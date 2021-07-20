@@ -1,0 +1,72 @@
+/*
+
+ ______ __  __  ______  ______  ______  ______  ______  ______ ______  ______    
+/\__  _/\ \_\ \/\  ___\/\  == \/\  ___\/\  __ \/\  ___\/\__  _/\  == \/\  == \   
+\/_/\ \\ \  __ \ \  __\\ \  __<\ \  __\\ \  __ \ \ \___\/_/\ \\ \  __<\ \  __<   
+   \ \_\\ \_\ \_\ \_____\ \_\ \_\ \_____\ \_\ \_\ \_____\ \ \_\\ \_\ \_\ \_\ \_\ 
+    \/_/ \/_/\/_/\/_____/\/_/ /_/\/_____/\/_/\/_/\/_____/  \/_/ \/_/ /_/\/_/ /_/ 
+                                                                                 
+                                                 Firefox-89 PROTON+
+                                                 by. thereact0rr
+
+*/
+
+/* Remove space to left of toolbar  */
+
+.titlebar-spacer[type="pre-tabs"] {
+  display: none !important;
+}
+
+/* Customize window action buttons ( Close, Min, Max ) */
+
+.titlebar-button {
+  margin: 7px !important;
+  margin-left: 0 !important;
+  margin-right: 5px !important;
+  border-radius: 4px !important;
+}
+
+/* Apply dimmed background for inactive tabs */
+
+.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected=true], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.tabbrowser-tab>.tab-stack>.tab-background:not([selected=true], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+/* Make all tabs small except selected one */
+
+.tabbrowser-tab:not([selected=true]):not([pinned=true]) {
+  max-width: 100px !important;
+}
+
+/* Hide tab close button */
+
+#TabsToolbar .close-icon {
+  display: none !important;
+}
+
+/* Unhide the tab close button on hover when it is the selected tab and not pinned */
+
+#TabsToolbar .tabbrowser-tab[selected=true]:not([pinned=true]):hover .close-icon {
+  display: inline-block !important;
+}
+
+/* Reduce spacing between pinned and regular tabs */
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: initial !important;
+}
+
+/****GITHUB CODE DIFFERENT******
+
+.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected=true], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.tabbrowser-tab>.tab-stack>.tab-background:not([selected=true], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 4%, transparent);
+}
+***************************/

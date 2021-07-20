@@ -1,0 +1,77 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Beautiful Alpen Blue",
+  "author": "GODIE",
+  "description": "Tema al estilo de Firefox Alpen. Contiene Transparencias. Disponible Personalización CSS",
+  "theme":
+  {
+  "images": {
+      "additional_backgrounds": [
+        "images/derecha.png",
+        "images/izquierda.png",
+        "images/middle.png"
+      ]
+    },
+
+    "properties": {
+      "additional_backgrounds_alignment": [
+        "right top",
+        "left top",
+        "right top"
+      ],
+    "additional_backgrounds_tiling": ["no-repeat", "no-repeat", "repeat-x"]
+    },
+      "colors": {
+      "frame": "#060609",                              
+        "tab_background_text": "#b3b3b3",
+      "frame_inactive": "#000000",
+      
+      "toolbar":"#1e2035bc",                             
+          "toolbar_text": "#b3b3b3",
+      		
+      "toolbar_field":"#24234300",                
+          "toolbar_field_text":"#e5e5e6",
+      "toolbar_top_separator": "#262576",
+      "toolbar_bottom_separator": "#131230",
+
+      "toolbar_field_border": "#4d4dfe40",
+      "toolbar_field_separator": "#131118",
+
+      "toolbar_field_focus": "#242343fc",
+      "toolbar_field_border_focus": "#4d4dfe",
+        
+      "toolbar_field_highlight": "#3b539b",
+      "toolbar_field_highlight_text": "#eaeaea",
+      "toolbar_field_text_focus": "#ffffff",
+      
+      "toolbar_vertical_separator": "#101019",
+
+      "button_background_hover": "#5524dbaa",
+      "button_background_active": "#5524db80",
+
+      "icons" : "#d8d8d9",
+      "icons_attention": "#4d7afe",
+
+      "ntp_background": "#1c1b3e",                     
+        "ntp_text": "#4da6fe",
+
+      "popup": "#1d1d38fa",                             
+        "popup_text": "#e5e5e6",
+      "popup_border": "#4d4dfe30",
+      "popup_highlight": "#3e3b9d",
+
+      "sidebar": "#1d1d38",                            
+          "sidebar_text": "#eaeaea",
+      "sidebar_border": "#0e0e25",
+      		"sidebar_highlight": "#3f3da9",            
+          "sidebar_highlight_text": "#EEEEEE",
+
+      "tab_line": "#4d4dfe",
+      "tab_selected": "#11092310",
+      "tab_text": "#ffffff",
+      "tab_loading": "#4d4dfe",
+      "tab_background_separator": "#0a090c"
+            }
+  }
+}

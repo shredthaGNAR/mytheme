@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "jixabon.lando-ui",
+    "johnpapa.vscode-peacock",
+    "equinusocio.moxer-icons",
+    "equinusocio.moxer-theme",
+    "tabnine.tabnine-vscode",
+    "phoenisx.cssvar",
+    "sandorengholm.csspreview",
+    "rohit-chouhan.animate-css",
+    "hridoy.animate-css",
+    "tylerxwright.vscode-line-surfer",
+    "mde.select-highlight-minimap",
+    "smokingslim.vscode-touchbar",
+    "shyykoserhiy.git-autoconfig",
+    "codestream.codestream",
+    "felipecaputo.git-project-manager",
+    "dsebastien.vscode-git-pack",
+    "slysherz.comment-box",
+    "ryanbelisle.vscode-idiomatic-css-comments"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.fontSize": 18,
+    "editor.cursorStyle": "block",
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "operator mono, josefin slab",
+    "gitProjectManager.displayProjectPath": true
+}

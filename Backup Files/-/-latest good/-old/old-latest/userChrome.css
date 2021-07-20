@@ -1,0 +1,83 @@
+/*
+░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
+░█░░░█░█░█░░░█░█░█▀▄░▀▀█
+░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
+
+Load preferred colorscheme
+*/
+
+/* Blurred Color Scheme */
+@import url('colors/blurred.css');
+
+/* Solid Color Scheme */
+/*
+@import url('colors/solid.css');
+*/
+
+/*
+░█░█░▀█▀░░░█▀▀░█░░░█▀▀░█▄█░█▀▀░█▀█░▀█▀░█▀▀
+░█░█░░█░░░░█▀▀░█░░░█▀▀░█░█░█▀▀░█░█░░█░░▀▀█
+░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
+
+Load Customized Firefox's UI Elements
+*/
+
+@import url('parts/main-window.css');
+@import url('parts/toolbar.css');
+@import url('parts/tabbar.css');
+@import url('parts/urlbar.css');
+@import url('parts/sidebar.css');
+@import url('parts/arrow-panel.css');
+@import url('parts/findbar.css');
+@import url('parts/context-menu.css');
+@import url('parts/customization-window.css');
+@import url('parts/window-controls.css');
+
+/* Turn on Vibrancy aka macOS Transparency and Blur in the URL Bar, Nav Bar, and Side
+Panel, Findbar, and Bookmarks Bar */
+#main-window,
+#nav-bar,
+#sidebar-header,
+#history-panel,
+#sidebar-search-container,
+#bookmarksPanel,
+#PersonalToolbar,
+findbar {
+  -moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+/* Selected Tab Background Color */
+.tab-background[selected="true"] {
+  background: var(--autocomplete-popup-highlight-background) !important;
+  opacity: 0.8;
+}
+
+/* Various Opacities */
+#appMenu-popup,
+#customizationui-widget-panel,
+#pageActionPanel,
+#editBookmarkPanel,
+#protections-popup,
+#pageActionActivatedActionPanel,
+#widget-overflow,
+#urlbar-background,
+#identity-popup,
+.panel-arrowcontent,
+menupopup[hasbeenopened="true"] {
+  opacity: 0.95;
+}
+
+/* Bar between the bookmarks bar and the page  */
+#sidebar-splitter {
+  border: none !important;
+  opacity: 1 !important;
+  -moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+/* Possible Bug Fix Keeps sidebar from being weirdly affected by vibrancy settings in find bar*/
+findbar {
+  opacity: 0.9 !important;
+}
+
+
+
