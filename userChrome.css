@@ -1,29 +1,15 @@
 /** @format */
 
 @import url("colors/blurred.css");
-/*@import url('parts/sliding-bookmarks-bar.css');*/
 @import url("parts/main-window.css");
 @import url("parts/toolbar.css");
 @import url("parts/tabbar.css");
 @import url("parts/urlbar.css");
 @import url("parts/sidebar.css");
-/*@import url('parts/arrow-panel.css');*/
 @import url("parts/findbar.css");
 @import url("parts/customization-window.css");
 @import url("parts/window-controls.css");
-/*@import url('edge/extras/hidetabclosebutton.css');*
-@import url("edge/extras/vibrancy.css");
-/*@import url('edge/tabbar/EdgeStyleTabShadow.css');
-/*@import url('autohide.css');*/
 @import url("parts/compact-bookmarks.css");
-/*@import url('extras/customColorTheme.css');
-/* Selected Tab Background Color *
-
-.tab-background[selected="true"] {
-  background: var(--autocomplete-popup-highlight-background) !important;
-  opacity: 1;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
 
 /* Turn on Vibrancy aka macOS Transparency and Blur in the URL Bar, Nav Bar, and SidePanel, Findbar, and Bookmarks Bar */
 
@@ -111,7 +97,7 @@ image.panel-arrow {
 box.panel-arrowcontent {
 	color: #dddddd !important;
 	background: #4d4dfe30 !important;
-	/*	box-shadow: #4d4dfe30 !important;*/
+	box-shadow: #4d4dfe30 !important;
 	opacity: 0.9;
 }
 
@@ -177,14 +163,14 @@ box#customization-container {
 /*Button Color*/
 
 .customizationmode-button {
-	-moz-appearance: auto !important;
+	-moz-appearance: none !important;
 	background: #4d4dfe30 !important;
 }
 
 /* Button Color on Hover */
 
 .customizationmode-button:hover {
-	-moz-appearance: auto !important;
+	-moz-appearance: none !important;
 	background: var(--autocomplete-popup-highlight-background) !important;
 }
 
@@ -310,7 +296,7 @@ toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :
 
 .tabbrowser-tab:not([pinned]) .tab-close-button {
 	display: -moz-box !important;
-	opacity: 0;
+	opacity: 0 !important;
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
@@ -516,13 +502,12 @@ slider,
 
 /* Active tab brightness */
 
-/*
 .tab-content[selected="true"] {
-  background-color: color-mix(in srgb, #4d4dfe 7%, transparent) !important;
-  text-shadow: 1px !important;
-  border-radius: 4px 4px 4px 4px !important;
-  margin-top: 3px !important;
-  margin-bottom: 3px !important;
+	background-color: color-mix(in srgb, #4d4dfe 7%, transparent) !important;
+	text-shadow: 1px !important;
+	border-radius: 4px 4px 4px 4px !important;
+	margin-top: 3px !important;
+	margin-bottom: 3px !important;
 }
 
 /* Remove shadows of the selected tab Label */
@@ -538,7 +523,7 @@ slider,
 }
 
 box#customization-container {
-	-moz-appearance: auto !important;
+	-moz-appearance: none !important;
 }
 
 :root {
@@ -605,25 +590,25 @@ menuseparator {
 	color: var(--lwt-toolbar-field-color) !important;
 }
 
-/*"toolbar_bottom_separator"*
+/*"toolbar_bottom_separator"*/
 
 #navigator-toolbox {
-  border-bottom: 1px solid #131230 !important;
-}*/
+	border-bottom: 1px solid #131230 !important;
+}
 
 .tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button {
 	border-radius: 5px !important;
 }
-
+/*
 .tabbrowser-tab:hover {
 	border-radius: 0.25em;
 	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true *
+/* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true */
 
 #PersonalToolbar {
-	background-color: #00000005 !important;
+	background-color: #392a7e79 !important;
 	backdrop-filter: blur(32px) !important;
 	-moz-backdrop-filter: blur(32px) !important;
 }
@@ -632,7 +617,6 @@ menuseparator {
 
 .tabbrowser-tab:not([pinned]) .tab-close-button {
 	min-width: 20px !important;
-	opacity: 0 !important;
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
@@ -791,7 +775,7 @@ menuitem.subviewbutton:not([disabled], :active)[_moz-menuactive],
 	border-image: var(--panel-separator-zap-gradient) 1 !important;
 }
 
-/* Colors of the contextual menu *
+/* Colors of the contextual menu */
 
 .menuseparator {
 	border-top: 1px solid #3d376279 !important;
@@ -808,8 +792,8 @@ menuitem.subviewbutton:not([disabled], :active)[_moz-menuactive],
 	border-color: #2d2762 !important;
 }
 
-menu[_moz-menuactive='true']:not([disabled='true']),
-menuitem[_moz-menuactive='true']:not([disabled='true']) {
+menu[_moz-menuactive="true"]:not([disabled="true"]),
+menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 	background-color: #4e6bfd90 !important;
 	color: #eaeaea !important;
 	--menuitem-hover-background-color: #4e6bfd00 !important;
@@ -991,7 +975,7 @@ description#identity-popup-content-verifier,
 	> .tab-background:not([selected="true"], [multiselected]) {
 	background-image: radial-gradient(
 		circle at bottom center,
-		#551dfc,
+		#551dfc 15px,
 		#000134d3
 	) !important;
 	box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 0px 0px 2px 1px rgb(0 0 0 / 23%) !important;
@@ -1072,17 +1056,28 @@ description#identity-popup-content-verifier,
 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 */
 
-/*
 :root {
-  --button-hover-bgcolor: color-mix(in srgb, #4e6bfd 50%, transparent) !important;
-  --button-active-bgcolor: color-mix(in srgb, #4e6bfd 65%, transparent) !important;
-  --urlbar-icon-padding: 4px !important;
-  --panel-separator-color: #3d3772 !important;
-  --toolbarbutton-outer-padding: 3px !important;
-  --urlbar-popup-url-color: #3399ff !important;
-  --autocomplete-popup-hover-background: #3e4cff95 !important;
-  --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
-  --toolbarseparator-color: #392b45 !important;
+	--button-hover-bgcolor: color-mix(
+		in srgb,
+		#4e6bfd 50%,
+		transparent
+	) !important;
+	--button-active-bgcolor: color-mix(
+		in srgb,
+		#4e6bfd 65%,
+		transparent
+	) !important;
+	--urlbar-icon-padding: 4px !important;
+	--panel-separator-color: #3d3772 !important;
+	--toolbarbutton-outer-padding: 3px !important;
+	--urlbar-popup-url-color: #3399ff !important;
+	--autocomplete-popup-hover-background: #3e4cff95 !important;
+	--autocomplete-popup-separator-color: color-mix(
+		in srgb,
+		#4d4dfeff 30%,
+		transparent
+	) !important;
+	--toolbarseparator-color: #392b45 !important;
 }
 
 /* more test code reddit*/
@@ -1267,14 +1262,15 @@ tab:not([pinned], [selected])
 
 .tabbrowser-tab[multiselected]:-moz-lwtheme {
 	background: linear-gradient(
-		to right,
+		190deg,
 		#00bbff 0%,
 		#6b6bff 40%,
 		#dd4aa2 100%
 	) !important;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	background-clip: text !important;
+	box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
 	/* --tab-line-color: linear-gradient(to bottom, #202085, #2020853c) !important;*/
 }
 
@@ -1408,7 +1404,7 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
   height: 32px !important;
 }
 
-/* Colors of the contextual menu *
+/* Colors of the contextual menu */
 
 menuseparator {
 	border-top: 1px solid #3d3762 !important;
@@ -1424,8 +1420,8 @@ menuseparator {
 	border-color: #4d4dfe50 !important;
 }
 
-menu[_moz-menuactive='true']:not([disabled='true']),
-menuitem[_moz-menuactive='true']:not([disabled='true']) {
+menu[_moz-menuactive="true"]:not([disabled="true"]),
+menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 	background-color: #161742 !important;
 	color: #eaeaea !important;
 	--menuitem-hover-background-color: #3d3762 !important;
@@ -1524,7 +1520,7 @@ description#identity-popup-content-verifier,
 	background-color: #4d4dfe70 !important;
 }
 
-/*** URLBAR Focus ******
+/*** URLBAR Focus ******/
 
 #urlbar[focused="true"] {
 	background: linear-gradient(#161742a6, #18151e26) !important;
@@ -1544,9 +1540,9 @@ description#identity-popup-content-verifier,
 			#e8ab52
 		) !important;
 	border-image: 9px !important;*/
-/*	border-radius: 9px !important;*
+	/*	border-radius: 9px !important;*/
 }
-
+/*
 #urlbar[focused="true"] #urlbar-background {
 	background-image: url(images/noise-512x512.png) !important;
 	/* background-color: #24095a7b !important;*
@@ -1823,7 +1819,7 @@ description#identity-popup-content-verifier,
 	> .tab-background:not([selected="true"], [multiselected]) {
 	background-image: radial-gradient(
 		circle at bottom center,
-		#551dfc 15px,
+		#4d4dfe 15px,
 		#000134d3
 	) !important;
 	box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
@@ -2111,16 +2107,16 @@ toolbar#nav-bar {
 		border-top-width: 1px !important;
 		border-bottom-width: 0 !important;
 	}
-	/* Container color bar visibility *
-	.tabbrowser-tab[usercontextid]
-		> .tab-stack
-		> .tab-background
-		> .tab-context-line {
-		margin: 0px max(calc(var(--user-tab-rounding) - 3px), 0px) !important;
-	}
+	/* Container color bar visibility */
+.tabbrowser-tab[usercontextid]
+	> .tab-stack
+	> .tab-background
+	> .tab-context-line {
+	margin: 0px max(calc(var(--user-tab-rounding) - 3px), 0px) !important;
+} /*
 }
 
-/* Inactive tabs: Shadow style *s
+/* Inactive tabs: Shadow style *
 
 @media (-moz-proton) {
   .tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
@@ -2205,7 +2201,7 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 
 browser[type="content-primary"],
 browser[type="content"] {
-	background: #0000395e !important;
+	background: #2020685e !important;
 }
 
 /*container tab label color when selected */
@@ -2221,15 +2217,15 @@ browser[type="content"] {
 .titlebar-spacer {
 	border: none !important;
 }
-/*
+
 .tabbrowser-tab:hover
 	> .tab-stack
-	> .tab-background:not([selected='true'])
+	> .tab-background:not([selected="true"])
 	> spacer {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 }
-*/
+
 /* To be able to see the top border of the tab*/
 
 .tab-stack {
@@ -2239,30 +2235,30 @@ browser[type="content"] {
 /* Fancy tab container label in url bar *
 
 #page-action-buttons {
-  height: 24px !important;
-  display: flex !important;
+	height: 24px !important;
+	display: flex !important;
 }
 
 #userContext-icons {
-  position: relative !important;
-  padding-inline: 8px !important;
-  margin: 0 !important;
-  color: var(--identity-tab-color) !important;
+	position: relative !important;
+	padding-inline: 8px !important;
+	margin: 0 !important;
+	color: var(--identity-tab-color) !important;
 }
 
 #userContext-icons::before {
-  content: '' !important;
-  position: absolute !important;
-  left: 0 !important;
-  right: 0 !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  background: var(--identity-tab-color) !important;
-  border-radius: 99px !important;
-  border-radius: 5px !important;
-  opacity: .1 !important;
-}*/
-
+	content: "" !important;
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	top: 0 !important;
+	bottom: 0 !important;
+	background: var(--identity-tab-color) !important;
+	border-radius: 99px !important;
+	border-radius: 5px !important;
+	opacity: 0.1 !important;
+}
+*/
 :root:not([uidensity="touch"]) #new-tab-button,
 #alltabs-button {
 	--toolbarbutton-outer-padding: 1px;
@@ -2283,10 +2279,10 @@ browser[type="content"] {
 }
 
 /* This is kinda weird, but it makes the horizontal line between tabs and nav-bar render "inside" nav-bar thus tabs are more visibily separated even if there is less space there */
-/*
+
 #nav-bar {
 	box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%);
-}*/
+}
 
 .tab-close-button {
 	margin-inline-start: 0px !important;
@@ -2300,8 +2296,8 @@ browser[type="content"] {
 .tab-context-line {
 	-moz-box-ordinal-group: 2;
 	margin-block: 0 !important;
-	margin-left: 5px !important;
-	margin-right: 5px !important;
+	margin-left: 1px !important;
+	margin-right: 1px !important;
 }
 
 /*container tab label color when selected */
@@ -2388,7 +2384,7 @@ toolbarbutton {
 #template-container.content-scrollable {
 	background-color: #2b2a33 !important;
 }
-*/ .sidebar-splitter {
+.sidebar-splitter {
 	display: none !important;
 }
 
@@ -2469,7 +2465,7 @@ toolbarbutton {
 	> .urlbarView-no-wrap
 	> .urlbarView-favicon,
 #urlbar-engine-one-off-item-bookmarks {
-	fill: #fc7169 !important;
+	fill: #9400ff !important;
 }
 
 /* Remove bottom radius and bottom margin from current tab */
@@ -2485,27 +2481,28 @@ toolbarbutton {
 
 /* Theme - Compatibility ****************************************************/
 
-/* Header Image *
+/* Header Image 
   :root[lwtheme-image] {
       background-image: var(--lwt-header-image)  !important; /* Original: var(--lwt-header-image) *
       background-repeat: no-repeat !important;
       background-position: right top !important;
   }
-  :root[lwtheme-image] #navigator-toolbox:-moz-lwtheme {
-      background-image:    var(--lwt-additional-images) !important; /* Original: var(--lwt-header-image), var(--lwt-additional-images); *
-      background-repeat:   var(--lwt-background-tiling) !important;
-      background-position: var(--lwt-background-alignment) !important;
-      background-color:    unset !important; /* Original:  var(--lwt-accent-color)
-    }*/
+:root[lwtheme-image] #navigator-toolbox:-moz-lwtheme {
+	background-image: var(
+		--lwt-additional-images
+	) !important; /* Original: var(--lwt-header-image), var(--lwt-additional-images); 
+	background-repeat: var(--lwt-background-tiling) !important;
+	background-position: var(--lwt-background-alignment) !important;
+	background-color:/*unset !important; var(--lwt-accent-color) !important;
+}
 
 /* URL Bar */
 
-/*
-    :root[tabsintitlebar]:not(:-moz-window-inactive, :-moz-lwtheme),
-    :root[tabsintitlebar][lwt-default-theme-in-dark-mode]:not(:-moz-window-inactive) {
-      --focus-outline-color: -moz-accent-color !important;
-    }
-*/
+:root[tabsintitlebar]:not(:-moz-window-inactive, :-moz-lwtheme),
+:root[tabsintitlebar][lwt-default-theme-in-dark-mode]:not(:-moz-window-inactive) {
+	--focus-outline-color: -moz-accent-color !important;
+}
+
 /*
 :root[tabsintitlebar][lwt-theme]:not(:-moz-window-inactive)
 	#urlbar[open]
@@ -2523,8 +2520,6 @@ toolbarbutton {
 		#f9845b,
 		#e8ab52
 	) !important; /* Like: --toolbar-field-focus-border-color*
-}
-
 }
 
 /** Tab Bar - Reduce Width, Show more tabs **********************************
@@ -2734,9 +2729,9 @@ toolbarbutton {
 	.tabbrowser-tab[visuallyselected="true"]:not(:focus)
 	> .tab-stack
 	> .tab-background:-moz-lwtheme {
-	/* Origina: 0 0 1px var(--tab-line-color, rgba(128,128,142,0.9))
+	/*Original: 0 0 1px var(--tab-line-color, rgba(128,128,142,0.9))
        Bright: 0 0 1px var(--tab-line-color, rgba(128,128,142,0.9)), 0 0 4px rgba(128,128,142,0.5) */
-	box-shadow: 0 0 1px color-mix(in srgb, var(--toolbar-color) 80%, transparent) !important;
+	box-shadow: 0 0 1px var(--tab-line-color, rgba(128, 128, 142, 0.9)) !important;
 }
 
 #TabsToolbar[brighttext]
@@ -2843,7 +2838,6 @@ toolbarbutton {
 }
 
 
-
 #urlbar-background {
 	margin-bottom: 2px !important;
 	margin-top: 2px !important;
@@ -2851,28 +2845,28 @@ toolbarbutton {
 	margin-right: 2px !important;
 	border-radius: 9px !important;
 }
-#urlbar[focused='true'] #urlbar-background {
-	background: linear-gradient(#161742a6, #18151e26) !important;
-	border-radius: 9px !important;
-	/* backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px) !important;
-}
-
-#urlbar[open='true'] #urlbar-background {
+#urlbar[focused="true"] #urlbar-background {
 	background: linear-gradient(#161742a6, #18151e26) !important;
 	border-radius: 9px !important;
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px) !important;
 }
 
-#urlbar[focused='true'] {
+#urlbar[open="true"] #urlbar-background {
 	background: linear-gradient(#161742a6, #18151e26) !important;
 	border-radius: 9px !important;
-	/*border: 1px solid transparent !important;*/
-/*border-image: 1 1 1 1 linear-gradient(#24095a7b, #18151e) !important;*
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px) !important;
 }
 
-#urlbar[focused='true'] #urlbar-background {
+#urlbar[focused="true"] {
+	background: linear-gradient(#161742a6, #18151e26) !important;
+	border-radius: 9px !important;
+	border: 1px solid transparent !important;
+	border-image: 1 1 1 1 linear-gradient(#24095a7b, #18151e) !important;
+}
+
+#urlbar[focused="true"] #urlbar-background {
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px) !important;
 	background: linear-gradient(#161742a6, #18151e26) !important;
@@ -3147,7 +3141,7 @@ menuseparator {
 	background-color: var(--arrowpanel-background) !important;
 	color: var(--arrowpanel-color);
 	border: 1px solid var(--arrowpanel-border-color) !important;
-} /*Margins of the unselected tabs*
+} /*Margins of the unselected tabs
 .tabbrowser-tab
 	> .tab-stack
 	> .tab-background:not([selected='true'], [multiselected]) {
@@ -3289,7 +3283,7 @@ description#identity-popup-content-verifier,
 	--tab-label-mask-size: 1em !important;
 }
 
-/* sidebar bgcolor to proton dark */
+/* sidebar bgcolor to proton dark 
 #sidebar-header,
 #sidebar-search-container,
 #bookmarks-view-children,
@@ -3302,7 +3296,7 @@ description#identity-popup-content-verifier,
 #history-panel {
 	background-color: #6455db00 !important;
 }
-/* synced tabs sidebar bgcolor */
+/* synced tabs sidebar bgcolor *
 #template-container.content-scrollable {
 	background-color: #11028988 !important;
 }
@@ -3313,7 +3307,7 @@ description#identity-popup-content-verifier,
 #TabsToolbar {
 	--toolbarbutton-inner-padding: 3px !important;
 }
-/***
+
 #urlbar-background,
 #urlbar {
 	border-radius: 4px !important;
@@ -3352,7 +3346,7 @@ description#identity-popup-content-verifier,
 #nav-bar > .customization-target {
 	-moz-box-align: center !important;
 }
-/*** Unhide the tab close button on hover when it is the selected tab and not pinned*/
+/*** Unhide the tab close button on hover when it is the selected tab and not pinned*
 #TabsToolbar .tabbrowser-tab[selected]:not([pinned]):hover .close-icon {
 	display: inline-block !important;
 }
@@ -3826,7 +3820,7 @@ menuseparator {
 /* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true */
 
 #PersonalToolbar {
-	background-color: #00000005 !important;
+	background-color: #29207480 !important;
 	backdrop-filter: blur(32px) !important;
 	-moz-backdrop-filter: blur(32px) !important;
 }
@@ -3835,6 +3829,7 @@ menuseparator {
 
 .tabbrowser-tab:not([pinned]) .tab-close-button {
 	min-width: 20px !important;
+	opacity: 0 !important;
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
@@ -4004,8 +3999,8 @@ browser[type="content"] {
 .tab-context-line {
 	-moz-box-ordinal-group: 2;
 	margin-block: 0 !important;
-	margin-left: 5px !important;
-	margin-right: 5px !important;
+	margin-left: 1px !important;
+	margin-right: 1px !important;
 }
 
 /*container tab label color when selected */
@@ -4156,7 +4151,7 @@ toolbarbutton {
 	> .urlbarView-no-wrap
 	> .urlbarView-favicon,
 #urlbar-engine-one-off-item-bookmarks {
-	fill: #00a5ff !important;
+	fill: #9f1aff !important;
 }
 
 /* Remove bottom radius and bottom margin from current tab */
@@ -4197,7 +4192,7 @@ toolbarbutton {
 	margin-inline-end: -0.5px !important;
 }
 
-/** Selected Tab - Box Shadow ***********************************************/
+/** Selected Tab - Box Shadow ***********************************************
 
 #TabsToolbar[brighttext]
 	#tabbrowser-tabs:not([noshadowfortests])
@@ -4205,7 +4200,7 @@ toolbarbutton {
 	> .tab-stack
 	> .tab-background:-moz-lwtheme {
 	/* Origina: 0 0 1px var(--tab-line-color, rgba(128,128,142,0.9))
-       Bright: 0 0 1px var(--tab-line-color, rgba(128,128,142,0.9)), 0 0 4px rgba(128,128,142,0.5) */
+       Bright: 0 0 1px var(--tab-line-color, rgba(128,128,142,0.9)), 0 0 4px rgba(128,128,142,0.5) *
 	box-shadow: 0 0 1px color-mix(in srgb, var(--toolbar-color) 80%, transparent) !important;
 }
 
@@ -4511,3 +4506,53 @@ toolbarbutton {
 	--chrome-nav-bar-controls-border-color: transparent !important;
 }
 /* border around url bar */
+
+/* fancy line for container tabs */
+#TabsToolbar
+	#tabbrowser-tabs
+	.tabbrowser-tab[class*="identity-color"]
+	.tab-label {
+	text-decoration: underline !important;
+	text-decoration-color: var(--identity-icon-color) !important;
+	/*font-weight: bold !important;*/
+	text-shadow: 1px !important;
+}
+tab {
+	font-size: 11px !important;
+	font-family: sans-serif !important;
+}
+
+/******
+new code just trying it out may need romve just test
+ ******/
+
+/* remove padding between tabs and also z-index uhhhhhhh forgot what thats for */
+.tabbrowser-tab {
+	padding-inline-start: 0 !important;
+	padding-inline-end: 0 !important;
+	z-index: 1 !important;
+}
+
+/* Remove margin between buttons */
+#TabsToolbar .toolbarbutton-1 {
+	margin: 0 !important;
+	padding-inline: 0 !important;
+}
+
+/* Remove margin from pinned tabs */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab[first-visible-unpinned-tab] {
+	margin-inline-start: 0px !important;
+}
+
+/* quick fix for tab hover bug *
+.tabbrowser-tab[visuallyselected="true"]:hover,
+#tabbrowser-tabs:not([closebuttons="activetab"])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab:not([visuallyselected="true"]):hover {
+	--tab-label-mask-size: 2em !important;
+}
+/******
+end test code
+******/
