@@ -4,6 +4,6 @@
     "editor.fontSize": 18,
     "editor.cursorStyle": "block",
     "editor.wordWrap": "on",
-    "editor.fontFamily": "operator mono, josefin slab",
+    "editor.fontFamily": "operator mono lig, josefin slab, monospace",
     "gitProjectManager.displayProjectPath": true
 }

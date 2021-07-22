@@ -1,8 +1,12 @@
-/*
-░▀█▀░█▀█░█▀█░█░░░█▀▄░█▀█░█▀▄
-░░█░░█░█░█░█░█░░░█▀▄░█▀█░█▀▄
-░░▀░░▀▀▀░▀▀▀░▀▀▀░▀▀░░▀░▀░▀░▀
-Contains navbar, urlbar, and etc*/
+/**
+ * /*
+ * ░▀█▀░█▀█░█▀█░█░░░█▀▄░█▀█░█▀▄
+ * ░░█░░█░█░█░█░█░░░█▀▄░█▀█░█▀▄
+ * ░░▀░░▀▀▀░▀▀▀░▀▀▀░▀▀░░▀░▀░▀░▀
+ * Contains navbar, urlbar, and etc
+ *
+ * @format
+ */
 
 .browser-toolbar {
 }
@@ -24,11 +28,11 @@ toolbar#nav-bar {
 	border-top: none !important;
 }
 
-/* Set color schemes for #nav-bar */
+/* Set color schemes for #nav-bar *
 
 toolbar#nav-bar:-moz-lwtheme-darktext,
 toolbar#nav-bar:-moz-lwtheme-brighttext {
-	background: transparent /*var(--bf-navbar-bg)*/ !important;
+	background: transparent /*var(--bf-navbar-bg)* !important;
 	-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
 }
 
@@ -67,7 +71,7 @@ toolbaritem {
 	border-bottom: 0 !important;
 }
 
-/* Set color scheme */
+/* Set color scheme *
 
 .toolbarbutton-text:-moz-lwtheme-darktext,
 .toolbarbutton-text:-moz-lwtheme-brighttext {
