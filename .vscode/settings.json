@@ -1,9 +1,9 @@
 {
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.cursorStyle": "block",
     "editor.wordWrap": "on",
-    "editor.fontFamily": "operator mono lig, josefin slab, monospace",
+    "editor.fontFamily": "Jetbrains Mono, Fira Code, Cascadia Code, Operator mono, monospace",
     "gitProjectManager.displayProjectPath": true
 }
