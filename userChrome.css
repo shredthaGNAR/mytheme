@@ -4437,27 +4437,22 @@ toolbarbutton {
 /* moves context-line to the bottom */
 
 .tab-context-line {
-  -moz-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2 !important;
 }
-
+/**AUTO HIDE BOOKMARK TOOLBAR/PERSONAL TOOLBAR */
 #PersonalToolbar {
-  --uc-bm-height: 20px;
-  /* Might need to adjust if the toolbar has other buttons */
-  --uc-bm-padding: 4px;
-  /* Vertical padding to be applied to bookmarks */
-  --uc-autohide-toolbar-delay: 600ms;
-  /* The toolbar is hidden after 0.6s */
+  --uc-bm-height: 20px; /* Might need to adjust if the toolbar has other buttons */
+  --uc-bm-padding: 4px; /* Vertical padding to be applied to bookmarks */
+  --uc-autohide-toolbar-delay: 600ms; /* The toolbar is hidden after 0.6s */
+
   /* 0deg = "show" ; 90deg = "hide" ;  Set the following to control when bookmarks are shown */
-  --uc-autohide-toolbar-focus-rotation: 90deg;
-  /* urlbar is focused */
-  --uc-autohide-toolbar-hover-rotation: 0deg;
-  /* cursor is over the toolbar area */
+  --uc-autohide-toolbar-focus-rotation: 0deg; /* urlbar is focused */
+  --uc-autohide-toolbar-hover-rotation: 0deg; /* cursor is over the toolbar area */
 }
 
 :root[uidensity="compact"] #PersonalToolbar {
-  --uc-bm-padding: 0px;
+  --uc-bm-padding: 1px;
 }
-
 :root[uidensity="touch"] #PersonalToolbar {
   --uc-bm-padding: 7px;
 }
@@ -4469,6 +4464,22 @@ toolbarbutton {
   transform-origin: top;
   transition: transform 135ms linear var(--uc-autohide-toolbar-delay) !important;
   z-index: 1;
+}
+
+:root[lwtheme-image] #PersonalToolbar {
+  background-color: transparent !important;
+  background-position: top left, top left,
+    var(--lwt-background-alignment, top left);
+  background-position-y: top, top,
+    calc(
+      -2 * (
+          var(--tab-block-margin) + var(--toolbarbutton-inner-padding) +
+            var(--toolbarbutton-outer-padding)
+        ) - var(--tab-min-height) - 16px
+    );
+  background-image: var(--toolbar-bgimage),
+    linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)),
+    var(--lwt-header-image) !important;
 }
 
 #PlacesToolbarItems > .bookmark-item,
@@ -4559,17 +4570,10 @@ toolbarbutton {
   margin-inline-start: 0px !important;
 }
 
-/*
-.titlebar-spacer[type="pre-tabs"] {
-	display: none !important;
-}
-*/
 .tabbrowser-tab[visuallyselected="true"] {
   box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
   --chrome-nav-bar-controls-border-color: transparent !important;
 }
-
-/* border around url bar */
 
 /* fancy line for container tabs */
 #TabsToolbar
@@ -4596,12 +4600,6 @@ new code just trying it out may need romve just test
   padding-inline-start: 0 !important;
   padding-inline-end: 0 !important;
   z-index: 1 !important;
-}
-
-/* Remove margin between buttons *
-#TabsToolbar .toolbarbutton-1 {
-	margin: 0 !important;
-	padding-inline: 0 !important;
 }
 
 /* Remove margin from pinned tabs */
@@ -5049,3 +5047,15 @@ description#identity-popup-content-verifier,
   box-shadow: 0px 0px 8px -5px hsla(240, 4%, 0%, 0.5),
     0px 0px 15px 0px hsla(0, 0%, 0%, 0.2) !important;
 }
+/* Apply dimmed background for inactive tabs *
+.tabbrowser-tab:hover
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+.tabbrowser-tab
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 6%, transparent);
+}
+*/
