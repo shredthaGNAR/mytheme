@@ -1364,7 +1364,7 @@ tab:is([pinned])[selected="true"] .tab-content {
     #551dfc
   ) !important;
   height: 32px !important;
-  /* border-radius: 5px !important;*/
+  border-radius: 5px !important;
 }
 
 tab:is([pinned]):not([selected="true"]) .tab-content {
@@ -1820,6 +1820,7 @@ description#identity-popup-content-verifier,
     #110046
   ) !important;
   box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
+  border-radius: 5px !important;
 }
 
 /* Active tab brightness */
@@ -1828,7 +1829,7 @@ description#identity-popup-content-verifier,
   background-color: color-mix(in srgb, #4d4dfe 20%, transparent) !important;
   text-shadow: 1px !important;
   margin-top: 3px !important;
-  margin-bottom: 0px !important;
+  margin-bottom: 3px !important;
   border-radius: 5px !important;
 }
 
@@ -1915,13 +1916,13 @@ menupopup {
 }
 
 /* 8px is default value since it looks good - lower values compactify tabs horizontally */
-/*
+
 .subviewbutton.bookmark-item {
-	padding-block: 4px !important;
+  padding-block: 4px !important;
 }
 
 .subview-subheader {
-	display: -moz-box;
+  display: -moz-box;
 }
 
 /* Set color schemes for #nav-bar */
@@ -2203,15 +2204,6 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 
 #urlbar-zoom-button[animate="true"] {
   animation-name: none !important;
-}
-
-/* LOADING PAGES HAVE A GRAY BACKGROUND */
-
-/* This makes it so that when you go to a new page or open a new tab, it's gray instead of blinding white while loading */
-
-browser[type="content-primary"],
-browser[type="content"] {
-  background: #111241fa !important;
 }
 
 /*container tab label color when selected */
@@ -4011,7 +4003,7 @@ tooltip {
 
 browser[type="content-primary"],
 browser[type="content"] {
-  background: #6a66d171 !important;
+  background: #01023f4f !important;
 }
 
 /*container tab label color when selected */
@@ -4219,8 +4211,8 @@ toolbarbutton {
 /* Remove bottom radius and bottom margin from current tab */
 
 .tab-background[selected="true"] {
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
   margin-bottom: 0px !important;
   min-height: calc(
     var(--tab-min-height) + var(--proton-tab-block-margin)
@@ -4385,7 +4377,7 @@ toolbarbutton {
 .tab-content[selected="true"] {
   background-color: color-mix(in srgb, #c5c5c5 90%, transparent) !important;
   border-radius: 5px !important;
-  margin-top: 2px !important;
+  margin-top: 3px !important;
   margin-bottom: 3px !important;
 }
 
@@ -5000,13 +4992,6 @@ description#identity-popup-content-verifier,
   margin-inline-start: 0 !important;
 }
 
-#scrollbutton-down,
-#scrollbutton-up {
-  border-width: 0px !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
-}
-
 .scrollbox-clip > scrollbox {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -5043,7 +5028,7 @@ description#identity-popup-content-verifier,
 }
 /* navbar shadow */
 #navigator-toolbox {
-  position: relative;
+  position: relative !important;
   box-shadow: 0px 0px 8px -5px hsla(240, 4%, 0%, 0.5),
     0px 0px 15px 0px hsla(0, 0%, 0%, 0.2) !important;
 }
@@ -5059,3 +5044,6 @@ description#identity-popup-content-verifier,
   background-color: color-mix(in srgb, currentColor 6%, transparent);
 }
 */
+/***
+ background: radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%);
+background-blend-mode: overlay, hard-light, overlay, normal; */
