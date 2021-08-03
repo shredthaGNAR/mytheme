@@ -5087,12 +5087,12 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
   min-width: 115px !important;
 }
 
-/* Selected tabs width */
+/* Selected tabs width *
 .tabbrowser-tab[selected][fadein]:not([pinned]) {
-  /*max-width: 225px !important;*/
+  /*max-width: 225px !important;*
   min-width: 205px !important;
 }
-
+*/
 #PersonalToolbar,
 .TabsToolbar,
 .tab-background-inner,
