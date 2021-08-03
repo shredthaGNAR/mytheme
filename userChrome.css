@@ -5069,28 +5069,30 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
   height: var(--urlbar-height) !important;
 }
 
-/* Apply dimmed background for inactive tabs 
-.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected], [multiselected]) {
-    background-color: color-mix(in srgb, currentColor 12%, transparent);
+/* Apply dimmed background for inactive tabs */
+.tabbrowser-tab:hover
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
 }
-.tabbrowser-tab>.tab-stack>.tab-background:not([selected], [multiselected]) {
-    background-color: color-mix(in srgb, currentColor 6%, transparent);
+.tabbrowser-tab
+  > .tab-stack
+  > .tab-background:not([selected], [multiselected]) {
+  background-color: color-mix(in srgb, currentColor 6%, transparent);
 }
- 
- 
-/* Make all tabs small except selected one 
-.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {  
-    max-width: 145px !important;
-    min-width: 115px !important;
+
+/* Make all tabs small except selected one */
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+  max-width: 145px !important;
+  min-width: 115px !important;
 }
- 
- 
-/* Selected tabs width 
-.tabbrowser-tab[selected][fadein]:not([pinned]) {  
-    /*max-width: 225px !important;*
-    min-width: 205px !important;
+
+/* Selected tabs width */
+.tabbrowser-tab[selected][fadein]:not([pinned]) {
+  /*max-width: 225px !important;*/
+  min-width: 205px !important;
 }
-*/
+
 #PersonalToolbar,
 .TabsToolbar,
 .tab-background-inner,
