@@ -4406,6 +4406,7 @@ toolbarbutton {
     var(--lwt-additional-images) !important;
   background-position: 0 0, 100% -69px, 0% -69px, 100% -69px !important;
   background-repeat: no-repeat, no-repeat, no-repeat, repeat-x !important;
+  background: linear-gradient(#161742c4, #18151e8c) !important;
 }
 
 #PlacesToolbarItems > .bookmark-item,
