@@ -1202,6 +1202,12 @@ menuitem.subviewbutton:not([disabled], :active)[_moz-menuactive],
   border-image: var(--panel-separator-zap-gradient) 1 !important;
 }
 
+/* Correct visualization of the zoom percentage shown in URLBAR *
+
+#urlbar-zoom-button {
+	padding: 0px 2px !important;
+}
+
 /* Line gradient in active tab *
 
 tab:not([pinned])[selected='true'] .tab-background {
@@ -1991,6 +1997,13 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   --menuitem-hover-background-color: #3949aa !important;
 }
 
+/* Remove margin between buttons *
+
+#TabsToolbar .toolbarbutton-1 {
+  margin: 0 !important;
+  padding-inline: 0 !important;
+}
+
 /* Remove margin from pinned tabs */
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) .tabbrowser-tab[first-visible-unpinned-tab],
@@ -2051,6 +2064,10 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 	opacity: 0.1 !important;
 }
 */
+
+#nav-bar {
+  box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
+}
 
 .tab-close-button {
   margin-inline-start: 0px !important;
@@ -2160,6 +2177,28 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   margin-inline-start: 1px !important;
 }
 */
+:root:not([uidensity="touch"]) #tabbrowser-arrowscrollbox {
+  --scrollbtn-inner-padding: 1px;
+  --scrollbtn-outer-padding: 3px;
+}
+
+#scrollbutton-up {
+  padding-left: var(--scrollbtn-inner-padding, 4px) !important;
+  /* Original: 4px */
+  padding-right: var(--scrollbtn-outer-padding, 4px) !important;
+}
+
+#scrollbutton-down {
+  padding-left: var(--scrollbtn-outer-padding, 4px) !important;
+  /* Original: 4px */
+  padding-right: var(--scrollbtn-inner-padding, 4px) !important;
+}
+
+:root:not([uidensity="touch"]) #new-tab-button,
+#alltabs-button {
+  --toolbarbutton-outer-padding: 1px;
+  /* Original: 2px*/
+}
 
 /*** Tab - Max Size *
 
@@ -2169,6 +2208,104 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 }*/
 .tabbrowser-tab[fadein]:not([pinned]) {
   max-width: 200px !important;
+}
+
+/** Tab Bar - Reduce Height, Show more contents *****************************
+
+:root:not([uidensity='touch']) #TabsToolbar {
+	--toolbarbutton-inner-padding: 9px;
+	/* Original: calc((var(--tab-min-height) - 16px) / 2) = 10px *
+}
+
+.toolbar-items,
+.tabbrowser-tab {
+	max-height: 38px;
+}
+
+:root[uidensity='compact'] .toolbar-items,
+.tabbrowser-tab {
+	max-height: 32px;
+}
+
+:root[uidensity='touch'] .toolbar-items,
+.tabbrowser-tab {
+	max-height: unset;
+}
+
+:root:not([uidensity='touch']) #tabbrowser-arrowscrollbox {
+	--scrollbtn-vertical-padding: 3px;
+	--scrollbtn-vertical-border: 2px;
+	--scrollbtn-border-radius: 7px;
+}
+
+#scrollbutton-up,
+#scrollbutton-down {
+	/* Original: var(--toolbarbutton-inner-padding) calc(var(--toolbarbutton-inner-padding) - 6px) = 9px */
+/* https://github.com/mozilla/gecko-dev/blob/71b1259afd1cdaf41871ae675c2dadb967ea5b34/browser/themes/shared/toolbarbuttons.inc.css#L142 *
+	padding-top: var(
+		--scrollbtn-vertical-padding,
+		var(--toolbarbutton-inner-padding)
+	) !important;
+	padding-bottom: var(
+		--scrollbtn-vertical-padding,
+		var(--toolbarbutton-inner-padding)
+	) !important;
+	/* Original: 4px *
+	border-top-width: var(--scrollbtn-vertical-border, 4px) !important;
+	border-bottom-width: var(--scrollbtn-vertical-border, 4px) !important;
+	/* Original: calc(var(--tab-border-radius) + 4px) = 8px *
+	border-radius: var(
+		--scrollbtn-border-radius,
+		calc(var(--tab-border-radius) + 4px)
+	) !important;
+}
+/**
+:root[tabsintitlebar]:not([uidensity='compact'])
+	#toolbar-menubar[autohide='true'] {
+	height: calc(var(--tab-min-height) - var(--tabs-navbar-shadow-size) - 2px);
+	/* Compact: 28px, Normal: 33px, Touch: 38px
+}
+
+/** Pinned Tab - Titlechanged Indicator position fix *
+
+:root:not([uidensity='touch'])
+	.tabbrowser-tab:is([image], [pinned])
+	> .tab-stack
+	> .tab-content[attention]:not([selected='true']),
+:root:not([uidensity='touch'])
+	.tabbrowser-tab
+	> .tab-stack
+	> .tab-content[pinned][titlechanged]:not([selected='true']) {
+	/* Original: center bottom calc(6.5px + var(--tabs-navbar-shadow-size)); *
+	background-position-y: bottom calc(4.5px + var(--tabs-navbar-shadow-size)) !important;
+}
+
+:root[uidensity='compact']
+	.tabbrowser-tab:is([image], [pinned])
+	> .tab-stack
+	> .tab-content[attention]:not([selected='true']),
+:root[uidensity='compact']
+	.tabbrowser-tab
+	> .tab-stack
+	> .tab-content[pinned][titlechanged]:not([selected='true']) {
+	/* Original: center bottom calc(6.5px + var(--tabs-navbar-shadow-size)); *
+	background-position-y: bottom calc(0.5px + var(--tabs-navbar-shadow-size)) !important;
+}
+
+/** Tab Bar - Connect to window *********************************************
+
+.tab-background {
+	border-radius: var(--tab-border-radius) var(--tab-border-radius) 0px 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.tab-content {
+	margin-top: var(--proton-tab-block-margin);
+}
+
+.tab-stack {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 /* Multi Selected Color */
@@ -2213,6 +2350,41 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 
 #tabbrowser-tabs[positionpinnedtabs]>#tabbrowser-arrowscrollbox>.tabbrowser-tab[pinned] {
   z-index: 0 !important;
+}
+
+/** Selected Tab - Bottom Rounded Corner ************************************
+
+#tabbrowser-tabs {
+	--tab-corner-rounding: 5px;
+	/* 10px looks about like chromium - 17px looks close to Australis tabs *
+	--tab-corner-padding: 1px;
+}
+
+:root[lwtheme='true'] tab[visuallyselected] > stack::before,
+:root[lwtheme='true'] tab[visuallyselected] > stack::after {
+	/* Box *
+	content: '' !important;
+	display: block !important;
+	position: absolute !important;
+	z-index: 1 !important;
+	/* Shape *
+	width: var(--tab-corner-rounding) !important;
+	height: 100% !important;
+	/* Color *
+	/* background-image: url(./icons/tab-bottom-corner.svg);*
+	background-size: var(--tab-corner-rounding) !important;
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+}
+
+:root[lwtheme='true'] tab[visuallyselected] > stack::before {
+	left: calc(var(--tab-corner-padding) - var(--tab-corner-rounding)) !important;
+}
+
+:root[lwtheme='true'] tab[visuallyselected] > stack::after {
+	left: auto;
+	right: calc(var(--tab-corner-padding) - var(--tab-corner-rounding));
+	transform: scaleX(-1) !important;
 }
 
 /* Latest Tab & New tab margin */
@@ -2385,6 +2557,15 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   display: none;
 }
 
+/*
+.tab-close-button {
+	margin-inline-start: -2px !important;
+	width: 20px !important;
+	height: 20px !important;
+	padding: 3px !important;
+	margin-inline-end: -6px !important;
+}*/
+
 #personal-bookmarks menupopup[placespopup] {
   -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
   background-color: #01042ab4 !important;
@@ -2479,8 +2660,40 @@ menupopup>menu {
   padding-block: 0.3em !important;
 }
 
+/*"Botón de cerrar pestaña"*
+.tab-close-button {
+	margin-inline-start: 0px !important;
+	width: 16px !important;
+	height: 16px !important;
+	padding: 3px !important;
+	margin-inline-end: -5px !important;
+}
+.tab-close-button[selected='true'] {
+	margin-inline-start: 0px !important;
+	width: 16px !important;
+	height: 16px !important;
+	padding: 3px !important;
+	margin-inline-end: -5px !important;
+}
+.tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button {
+	border-radius: 5px !important;
+}
+/*
+.tab-close-button:hover {
+	background-color: var(--toolbarbutton-active-background) !important;
+}*/
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   display: -moz-box !important;
+}
+
+/*"Medidas menores para scroll de pestañas"*/
+#tabbrowser-tabs {
+  --uc-tabs-scrollbutton-border: 2px;
+}
+
+#scrollbutton-up,
+#scrollbutton-down {
+  border-block-width: var(--uc-tabs-scrollbutton-border, 0px) !important;
 }
 
 /*"Íconos de la urlbar más pequeños"*/
@@ -2508,6 +2721,17 @@ description#identity-popup-content-owner,
 description#identity-popup-content-verifier,
 #identity-popup-securityView-body>button {
   color: #2cf62c !important;
+}
+
+/*Páginas seguras de firefox"*/
+#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button:hover:not([open]),
+#identity-box[pageproxystate="valid"].chromeUI>.identity-box-button:hover:not([open]) {
+  background-color: #3e3bad !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button[open="true"],
+#identity-box[pageproxystate="valid"].chromeUI>.identity-box-button[open="true"] {
+  background-color: #3e3bdc !important;
 }
 
 /* COLOUR OF URL BAR ADDRESS UNDERLINE */
@@ -2572,12 +2796,12 @@ description#identity-popup-content-verifier,
   width: 5px !important;
 }
 
-
-/*Allow window dragging around the toolbar buttons.*/
-
+/**
+ * Allow window dragging around the toolbar buttons.
+ 
 
 #nav-bar,
-#nav-bar>.customization-target {
+#nav-bar > .customization-target {
   -moz-box-align: center !important;
 }
 
@@ -3084,6 +3308,12 @@ tooltip {
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) .tabbrowser-tab[first-visible-unpinned-tab],
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
   margin-inline-start: 0px !important;
+}
+
+/* I remembered why I hid the zoom indicator in the first place, that horrible animation!!!!! grrr!!!!! */
+
+#urlbar-zoom-button[animate="true"] {
+  animation-name: none !important;
 }
 
 /* LOADING PAGES HAVE A GRAY BACKGROUND */
