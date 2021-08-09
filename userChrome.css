@@ -2732,8 +2732,8 @@ menupopup>menu {
   --autocomplete-popup-separator-color: color-mix(in srgb,
       #4d4dfeff 30%,
       transparent) !important;
-  --lwt-additional-images: url("images/background-noodles-right.svg"),
-    url("images/background-noodles-left.svg"), url("images/1.svg") !important;
+  --lwt-additional-images: url("images/derecha-copy.png"),
+    url("images/izquierda-copy.png"), url("images/1.svg") !important;
   --lwt-background-alignment: right top, left top, right top !important;
   --lwt-background-tiling: no-repeat, no-repeat, repeat-x !important;
   --uc-tab-line-color: transparent !important;
