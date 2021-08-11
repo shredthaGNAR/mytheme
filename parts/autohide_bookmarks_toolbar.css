@@ -2,31 +2,31 @@
 See the above repository for updates as well as full license text. */
 
 #PersonalToolbar {
-  --uc-bm-height: 20px;
+  --uc-bm-height: 20px !important;
   /* Might need to adjust if the toolbar has other buttons */
-  --uc-bm-padding: 4px;
+  --uc-bm-padding: 4px !important;
   /* Vertical padding to be applied to bookmarks */
   --uc-autohide-toolbar-delay: 600ms;
   /* The toolbar is hidden after 0.6s */
 
   /* 0deg = "show" ; 90deg = "hide" ;  Set the following to control when bookmarks are shown */
-  --uc-autohide-toolbar-focus-rotation: 0deg;
+  --uc-autohide-toolbar-focus-rotation: 90deg;
   /* urlbar is focused */
   --uc-autohide-toolbar-hover-rotation: 0deg;
   /* cursor is over the toolbar area */
 }
 
 :root[uidensity="compact"] #PersonalToolbar {
-  --uc-bm-padding: 1px
+  --uc-bm-padding: 1px !important
 }
 
 :root[uidensity="touch"] #PersonalToolbar {
-  --uc-bm-padding: 7px
+  --uc-bm-padding: 7px !important
 }
 
 #PersonalToolbar:not([customizing]) {
   position: relative;
-  margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+  margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)) !important;
   transform: rotateX(90deg);
   transform-origin: top;
   transition: transform 135ms linear var(--uc-autohide-toolbar-delay) !important;

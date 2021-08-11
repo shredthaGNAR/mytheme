@@ -4,6 +4,6 @@
     "editor.fontSize": 16,
     "editor.cursorStyle": "block",
     "editor.wordWrap": "on",
-    "editor.fontFamily": "Jetbrains Mono, Fira Code, Cascadia Code, Operator mono, monospace",
+    "editor.fontFamily": "JetBrainsMono Nerd Font, Source Code Pro for Powerline, Space Mono, Fira Code, Operator mono, monospace",
     "gitProjectManager.displayProjectPath": true
 }
