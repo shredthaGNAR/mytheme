@@ -1059,7 +1059,6 @@ tab:not([pinned])[selected="true"] .tab-content {
 }
 
 tab:is([pinned])[selected="true"] .tab-background {
-    /*	border-radius: 5px !important;*/
     min-height: 32px !important;
     border-radius: 5px !important;
 }
@@ -1491,10 +1490,10 @@ menupopup {
     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
 }
 
-/*
+
 #nav-bar {
-  box-shadow: inset 0 0 20px 5px hsla(0, 0%, 0%, 0.5) !important;
-}*/
+    box-shadow: inset 0 0 20px 5px hsla(0, 0%, 0%, 0.5) !important;
+}
 
 .subviewbutton.bookmark-item {
     padding-block: 4px !important;
@@ -1616,7 +1615,7 @@ background-image: radial-gradient( circle farthest-corner at 32.7% 82.7%,  rgba(
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"], [multiselected]) {
     background-image: radial-gradient(circle at bottom center, #551dfc, #000134d3) !important;
     /* box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;*/
-    height: calc(var(--tab-min-height) + var(--proton-tab-block-margin)) !important;
+    height: calc(var(--tab-min-height) + var(-tab-block-margin)) !important;
     border-radius: 5px !important;
     border-top: 3px solid transparent !important;
     border-image: 1 0 0 0 linear-gradient(90deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
@@ -2159,25 +2158,6 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   margin-bottom: 3px !important;
 }
 
-/* show the secondary label when video is in PiP */
-
-.tab-secondary-label[pictureinpicture] {
-    display: -moz-box;
-}
-
-.tab-secondary-label:is([pictureinpicture]) {
-    display: -moz-box !important;
-    margin-top: -1px !important;
-    color: #00dbfd !important;
-    font-size: 0.65em !important;
-    font-weight: bold !important;
-    text-shadow: 0px 0px 5px #272727 !important;
-}
-
-.tab-secondary-label:is([muted], [activemedia-blocked]) {
-    display: none;
-}
-
 #personal-bookmarks menupopup[placespopup] {
     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
     background-color: #01042ab4 !important;
@@ -2448,7 +2428,7 @@ description#identity-popup-content-verifier,
 
 .tab-background {
     border-radius: 5px !important;
-    box-shadow: none !important;
+    /*   box-shadow: none !important;*/
 }
 
 .tab-stack:hover>.tab-background::before {
@@ -2645,14 +2625,14 @@ menuseparator {
     border-radius: 5px !important;
 }
 
-/* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true */
+/* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true *
 
 #PersonalToolbar {
     background-image: linear-gradient(to bottom, #551dfc, #1293dd, #551dfc) !important;
     background: transparent !important;
     backdrop-filter: blur(32px) !important;
     -moz-backdrop-filter: blur(32px) !important;
-}
+}*/
 
 #PersonalToolbar {
     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
@@ -2724,9 +2704,8 @@ menuseparator {
     box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
 }
 
-/* LOADING PAGES HAVE A GRAY BACKGROUND */
-
-/* This makes it so that when you go to a new page or open a new tab, it's gray instead of blinding white while loading */
+/* LOADING PAGE BACKGROUND */
+/* no nore white backgroud while loading */
 
 browser[type="content-primary"],
 browser[type="content"] {
@@ -2751,6 +2730,7 @@ browser[type="content"] {
 .tab-stack {
     margin-top: 0px !important;
 }
+
 
 :root[uidensity="compact"] .toolbar-items,
 .tabbrowser-tab {
@@ -2896,7 +2876,7 @@ toolbarbutton {
 }
 
 .tab-background>.tab-context-line {
-    flex: 1;
+    flex: 1 !important;
 }
 
 #navigator-toolbox {
@@ -2995,14 +2975,14 @@ toolbarbutton {
 /* show the secondary label when video is in PiP */
 
 .tab-secondary-label[pictureinpicture] {
-    display: -moz-box;
+    display: -moz-box !important;
 }
 
 .tab-secondary-label:is([pictureinpicture]) {
     display: -moz-box !important;
     margin-top: -1px !important;
     color: #00dbfd !important;
-    font-size: 0.65em !important;
+    font-size: 0.5rem !important;
     font-weight: bold !important;
     text-shadow: 0px 0px 5px #272727 !important;
 }
@@ -3083,10 +3063,10 @@ toolbarbutton {
 /* fancy line for container tabs */
 
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[class*="identity-color"] .tab-label {
-    text-decoration: underline !important;
+    /* text-decoration: underline !important;*/
     text-decoration-color: var(--identity-icon-color) !important;
     font-weight: bold !important;
-    text-shadow: 1px !important;
+    text-shadow: 0px 0px 5px #272727 !important;
 }
 
 tab {
@@ -3102,12 +3082,10 @@ tab {
     z-index: 1 !important;
 }
 
-/* quick fix for tab hover bug *
+/** quick fix for tab hover bug */
 .tabbrowser-tab[visuallyselected="true"]:hover,
-#tabbrowser-tabs:not([closebuttons="activetab"])
-	> #tabbrowser-arrowscrollbox
-	> .tabbrowser-tab:not([visuallyselected="true"]):hover {
-	--tab-label-mask-size: 2em !important;
+#tabbrowser-tabs:not([closebuttons="activetab"])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:not([visuallyselected="true"]):hover {
+    --tab-label-mask-size: 2em !important;
 }
 
 /* This may seem pretty weird, but it gets around an issue where the height of urlbar may suddenly change when one starts typing into it */
@@ -3117,12 +3095,12 @@ tab {
 #urlbar>#urlbar-input-container::before {
     content: "";
     display: -moz-box;
-    height: 26px !important;
+    height: 28px !important;
 }
 
 #urlbar {
-    --urlbar-min-height: 26px;
-    --urlbar-icon-padding: 4px;
+    --urlbar-min-height: 28px !important;
+    --urlbar-icon-padding: 4px !important;
     font-size: 1.35em !important;
     border-radius: 9px !important;
     overflow: hidden !important;
@@ -3154,9 +3132,8 @@ tab {
 #urlbar[focused="true"] #urlbar-background {
     background-image: url(images/noise-512x512.png) !important;
     background-color: #161742 !important;
-    /*
-	backdrop-filter: blur(32px) !important;
-	-webkit-backdrop-filter: blur(32px) !important;*/
+    backdrop-filter: blur(32px) !important;
+    -webkit-backdrop-filter: blur(32px) !important;
     /* background: linear-gradient(#161742, #18151ea9) !important;
   /*border-radius: 9px !important;
 		border-image: 1 1 1 1
@@ -3195,7 +3172,7 @@ tab {
 }
 
 #urlbar {
-    min-height: 26px !important;
+    min-height: 28px !important;
     margin-block: 0px 0px !important;
     text-shadow: none !important;
     background-image: linear-gradient(270deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
@@ -3226,7 +3203,7 @@ tab {
 }
 
 #searchbar {
-    min-height: 26px !important;
+    min-height: 28px !important;
     text-shadow: none !important;
     /* margin-block: -3px !important;*/
 }
@@ -3318,9 +3295,10 @@ tab {
     --purple-80: hsl(254, 100%, 20%) !important;
 }
 
+/*
 .tabbrowser-tab {
     border-inline-end: 1px solid transparent !important;
-    border-image: 1 1 linear-gradient(transparent 20%, var(--toolbarseparator-color) 20%, var(--toolbarseparator-color) 80%, transparent 80%);
+    border-image: 1 1 linear-gradient(transparent 20%, var(--lwt-background-tab-separator-color) 20%, var(--lwt-background-tab-separator-color) 80%, transparent 80%);
 }
 
 .tabbrowser-tab:hover,
@@ -3329,7 +3307,7 @@ tab {
 .tabbrowser-tab[last-visible-tab],
 .tabbrowser-tab[beforeselected-visible] {
     border-image: none !important;
-}
+}*/
 
 .tabbrowser-tab:not([selected="true"]) .tab-label {
     color: #999999 !important;
@@ -3414,7 +3392,8 @@ tab {
     padding-right: 0px !important;
 }
 
-.customization-target:is(toolbarbutton, toolbaritem):not([attention]) .toolbarbutton-badge {
+/*
+.customization-target:is(toolbarbutton, toolbaritem, .toolbarbutton-badge) {
     background-color: hsl(224, 100%, 71%) !important;
     color: var(--toolbar-color, currentColor) !important;
     box-shadow: 0 1px 1px -1px hsla(0, 0%, 100%, 0.3) inset, 0 -1px 1px -1px hsla(0, 0%, 0%, 0.5) inset, 0 1px 1px hsla(240, 3%, 12%, 0.15), 0 1px 3px hsla(240, 3%, 12%, 0.2) !important;
@@ -3427,7 +3406,7 @@ tab {
     line-height: 10px !important;
     filter: none !important;
     margin: -6px -6px 0 -6px !important;
-}
+}*/
 
 #TabsToolbar,
 .table-widget-empty-text {
@@ -3470,8 +3449,8 @@ background-blend-mode: overlay, hard-light, overlay, normal; */
 :root[sizemode="fullscreen"] #nav-bar {
   padding: 0px 6px 0px 6px !important;
 }
-*/
 
+*/
 #TabsToolbar tab:not([visuallyselected="true"]):not(:hover) .tab-close-button {
     opacity: 0 !important;
 }
@@ -3522,12 +3501,12 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
 
 /* Maintain original tab size when scrollstrip enables, otherwise tab size will awkwardly increase */
 
-/* also the default border-radius makes it hard to click the arrows at the corner of the window!!!!!!! *
+/* also the default border-radius makes it hard to click the arrows at the corner of the window!!!!!!! */
 #scrollbutton-up,
 #scrollbutton-down {
-  border: 0px !important;
-  border-radius: 0px !important;
-  padding: 0px !important;
+    border: 0px !important;
+    border-radius: 0px !important;
+    padding: 0px !important;
 }
 
 /* Allow draggging on the tab if there is only one tab */
@@ -3598,24 +3577,24 @@ slider,
 #urlbar,
 #searchbar {
     -moz-window-dragging: no-drag !important;
-    min-height: 26px !important;
+    min-height: 28px !important;
 }
 
-/* Add tab separators */
+/** Add tab separators *
 
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
-    /*   box-shadow: -1px 0px 0px -1px var(--lwt-background-tab-separator-colorr),
-    1px 0px 0px 0px var(--lwt-background-tab-separator-colorr) !important; */
-    box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 5px 0 0px -4px var(--lwt-background-tab-separator-color), -4px 0 0px -4px var(--lwt-background-tab-separator-color) !important;
+    box-shadow: -1px 0px 0px -1px var(--lwt-background-tab-separator-color),
+        1px 0px 0px 0px var(--lwt-background-tab-separator-color) !important;
+    /*  box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 5px 0 0px -4px var(--lwt-background-tab-separator-color), -4px 0 0px -4px var(--lwt-background-tab-separator-color) !important;*
 }
 
-/* Add separator to newtab button. */
+/* Add separator to newtab button. *
 
 #tabs-newtab-button {
     box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 0px 0 0px 0px var(--lwt-background-tab-separator-color), -5px 0 0px -4px var(--lwt-background-tab-separator-color) !important;
 }
 
-/* hide separators and yeah. yeah */
+/* hide separators and yeah. yeah *
 
 #tabs-newtab-button:hover,
 #tabbrowser-tabs>#tabbrowser-arrowscrollbox>.tabbrowser-tab:is([beforeselected-visible], [before-multiselected], [selected], [beforehovered], [visuallyselected], [multiselected], :hover, [collapsed], [last-visible-tab]) .tab-background,
@@ -3648,7 +3627,7 @@ slider,
     padding-block: 0 !important;
 }
 
-/* This is kinda weird, but it makes the horizontal line between tabs and nav-bar render "inside" nav-bar thus tabs are more visibily separated even if there is less space there */
+/** This is kinda weird, but it makes the horizontal line between tabs and nav-bar render "inside" nav-bar thus tabs are more visibily separated even if there is less space there *
 
 #nav-bar {
     box-shadow: inset 0 var(--tabs-shadow-size) 0 var(--lwt-background-tab-separator-color) !important;
@@ -3673,7 +3652,7 @@ slider,
 
 #identity-box[pageproxystate="valid"].localResource~.urlbar-input-box,
 #identity-box[pageproxystate="valid"].chromeUI~.urlbar-input-box {
-    color: dodgerblue;
+    color: #f9845b;
 }
 
 /* Navbar icons. *
@@ -3689,4 +3668,159 @@ slider,
 
 #navigator-toolbox {
     box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
+}
+
+/*
+.urlbarView-row[label="Firefox Suggest"]::before {
+    display: none !important;
+}
+
+.urlbarView-row[label="Firefox Suggest"] {
+    margin-top: 0 !important;
+}
+*/
+
+.toolbarbutton-badge {
+    color: #f9845b !important;
+    background-color: #9400ff !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    padding: 0px !important;
+    margin-right: -6px !important;
+}
+
+/* optimize tab drag/drop  movement */
+#tabbrowser-tabs[movingtab] .tabbrowser-tab[selected],
+#tabbrowser-tabs .tabbrowser-tab[justmoved] {
+    will-change: transform;
+}
+
+/* block our animations while tabs are being dragged & dropped */
+#tabbrowser-tabs[movingtab] .tabbrowser-tab *,
+#tabbrowser-tabs .tabbrowser-tab[justmoved] * {
+    transform: none !important;
+}
+
+
+/* set rounded outside corners on tabs so they look like folder labels.
+you can disable this by making a new pref in about:config and setting it to true: "userChrome.tabs.rounded-outer-corners.disabled"
+this CSS is complicated because the outside corner needs to take on the color of the tab,
+but it's not part of the tab background so it doesn't do so automatically. */
+/* overflow needs to be visible since the corners need to be outside the bounding box of the tab,
+otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar. 
+#TabsToolbar .tabbrowser-tab,
+#TabsToolbar .tabbrowser-tab .tab-stack {
+    overflow: visible;
+}
+
+.tabbrowser-tab .tab-stack:before,
+.tabbrowser-tab .tab-stack:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    width: 5px;
+    height: 5px;
+    z-index: 2;
+}
+
+/* for some reason the gradient on overflowing labels is variable in proton.
+it gets bigger when you hover the tab, apparently because the close button gains a background in that condition.
+this is ugly in general imo but it's useless with this theme in particular since we put the close button on the right,
+meaning it doesn't overlap with the right side of the label at all, which is where the overflowing mask is applied.
+so we make the mask size constant. *
+.tabbrowser-tab {
+    --tab-label-mask-size: 2em !important;
+}
+
+/* this is all the convoluted z-index stuff I was talking about — how tab depth is controlled. */
+
+/* default position is for tabs to be stacked on top of the tab to their left.
+so shadows are cast to the left but not to the right. */
+.tabbrowser-tab {
+    position: relative !important;
+}
+
+/* hovered tabs stack on top of normal tabs in either direction.
+so shadows are cast in both directions, unless the neighboring tab is selected or something. */
+.tabbrowser-tab:not([visuallyselected="true"], [pinned], [multiselected]):is(:hover, .keyboard-focused-tab) {
+    z-index: 3 !important;
+}
+
+/* selected tabs stack over hovered tabs */
+.tabbrowser-tab[visuallyselected="true"] {
+    z-index: 8 !important;
+}
+
+/* multiselected tabs do too, but lower than selected tabs */
+.tabbrowser-tab[multiselected] {
+    z-index: 4 !important;
+}
+
+/* multiselected gets 1 extra point for being hovered */
+.tabbrowser-tab[multiselected]:not([visuallyselected="true"], [pinned]):is(:hover, .keyboard-focused-tab) {
+    z-index: 5 !important;
+}
+
+.tabbrowser-tab[multiselected][visuallyselected="true"] {
+    z-index: 8 !important;
+}
+
+/* pinned tabs stack over everything except selected tabs */
+.tabbrowser-tab[pinned] {
+    z-index: 6 !important;
+}
+
+/* and the same formula applies to them too */
+.tabbrowser-tab[pinned]:not([visuallyselected="true"], [multiselected]):is(:hover, .keyboard-focused-tab) {
+    z-index: 7 !important;
+}
+
+.tabbrowser-tab[pinned][visuallyselected="true"],
+.tabbrowser-tab[pinned][multiselected] {
+    z-index: 8 !important;
+}
+
+.tabbrowser-tab[pinned][multiselected]:not([visuallyselected="true"]):is(:hover, .keyboard-focused-tab) {
+    z-index: 9 !important;
+}
+
+/* the pinnacle of z-index, the pinned, selected, multiselected tab lol */
+.tabbrowser-tab[pinned][visuallyselected="true"][multiselected] {
+    z-index: 10 !important;
+}
+
+#TabsToolbar .tabbrowser-tab {
+    padding: 0 !important;
+}
+
+/* different tab shadows in various states. to produce the illusion of modulated depth */
+.tabbrowser-tab .tab-content {
+    box-shadow: 0px 0px 15px 0px hsla(0, 0%, 0%, 0.2), 0px 0px 5px 0px hsla(0, 0%, 0%, 0.1);
+}
+
+.tabbrowser-tab:not([selected], [multiselected]):is(:hover, .keyboard-focused-tab) .tab-content,
+.tabbrowser-tab:is([multiselected], [pinned]) .tab-content {
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1), 0px 0px 15px 0px hsla(0, 0%, 0%, 0.25) !important;
+}
+
+.tabbrowser-tab[selected] .tab-content,
+.tabbrowser-tab:is([multiselected], [pinned])[selected] .tab-content {
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1), 0px 0px 15px 0px hsla(0, 0%, 0%, 0.35) !important;
+}
+
+.tabbrowser-tab:focus:not([aria-activedescendant]) .tab-content {
+    box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.1), 0px 0px 15px 0px hsla(0, 0%, 0%, 0.35) !important;
+}
+
+/* This colors the folders in the bookmark bar and menu bar */
+PlacesToolbarItems toolbarbutton[container="true"]:not([query="true"]) .toolbarbutton-icon,
+:-moz-any(#PlacesToolbarItems, #PlacesChevronPopup, #BMB_bookmarksPopup, #bookmarksMenu, #OtherBookmarksPopup) menu[container="true"]:not([query="true"])>.menu-iconic-left>.menu-iconic-icon {
+    fill: #9400ff !important;
+}
+
+/* Change DOWNLOAD ICON color */
+.downloadIconShow .button-icon {
+    fill: #9400ff !important;
 }

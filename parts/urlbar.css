@@ -51,8 +51,8 @@
 /* URL bar and toolbar height if compact mode */
 
 :root[uidensity="compact"] #urlbar {
-    --urlbar-height: 30px !important;
-    --urlbar-toolbar-height: 36px !important;
+    --urlbar-height: 28px !important;
+    --urlbar-toolbar-height: 34px !important;
 }
 
 #urlbar-input:focus {}
