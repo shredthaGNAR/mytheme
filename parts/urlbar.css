@@ -55,6 +55,7 @@
     --urlbar-toolbar-height: 34px !important;
 }
 
+/*
 #urlbar-input:focus {}
 
 /* Set color scheme */
@@ -178,7 +179,7 @@
     background-color: var(--bf-accent-bg) !important;
 }
 
-/* Bookmark button - Star button */
+/* Bookmark button - Star button
 
 #star-button {}
 
@@ -191,6 +192,7 @@
     background: var(--bf-tab-selected-bg) !important;
 }
 
+/*
 #star-button:hover:active:not(.no-hover),
 #star-button[open="true"] {}
 
