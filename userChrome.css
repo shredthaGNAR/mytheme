@@ -2597,14 +2597,16 @@ menuseparator {
     border-radius: 5px !important;
 }
 
-/* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true *
+/* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true */
 
 #PersonalToolbar {
-    background-image: linear-gradient(to bottom, #551dfc, #1293dd, #551dfc) !important;
+    /*background-image: linear-gradient(to bottom, #551dfc, #1293dd, #551dfc) !important;*/
+    background-color: #551dfc !important;
+    background-image: #551dfc !important;
     background: transparent !important;
     backdrop-filter: blur(32px) !important;
     -moz-backdrop-filter: blur(32px) !important;
-}*/
+}
 
 #PersonalToolbar {
     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
@@ -2677,7 +2679,7 @@ menuseparator {
 }
 
 /* LOADING PAGE BACKGROUND */
-/* no nore white backgroud while loading */
+/* no more white background while loading */
 
 browser[type="content-primary"],
 browser[type="content"] {
@@ -2715,8 +2717,8 @@ browser[type="content"] {
 .tab-context-line {
     -moz-box-ordinal-group: 2;
     margin-block: 0 !important;
-    margin-left: 1px !important;
-    margin-right: 1px !important;
+    /* margin-left: 1px !important;
+    margin-right: 1px !important;*/
 }
 
 .tabbrowser-tab .tab-stack {
@@ -2807,18 +2809,16 @@ toolbarbutton {
 
 /* Theme - Compatibility ****************************************************/
 
-/* Header Image *
+/* Header Image */
 :root[lwtheme-image] {
-  background-image: var(--lwt-header-image) !important;
-  /* Original: var(--lwt-header-image) *
-  background-repeat: no-repeat !important;
-  background-position: right top !important;
-}*/
+    background-image: var(--lwt-header-image) !important;
+    /* Original: var(--lwt-header-image) */
+    background-repeat: no-repeat !important;
+    background-position: right top !important;
+}
 
 :root[lwtheme-image] #navigator-toolbox:-moz-lwtheme {
-    background-image:
-        /*var(--lwt-header-image)*/
-        var(--lwt-additional-images) !important;
+    background-image: var(--lwt-additional-images) !important;
     background-repeat: var(--lwt-background-tiling) !important;
     background-position: var(--lwt-background-alignment) !important;
     background-color: unset !important;
@@ -2933,7 +2933,6 @@ toolbarbutton {
     --panel-font-size: inherit !important;
     --arrowpanel-padding: 0.4em !important;
     --lwt-accent-color: #10102a !important;
-    /* frame */
 }
 
 /* Active Tab Brightness *
@@ -2961,7 +2960,7 @@ toolbarbutton {
 }
 
 .tab-secondary-label:is([muted], [activemedia-blocked]) {
-    display: none;
+    display: none !important;
 }
 
 /* Left space of the first tab */
@@ -2995,7 +2994,7 @@ toolbarbutton {
     border-image: 1 1 1 1 linear-gradient(90deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
 }
 
-/* Inactive tabs: Separator line style *
+/** Inactive tabs: Separator line style *
 .tab-background:not([selected="true"]):not([multiselected="true"]):not([beforeselected-visible="true"]) {
 	border-right: 1px solid rgba(0, 0, 0, 0.2) !important;
 	/*  border-left: 1px solid rgba(0, 0, 0, 0.2) !important;*
@@ -3016,13 +3015,7 @@ toolbarbutton {
 /*
 :root[sizemode="normal"] #nav-bar {
 	border-radius: 5px 5px 5px 5px !important;
-}
-
-/* Shadow above content */
-
-#navigator-toolbox {
-    box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
-}
+}*/
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0px !important;
@@ -3125,8 +3118,6 @@ tab {
 		) !important;*/
 }
 
-/*"Íconos de la urlbar más pequeños"**/
-
 .sharing-icon,
 #permissions-granted-icon,
 #tracking-protection-icon,
@@ -3135,8 +3126,6 @@ tab {
     margin: 1px !important;
     padding: 0px !important;
 }
-
-/*"Color verde del ícono de candado de web segura"*/
 
 #identity-icon {
     color: #2cf62c !important;
@@ -3205,13 +3194,13 @@ tab {
     animation-duration: 0ms !important;
 }
 
-/*
+
 #urlbar {
-	min-height: 26px !important;
-	margin-block: 0px 0px !important;
-	font-size: 1.12rem !important;
-	text-shadow: 1px !important;
-}*/
+    /*min-height: 26px !important;
+    margin-block: 0px 0px !important;
+    font-size: 1.12rem !important;*/
+    text-shadow: 0px 0px 5px #272727 !important;
+}
 
 #urlbar-background {
     margin-block: 0px 0px !important;
@@ -3268,7 +3257,7 @@ tab {
     --purple-80: hsl(254, 100%, 20%) !important;
 }
 
-/*
+
 .tabbrowser-tab {
     border-inline-end: 1px solid transparent !important;
     border-image: 1 1 linear-gradient(transparent 20%, var(--lwt-background-tab-separator-color) 20%, var(--lwt-background-tab-separator-color) 80%, transparent 80%);
@@ -3355,7 +3344,7 @@ tab {
 #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[pinned] {
     min-height: calc(var(--tab-min-height) + 2px) !important;
 }
-
+*/
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0 !important;
 }
@@ -3680,7 +3669,7 @@ you can disable this by making a new pref in about:config and setting it to true
 this CSS is complicated because the outside corner needs to take on the color of the tab,
 but it's not part of the tab background so it doesn't do so automatically. */
 /* overflow needs to be visible since the corners need to be outside the bounding box of the tab,
-otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar. 
+otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar.
 #TabsToolbar .tabbrowser-tab,
 #TabsToolbar .tabbrowser-tab .tab-stack {
     overflow: visible;
@@ -3836,3 +3825,35 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
     --arrowpanel-padding: 0.4em !important;
     --lwt-accent-color: #10102a !important;
 }
+
+/** animations
+
+:root {
+    --animationSpeed: 0.15s;
+}
+
+/** animations
+toolbarbutton,
+.toolbarbutton-icon,
+.subviewbutton,
+#urlbar-background,
+.urlbar-icon,
+#userContext-indicator,
+#userContext-label,
+.urlbar-input-box,
+#identity-box,
+#tracking-protection-icon-container,
+[anonid=urlbar-go-button],
+.urlbar-icon-wrapper,
+#tracking-protection-icon,
+#identity-box image,
+stack,
+vbox,
+tab:not(:active) .tab-background,
+tab:not([beforeselected-visible])::after,
+tab[visuallyselected] .tab-background::before,
+tab[visuallyselected] .tab-background::before,
+.tab-close-button {
+    transition: var(--animationSpeed) !important;
+}
+*/
