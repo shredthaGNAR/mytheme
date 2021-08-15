@@ -721,20 +721,6 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
     padding: 0px !important;
 }
 
-/*"toolbar_bottom_separator"*/
-
-#navigator-toolbox {
-    border-bottom: 1px transparent !important;
-}
-
-/*"toolbar_top_separator": "#17161c"*/
-
-#tabbrowser-tabs {
-    --tab-line-color: transparent !important;
-}
-
-/*"tab_line": "#126e82"*/
-
 /*Color of "Track Protection"*/
 
 .protections-popup-category.notFound {
@@ -756,17 +742,6 @@ description#identity-popup-content-owner,
 description#identity-popup-content-verifier,
 #identity-popup-securityView-body>button {
     color: #2cf62c !important;
-}
-
-/*"Smaller Urlbar icons"*
-
-.sharing-icon,
-#permissions-granted-icon,
-#tracking-protection-icon,
-.notification-anchor-icon,
-#blocked-permissions-container > .blocked-permission-icon {
-  margin: 1px !important;
-  padding: 0px !important;
 }
 
 /** Gradient line ***/
@@ -862,17 +837,6 @@ box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 2px rgba(0, 0, 0, 0.08);
 
 #navigator-toolbox {
     border-bottom: 1px solid #1312308d !important;
-}
-
-/* "Smaller URLBAR icons" */
-
-.sharing-icon,
-#permissions-granted-icon,
-#tracking-protection-icon,
-.notification-anchor-icon,
-#blocked-permissions-container>.blocked-permission-icon {
-    margin: 1px !important;
-    padding: 0px !important;
 }
 
 /* Media label "Playing" modified */
@@ -1549,7 +1513,7 @@ Contains navbar, urlbar, and etc*/
 }
 
 #nav-bar {
-    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.2), inset 0 1 0 var(--border-color) !important;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.2), inset 0 1 0 var(--lwt-toolbar-field-border-color) !important;
 }
 
 /* Selected Tab - Box Shadow */
@@ -1613,7 +1577,7 @@ background-image: radial-gradient( circle farthest-corner at 32.7% 82.7%,  rgba(
 
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"], [multiselected]) {
     background-image: radial-gradient(circle at bottom center, #551dfc, #000134d3) !important;
-    /* box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;*/
+    box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
     min-height: calc(var(--tab-min-height) + var(--tab-block-margin)) !important;
     border-radius: 5px !important;
     border-top: 3px solid transparent !important;
@@ -1665,8 +1629,7 @@ tooltip {
     border-radius: 4px !important;
 }
 
-/*colores del Menú contextual*/
-
+/* Context menu styles */
 menuseparator {
     border-top: 1px solid #3d3762 !important;
     padding: 0 !important;
@@ -1688,13 +1651,6 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
     --menuitem-hover-background-color: #3949aa !important;
 }
 
-/* Remove margin between buttons *
-
-#TabsToolbar .toolbarbutton-1 {
-  margin: 0 !important;
-  padding-inline: 0 !important;
-}
-
 /* Remove margin from pinned tabs */
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) .tabbrowser-tab[first-visible-unpinned-tab],
@@ -1702,29 +1658,8 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
     margin-inline-start: 0px !important;
 }
 
-/* I remembered why I hid the zoom indicator in the first place, that horrible animation!!!!! grrr!!!!! */
-
 #urlbar-zoom-button[animate="true"] {
     animation-name: none !important;
-}
-
-.titlebar-placeholder {
-    border: none !important;
-}
-
-.titlebar-spacer {
-    border: none !important;
-}
-
-.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"])>spacer {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-}
-
-/* To be able to see the top border of the tab*/
-
-.tab-stack {
-    margin-top: 0px !important;
 }
 
 /*** Fancy tab container label in url bar *
@@ -1763,7 +1698,7 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
     padding: 5px !important;
 }
 
-/*prevent tab overflow to expand causing height changes *
+/*prevent tab overflow to expand causing height changes */
 
 #tabbrowser-tabs,
 #tabbrowser-tabs>.tabbrowser-arrowscrollbox {
@@ -1860,7 +1795,6 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   > .tabbrowser-tab[first-visible-unpinned-tab] {
   margin-inline-start: 1px !important;
 }
-*/
 
 :root:not([uidensity="touch"]) #tabbrowser-arrowscrollbox {
     --scrollbtn-inner-padding: 1px;
@@ -1869,33 +1803,31 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 
 #scrollbutton-up {
     padding-left: var(--scrollbtn-inner-padding, 4px) !important;
-    /* Original: 4px */
+    /* Original: 4px 
     padding-right: var(--scrollbtn-outer-padding, 4px) !important;
 }
 
 #scrollbutton-down {
     padding-left: var(--scrollbtn-outer-padding, 4px) !important;
-    /* Original: 4px */
+    /* Original: 4px 
     padding-right: var(--scrollbtn-inner-padding, 4px) !important;
 }
-
+*/
 :root:not([uidensity="touch"]) #new-tab-button,
 #alltabs-button {
-    --toolbarbutton-outer-padding: 3px;
-    /* Original: 2px*/
+    --toolbarbutton-outer-padding: 3px !important;
 }
 
-/*** Tab - Max Size */
+/* Original: 2px*/
+
+/*** Tab - Max Size ---Orginal = 225px
 
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
-    max-width: 200px !important;
-    /* Original: 225px*/
-}
-
-/*
+    max-width: 200px !important;}
+*/
 .tabbrowser-tab[fadein]:not([pinned]) {
-  max-width: 200px !important;
-}*/
+    max-width: 200px !important;
+}
 
 /** Tab Bar - Reduce Height, Show more contents *****************************
 
@@ -1918,7 +1850,6 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 .tabbrowser-tab {
 	max-height: unset;
 }
-*/
 
 :root:not([uidensity="touch"]) #tabbrowser-arrowscrollbox {
     --scrollbtn-vertical-padding: 3px;
@@ -1929,21 +1860,14 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 #scrollbutton-up,
 #scrollbutton-down {
     /* Original: var(--toolbarbutton-inner-padding) calc(var(--toolbarbutton-inner-padding) - 6px) = 9px */
-    /* https://github.com/mozilla/gecko-dev/blob/71b1259afd1cdaf41871ae675c2dadb967ea5b34/browser/themes/shared/toolbarbuttons.inc.css#L142 */
+/* https://github.com/mozilla/gecko-dev/blob/71b1259afd1cdaf41871ae675c2dadb967ea5b34/browser/themes/shared/toolbarbuttons.inc.css#L142 
     padding-top: var(--scrollbtn-vertical-padding, var(--toolbarbutton-inner-padding)) !important;
     padding-bottom: var(--scrollbtn-vertical-padding, var(--toolbarbutton-inner-padding)) !important;
-    /* Original: 4px */
+    /* Original: 4px 
     border-top-width: var(--scrollbtn-vertical-border, 4px) !important;
     border-bottom-width: var(--scrollbtn-vertical-border, 4px) !important;
-    /* Original: calc(var(--tab-border-radius) + 4px) = 8px */
+    /* Original: calc(var(--tab-border-radius) + 4px) = 8px 
     border-radius: var(--scrollbtn-border-radius, calc(var(--tab-border-radius) + 4px)) !important;
-}
-
-/**
-:root[tabsintitlebar]:not([uidensity='compact'])
-	#toolbar-menubar[autohide='true'] {
-	height: calc(var(--tab-min-height) - var(--tabs-navbar-shadow-size) - 2px);
-	/* Compact: 28px, Normal: 33px, Touch: 38px
 }
 
 /** Pinned Tab - Titlechanged Indicator position fix *
@@ -1991,22 +1915,18 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 /* Multi Selected Color */
 
 #tabbrowser-tabs:not([movingtab])>#tabbrowser-arrowscrollbox>.tabbrowser-tab>.tab-stack>.tab-background[multiselected]:not([selected]):-moz-lwtheme {
-    background-image: linear-gradient(var(--toolbar-bgcolor, transparent), var(--toolbar-bgcolor, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none) !important;
+    background-image: linear-gradient(var(--toolbar-bgcolor, transparent), var(--toolbar-bgcolor, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor))
+        /*, var(--lwt-header-image, none)*/
+         !important;
 }
 
 .tab-background[multiselected="true"]:not([selected="true"])>.tab-loading-burst:not([bursting]) {
-    background: color-mix(in srgb, currentColor 65%, transparent);
-    opacity: 0.3;
+    background: color-mix(in srgb, currentColor 65%, transparent) !important;
+    opacity: 0.3 !important;
 }
 
 #TabsToolbar[brighttext] .tab-background[multiselected="true"]:not([selected="true"])>.tab-loading-burst:not([bursting]) {
-    opacity: 0.15;
-}
-
-/* Pinned Tab - tabbrowser-arrowscrollbox overflowing */
-
-#tabbrowser-tabs[positionpinnedtabs]>#tabbrowser-arrowscrollbox>.tabbrowser-tab[pinned] {
-    z-index: 0 !important;
+    opacity: 0.15 !important;
 }
 
 /** Clipped tabs - Letters cleary *******************************************
@@ -2037,7 +1957,7 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 */
 
 .tab-background>.tab-context-line {
-    flex: 1;
+    flex: 1 !important;
 }
 
 #navigator-toolbox {
@@ -2090,39 +2010,17 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 	background: linear-gradient(#161742a6, #18151e26) !important;
 	border-radius: 9px !important;
 }
-
-/* ---Tabs/Tab Bar height--- */
-
-:root {
-    --tab-min-height: 32px !important;
-    /* adjust to suit your needs */
-}
-
-:root #tabbrowser-tabs {
-    --tab-min-height: 32px !important;
-    /* needs to be the same as above under :root */
-}
-
+ */
 :root {
     --toolbarbutton-inner-padding: 7px !important;
-    /* reduce spacing for toolbar buttons */
     --proton-tab-block-margin: 3px 2px !important;
-    /* space around tab (0 to merge with URL)*/
     --tab-min-height: 32px !important;
     --tabs-shadow-size: 1px !important;
-    /*	--tab-border-radius: 8px 8px !important;*/
     --arrowpanel-menuitem-padding: 2px !important;
     --urlbar-icon-padding: 4px !important;
     --panel-font-size: inherit !important;
     --arrowpanel-padding: 0.4em !important;
     --lwt-accent-color: #10102a !important;
-    /* frame */
-}
-
-/* Reduce left spacer on tab bar */
-
-.titlebar-spacer[type="pre-tabs"] {
-    display: none !important;
 }
 
 /**** Gradient Line *
@@ -2156,7 +2054,7 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   margin-top: 3px !important;
   margin-bottom: 3px !important;
 }
-
+*/
 #personal-bookmarks menupopup[placespopup] {
     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
     background-color: #01042ab4 !important;
@@ -2252,24 +2150,6 @@ menuseparator {
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
     display: -moz-box !important;
 }
-
-/*"Íconos de la urlbar más pequeños"*/
-
-.sharing-icon,
-#permissions-granted-icon,
-#blocked-permissions-container>.blocked-permission-icon {
-    height: 14px !important;
-    width: 14px !important;
-}
-
-#tracking-protection-icon {
-    height: 14px !important;
-    width: 14px !important;
-    padding: 0px !important;
-    margin-left: 1px !important;
-}
-
-/*"Color verde de la descripción de web segura"*/
 
 #identity-icon {
     width: 14px !important;
@@ -2368,12 +2248,6 @@ description#identity-popup-content-verifier,
     background-color: #55545270 !important;
 }*/
 
-:root {
-    --proton-tab-block-margin: 0px !important;
-    --tab-block-margin: 0px !important;
-    --tabs-shadow-size: 1px !important;
-}
-
 /*** This sets a color for border around tabs and between tabs & navigation toolbars. Set to transparent to remove the border.*/
 
 #navigator-toolbox {
@@ -2392,18 +2266,18 @@ description#identity-popup-content-verifier,
 /* tabs newtab button needs some special styling... */
 
 #tabs-newtab-button {
-    padding-inline: 0 !important;
+    padding-inline: 4 !important;
 }
 
 #tabbrowser-arrowscrollbox>#tabs-newtab-button>.toolbarbutton-icon {
     border-radius: 20px !important;
     width: initial !important;
     height: initial !important;
-    padding: 9px !important;
+    padding: 5px !important;
 }
 
 :root[uidensity="compact"] #tabbrowser-arrowscrollbox>#tabs-newtab-button>.toolbarbutton-icon {
-    padding: 4px !important;
+    padding: 5px !important;
 }
 
 #scrollbutton-up,
@@ -2485,7 +2359,7 @@ description#identity-popup-content-verifier,
 .urlbarView-row-inner[selected] {
     background-color: #3e3b9d !important;
     color: #fff !important;
-    /* -moz-appearance: auto !important;*/
+    -moz-appearance: auto !important;
 }
 
 /* "Menu with fewer spaces" */
@@ -2601,7 +2475,7 @@ menuseparator {
 #PersonalToolbar {
     /*background-image: linear-gradient(to bottom, #551dfc, #1293dd, #551dfc) !important;*/
     background-color: #551dfc !important;
-    background: #551dfc !important;
+    background: transparent !important;
     background-image: url(images/noise-512x512.png) !important;
     backdrop-filter: blur(32px) !important;
     -moz-backdrop-filter: blur(32px) !important;
@@ -2704,12 +2578,12 @@ browser[type="content"] {
     margin-top: 0px !important;
 }
 
-/*
 :root[uidensity="compact"] .toolbar-items,
 .tabbrowser-tab {
-    max-height: 32px;}
-    /*36px*/
+    max-height: 34px;
+}
 
+/*36px*/
 
 /*container tabs indicator customization. Line Position:bottom Default style */
 
@@ -2761,12 +2635,6 @@ menugroup>menuitem>hbox>image {
     border-radius: 5px !important;
 }
 
-/* menu item padding */
-
-toolbarbutton {
-    --arrowpanel-menuitem-padding: 2px 8px !important;
-}
-
 /***toolbar hamburger menu gradient color*/
 
 #appMenu-fxa-separator {
@@ -2802,6 +2670,9 @@ toolbarbutton {
 .tab-background[selected="true"] {
     border-bottom-left-radius: 5px !important;
     border-bottom-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    border-radius: 5px !important;
     margin-bottom: 0px !important;
     min-height: calc(var(--tab-min-height) + var(--proton-tab-block-margin)) !important;
 }
@@ -2811,7 +2682,6 @@ toolbarbutton {
 /* Header Image */
 :root[lwtheme-image] {
     background-image: var(--lwt-header-image) !important;
-    /* Original: var(--lwt-header-image) */
     background-repeat: no-repeat !important;
     background-position: right top !important;
 }
@@ -2821,8 +2691,9 @@ toolbarbutton {
     background-repeat: var(--lwt-background-tiling) !important;
     background-position: var(--lwt-background-alignment) !important;
     background-color: unset !important;
-    /* Original:  var(--lwt-accent-color)*/
 }
+
+/* Original:  var(--lwt-accent-color)*/
 
 /* neighbouring tabs should "pinch" together */
 
@@ -2866,7 +2737,7 @@ toolbarbutton {
     border-image: 1 1 1 1 linear-gradient( 90deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
 }
 
-*/
+
 
 #urlbar-background {
     margin-bottom: 2px !important;
@@ -2877,13 +2748,6 @@ toolbarbutton {
 }
 
 /*
-#urlbar[focused='true'] #urlbar-background {
-	background: linear-gradient(#161742a6, #18151e26) !important;
-	border-radius: 9px !important;
-	/* backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px) !important;
-}
-
 #urlbar[open='true'] #urlbar-background {
 	background: linear-gradient(#161742a6, #18151e26) !important;
 	border-radius: 9px !important;
@@ -2905,17 +2769,13 @@ toolbarbutton {
 	background: linear-gradient(#161742a6, #18151e26) !important;
 	border-radius: 9px !important;
 }
-
-/* ---Tabs/Tab Bar height--- */
-
+*/
 :root {
     --tab-min-height: 32px !important;
-    /* adjust to suit your needs */
 }
 
 :root #tabbrowser-tabs {
     --tab-min-height: 32px !important;
-    /* needs to be the same as above under :root */
 }
 
 :root {
@@ -2923,7 +2783,7 @@ toolbarbutton {
     /* reduce spacing for toolbar buttons */
     --proton-tab-block-margin: 3px 2px !important;
     /* space around tab (0 to merge with URL)*/
-    --tab-block-margin: 3px 29400ffpx !important;
+    --tab-block-margin: 3px 2px !important;
     --tab-min-height: 32px !important;
     --tabs-shadow-size: 1px !important;
     /*	--tab-border-radius: 8px 8px !important;*/
@@ -2974,18 +2834,10 @@ toolbarbutton {
     margin-inline-start: 0px !important;
 }
 
-#tabbrowser-tabs {
-    --tab-line-color: transparent !important;
-}
-
 /* moves context-line to the bottom */
 
 .tab-context-line {
     -moz-box-ordinal-group: 2 !important;
-}
-
-#navigator-toolbox {
-    border-bottom: none !important;
 }
 
 #searchbar {
@@ -3031,7 +2883,7 @@ toolbarbutton {
     /* text-decoration: underline !important;*/
     text-decoration-color: var(--identity-icon-color) !important;
     font-weight: bold !important;
-    text-shadow: 0px 0px 5px #272727 !important;
+    text-shadow: 0px 0px 5px #27272793 !important;
 }
 
 tab {
@@ -3066,7 +2918,7 @@ tab {
 #urlbar {
     --urlbar-min-height: 28px !important;
     --urlbar-icon-padding: 4px !important;
-    font-size: 1.35em !important;
+    /* font-size: 1.35em !important;*/
     border-radius: 9px !important;
     overflow: hidden !important;
 }
@@ -3096,7 +2948,7 @@ tab {
 
 #urlbar[focused="true"] #urlbar-background {
     background-image: url(images/noise-512x512.png) !important;
-    background-color: #161742 !important;
+    background: #161742ab !important;
     backdrop-filter: blur(32px) !important;
     -webkit-backdrop-filter: blur(32px) !important;
     /* background: linear-gradient(#161742, #18151ea9) !important;
@@ -3115,15 +2967,6 @@ tab {
 			#f9845b,
 			#e8ab52
 		) !important;*/
-}
-
-.sharing-icon,
-#permissions-granted-icon,
-#tracking-protection-icon,
-.notification-anchor-icon,
-#blocked-permissions-container>.blocked-permission-icon {
-    margin: 1px !important;
-    padding: 0px !important;
 }
 
 #identity-icon {
@@ -3169,7 +3012,7 @@ tab {
 }
 
 #searchbar {
-    min-height: 26px !important;
+    min-height: 28px !important;
     text-shadow: none !important;
     margin-block: -3px !important;
 }
@@ -3180,7 +3023,7 @@ tab {
     background-image: linear-gradient(270deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
     border-radius: 9px !important;
 }
-
+*/
 #urlbar[focused="true"] #urlbar-background {
     background-color: #1b1a38f6 !important;
     border: transparent !important;
@@ -3197,10 +3040,10 @@ tab {
     margin-right: 1px !important;
     animation-duration: 0ms !important;
 }
-*/
+
 
 #urlbar {
-    *min-height: 26px !important;
+    *min-height: 28px !important;
     margin-block: 0px 0px !important;
     font-size: 1.12rem !important;
     text-shadow: 0px 0px 5px #272727 !important;
@@ -3265,7 +3108,7 @@ tab {
 
 .tabbrowser-tab {
     border-inline-end: 1px solid transparent !important;
-    border-image: 1 1 linear-gradient(transparent 20%, var(--lwt-background-tab-separator-color) 20%, var(--lwt-background-tab-sepqarator-color) 80%, transparent 80%) !important;
+    border-image: 1 1 linear-gradient(transparent 20%, var(--lwt-background-tab-separator-color) 20%, var(--lwt-background-tab-sepqarator-color) 80%, transparent 80%);
 }
 
 .tabbrowser-tab:hover,
@@ -3297,7 +3140,7 @@ tab {
 }
 
 .tabbrowser-tab::before {
-    margin-inline-start: -1px;
+    margin-inline-start: -1px !important;
 }
 
 :root[tabsintitlebar]:not([extradragspace]) #toolbar-menubar[autohide=true]+#TabsToolbar .tabbrowser-tab::after,
@@ -3325,7 +3168,6 @@ tab {
     content: '';
     display: block;
 }
-*
 
 .tabbrowser-tab:not([selected], [beforeselected-visible])::after {
     content: "";
@@ -3347,8 +3189,9 @@ tab {
 }
 
 #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[pinned] {
-    min-height: calc(var(--tab-min-height) + 2px) !important;
+    min-height: calc(var(--tab-min-height) + 0px) !important;
 }
+
 */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0 !important;
@@ -3468,7 +3311,7 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
 
 /* Maintain original tab size when scrollstrip enables, otherwise tab size will awkwardly increase */
 
-/* also the default border-radius makes it hard to click the arrows at the corner of the window!!!!!!! */
+/* also the default border-radius makes it hard to click the arrows at the corner of the window!!!!!!! *
 #scrollbutton-up,
 #scrollbutton-down {
     border: 0px !important;
@@ -3497,16 +3340,13 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
     height: var(--urlbar-height) !important;
 }
 
-/* Apply dimmed background for inactive tabs *
-.tabbrowser-tab:hover
-  > .tab-stack
-  > .tab-background:not([selected], [multiselected]) {
-  background-color: color-mix(in srgb, currentColor 12%, transparent);
+/* Apply dimmed background for inactive tabs */
+.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected], [multiselected]) {
+    background-color: color-mix(in srgb, currentColor 12%, transparent);
 }
-.tabbrowser-tab
-  > .tab-stack
-  > .tab-background:not([selected], [multiselected]) {
-  background-color: color-mix(in srgb, currentColor 6%, transparent);
+
+.tabbrowser-tab>.tab-stack>.tab-background:not([selected], [multiselected]) {
+    background-color: color-mix(in srgb, currentColor 6%, transparent);
 }
 
 /* Make all tabs small except selected one *
@@ -3550,10 +3390,11 @@ slider,
 /** Add tab separators */
 
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
-    /* box-shadow: -1px 0px 0px -1px var(--lwt-background-tab-separator-color),
+    /*box-shadow: -1px 0px 0px -1px var(--lwt-background-tab-separator-color),
         1px 0px 0px 0px var(--lwt-background-tab-separator-color) !important;*/
     box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 5px 0 0px -4px var(--lwt-background-tab-separator-color), -4px 0 0px -4px var(--lwt-background-tab-separator-color) !important;
 }
+
 
 /* Add separator to newtab button. *
 
@@ -3561,7 +3402,7 @@ slider,
     box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 0px 0 0px 0px var(--lwt-background-tab-separator-color), -5px 0 0px -4px var(--lwt-background-tab-separator-color) !important;
 }
 
-/* hide separators and yeah. yeah *
+/* hide separators and yeah. yeah */
 
 #tabs-newtab-button:hover,
 #tabbrowser-tabs>#tabbrowser-arrowscrollbox>.tabbrowser-tab:is([beforeselected-visible], [before-multiselected], [selected], [beforehovered], [visuallyselected], [multiselected], :hover, [collapsed], [last-visible-tab]) .tab-background,
@@ -3587,7 +3428,7 @@ slider,
 	--urlbar-toolbar-height: 28px !important;
 }
 
-/* Searchbar: Ensure toolbar height doesn't augment when searchbar is visible *
+/* Searchbar: Ensure toolbar height doesn't augment when searchbar is visible */
 
 #urlbar-container,
 #search-container {
@@ -3605,17 +3446,17 @@ slider,
     color: #1b1a38f6
 }
 
-/* http: and potentially some other insecure connections like ftp: */
+/* http: and potentially some other insecure connections like ftp: *
 #identity-box[pageproxystate="valid"].notSecure~.urlbar-input-box {
     color: #f9845b
 }
 
-/* Extension pages */
+/* Extension pages *
 #identity-box[pageproxystate="valid"].extensionPage~.urlbar-input-box {
     color: #ba00e5
 }
 
-/* Internal about: and chrome:// urls (includes reader-view) */
+/* Internal about: and chrome:// urls (includes reader-view) *
 
 #identity-box[pageproxystate="valid"].localResource~.urlbar-input-box,
 #identity-box[pageproxystate="valid"].chromeUI~.urlbar-input-box {
@@ -3659,7 +3500,7 @@ slider,
 /* optimize tab drag/drop  movement */
 #tabbrowser-tabs[movingtab] .tabbrowser-tab[selected],
 #tabbrowser-tabs .tabbrowser-tab[justmoved] {
-    will-change: transform;
+    will-change: transform !important;
 }
 
 /* block our animations while tabs are being dragged & dropped */
@@ -3674,7 +3515,7 @@ you can disable this by making a new pref in about:config and setting it to true
 this CSS is complicated because the outside corner needs to take on the color of the tab,
 but it's not part of the tab background so it doesn't do so automatically. */
 /* overflow needs to be visible since the corners need to be outside the bounding box of the tab,
-otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar.
+otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar.*
 #TabsToolbar .tabbrowser-tab,
 #TabsToolbar .tabbrowser-tab .tab-stack {
     overflow: visible !important;
@@ -3690,7 +3531,7 @@ otherwise they won't overlap with other tabs, they'll just push tabs 10px away f
     pointer-events: none;
     width: 5px;
     height: 5px;
-    z-index: 2;
+    z-index: 2 !important;
 }
 
 /* for some reason the gradient on overflowing labels is variable in proton.
@@ -3765,7 +3606,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 
 /* different tab shadows in various states. to produce the illusion of modulated depth */
 .tabbrowser-tab .tab-content {
-    box-shadow: 0px 0px 15px 0px hsla(0, 0%, 0%, 0.2), 0px 0px 5px 0px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0px 0px 15px 0px hsla(0, 0%, 0%, 0.2), 0px 0px 5px 0px hsla(0, 0%, 0%, 0.1) !important;
 }
 
 .tabbrowser-tab:not([selected], [multiselected]):is(:hover, .keyboard-focused-tab) .tab-content,
@@ -3796,12 +3637,10 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 /* change browser tab height in Firefox 91 */
 :root {
     --tab-min-height: 32px !important;
-    /* adjust to suit your needs */
 }
 
 :root #tabbrowser-tabs {
     --tab-min-height: 32px !important;
-    /* needs to be the same as above under :root */
 }
 
 :root[uidensity="compact"] {
@@ -3813,12 +3652,13 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
     padding: 0 !important;
 }
 
+/*
 #TabsToolbar {
     --toolbarbutton-inner-padding: calc((var(--tab-min-height) - 16px) / 2) !important;
 }
-
+*/
 :root[uidensity="compact"] #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[pinned] {
-    min-height: calc(var(--tab-min-height)+2px) !important;
+    min-height: calc(var(--tab-min-height)+0px) !important;
 }
 
 :root {
@@ -3894,12 +3734,41 @@ toolbarbutton {
 }
 
 #nav-bar {
-    /* This overrides value in compact_proton.css
-    box-shadow: 0 -2px 0 0 color-mix(in srgb, currentcolor 30%, transparent) !important;*/
-    box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--lwt-background-tab-separator-color) !important;
+    box-shadow: 0 -2px 0 0 color-mix(in srgb, currentcolor 30%, transparent) !important;
 }
+
+/* box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--my-border-color) !important;*/
+
 
 :root[uidensity=compact] #urlbar-container,
 :root[uidensity=compact] #search-container {
     padding-block: 2px !important;
+}
+
+/* Pinned Tab - tabbrowser-arrowscrollbox overflowing */
+
+#tabbrowser-tabs[positionpinnedtabs]>#tabbrowser-arrowscrollbox>.tabbrowser-tab[pinned] {
+    z-index: 0 !important;
+}
+
+:root:not([uidensity="touch"]) #new-tab-button,
+#alltabs-button {
+    --toolbarbutton-outer-padding: 3px !important;
+}
+
+/* tabs newtab button needs some special styling... */
+
+#tabs-newtab-button {
+    padding-inline: 4 !important;
+}
+
+#tabbrowser-arrowscrollbox>#tabs-newtab-button>.toolbarbutton-icon {
+    border-radius: 20px !important;
+    width: initial !important;
+    height: initial !important;
+    padding: 5px !important;
+}
+
+:root[uidensity="compact"] #tabbrowser-arrowscrollbox>#tabs-newtab-button>.toolbarbutton-icon {
+    padding: 5px !important;
 }
