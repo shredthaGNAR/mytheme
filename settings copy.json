@@ -5,5 +5,10 @@
     "editor.cursorStyle": "block",
     "editor.wordWrap": "on",
     "editor.fontFamily": "JetBrainsMono Nerd Font, Source Code Pro for Powerline, Space Mono, Fira Code, Operator mono, monospace",
-    "gitProjectManager.displayProjectPath": true
+    "gitProjectManager.displayProjectPath": true,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#581605",
+        "titleBar.activeBackground": "#7B1F07",
+        "titleBar.activeForeground": "#FFFBFA"
+    }
 }

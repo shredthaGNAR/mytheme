@@ -22,6 +22,7 @@
     "tinaciousdesign.theme-tinaciousdesign",
     "al3xcubed.theme-cubed",
     "zenghongtu.vscode-css-intellisense",
-    "saionaro.smart-css-autocomplete"
+    "saionaro.smart-css-autocomplete",
+    "navin-moorthy.vscode-css-snippets"
   ]
 }
