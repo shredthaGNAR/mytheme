@@ -76,25 +76,25 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>uc.css.js/tooltipShadowSupport.uc.js at master · aminomancer/uc.css.js</title>
-    <meta name="description" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/tooltipShadowSupport.uc.js at master · aminomancer/uc.css.js">
+  <title>uc.css.js/appMenuAboutConfigButton.uc.js at master · aminomancer/uc.css.js</title>
+    <meta name="description" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/appMenuAboutConfigButton.uc.js at master · aminomancer/uc.css.js">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
   <meta property="fb:app_id" content="1401488693436528">
   <meta name="apple-itunes-app" content="app-id=1477376905" />
-    <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/213097329/5704e880-b886-11eb-9dd1-f238b9314155" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="uc.css.js/tooltipShadowSupport.uc.js at master · aminomancer/uc.css.js" /><meta name="twitter:description" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/tooltipShadowSupport.uc.js at master · aminomancer/uc.css.js" />
-    <meta property="og:image" content="https://repository-images.githubusercontent.com/213097329/5704e880-b886-11eb-9dd1-f238b9314155" /><meta property="og:image:alt" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/tooltipShadowSupport.uc.js at master · aminomancer/uc.css.js" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="uc.css.js/tooltipShadowSupport.uc.js at master · aminomancer/uc.css.js" /><meta property="og:url" content="https://github.com/aminomancer/uc.css.js" /><meta property="og:description" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/tooltipShadowSupport.uc.js at master · aminomancer/uc.css.js" />
+    <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/213097329/5704e880-b886-11eb-9dd1-f238b9314155" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="uc.css.js/appMenuAboutConfigButton.uc.js at master · aminomancer/uc.css.js" /><meta name="twitter:description" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/appMenuAboutConfigButton.uc.js at master · aminomancer/uc.css.js" />
+    <meta property="og:image" content="https://repository-images.githubusercontent.com/213097329/5704e880-b886-11eb-9dd1-f238b9314155" /><meta property="og:image:alt" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/appMenuAboutConfigButton.uc.js at master · aminomancer/uc.css.js" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="uc.css.js/appMenuAboutConfigButton.uc.js at master · aminomancer/uc.css.js" /><meta property="og:url" content="https://github.com/aminomancer/uc.css.js" /><meta property="og:description" content="My personal Firefox theme/layout, plus some privileged scripts to add new behaviors and functions. - uc.css.js/appMenuAboutConfigButton.uc.js at master · aminomancer/uc.css.js" />
 
 
 
     
 
   <link rel="assets" href="https://github.githubassets.com/">
-    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/37919512/ws?session=eyJ2IjoiVjMiLCJ1IjozNzkxOTUxMiwicyI6NzA4Mjc2MjA1LCJjIjo0MjQwOTUzODY2LCJ0IjoxNjI5MDkyNTA0fQ==--6de32d10623ca26cc6a3027e3029a64349f6cafa4e965c0918f0f6f55c137d46" data-refresh-url="/_alive" data-session-id="8d7a5a3bd8159519a39eeb4dacc5b1c5f5974c740101cfd0dfcc39842b5cbe03">
+    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/37919512/ws?session=eyJ2IjoiVjMiLCJ1IjozNzkxOTUxMiwicyI6NzA4Mjc2MjA1LCJjIjozMjk2NTU3MTkyLCJ0IjoxNjI5MDkyODE5fQ==--b7539197fc9920c6c4219c5fe73375c2e89f521d1120910f04e0d0337efca4e6" data-refresh-url="/_alive" data-session-id="8d7a5a3bd8159519a39eeb4dacc5b1c5f5974c740101cfd0dfcc39842b5cbe03">
     <link rel="shared-web-socket-src" href="/socket-worker-3f088aa2.js">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-  <meta name="request-id" content="E1E8:3B7B:1A416C:1E505E:6119FA84" data-pjax-transient="true" /><meta name="html-safe-nonce" content="6de9d52eefa493718cc703c26ffd33e984b304f057378c0057dbac6eefd98b69" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9hbWlub21hbmNlci91Yy5jc3MuanMiLCJyZXF1ZXN0X2lkIjoiRTFFODozQjdCOjFBNDE2QzoxRTUwNUU6NjExOUZBODQiLCJ2aXNpdG9yX2lkIjoiNzkxNDE4MTk5MjgwMTA4MDE3MSIsInJlZ2lvbl9lZGdlIjoic2VhIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true" /><meta name="visitor-hmac" content="088fd692963baeff341fa4f1eb4981d78e5abb89bedd94c7ed5e746aa2f0abbc" data-pjax-transient="true" />
+  <meta name="request-id" content="E1E8:3B7B:1A8BED:1EA45C:6119FBCB" data-pjax-transient="true" /><meta name="html-safe-nonce" content="6de9d52eefa493718cc703c26ffd33e984b304f057378c0057dbac6eefd98b69" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9hbWlub21hbmNlci91Yy5jc3MuanMiLCJyZXF1ZXN0X2lkIjoiRTFFODozQjdCOjFBOEJFRDoxRUE0NUM6NjExOUZCQ0IiLCJ2aXNpdG9yX2lkIjoiNzkxNDE4MTk5MjgwMTA4MDE3MSIsInJlZ2lvbl9lZGdlIjoic2VhIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true" /><meta name="visitor-hmac" content="94022ddf4e81dcae8ad93cc8d400fe906ecf7a438f9d33aea2214099c2dc89ac" data-pjax-transient="true" />
 
     <meta name="hovercard-subject-tag" content="repository:213097329" data-pjax-transient>
 
@@ -133,7 +133,7 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="NTVlNTc0NzU2MzllNjA4NTczYjRkMTc5N2Q5MGQ0MDRjNTUzMjhjODJmZDRhODdiYzY3YjUwNThmODBlYzg1NXx7InJlbW90ZV9hZGRyZXNzIjoiMTg0LjE4Ny4xNjYuNzgiLCJyZXF1ZXN0X2lkIjoiRTFFODozQjdCOjFBNDE2QzoxRTUwNUU6NjExOUZBODQiLCJ0aW1lc3RhbXAiOjE2MjkwOTI1MDQsImhvc3QiOiJnaXRodWIuY29tIn0=">
+      <meta name="js-proxy-site-detection-payload" content="MTc1MTc4MWU1NDNjZTA2YzQ2ZjExMDgyYjdkZjhmNmJjMjJiZTFiNWFiNWQyMmNlNjUxNTRmYTIwYWUyNmZjNnx7InJlbW90ZV9hZGRyZXNzIjoiMTg0LjE4Ny4xNjYuNzgiLCJyZXF1ZXN0X2lkIjoiRTFFODozQjdCOjFBOEJFRDoxRUE0NUM6NjExOUZCQ0IiLCJ0aW1lc3RhbXAiOjE2MjkwOTI4MTksImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,GITHUB_TOKEN_PERMISSION">
 
@@ -147,7 +147,7 @@
 
 
 
-    <link rel="canonical" href="https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -189,7 +189,7 @@
   href="https://github.com/"
   data-hotkey="g d"
   aria-label="Homepage "
-  data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;go to dashboard&quot;,&quot;label&quot;:&quot;icon:logo&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="2ee9d68aad9b0968f6ab7c11a16b1679d48a3419220e7ea6d6dcf67222bd5da0"
+  data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;go to dashboard&quot;,&quot;label&quot;:&quot;icon:logo&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="a6771221a833ab9a1d3b0d7bd389ffa07287bf356e5af4f1299426f183619054"
 >
   <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
     <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
@@ -235,7 +235,7 @@
           spellcheck="false"
           autocomplete="off"
         >
-        <input type="hidden" value="JKQpfoGfzVUorbVxRn27aPYHDXUys7PYTRXkdt0dJCdrcTfcZoKAczaSPJl4z6Qb6juUPm/bp5P/y+5frkdm5Q==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+        <input type="hidden" value="qm1BILT1syNFmaDU+4m9cf6zJhk0MZx/K3y7VUEYbtLluF+CU+j+BVumKTzFO6IC4o+/UmlZiDSZorF8MkIsEA==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
         <input type="hidden" class="js-site-search-type-field" name="type" >
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" class="mr-1 header-search-key-slash"><path fill="none" stroke="#979A9C" opacity=".4" d="M3.5.5h12c1.7 0 3 1.3 3 3v13c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-13c0-1.7 1.3-3 3-3z"></path><path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path></svg>
 
@@ -415,7 +415,7 @@
     <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade" data-ga-click="Header, click, Nav menu - item:workspaces context:user" data-selected-links="/codespaces /codespaces" href="/codespaces">
       Codespaces
 </a>
-      <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade" data-ga-click="Header, click, Nav menu - item:Sponsors" data-hydro-click="{&quot;event_type&quot;:&quot;sponsors.button_click&quot;,&quot;payload&quot;:{&quot;button&quot;:&quot;HEADER_SPONSORS_DASHBOARD&quot;,&quot;sponsorable_login&quot;:&quot;WynStaXxx&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="14f98812e53d812bc1a13279c1ebc8bb0d5d3378366991e71477512108a0feb7" data-selected-links=" /sponsors/accounts" href="/sponsors/accounts">Sponsors</a>
+      <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade" data-ga-click="Header, click, Nav menu - item:Sponsors" data-hydro-click="{&quot;event_type&quot;:&quot;sponsors.button_click&quot;,&quot;payload&quot;:{&quot;button&quot;:&quot;HEADER_SPONSORS_DASHBOARD&quot;,&quot;sponsorable_login&quot;:&quot;WynStaXxx&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="c03df63eb2f1d0e27753c01c24922e96242c111829f73e4ae03b6d461a5e9c6d" data-selected-links=" /sponsors/accounts" href="/sponsors/accounts">Sponsors</a>
 
     <a class="Header-link d-block d-md-none mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade" href="/settings/profile">
       Settings
@@ -424,12 +424,12 @@
       <img class="avatar avatar-user" loading="lazy" decoding="async" src="https://avatars.githubusercontent.com/u/37919512?s=40&amp;v=4" width="20" height="20" alt="@WynStaXxx" />
       WynStaXxx
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="bL2u0WsH/091O6mB1FtK9E7te5ld7aHCyWzERhPV/bn3rpEGqXvUYjNwP4Fz9MOB1Bjxsvr6N3jD4MVnN+Zujg==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="QdJwzI1eFnHzzqgDQVNsEepUFzY5PAa6zO88g9c49vbawU8bTyI9XLWFPgPm/OVkcKGdHZ4rkADGYz2i8wtlwQ==" />
       <button
         type="submit"
         class="Header-link mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade d-md-none btn-link d-block width-full text-left"
         style="padding-left: 2px;"
-        data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;sign out&quot;,&quot;label&quot;:&quot;icon:logout&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="a78110d70d4a33516549f1b48c7595e162bade6027eb64faa0c2dd9831ada4f9"
+        data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;sign out&quot;,&quot;label&quot;:&quot;icon:logout&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="3aad94c1eea6dd2c8a00850e41d581e71946edaa7db1caf2b38df8694be6f8e6"
       >
         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-sign-out v-align-middle">
     <path fill-rule="evenodd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"></path>
@@ -446,7 +446,7 @@
   href="https://github.com/"
   data-hotkey="g d"
   aria-label="Homepage "
-  data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;go to dashboard&quot;,&quot;label&quot;:&quot;icon:logo&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="2ee9d68aad9b0968f6ab7c11a16b1679d48a3419220e7ea6d6dcf67222bd5da0"
+  data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;go to dashboard&quot;,&quot;label&quot;:&quot;icon:logo&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="a6771221a833ab9a1d3b0d7bd389ffa07287bf356e5af4f1299426f183619054"
 >
   <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
     <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
@@ -463,7 +463,7 @@
       <notification-indicator
         class="js-socket-channel"
         data-test-selector="notifications-indicator"
-        data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6Mzc5MTk1MTIiLCJ0IjoxNjI5MDkyNTA0fQ==--1dfa6637cbea2fe1b1090c939ebcd04ae57e135d1bc3b0424b8932d512abbef2">
+        data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6Mzc5MTk1MTIiLCJ0IjoxNjI5MDkyODE5fQ==--7c419246b0a35a522af1331566e927a683c9803a5efde4326a8c3f8fd9bb5409">
         <a href="/notifications"
           class="Header-link notification-indicator position-relative tooltipped tooltipped-sw"
           
@@ -486,7 +486,7 @@
   <summary
     class="Header-link"
     aria-label="Create new…"
-    data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;create new&quot;,&quot;label&quot;:&quot;icon:add&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="1c57d8ef19e8ae33bdfcac348c09151ddbd1e0870ae9af8f8628b43f2b4beb5b"
+    data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;create new&quot;,&quot;label&quot;:&quot;icon:add&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="b72a4c7b1c8f54f67f4a25da520b0a4ce5f54721ea3816ba9a3d76dbf3d19c9b"
   >
       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-plus">
     <path fill-rule="evenodd" d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"></path>
@@ -524,7 +524,7 @@
   <summary
     class="Header-link"
     aria-label="View profile and more"
-    data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;show menu&quot;,&quot;label&quot;:&quot;icon:avatar&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="265e598615fdd9564277af06a8ff863bdbeb4a07e3f68e5e964ecbbdfc81627a"
+    data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;show menu&quot;,&quot;label&quot;:&quot;icon:avatar&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="13ab394595d159c6d169a851b4823b6d2577548c001dfc2b37cb5c51eae4e151"
   >
     <img src="https://avatars.githubusercontent.com/u/37919512?s=60&amp;v=4" alt="@WynStaXxx" size="20" height="20" width="20" data-view-component="true" class="avatar-user avatar avatar-small"></img>
       <span class="feature-preview-indicator js-feature-preview-indicator" style="top: 1px;" hidden></span>
@@ -637,7 +637,7 @@
         data-action="toggle:notifications-list-subscription-form#detailsToggled"
       >
 
-      <summary class="btn btn-sm rounded-right-0" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="b6fbad33b5839a108d73399a76ae09ac125b10ed662b0f87da830cd9734d74ad" data-ga-click="Repository, click Watch settings, action:blob#show" aria-label="Notifications settings">
+      <summary class="btn btn-sm rounded-right-0" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="5b2340bffda72b6dd590f81ae1f4f450222bd98ad58c5a4b75b79b6889427a66" data-ga-click="Repository, click Watch settings, action:blob#show" aria-label="Notifications settings">
           <span data-menu-button>
             <span
               hidden
@@ -689,7 +689,7 @@
             </header>
 
             <div class="SelectMenu-list">
-              <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="XpnHACoZ6IO6Fv7n1ev15JZLpzNhyljkjSw8ILDJgHcpkf+eIwukGuzU29UDSQKYU5NMfFFT+KzySxWLIJOe1Q==" />
+              <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="NXWgge/q6//q8hKEkmUCpRoVGTG3uL1UaMzhOkc8SCZCfZgf5vinZrwwN7ZEx/XZ383yfochHRwXq8iR12ZWhA==" />
 
                 <input type="hidden" name="repository_id" value="213097329">
 
@@ -812,7 +812,7 @@
 
         <details-dialog class="notifications-component-dialog " data-target="notifications-list-subscription-form.customDialog" hidden>
           <div class="SelectMenu-modal notifications-component-dialog-modal overflow-visible">
-            <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="9d/5SdPgORllES1AHDjB/hc2HqR2zAoXt4LC3z/wRRGC18HX2vJ1gDPTCHLKmjaC0u7160ZVql/I5et0r6pbsw==" />
+            <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ItNwMsqO5SSMzMNVj/t7tPTEFjLanZs014MJSCLAGyBV20isw5ypvdoO5mdZWYzIMRz9feoEO3yo5CDjspoFgg==" />
 
               <input type="hidden" name="repository_id" value="213097329">
 
@@ -963,9 +963,9 @@
 
   <li>
         <div class="d-block js-toggler-container js-social-container starring-container on">
-    <form class="starred js-social-form" action="/aminomancer/uc.css.js/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="FlEwXiEWBmjP7QDbnasASAHqJMrnmL5/rAPGcXuMOjn8RdCTgRM6BrIGhsyn+Ry7MeKaOqF8qKrpchz44twRTA==" />
+    <form class="starred js-social-form" action="/aminomancer/uc.css.js/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="wdXC5Z1/hHjMrkTyF6gx4aVlmqEIwIlzabVMFLVfIuArwSIoPXq4FrFFwuUt+i0SlW0kUU4kn6YsxJadLA8JlQ==" />
       <input type="hidden" name="context" value="repository">
-      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar aminomancer/uc.css.js" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="647cdff5e086d70b9fc355b5a6d9c1fda800be5de9869a392489c523afa36105" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star-fill mr-1">
+      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar aminomancer/uc.css.js" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="5a0b1d4c58fcd7c7879a77d40d36ab7c9f1a23f319a35d700bc10c1f7092cf43" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star-fill mr-1">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
 </svg>
         <span data-view-component="true">
@@ -975,9 +975,9 @@
            75
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/aminomancer/uc.css.js/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="7p1K5W4f/Qa82EgAVNfx1occj1NF/F/0IEtXja/Bd5RkF6wtVZrRHrnEEdu2cKJx34/Uvyldqg71omfIJWG22A==" />
+    <form class="unstarred js-social-form" action="/aminomancer/uc.css.js/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="uzyWsoIU5AF4N6G2934FVZOxwDJ1Fmqv1/tA+wmdG2wxtnB6uZHIGX0r+G0V2VbyyyKb3hm3n1UCEnC+gz3aIA==" />
       <input type="hidden" name="context" value="repository">
-      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star aminomancer/uc.css.js" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="d5f5b964df4c51179d0c7a671fbb42b6a0c7ee916a7736b6c1c70af01bd90cd5" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star mr-1">
+      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star aminomancer/uc.css.js" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="0d4b25a5af65d5799a98f8a83702ec81618fe05982db2bf991e84228bd1edfbb" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star mr-1">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
 </svg>
         <span data-view-component="true">
@@ -991,8 +991,8 @@
   </li>
 
   <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/aminomancer/uc.css.js/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="v4X80VxxZ2ObOFjYCMXKaTHwnLn2kEEV0YIy0ZcPjbZO2xKSFCosvRHGERCMbwkyJhSe13VRyQRaCkz4Xk/QZA==" />
-              <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="713a60f2c67686e3748f93f4e31d11ea9e0a901df085cf4bec3a35f5237ff2a1" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of aminomancer/uc.css.js to your account" aria-label="Fork your own copy of aminomancer/uc.css.js to your account">                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked">
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/aminomancer/uc.css.js/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="sgN2ddrqsLfRk/+K/4SLR9cmxTkMlfI9BVvX0XB02BhDXZg2krH7aVtttkJ7LkgcwMLHV49UeiyO06n4uTSFyg==" />
+              <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="6baff0807924d3060d8e14c04a0e1e8a80fcae635ef2ee32273037a7dbccd48c" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of aminomancer/uc.css.js to your account" aria-label="Fork your own copy of aminomancer/uc.css.js to your account">                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked">
     <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
 </svg>
                 Fork
@@ -1141,9 +1141,9 @@
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/aminomancer/uc.css.js/blob/910840ceae3177abe73c9f4a64aa3b88482e551c/JS/tooltipShadowSupport.uc.js">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/aminomancer/uc.css.js/blob/910840ceae3177abe73c9f4a64aa3b88482e551c/JS/appMenuAboutConfigButton.uc.js">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v22:9e7771c03df9b56de6981fab75a51f6b73bfcac1e3cecf206945ab8605a4d8e8 -->
+    <!-- blob contrib key: blob_contributors:v22:76ab57bd51e88cb518ab4b371bbc9b99235662c15ef20dd66aaaaa3fae8c1bdc -->
 
     <div class="d-flex flex-items-start flex-shrink-0 pb-3 flex-wrap flex-md-nowrap flex-justify-between flex-md-justify-start">
       
@@ -1228,7 +1228,7 @@
             </div>
 
               <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/aminomancer/uc.css.js/blob/{{ urlEncodedRefName }}/JS/tooltipShadowSupport.uc.js" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
+  <a href="https://github.com/aminomancer/uc.css.js/blob/{{ urlEncodedRefName }}/JS/appMenuAboutConfigButton.uc.js" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -1268,7 +1268,7 @@
             </template>
 
               <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/aminomancer/uc.css.js/blob/{{ urlEncodedRefName }}/JS/tooltipShadowSupport.uc.js" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
+  <a href="https://github.com/aminomancer/uc.css.js/blob/{{ urlEncodedRefName }}/JS/appMenuAboutConfigButton.uc.js" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -1299,9 +1299,9 @@
 </div>
 
       <h2 id="blob-path" class="breadcrumb flex-auto flex-self-center min-width-0 text-normal mx-2 width-full width-md-auto flex-order-1 flex-md-order-none mt-3 mt-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/aminomancer/uc.css.js"><span>uc.css.js</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/aminomancer/uc.css.js/tree/master/JS"><span>JS</span></a></span><span class="separator">/</span><strong class="final-path">tooltipShadowSupport.uc.js</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/aminomancer/uc.css.js"><span>uc.css.js</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/aminomancer/uc.css.js/tree/master/JS"><span>JS</span></a></span><span class="separator">/</span><strong class="final-path">appMenuAboutConfigButton.uc.js</strong>
           <span class="separator">/</span><details class="details-reset details-overlay d-inline" id="jumpto-symbol-select-menu">
-  <summary class="btn-link Link--secondary css-truncate" aria-haspopup="true" data-hotkey="r" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_blob_definitions&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_blob_definitions&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="3b204dc48f7babf3001afc72e673f0f5e546b6b80d8b30ebc35546f40ad19e12">
+  <summary class="btn-link Link--secondary css-truncate" aria-haspopup="true" data-hotkey="r" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_blob_definitions&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_blob_definitions&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="2d5787a8c797f257b2058f7115106c262844d45db56912dbc7159dde00272038">
       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-code">
     <path fill-rule="evenodd" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"></path>
 </svg>
@@ -1331,11 +1331,29 @@
         </div>
       <div class="SelectMenu-list">
         <div data-filterable-for="jumpto-symbols-filter-field" data-filterable-type="substring">
-            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="0be50ad334d0d831cb9d0080f4b6327572734706d4364b672c506b9713c984d5" href="/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js#L10">
+            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="fa9f6be6c9f0dc115dc01422c0e59f026d7f50aa6599967a648424bcaecd5da2" href="/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js#L27">
               <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
-              <span class="flex-auto css-truncate-target" data-menu-button-text>create</span>
+              <span class="flex-auto css-truncate-target" data-menu-button-text>findAboutConfig</span>
+              <span class="flex-auto d-flex flex-justify-end">Function</span>
+</a>            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="fa9f6be6c9f0dc115dc01422c0e59f026d7f50aa6599967a648424bcaecd5da2" href="/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js#L50">
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
+    <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+</svg>
+              <span class="flex-auto css-truncate-target" data-menu-button-text>createButton</span>
+              <span class="flex-auto d-flex flex-justify-end">Function</span>
+</a>            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="fa9f6be6c9f0dc115dc01422c0e59f026d7f50aa6599967a648424bcaecd5da2" href="/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js#L72">
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
+    <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+</svg>
+              <span class="flex-auto css-truncate-target" data-menu-button-text>init</span>
+              <span class="flex-auto d-flex flex-justify-end">Function</span>
+</a>            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="fa9f6be6c9f0dc115dc01422c0e59f026d7f50aa6599967a648424bcaecd5da2" href="/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js#L83">
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
+    <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+</svg>
+              <span class="flex-auto css-truncate-target" data-menu-button-text>delayedListener</span>
               <span class="flex-auto d-flex flex-justify-end">Function</span>
 </a>        </div>
       </div>
@@ -1369,7 +1387,7 @@
 </summary>
   <div data-view-component="true">          <ul class="dropdown-menu dropdown-menu-sw">
             <li class="d-block d-md-none">
-              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="38bf9bdd2d4fe4947a0b192aefe753361a964d91c85ed9537303a07f277edadd" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/aminomancer/uc.css.js/find/master">
+              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:213097329,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="a4de55bd70837c579bf8c8e0d4472c71913f05cd9fa1076a0465c3dc4c52163e" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/aminomancer/uc.css.js/find/master">
                 <span class="flex-auto">Go to file</span>
                 <span class="text-small color-text-secondary" aria-hidden="true">T</span>
 </a>            </li>
@@ -1391,12 +1409,12 @@
             </li>
             <li class="dropdown-divider" role="none"></li>
             <li>
-              <clipboard-copy value="JS/tooltipShadowSupport.uc.js" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details">
+              <clipboard-copy value="JS/appMenuAboutConfigButton.uc.js" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details">
                 Copy path
               </clipboard-copy>
             </li>
             <li>
-              <clipboard-copy value="https://github.com/aminomancer/uc.css.js/blob/910840ceae3177abe73c9f4a64aa3b88482e551c/JS/tooltipShadowSupport.uc.js" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details" >
+              <clipboard-copy value="https://github.com/aminomancer/uc.css.js/blob/910840ceae3177abe73c9f4a64aa3b88482e551c/JS/appMenuAboutConfigButton.uc.js" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details" >
                 <span class="d-flex flex-items-baseline">
                   <span class="flex-auto">Copy permalink</span>
                 </span>
@@ -1410,7 +1428,7 @@
 
 
     <div class="Box d-flex flex-column flex-shrink-0 mb-3">
-      <include-fragment src="/aminomancer/uc.css.js/contributors/master/JS/tooltipShadowSupport.uc.js" class="commit-loader">
+      <include-fragment src="/aminomancer/uc.css.js/contributors/master/JS/appMenuAboutConfigButton.uc.js" class="commit-loader">
         <div class="Box-header hx_commit-tease d-flex flex-items-center">
           <div class="Skeleton avatar avatar-user flex-shrink-0 ml-n1 mr-n1 mt-n1 mb-n1" style="width:24px;height:24px;"></div>
           <div class="Skeleton Skeleton--text col-5 ml-2">&nbsp;</div>
@@ -1445,21 +1463,21 @@
 
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1">
 
-      29 lines (28 sloc)
+      91 lines (83 sloc)
       <span class="file-info-divider"></span>
-    2.65 KB
+    5.27 KB
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between hide-sm hide-md">
 
     <div class="BtnGroup">
-      <a href="/aminomancer/uc.css.js/raw/master/JS/tooltipShadowSupport.uc.js" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">
+      <a href="/aminomancer/uc.css.js/raw/master/JS/appMenuAboutConfigButton.uc.js" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">
   
   Raw
   
 
 </a>
-        <a href="/aminomancer/uc.css.js/blame/master/JS/tooltipShadowSupport.uc.js" data-hotkey="b" role="button" data-view-component="true" class="js-update-url-with-hash btn-sm btn BtnGroup-item">
+        <a href="/aminomancer/uc.css.js/blame/master/JS/appMenuAboutConfigButton.uc.js" data-hotkey="b" role="button" data-view-component="true" class="js-update-url-with-hash btn-sm btn BtnGroup-item">
   
   Blame
   
@@ -1470,7 +1488,7 @@
     <div>
           <a class="btn-octicon tooltipped tooltipped-nw js-remove-unless-platform"
              data-platforms="windows,mac"
-             href="x-github-client://openRepo/https://github.com/aminomancer/uc.css.js?branch=master&amp;filepath=JS%2FtooltipShadowSupport.uc.js"
+             href="x-github-client://openRepo/https://github.com/aminomancer/uc.css.js?branch=master&amp;filepath=JS%2FappMenuAboutConfigButton.uc.js"
              aria-label="Open this file in GitHub Desktop"
              data-ga-click="Repository, open with desktop">
               <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-device-desktop">
@@ -1478,7 +1496,7 @@
 </svg>
           </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/aminomancer/uc.css.js/edit/master/JS/tooltipShadowSupport.uc.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="J23q4FylGicFXY87Zdwk8spmTxchApX5YTotGkXR0WA4+nbDaY94p1uE06pmzFOCb6Hv3KK77ZdaWkUop0quZg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/aminomancer/uc.css.js/edit/master/JS/appMenuAboutConfigButton.uc.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="RC9PvQMBXRx7crT9h0jPi5HbDFGShLcUPBOWh0Xw0YkQ/BDQUb1ffzAgsQrOxsboObgM+KIxmS+BZXyVfL2TQQ==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
               <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-pencil">
@@ -1486,7 +1504,7 @@
 </svg>
             </button>
 </form>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/aminomancer/uc.css.js/delete/master/JS/tooltipShadowSupport.uc.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ntTwB1DaCqZzoduFzNswsyO1+tg7NmclhX2ZPdUXNvsi8oqvopOZzXa/yTwfWVI5/XbhnwPU8BrtsPW2Pq1ntg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/aminomancer/uc.css.js/delete/master/JS/appMenuAboutConfigButton.uc.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="9qoQO3E48hOlxxoVeouJ4ls77u2oJXBr02aYsG0iBsPor8MTN6lBGtd4YEqg/O+s2OK1S4ZSe+MGi4qOl/s8MA==" />
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Fork this project and delete the file" data-disable-with>
               <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-trash">
@@ -1508,28 +1526,28 @@
             <li>
                 <a class="dropdown-item tooltipped tooltipped-nw js-remove-unless-platform"
                    data-platforms="windows,mac"
-                   href="x-github-client://openRepo/https://github.com/aminomancer/uc.css.js?branch=master&amp;filepath=JS%2FtooltipShadowSupport.uc.js"
+                   href="x-github-client://openRepo/https://github.com/aminomancer/uc.css.js?branch=master&amp;filepath=JS%2FappMenuAboutConfigButton.uc.js"
                    data-ga-click="Repository, open with desktop">
                   Open with Desktop
                 </a>
             </li>
           <li>
-            <a class="dropdown-item" href="/aminomancer/uc.css.js/raw/master/JS/tooltipShadowSupport.uc.js">
+            <a class="dropdown-item" href="/aminomancer/uc.css.js/raw/master/JS/appMenuAboutConfigButton.uc.js">
               View raw
             </a>
           </li>
             <li>
-              <a class="dropdown-item" href="/aminomancer/uc.css.js/blame/master/JS/tooltipShadowSupport.uc.js">
+              <a class="dropdown-item" href="/aminomancer/uc.css.js/blame/master/JS/appMenuAboutConfigButton.uc.js">
                 View blame
               </a>
             </li>
 
               <li class="dropdown-divider" role="none"></li>
               <li>
-                <a class="dropdown-item" href="/aminomancer/uc.css.js/edit/master/JS/tooltipShadowSupport.uc.js">Edit file</a>
+                <a class="dropdown-item" href="/aminomancer/uc.css.js/edit/master/JS/appMenuAboutConfigButton.uc.js">Edit file</a>
               </li>
               <li>
-                <a class="dropdown-item menu-item-danger" href="/aminomancer/uc.css.js/delete/master/JS/tooltipShadowSupport.uc.js">Delete file</a>
+                <a class="dropdown-item menu-item-danger" href="/aminomancer/uc.css.js/delete/master/JS/appMenuAboutConfigButton.uc.js">Delete file</a>
               </li>
         </ul>
       </details>
@@ -1548,11 +1566,11 @@
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// <span class=pl-k>@name</span>           Tooltip Shadow Support</span></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// <span class=pl-k>@name</span>           App Menu about:config Button</span></td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// <span class=pl-k>@version</span>        1.0</span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// <span class=pl-k>@version</span>        1.2</span></td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
@@ -1564,7 +1582,7 @@
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// <span class=pl-k>@description</span>    This script makes it easier to add box shadows and borders to tooltips without messing up some specific tooltips. Some tooltips have an awkward structure, where multiple descriptions exist within a single container, with display: -moz-popup. This means the tooltip is displayed within a restricted popup area with dimensions equal to the container, and overflow completely hidden. Box shadows on the container therefore won&#39;t be visible, since they&#39;ll fall outside of the popup box — you&#39;d have to use a window shadow instead, but those can&#39;t be styled in a precise way. In tooltips with only 1 label we can just make the container transparent and put the background and box shadow on the label element. That way there can still be room within the popup for the box shadow to be visible. A box shadow with a 5px radius can fit well within a container with ~7px padding. Tooltips with a more elaborate structure with containers within containers, e.g. the tab tooltip, don&#39;t have this problem at all. But tooltips like the back and forward buttons&#39; can only be given a shadow if you give each label a background color, and try to position and size them so that they perfectly overlap and create the illusion of being one element. But if you also want rounded corners and borders, that won&#39;t be an option. A good way to fix this is just to put the tooltips inside of another container, so that&#39;s what this script does. Because generic tooltips are native-anonymous, they don&#39;t inherit variables from the main window. So you have to edit userChrome.ag.css directly for some things. If you want to disable the borders, 1) don&#39;t use this script, and 2) go to about:config and set userChrome.css.remove-tooltip-borders to true.</span></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// <span class=pl-k>@description</span>    Adds an about:config shortcut button to the main app menu panel, under the built-in Settings button. It can open the built-in about:config page, or it can open the old-school about:config page with earthlng&#39;s [aboutconfig](https://github.com/earthlng/aboutconfig) module. To use that with fx-autoconfig, download ONLY the profile/chrome/utils/aboutconfig folder and place it inside your profile/chrome/resources folder. Then open config.xhtml and find &amp; replace &quot;userchromejs&quot; with &quot;userchrome&quot; and save. Now &quot;chrome://userchrome/content/aboutconfig/config.xhtml&quot; should be the correct URL. By default the script will open to that link, so if you don&#39;t have that module installed the button will open to a blank page. If you can&#39;t get the module to work or if you just prefer Firefox&#39;s built-in page, you can change the constant on line 10 below to &quot;about:config&quot; and it&#39;ll open to the same page you&#39;d get if you typed about:config in the address bar. (the URL must be in quotes) That said, typing about:config is already easy enough. The reason I made this script was to make a clean shortcut to reach the old-school page, and in a more central location than a bookmark. FYI I added an icon for this button (and for all the other main app menu buttons too) in uc-app-menu.css</span></td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
@@ -1581,83 +1599,338 @@
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>function</span> <span class=pl-en>create</span><span class=pl-kos>(</span><span class=pl-s1>aDoc</span><span class=pl-kos>,</span> <span class=pl-s1>tag</span><span class=pl-kos>,</span> <span class=pl-s1>props</span><span class=pl-kos>,</span> <span class=pl-s1>isHTML</span> <span class=pl-c1>=</span> <span class=pl-c1>false</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">    <span class=pl-c>// user configuration</span></td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>let</span> <span class=pl-s1>el</span> <span class=pl-c1>=</span> <span class=pl-s1>isHTML</span> ? <span class=pl-s1>aDoc</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span><span class=pl-s1>tag</span><span class=pl-kos>)</span> : <span class=pl-s1>aDoc</span><span class=pl-kos>.</span><span class=pl-en>createXULElement</span><span class=pl-kos>(</span><span class=pl-s1>tag</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>const</span> <span class=pl-s1>config</span> <span class=pl-c1>=</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>for</span> <span class=pl-kos>(</span><span class=pl-k>let</span> <span class=pl-s1>prop</span> <span class=pl-k>in</span> <span class=pl-s1>props</span><span class=pl-kos>)</span> <span class=pl-s1>el</span><span class=pl-kos>.</span><span class=pl-en>setAttribute</span><span class=pl-kos>(</span><span class=pl-s1>prop</span><span class=pl-kos>,</span> <span class=pl-s1>props</span><span class=pl-kos>[</span><span class=pl-s1>prop</span><span class=pl-kos>]</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>urlOverride</span>: <span class=pl-s>&quot;&quot;</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>return</span> <span class=pl-s1>el</span><span class=pl-kos>;</span></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">        <span class=pl-c>/* the script tries to automatically find earthlng&#39;s aboutconfig URL,</span></td>
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class=pl-c>        and if it can&#39;t be found, uses the built-in about:config URL instead.</span></td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>[</span></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class=pl-c>        if it&#39;s unable to find the URL for your particular setup, or if you just want to use the vanilla about:config page,</span></td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line">        <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>getElementById</span><span class=pl-kos>(</span><span class=pl-s>&quot;back-button-tooltip&quot;</span><span class=pl-kos>)</span><span class=pl-kos>,</span></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class=pl-c>        replace this empty string with your preferred URL, in quotes.</span></td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line">        <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>getElementById</span><span class=pl-kos>(</span><span class=pl-s>&quot;forward-button-tooltip&quot;</span><span class=pl-kos>)</span><span class=pl-kos>,</span></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line"><span class=pl-c>        if you want to use my about:cfg script that registers earthlng&#39;s aboutconfig page to about:cfg,</span></td>
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>]</span><span class=pl-kos>.</span><span class=pl-en>forEach</span><span class=pl-kos>(</span><span class=pl-kos>(</span><span class=pl-s1>tip</span><span class=pl-kos>)</span> <span class=pl-c1>=&gt;</span> <span class=pl-kos>{</span></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class=pl-c>        and you want the about:config button to take you to about:cfg, then leave this empty.</span></td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>let</span> <span class=pl-s1>box</span> <span class=pl-c1>=</span> <span class=pl-en>create</span><span class=pl-kos>(</span><span class=pl-smi>document</span><span class=pl-kos>,</span> <span class=pl-s>&quot;vbox&quot;</span><span class=pl-kos>,</span> <span class=pl-kos>{</span></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line"><span class=pl-c>        it will automatically use about:cfg if the script exists.</span></td>
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>id</span>: <span class=pl-s1>tip</span><span class=pl-kos>.</span><span class=pl-c1>id</span> <span class=pl-c1>+</span> <span class=pl-s>&quot;-box&quot;</span><span class=pl-kos>,</span></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line"><span class=pl-c>        if about:cfg doesn&#39;t work for you then change the urlOverride in *that* script instead of this one. */</span></td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>class</span>: <span class=pl-s>&quot;uc-tooltip-box&quot;</span><span class=pl-kos>,</span></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>flex</span>: <span class=pl-c1>1</span><span class=pl-kos>,</span></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>let</span> <span class=pl-kos>{</span> <span class=pl-c1>interfaces</span>: <span class=pl-v>Ci</span><span class=pl-kos>,</span> <span class=pl-c1>manager</span>: <span class=pl-v>Cm</span> <span class=pl-kos>}</span> <span class=pl-c1>=</span> <span class=pl-v>Components</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line">        <span class=pl-v>Array</span><span class=pl-kos>.</span><span class=pl-en>from</span><span class=pl-kos>(</span><span class=pl-s1>tip</span><span class=pl-kos>.</span><span class=pl-c1>children</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>forEach</span><span class=pl-kos>(</span><span class=pl-kos>(</span><span class=pl-s1>elt</span><span class=pl-kos>)</span> <span class=pl-c1>=&gt;</span> <span class=pl-s1>box</span><span class=pl-kos>.</span><span class=pl-en>appendChild</span><span class=pl-kos>(</span><span class=pl-s1>elt</span><span class=pl-kos>)</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-c1>!</span><span class=pl-v>FileUtils</span><span class=pl-kos>)</span></td>
       </tr>
       <tr>
         <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1>tip</span><span class=pl-kos>.</span><span class=pl-en>appendChild</span><span class=pl-kos>(</span><span class=pl-s1>box</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">        <span class=pl-v>ChromeUtils</span><span class=pl-kos>.</span><span class=pl-en>defineModuleGetter</span><span class=pl-kos>(</span><span class=pl-smi>this</span><span class=pl-kos>,</span> <span class=pl-s>&quot;FileUtils&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;resource://gre/modules/FileUtils.jsm&quot;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1>tip</span><span class=pl-kos>.</span><span class=pl-en>setAttribute</span><span class=pl-kos>(</span><span class=pl-s>&quot;shadow-support&quot;</span><span class=pl-kos>,</span> <span class=pl-c1>true</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>function</span> <span class=pl-en>findAboutConfig</span><span class=pl-kos>(</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">    <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-c1>documentElement</span><span class=pl-kos>.</span><span class=pl-en>setAttribute</span><span class=pl-kos>(</span><span class=pl-s>&quot;tooltip-shadow-support&quot;</span><span class=pl-kos>,</span> <span class=pl-c1>true</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>config</span><span class=pl-kos>.</span><span class=pl-c1>urlOverride</span><span class=pl-kos>)</span></td>
       </tr>
       <tr>
         <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">            <span class=pl-c>// url overridden <span class=pl-k>@line</span> 12</span></td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">            <span class=pl-k>return</span> <span class=pl-s1>config</span><span class=pl-kos>.</span><span class=pl-c1>urlOverride</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>if</span> <span class=pl-kos>(</span></td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">            <span class=pl-v>Cm</span><span class=pl-kos>.</span><span class=pl-en>QueryInterface</span><span class=pl-kos>(</span><span class=pl-v>Ci</span><span class=pl-kos>.</span><span class=pl-c1>nsIComponentRegistrar</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>isContractIDRegistered</span><span class=pl-kos>(</span></td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">                <span class=pl-s>&quot;@mozilla.org/network/protocol/about;1?what=cfg&quot;</span></td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">            <span class=pl-kos>)</span></td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>)</span></td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">            <span class=pl-c>// registerAboutConf.uc.js</span></td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line">            <span class=pl-k>return</span> <span class=pl-s>&quot;about:cfg&quot;</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-v>FileUtils</span><span class=pl-kos>.</span><span class=pl-en>getDir</span><span class=pl-kos>(</span><span class=pl-s>&quot;UChrm&quot;</span><span class=pl-kos>,</span> <span class=pl-kos>[</span><span class=pl-s>&quot;resources&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;aboutconfig&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;config.xhtml&quot;</span><span class=pl-kos>]</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>exists</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>)</span></td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">            <span class=pl-c>// fx-autoconfig</span></td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">            <span class=pl-k>return</span> <span class=pl-s>&quot;chrome://userchrome/content/aboutconfig/config.xhtml&quot;</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-v>FileUtils</span><span class=pl-kos>.</span><span class=pl-en>getDir</span><span class=pl-kos>(</span><span class=pl-s>&quot;UChrm&quot;</span><span class=pl-kos>,</span> <span class=pl-kos>[</span><span class=pl-s>&quot;utils&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;aboutconfig&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;config.xhtml&quot;</span><span class=pl-kos>]</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>exists</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>)</span></td>
+      </tr>
+      <tr>
+        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">            <span class=pl-c>// earthlng&#39;s loader</span></td>
+      </tr>
+      <tr>
+        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">            <span class=pl-k>return</span> <span class=pl-s>&quot;chrome://userchromejs/content/aboutconfig/config.xhtml&quot;</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-v>FileUtils</span><span class=pl-kos>.</span><span class=pl-en>getDir</span><span class=pl-kos>(</span><span class=pl-s>&quot;UChrm&quot;</span><span class=pl-kos>,</span> <span class=pl-kos>[</span><span class=pl-s>&quot;utils&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;aboutconfig&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;aboutconfig.xhtml&quot;</span><span class=pl-kos>]</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>exists</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>)</span></td>
+      </tr>
+      <tr>
+        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">            <span class=pl-c>// xiaoxiaoflood&#39;s loader</span></td>
+      </tr>
+      <tr>
+        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">            <span class=pl-k>return</span> <span class=pl-s>&quot;chrome://userchromejs/content/aboutconfig/aboutconfig.xhtml&quot;</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>else</span> <span class=pl-k>return</span> <span class=pl-s>&quot;about:config&quot;</span><span class=pl-kos>;</span> <span class=pl-c>// no about:config replacement found</span></td>
+      </tr>
+      <tr>
+        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span></td>
+      </tr>
+      <tr>
+        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>async</span> <span class=pl-k>function</span> <span class=pl-en>createButton</span><span class=pl-kos>(</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
+      </tr>
+      <tr>
+        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>const</span> <span class=pl-s1>configStrings</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-k>new</span> <span class=pl-v>Localization</span><span class=pl-kos>(</span><span class=pl-kos>[</span><span class=pl-s>&quot;toolkit/about/config.ftl&quot;</span><span class=pl-kos>]</span><span class=pl-kos>,</span> <span class=pl-c1>true</span><span class=pl-kos>)</span><span class=pl-kos>;</span> <span class=pl-c>// get fluent file for AboutConfig page</span></td>
+      </tr>
+      <tr>
+        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>const</span> <span class=pl-s1>advancedPrefsLabel</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-s1>configStrings</span><span class=pl-kos>.</span><span class=pl-en>formatValue</span><span class=pl-kos>(</span><span class=pl-kos>[</span><span class=pl-s>&quot;about-config-page-title&quot;</span><span class=pl-kos>]</span><span class=pl-kos>)</span><span class=pl-kos>;</span> <span class=pl-c>// localize the &quot;Advanced Preferences&quot; string</span></td>
+      </tr>
+      <tr>
+        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>const</span> <span class=pl-kos>{</span> mainView <span class=pl-kos>}</span> <span class=pl-c1>=</span> <span class=pl-v>PanelUI</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>const</span> <span class=pl-s1>doc</span> <span class=pl-c1>=</span> <span class=pl-s1>mainView</span><span class=pl-kos>.</span><span class=pl-c1>ownerDocument</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>const</span> <span class=pl-s1>settingsButton</span> <span class=pl-c1>=</span></td>
+      </tr>
+      <tr>
+        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">            <span class=pl-s1>doc</span><span class=pl-kos>.</span><span class=pl-en>getElementById</span><span class=pl-kos>(</span><span class=pl-s>&quot;appMenu-settings-button&quot;</span><span class=pl-kos>)</span> <span class=pl-c1>??</span></td>
+      </tr>
+      <tr>
+        <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">            <span class=pl-s1>doc</span><span class=pl-kos>.</span><span class=pl-en>getElementById</span><span class=pl-kos>(</span><span class=pl-s>&quot;appMenu-preferences-button&quot;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>const</span> <span class=pl-s1>prefsButton</span> <span class=pl-c1>=</span> <span class=pl-s1>doc</span><span class=pl-kos>.</span><span class=pl-en>createXULElement</span><span class=pl-kos>(</span><span class=pl-s>&quot;toolbarbutton&quot;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1>prefsButton</span><span class=pl-kos>.</span><span class=pl-c1>preferredURL</span> <span class=pl-c1>=</span> <span class=pl-en>findAboutConfig</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>for</span> <span class=pl-kos>(</span><span class=pl-k>const</span> <span class=pl-kos>[</span><span class=pl-s1>key</span><span class=pl-kos>,</span> <span class=pl-s1>val</span><span class=pl-kos>]</span> <span class=pl-k>of</span> <span class=pl-v>Object</span><span class=pl-kos>.</span><span class=pl-en>entries</span><span class=pl-kos>(</span><span class=pl-kos>{</span></td>
+      </tr>
+      <tr>
+        <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>id</span>: <span class=pl-s>&quot;appMenu-advanced-settings-button&quot;</span><span class=pl-kos>,</span></td>
+      </tr>
+      <tr>
+        <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>class</span>: <span class=pl-s>&quot;subviewbutton&quot;</span><span class=pl-kos>,</span></td>
+      </tr>
+      <tr>
+        <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>label</span>: <span class=pl-s1>advancedPrefsLabel</span><span class=pl-kos>,</span></td>
+      </tr>
+      <tr>
+        <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>oncommand</span>: <span class=pl-s>`openTrustedLinkIn(this.preferredURL, gBrowser.currentURI.spec === AboutNewTab.newTabURL || gBrowser.currentURI.spec === HomePage.get(window) ? &quot;current&quot; : &quot;tab&quot;)`</span><span class=pl-kos>,</span></td>
+      </tr>
+      <tr>
+        <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>)</span></td>
+      </tr>
+      <tr>
+        <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line">            <span class=pl-s1>prefsButton</span><span class=pl-kos>.</span><span class=pl-en>setAttribute</span><span class=pl-kos>(</span><span class=pl-s1>key</span><span class=pl-kos>,</span> <span class=pl-s1>val</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1>settingsButton</span><span class=pl-kos>.</span><span class=pl-en>after</span><span class=pl-kos>(</span><span class=pl-s1>prefsButton</span><span class=pl-kos>)</span><span class=pl-kos>;</span> <span class=pl-c>// place after the built-in &quot;Settings&quot; button</span></td>
+      </tr>
+      <tr>
+        <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span></td>
+      </tr>
+      <tr>
+        <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>function</span> <span class=pl-en>init</span><span class=pl-kos>(</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
+      </tr>
+      <tr>
+        <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line">        <span class=pl-v>PanelMultiView</span><span class=pl-kos>.</span><span class=pl-en>getViewNode</span><span class=pl-kos>(</span><span class=pl-smi>document</span><span class=pl-kos>,</span> <span class=pl-s>&quot;appMenu-multiView&quot;</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>addEventListener</span><span class=pl-kos>(</span></td>
+      </tr>
+      <tr>
+        <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line">            <span class=pl-s>&quot;ViewShowing&quot;</span><span class=pl-kos>,</span></td>
+      </tr>
+      <tr>
+        <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line">            <span class=pl-s1>createButton</span><span class=pl-kos>,</span></td>
+      </tr>
+      <tr>
+        <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line">            <span class=pl-kos>{</span> <span class=pl-c1>once</span>: <span class=pl-c1>true</span> <span class=pl-kos>}</span></td>
+      </tr>
+      <tr>
+        <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span></td>
+      </tr>
+      <tr>
+        <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
+        <td id="LC79" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
+        <td id="LC80" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>gBrowserInit</span><span class=pl-kos>.</span><span class=pl-c1>delayedStartupFinished</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
+      </tr>
+      <tr>
+        <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
+        <td id="LC81" class="blob-code blob-code-inner js-file-line">        <span class=pl-en>init</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
+        <td id="LC82" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span> <span class=pl-k>else</span> <span class=pl-kos>{</span></td>
+      </tr>
+      <tr>
+        <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
+        <td id="LC83" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>let</span> <span class=pl-en>delayedListener</span> <span class=pl-c1>=</span> <span class=pl-kos>(</span><span class=pl-s1>subject</span><span class=pl-kos>,</span> <span class=pl-s1>topic</span><span class=pl-kos>)</span> <span class=pl-c1>=&gt;</span> <span class=pl-kos>{</span></td>
+      </tr>
+      <tr>
+        <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
+        <td id="LC84" class="blob-code blob-code-inner js-file-line">            <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>topic</span> <span class=pl-c1>==</span> <span class=pl-s>&quot;browser-delayed-startup-finished&quot;</span> <span class=pl-c1>&amp;&amp;</span> <span class=pl-s1>subject</span> <span class=pl-c1>==</span> <span class=pl-smi>window</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
+      </tr>
+      <tr>
+        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
+        <td id="LC85" class="blob-code blob-code-inner js-file-line">                <span class=pl-v>Services</span><span class=pl-kos>.</span><span class=pl-c1>obs</span><span class=pl-kos>.</span><span class=pl-en>removeObserver</span><span class=pl-kos>(</span><span class=pl-en>delayedListener</span><span class=pl-kos>,</span> <span class=pl-s1>topic</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
+        <td id="LC86" class="blob-code blob-code-inner js-file-line">                <span class=pl-en>init</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
+        <td id="LC87" class="blob-code blob-code-inner js-file-line">            <span class=pl-kos>}</span></td>
+      </tr>
+      <tr>
+        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
+        <td id="LC88" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>}</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
+        <td id="LC89" class="blob-code blob-code-inner js-file-line">        <span class=pl-v>Services</span><span class=pl-kos>.</span><span class=pl-c1>obs</span><span class=pl-kos>.</span><span class=pl-en>addObserver</span><span class=pl-kos>(</span><span class=pl-en>delayedListener</span><span class=pl-kos>,</span> <span class=pl-s>&quot;browser-delayed-startup-finished&quot;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+      </tr>
+      <tr>
+        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
+        <td id="LC90" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span></td>
+      </tr>
+      <tr>
+        <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
+        <td id="LC91" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
 </table>
 
@@ -1682,7 +1955,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/aminomancer/uc.css.js/blame/910840ceae3177abe73c9f4a64aa3b88482e551c/JS/tooltipShadowSupport.uc.js">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/aminomancer/uc.css.js/blame/910840ceae3177abe73c9f4a64aa3b88482e551c/JS/appMenuAboutConfigButton.uc.js">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/aminomancer/uc.css.js/issues/new">Reference in new issue</a></li>
       </ul>
     </details-menu>
@@ -1713,10 +1986,10 @@
      hidden
      data-tagsearch-url="/aminomancer/uc.css.js/find-definition"
      data-tagsearch-ref="master"
-     data-tagsearch-path="JS/tooltipShadowSupport.uc.js"
+     data-tagsearch-path="JS/appMenuAboutConfigButton.uc.js"
      data-tagsearch-lang="JavaScript"
-     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}"
-     data-hydro-click-hmac="f71f8cb80209b8d53102bcb91a1e74a6a36ddff5f52cf829fae049651b2948d5">
+     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:213097329,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}"
+     data-hydro-click-hmac="6ea76060b66148a2a9508b61f1c990ac830cdd200a65bff82b20fa203d56dc0b">
   <div class="Popover-message Popover-message--large Popover-message--top-left TagsearchPopover mt-1 mb-4 mx-auto Box color-shadow-large">
     <div class="TagsearchPopover-content js-tagsearch-popover-content overflow-auto" style="will-change:transform;">
     </div>
@@ -1741,10 +2014,10 @@
   <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 color-text-secondary border-top color-border-secondary ">
     <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
       <li class="mr-3 mr-lg-0">&copy; 2021 GitHub, Inc.</li>
-        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to terms&quot;,&quot;label&quot;:&quot;text:terms&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="19618d9a37d1552f9802c79872891aa180546c1433a046e24ca074cb0b427817">Terms</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="76237fb9b8fe4af15ac1dcf71ad9e5a13f92a07113b1fb7941d23c04acb7fd07">Privacy</a></li>
-        <li class="mr-3 mr-lg-0"><a data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="19864c12cf222f050658a85d3612cb17263280d008ac14b455118a1f28569dc9" href="https://github.com/security">Security</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://www.githubstatus.com/" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="1604a0c1135ead3554ea6b694d958acbaa81ebeb08fd8cf9e572f52ee1ef3652">Status</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to terms&quot;,&quot;label&quot;:&quot;text:terms&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="d877a84506d0a8b129b2074b1d13bd6496e6b8c47ab0119f206f6c50ba6f360e">Terms</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="7d36fee88dc213538198665f7ce0b20e445fa48c6a0c22f282c0cadb7b46ca0b">Privacy</a></li>
+        <li class="mr-3 mr-lg-0"><a data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="caf84b1ec771b3f6b955f47b428c0c1112288d861681c10da317372877a91746" href="https://github.com/security">Security</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://www.githubstatus.com/" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="76d29676f46e945d13ed4b667a4ade0b6f9781150f47c3060fd8e8c3a5d1b504">Status</a></li>
         <li><a data-ga-click="Footer, go to help, text:Docs" href="https://docs.github.com">Docs</a></li>
     </ul>
 
@@ -1754,11 +2027,11 @@
 </svg>
 </a>
     <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-        <li class="mr-3 mr-lg-0"><a href="https://support.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="11a144512d565ef8dc0865ba06795d56406719296716d386c62d938bb06f6ef8">Contact GitHub</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://github.com/pricing" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Pricing&quot;,&quot;label&quot;:&quot;text:Pricing&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="5dfb6c9c0d936721e7245e3673ce871e03d3625ffaa78d1b6d34fdc4dc1d6599">Pricing</a></li>
-      <li class="mr-3 mr-lg-0"><a href="https://docs.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to api&quot;,&quot;label&quot;:&quot;text:api&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="d8366ad1e49eee3016ea21f30e1440e276cdd5d56717a0fb567bb66e337cc546">API</a></li>
-      <li class="mr-3 mr-lg-0"><a href="https://services.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to training&quot;,&quot;label&quot;:&quot;text:training&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="e585e0d6adaf561352f2bbb99895b1758593d524553bfd9a7203c7e861463fca">Training</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://github.blog" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to blog&quot;,&quot;label&quot;:&quot;text:blog&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/tooltipShadowSupport.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="ab037857418602fdaeebf21f33128eab1cee304d0a5cc8e0cedea74875641c95">Blog</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://support.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="ec3d71c25b203cd09fee0ef30d109c9156b9980a98b4f3c8af39eec8e13e1b42">Contact GitHub</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://github.com/pricing" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Pricing&quot;,&quot;label&quot;:&quot;text:Pricing&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="949155bebb48bdae788c75da81e534f5dae441b09e188ce78928ceef2b32833d">Pricing</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://docs.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to api&quot;,&quot;label&quot;:&quot;text:api&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="bbda8ecba4bffcb04cb568fb7c5eb16eac6fa1b9a1418eb2abb7c2ec56575f14">API</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://services.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to training&quot;,&quot;label&quot;:&quot;text:training&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="b590508b6b338a48631f806311f2833e2f3e04542f0a100136d13a86356eec56">Training</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://github.blog" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to blog&quot;,&quot;label&quot;:&quot;text:blog&quot;,&quot;originating_url&quot;:&quot;https://github.com/aminomancer/uc.css.js/blob/master/JS/appMenuAboutConfigButton.uc.js&quot;,&quot;user_id&quot;:37919512}}" data-hydro-click-hmac="9cb57a12d61e53403737e0e4b893420fefc9fde440b4131d1248f48643553e2c">Blog</a></li>
         <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
     </ul>
   </div>

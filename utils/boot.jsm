@@ -71,7 +71,8 @@ let _uc = {
 
   getDirEntry: function(filename,isLoader = false){
     filename = filename.replace("\\","/");
-    let pathParts = ((isLoader ? _uc.SCRIPT_DIR : _uc.RESOURCE_DIR) + "/" + filename).split("/").filter((a)=>(!!a));
+    let pathParts = ((filename.startsWith("..") ? "" : (isLoader ? _uc.SCRIPT_DIR : _uc.RESOURCE_DIR)) + "/" + filename)
+                    .split("/").filter( (a) => (!!a && a != "..") );
     let entry = _uc.chromeDir;
     
     for(let part of pathParts){
@@ -87,6 +88,68 @@ let _uc = {
     }else{
       return null
     }
+  },
+  
+  updateStyleSheet: function(name,type) {
+    if(type){
+      let sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
+      try{
+        let uri = Services.io.newURI(`chrome://userchrome/content/${name}`);
+        switch(type){
+          case "agent":
+            sss.unregisterSheet(uri,sss.AGENT_SHEET);
+            sss.loadAndRegisterSheet(uri,sss.AGENT_SHEET);
+            return true
+          case "author":
+            sss.unregisterSheet(uri,sss.AUTHOR_SHEET);
+            sss.loadAndRegisterSheet(uri,sss.AUTHOR_SHEET);
+            return true
+          default:
+            return false
+        }
+      }catch(e){
+        console.error(e);
+        return false
+      }
+    }
+    let entry = _uc.utils.getFSEntry(name);
+    if(!(entry && entry.isFile())){
+      return false
+    }
+    let recentWindow = Services.wm.getMostRecentBrowserWindow();
+    if(!recentWindow){
+      return false
+    }
+    function recurseImports(sheet,all){
+      let z = 0;
+      let rule = sheet.cssRules[0];
+      // loop through import rules and check that the "all"
+      // doesn't already contain the same object
+      while(rule instanceof CSSImportRule && !all.includes(rule.styleSheet) ){
+        all.push(rule.styleSheet);
+        recurseImports(rule.styleSheet,all);
+        rule = sheet.cssRules[++z];
+      }
+      return all
+    }
+    
+    let sheets = recentWindow.InspectorUtils.getAllStyleSheets(recentWindow.document,false);
+    
+    sheets = sheets.flatMap( x => recurseImports(x,[x]) );
+    
+    // If a sheet is imported multiple times, then there will be
+    // duplicates, because style system does create an object for
+    // each instace but that's OK since sheets.find below will
+    // only find the first instance and reload that which is
+    // "probably" fine.
+    let entryFilePath = `file:///${entry.path.replaceAll("\\","/")}`;
+    
+    let target = sheets.find(sheet => sheet.href === entryFilePath);
+    if(target){
+      recentWindow.InspectorUtils.parseStyleSheet(target,_uc.utils.readFile(entry));
+      return true
+    }
+    return false
   },
 
   getScripts: function () {
@@ -160,10 +223,10 @@ let _uc = {
         && (/^\w*$/).test(script.startup)
         && SHARED_GLOBAL[script.startup]
         && typeof SHARED_GLOBAL[script.startup]._startup === "function")
-        {
+      {
           SHARED_GLOBAL[script.startup]._startup(win)
-        }
-    },
+      }
+  },
   
   loadScript: function (script, win) {
     if (script.inbackground || !script.regex.test(win.location.href) || !script.isEnabled) {
@@ -240,6 +303,7 @@ let _uc = {
           let props = {
             id: desc.id,
             class: `toolbarbutton-1 chromeclass-toolbar-additional ${desc.class?desc.class:""}`,
+            overflows: !!desc.overflows,
             label: desc.label || desc.id,
             tooltiptext: desc.tooltip || desc.id,
             style: itemStyle,
@@ -334,6 +398,10 @@ let _uc = {
         yPref.set(_uc.PREF_SCRIPTSDISABLED, yPref.get(_uc.PREF_SCRIPTSDISABLED).replace(new RegExp(`^${script.filename},?|,${script.filename}`), ''));
       }
       Services.appinfo.invalidateCachesOnRestart();
+    },
+    
+    updateStyleSheet: function(name = "../userChrome.css",type){
+      return _uc.updateStyleSheet(name,type)
     },
     
     updateMenuStatus: function(menu){

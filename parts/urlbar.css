@@ -12,47 +12,62 @@
 /* Hide some buttons for hover
 */
 
-#nav-bar:not([customizing="true"])>#nav-bar-customization-target>#urlbar-container:not(:hover)>#urlbar:not([focused])>#urlbar-input-container>#page-action-buttons {
-    opacity: 0;
+#nav-bar:not([customizing="true"])
+	> #nav-bar-customization-target
+	> #urlbar-container:not(:hover)
+	> #urlbar:not([focused])
+	> #urlbar-input-container
+	> #page-action-buttons {
+	opacity: 0;
 }
 
 #page-action-buttons {
-    transition: opacity 0.15s ease;
+	transition: opacity 0.15s ease;
 }
 
-#nav-bar:not([customizing="true"])>#nav-bar-customization-target>#urlbar-container:not(:hover)>#urlbar:not([focused])>#urlbar-input-container>#identity-box {
-    opacity: 0;
-    /*visibility: collapse;*/
+#nav-bar:not([customizing="true"])
+	> #nav-bar-customization-target
+	> #urlbar-container:not(:hover)
+	> #urlbar:not([focused])
+	> #urlbar-input-container
+	> #identity-box {
+	opacity: 0;
+	/*visibility: collapse;*/
 }
 
 #identity-box {
-    /*transition: visibility 0.30s ease-in-out, opacity 0.30s ease-in-out;*/
-    transition: opacity 0.15s ease;
+	/*transition: visibility 0.30s ease-in-out, opacity 0.30s ease-in-out;*/
+	transition: opacity 0.15s ease;
 }
 
-#nav-bar:not([customizing="true"])>#nav-bar-customization-target>#urlbar-container:not(:hover)>#urlbar:not([focused])>#urlbar-input-container>#tracking-protection-icon-container {
-    opacity: 0;
+#nav-bar:not([customizing="true"])
+	> #nav-bar-customization-target
+	> #urlbar-container:not(:hover)
+	> #urlbar:not([focused])
+	> #urlbar-input-container
+	> #tracking-protection-icon-container {
+	opacity: 0;
 }
 
 #tracking-protection-icon-container {
-    transition: opacity 0.15s ease;
+	transition: opacity 0.15s ease;
 }
 
 /* URL bar max-width and centered hack */
 
 #urlbar {
-    max-width: 75% !important;
-    margin: 0 15% !important;
-    /* URL bar and toolbar height */
-    --urlbar-height: 36px !important;
-    --urlbar-toolbar-height: 40px !important;
+	max-width: 75% !important;
+	margin: 0 15% !important;
+	/* URL bar and toolbar height */
+	--urlbar-height: 36px !important;
+	--urlbar-toolbar-height: 40px !important;
 }
 
 /* URL bar and toolbar height if compact mode */
 
 :root[uidensity="compact"] #urlbar {
-    --urlbar-height: 28px !important;
-    --urlbar-toolbar-height: 34px !important;
+	--urlbar-height: 28px !important;
+	--urlbar-toolbar-height: 34px !important;
 }
 
 /*
@@ -62,12 +77,12 @@
 
 #urlbar-input:focus:-moz-lwtheme-darktext,
 #urlbar-input:focus:-moz-lwtheme-brighttext {
-    color: var(--bf-urlbar-focused-color) !important;
+	color: var(--bf-urlbar-focused-color) !important;
 }
 
 #urlbar-background {
-    border-radius: var(--bf-urlbar-radius) !important;
-    /*border: none !important;*/
+	border-radius: var(--bf-urlbar-radius) !important;
+	/*border: none !important;*/
 }
 
 /* Set color scheme *
@@ -122,48 +137,48 @@
 
 .urlbar-icon:-moz-lwtheme-darktext,
 .urlbar-icon:-moz-lwtheme-brighttext {
-    color: var(--bf-icon-color) !important;
+	color: var(--bf-icon-color) !important;
 }
 
-.urlbar-icon>image {
-    fill: #ff00ff !important;
-    color: #ff00ff !important;
+.urlbar-icon > image {
+	fill: #ff00ff !important;
+	color: #ff00ff !important;
 }
 
 */ .urlbarView-favicon,
 .urlbarView-type-icon {
-    display: none !important;
+	display: none !important;
 }
 
-.urlbarView-row[type="bookmark"]>span {
-    color: var(--bf-urlbar-bookmark-color) !important;
+.urlbarView-row[type="bookmark"] > span {
+	color: var(--bf-urlbar-bookmark-color) !important;
 }
 
-.urlbarView-row[type="switchtab"]>span .urlbarView-url {
-    color: var(--bf-urlbar-switch-tab-color) !important;
+.urlbarView-row[type="switchtab"] > span .urlbarView-url {
+	color: var(--bf-urlbar-switch-tab-color) !important;
 }
 
 #urlbar-results {
-    font-weight: var(--bf-urlbar-results-font-weight) !important;
-    font-size: var(--bf-urlbar-results-font-size) !important;
+	font-weight: var(--bf-urlbar-results-font-weight) !important;
+	font-size: var(--bf-urlbar-results-font-size) !important;
 }
 
 /* Hover background color */
 
 .urlbarView-row-inner:hover {
-    background: var(--bf-accent-bg) !important;
+	background: var(--bf-accent-bg) !important;
 }
 
 .urlbarView-url,
 .search-panel-one-offs-container {
-    font-weight: var(--bf-urlbar-results-font-weight) !important;
-    font-size: var(--bf-urlbar-font-size) !important;
+	font-weight: var(--bf-urlbar-results-font-weight) !important;
+	font-size: var(--bf-urlbar-font-size) !important;
 }
 
 #urlbar-input {
-    font-size: var(--bf-urlbar-font-size) !important;
-    font-weight: var(--bf-urlbar-font-weight) !important;
-    text-align: center !important;
+	font-size: var(--bf-urlbar-font-size) !important;
+	font-weight: var(--bf-urlbar-font-weight) !important;
+	text-align: center !important;
 }
 
 /* Urlbar buttons *
@@ -176,7 +191,7 @@
 /* URL bar hightlight color */
 
 ::-moz-selection {
-    background-color: var(--bf-accent-bg) !important;
+	background-color: var(--bf-accent-bg) !important;
 }
 
 /* Bookmark button - Star button
@@ -189,7 +204,7 @@
 
 #star-button:hover:not(.no-hover):not([open="true"]):-moz-lwtheme-darktext,
 #star-button:hover:not(.no-hover):not([open="true"]):-moz-lwtheme-brighttext {
-    background: var(--bf-tab-selected-bg) !important;
+	background: var(--bf-tab-selected-bg) !important;
 }
 
 /*
@@ -202,21 +217,21 @@
 #star-button:hover:active:not(.no-hover):-moz-lwtheme-brighttext,
 #star-button[open="true"]:-moz-lwtheme-darktext,
 #star-button[open="true"]:-moz-lwtheme-brighttext {
-    background: var(--bf-tab-toolbar-bg) !important;
+	background: var(--bf-tab-toolbar-bg) !important;
 }
 
 /* Tracking */
 
 #tracking-protection-icon-container {
-    border-radius: 6px !important;
-    margin: 2px !important;
+	border-radius: 6px !important;
+	margin: 2px !important;
 }
 
 /* Identity */
 
 #identity-box {
-    border-radius: 6px !important;
-    margin: 2px !important;
+	border-radius: 6px !important;
+	margin: 2px !important;
 }
 
 /*
