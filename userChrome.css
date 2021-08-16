@@ -3800,8 +3800,8 @@ slider,
 .toolbarbutton-badge {
 	color: #9400ff !important;
 	background-color: #1b1a38f6 !important;
-	/*	min-width: 14px !important;
-	min-height: 14px !important;*/
+	min-width: 14px !important;
+	min-height: 14px !important;
 	padding: 0px !important;
 	/*margin-right: -6px !important;*/
 }
