@@ -67,7 +67,7 @@
 
 :root[uidensity="compact"] #urlbar {
 	--urlbar-height: 28px !important;
-	--urlbar-toolbar-height: 34px !important;
+	--urlbar-toolbar-height: 32px !important;
 }
 
 /*

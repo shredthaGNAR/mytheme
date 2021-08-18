@@ -13,41 +13,42 @@
 
 .browser-toolbar:-moz-lwtheme-darktext,
 .browser-toolbar:-moz-lwtheme-brighttext {
-	background: transparent /*var(--bf-tab-toolbar-bg)*/ !important;
+  background: transparent /*var(--bf-tab-toolbar-bg)*/ !important;
 }
-
+/*
 toolbar {
 	background-image: none !important;
-}
+}*/
 
 toolbar#nav-bar {
-	padding: var(
-		--bf-navbar-padding
-	) !important; /* Remove horizontal line on navbar */
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
-	border-top: none !important;
+  padding: var(
+    --bf-navbar-padding
+  ) !important; /* Remove horizontal line on navbar */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+  border-top: none !important;
 }
 
-/* Set color schemes for #nav-bar *
+/* Set color schemes for #nav-bar */
 
 toolbar#nav-bar:-moz-lwtheme-darktext,
 toolbar#nav-bar:-moz-lwtheme-brighttext {
-	background: transparent /*var(--bf-navbar-bg)* !important;
-	-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+  background: transparent /*var(--bf-navbar-bg)*/ !important;
+  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
 }
 
 toolbarbutton {
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
-	margin-left: 2px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+  margin-left: 2px !important;
 }
 
-/* Set color schemes for #nav-bar *
+/* Set color schemes for #nav-bar */
 
-.toolbarbutton-1:-moz-lwtheme-darktext, .toolbarbutton-1:-moz-lwtheme-brighttext {
-	--toolbarbutton-hover-background: var(--bf-hover-bg) !important;
-	--toolbarbutton-active-background: var(--bf-active-bg) !important;
+.toolbarbutton-1:-moz-lwtheme-darktext,
+.toolbarbutton-1:-moz-lwtheme-brighttext {
+  --toolbarbutton-hover-background: var(--bf-hover-bg) !important;
+  --toolbarbutton-active-background: var(--bf-active-bg) !important;
 }
-
+/*
 #searchbar {
 	border: none !important;
 }
@@ -59,16 +60,16 @@ toolbarbutton {
 }*/
 
 .searchbar-textbox {
-	font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 
 #navigator-toolbox,
 toolbaritem {
-	border: none !important;
+  border: none !important;
 }
 
 #navigator-toolbox::after {
-	border-bottom: 0 !important;
+  border-bottom: 0 !important;
 }
 
 /* Set color scheme *
@@ -81,7 +82,7 @@ toolbaritem {
 /* Back button */
 
 #back-button > .toolbarbutton-icon {
-	--backbutton-background: transparent !important;
-	border: none !important;
-	-moz-appearance: var(--bf-moz-appearance) !important;
+  --backbutton-background: transparent !important;
+  border: none !important;
+  -moz-appearance: var(--bf-moz-appearance) !important;
 }
