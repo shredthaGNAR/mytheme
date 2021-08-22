@@ -1,11 +1,4 @@
 /** @format */
-@import url(uc-globals.css);
-@import url(uc-variables.css);/*
-@import url(uc-search-mode-icons.css);
-/*@import url(uc-misc.css);
-@import url(uc-tabs-bar.css);
-@import url(uc-tabs.css);
-@import url(uc-urlbar.css);
 /*@import url(uc-findbar.css);  
 @import url(uc-urlbar-results.css);
 @import url(uc-search-one-offs.css);
@@ -13,6 +6,9 @@
 @import url(uc-search-mode-icons.css);
 @import url(uc-misc.css);
 @import url(custom-chrome.css);*/
+@import url(uc-globals.css);
+@import url(uc-variables.css);
+@import url(uc-misc.css);
 @import url("colors/blurred.css");
 @import url("parts/main-window.css");
 @import url("parts/toolbar.css");
@@ -24,6 +20,7 @@
 @import url("parts/window-controls.css");
 @import url("parts/compact-bookmarks.css");
 @import url("parts/autohide_bookmarks_toolbar.css");
+
 /* Turn on Vibrancy aka macOS Transparency and Blur in the URL Bar, Nav Bar, and SidePanel, Findbar, and Bookmarks Bar */
 
 #main-window,
@@ -3443,7 +3440,7 @@ tab {
 .tabbrowser-tab[beforeselected-visible] {
   border-image: none !important;
 }
- .tabbrowser-tab:not([selected="true"]) .tab-label {
+.tabbrowser-tab:not([selected="true"]) .tab-label {
   color: #99999990 !important;
 }
 
@@ -4102,8 +4099,8 @@ toolbarbutton {
 
 #nav-bar {
   box-shadow: inset 0 1px 1px var(--lwt-background-tab-separator-color),
-    0 -2px 0 0 color-mix(in srgb, currentcolor 30%, transparent),
-    0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--my-border-color) !important;
+    0 -2px 0 0 color-mix(in srgb, currentcolor 30%, transparent) !important;
+  /* 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--my-border-color) !important;*/
 }
 /*#nav-bar {
     box-shadow: 0 -2px 0 0 color-mix(in srgb, currentcolor 30%, transparent) !important;
@@ -4204,11 +4201,11 @@ toolbarbutton {
 .tabbrowser-tab[selected="true"] {
   border-top: 3px solid var(--my-gradient) !important;
   padding-top: 0px !important;
-} /*
+}
 .tabbrowser-tab:not([visuallyselected="true"]):hover {
   border-top: 3px solid var(--my-gradient) !important;
   padding-top: 0px !important;
-}*/
+}
 #urlbar {
   max-width: 75% !important;
   margin: 0 15% !important;
@@ -4335,7 +4332,8 @@ otherwise will change height when tabs overflow */
     --scrollbtn-border-radius,
     calc(var(--tab-border-radius) + 4px)
   ) !important;
-}/*
+} /*******************tab seperators that disappear on hover***********************/
+/*
 .tabbrowser-tab {
   border-inline-end: 1px solid transparent !important;
   border-image: 1 1
@@ -4354,3 +4352,191 @@ otherwise will change height when tabs overflow */
 .tabbrowser-tab[beforeselected-visible] {
   border-image: none !important;
 }
+*/
+
+/*----------------------------------------------------------------smaller new tab buttons ********************************/
+#tabs-newtab-button > .toolbarbutton-icon {
+  --toolbarbutton-inner-padding: 2px !important;
+}
+/* Blend Inactive tabs favicon */
+#TabsToolbar
+  #tabbrowser-tabs
+  .tabbrowser-tab[pending]
+  .tab-content:not(:hover)
+  .tab-icon-image {
+  filter: grayscale(70%);
+  transition: filter 0.2s ease-in;
+  opacity: 0.7;
+}
+/******************************** close icon size 
+:root {
+  --tab_close_icons_size: 16px;
+}
+
+#main-window
+  #navigator-toolbox
+  #TabsToolbar
+  #closetab_fmarin_com-browser-action
+  .toolbarbutton-icon,
+#main-window
+  #navigator-toolbox
+  #TabsToolbar
+  #_fe8cab45-aaee-45f8-8765-781e0ebea300_-browser-action
+  .toolbarbutton-icon,
+#main-window #navigator-toolbox #TabsToolbar .close-icon > .toolbarbutton-icon,
+#main-window #navigator-toolbox #TabsToolbar .tab-content .close-icon {
+  min-width: var(--tab_close_icons_size) !important;
+  width: var(--tab_close_icons_size) !important;
+  min-height: var(--tab_close_icons_size) !important;
+  height: var(--tab_close_icons_size) !important;
+}
+****************************************************************/
+#scrollbutton-up,
+#scrollbutton-down {
+  width: unset !important;
+  height: unset !important;
+  padding: unset !important;
+}
+
+.tab-background,
+.tab-stack {
+  min-height: unset !important;
+}
+
+#tabbrowser-tabs[overflow="true"]
+  .tabbrowser-tab[pinned]
+  :is(.tab-background, .tab-stack) {
+  min-height: var(--tab-min-height) !important;
+}
+/* tab top border roundness */
+#TabsToolbar :is(.tabs-newtab-button, #tabs-newtab-button),
+#TabsToolbar .tabbrowser-tab,
+#TabsToolbar .tabbrowser-tab .tab-stack,
+#TabsToolbar .tabbrowser-tab .tab-background,
+#TabsToolbar .tabbrowser-tab .tab-content {
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+}
+.tabbrowser-tab[usercontextid]
+  > .tab-stack
+  > .tab-background
+  > .tab-context-line
+  + .tab-loading-burst {
+  background-color: var(--identity-tab-color) !important;
+  opacity: 0.1 !important;
+}
+:root {
+  --tab-block-margin: 0 !important;
+}
+#tabbrowser-tabs {
+  --uc-scrollbutton-margin: 0px;
+}
+#scrollbutton-up,
+#scrollbutton-down {
+  border-block-width: var(--uc-scrollbutton-margin, 0px) !important;
+}
+.tabbrowser-tab {
+  padding-inline: 0 !important;
+} /**************************************************************** 
+.tab-context-line {
+  display: var(--my-gradient) !important;
+}
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background {
+  border-block: 2px solid var(--identity-icon-color, transparent) !important;
+}********************************/
+/*
+  §   "Add/Edit Bookmark": Show "Location" in Ctrl+D doorhanger popup
+      Nobody wants to launch Library just to edit bookmark URL.
+  */
+#editBMPanel_locationRow[collapsed="true"] {
+  visibility: visible !important;
+}
+/*
+  §  "Add/Edit Bookmark": Show "Keyword" in Ctrl+D doorhanger popup
+  */
+#editBMPanel_keywordRow[collapsed="true"] {
+  visibility: visible !important;
+}
+/* Remove margin around download item which is actually clickable, but not highlighted on hover (Download progress popup).
+Now whole area of tile should be highlighted and link to downloaded item.
+Works with Firefox 90 */
+#downloadsListBox > richlistitem > .downloadMainArea {
+  height: inherit !important;
+}
+/* Make open containing folder great again - fill whole height of the tile (Download progress popup).
+Works with Firefox 90 */
+#downloadsListBox > richlistitem > .downloadButton {
+  height: inherit !important;
+}
+/*
+.tabbrowser-tab[selected="true"] .tab-background {
+  border-top: 3px solid var(--my-gradient) !important;
+}
+/* DISABLE EXPANDING START */
+#urlbar[breakout][breakout-extend] {
+  top: calc(
+    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+  ) !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding-block: 0 !important;
+  padding-inline: 0 !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+  animation-name: none !important;
+  box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 0px 0px 2px 1px rgb(0 0 0 / 23%) !important;
+}
+/* DISABLE EXPANDING END */
+/* Do not animate */
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+  animation: none !important;
+}
+
+/* REMOVE URL RESULT PADDING START *
+.urlbarView {
+  margin-inline: 0 !important;
+  width: 100% !important;
+}
+
+.urlbarView-row {
+  padding-block: 0 !important;
+}
+/* REMOVE URL RESULT PADDING END */
+
+/* MOVE URL RESULT TYPE ICON TO LEFT START *
+.urlbarView-type-icon {
+  min-width: 16px !important;
+  height: 16px !important;
+  margin-bottom: 0 !important;
+  margin-inline-start: 0 !important;
+}
+
+.urlbarView-favicon {
+  visibility: none !important;
+}
+/* Remove margins around download item button (Download progress popup) - prepare for Firefox 93 (experiments on nightly) */
+/*
+#downloadsListBox > richlistitem {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.tab-background,
+menupopup,
+.menupopup-arrowscrollbox {
+  border-radius: 5px !important;
+}
+/** BEGIN Rouhdness **
+
+.tab-background {
+  border-radius: 5px 5px !important;
+  margin-bottom: 0px !important;
+}
+*/
