@@ -4636,6 +4636,10 @@ menupopup {
   border: none !important;
 }
 
+#tabs-newtab-button:hover > .toolbarbutton-icon {
+  background: none !important;
+  background-color: transparent !important;
+}
 /* Active tab brightness */
 
 .tab-content[selected="true"] {

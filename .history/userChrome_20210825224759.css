@@ -4609,10 +4609,10 @@ menupopup {
 .tab-background:is([selected], [multiselected]) {
   box-shadow: inset 0 5px red !important;
 }
-/* Makes black favicons more visible on dark background, contrast will be lowered though *
+/* Makes black favicons more visible on dark background, contrast will be lowered though */
 .tab-icon-image {
   filter: invert(40%) contrast(250%) saturate(250%) !important;
-}*/
+}
 
 :root[sizemode="normal"] {
   border-top: none !important;
@@ -4636,6 +4636,10 @@ menupopup {
   border: none !important;
 }
 
+#tabs-newtab-button:hover > .toolbarbutton-icon {
+  background: none !important;
+  background-color: transparent !important;
+}
 /* Active tab brightness */
 
 .tab-content[selected="true"] {

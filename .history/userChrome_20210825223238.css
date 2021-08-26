@@ -971,7 +971,7 @@ tab:not([pinned], [selected])
 
 .tab-icon-image:not([pinned]) {
   opacity: 1 !important;
-  margin-top: 0px !important;
+  margin-top: -1px !important;
 }
 
 .tab-icon-image:is([pinned]):not([selected]) {
@@ -1131,11 +1131,11 @@ tab:not([pinned])[selected="true"] .tab-content {
   padding-left: 7px !important;
   transition-duration: 0ms !important;
 }
-/*
+
 tab:is([pinned])[selected="true"] .tab-background {
   min-height: 32px !important;
   border-radius: 5px !important;
-}*/
+}
 
 tab:is([pinned])[selected="true"] .tab-content {
   /* background-color: #161742 !important;*/
@@ -2221,8 +2221,7 @@ menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   margin-top: 3px !important;
   margin-bottom: 3px !important;
 }
-*/
-#personal-bookmarks menupopup[placespopup] {
+*/ #personal-bookmarks menupopup[placespopup] {
   -moz-appearance: auto !important;
   background-color: #01042ab4 !important;
   color: #008aed !important;
@@ -2697,15 +2696,10 @@ menuseparator {
 /* Bookmarks bar with BLUR need layout.css.backdrop-filter.enabled = true */
 
 #PersonalToolbar {
-  background-image: linear-gradient(
-    to bottom,
-    #551dfc,
-    #1293dd,
-    #551dfc
-  ) !important;
-  background-color: #551dfc !important;
-  background: transparent !important;
-  /* background-image: url(images/noise-512x512.png) !important;*/
+  /*background-image: linear-gradient(to bottom, #551dfc, #1293dd, #551dfc) !important;*/
+  background: #551dfc !important;
+  /*background: transparent !important;*/
+  background-image: url(images/noise-512x512.png) !important;
   backdrop-filter: blur(32px) !important;
   -moz-backdrop-filter: blur(32px) !important;
 }
@@ -3930,7 +3924,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 :root[uidensity="compact"]
   #tabbrowser-tabs[positionpinnedtabs]
   .tabbrowser-tab[pinned] {
-  min-height: calc(var(--tab-min-height)+2px) !important;
+  min-height: calc(var(--tab-min-height)-2px) !important;
 }
 
 :root {
@@ -4609,10 +4603,10 @@ menupopup {
 .tab-background:is([selected], [multiselected]) {
   box-shadow: inset 0 5px red !important;
 }
-/* Makes black favicons more visible on dark background, contrast will be lowered though *
+/* Makes black favicons more visible on dark background, contrast will be lowered though */
 .tab-icon-image {
   filter: invert(40%) contrast(250%) saturate(250%) !important;
-}*/
+}
 
 :root[sizemode="normal"] {
   border-top: none !important;
@@ -4636,12 +4630,16 @@ menupopup {
   border: none !important;
 }
 
-/* Active tab brightness */
+#tabs-newtab-button:hover > .toolbarbutton-icon {
+  background: none !important;
+  background-color: transparent !important;
+}
+/* Active tab brightness *
 
 .tab-content[selected="true"] {
-  background-image: color-mix(in srgb, #4d4dfe 20%, transparent) !important;
+  background-color: color-mix(in srgb, #4d4dfe 20%, transparent) !important;
   text-shadow: 1px !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
   border-radius: 5px !important;
 }
