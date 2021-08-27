@@ -1114,35 +1114,35 @@ menuitem.subviewbutton:not([disabled], :active)[_moz-menuactive],
   background-color: color-mix(in srgb, #4e6bfd 43%, transparent) !important;
 }
 
-/* Line gradient in active tab *
+/* Line gradient in active tab */
 
-tab:not([pinned])[selected='true'] .tab-background {
-    border-radius: 5px !important;
-    height: 32px !important;
-    transition-duration: 0ms !important;
-    border-image: 1 0 0 0
-        linear-gradient(
-            90deg,
-            #9400ff,
-            #ba00e5,
-            #df06b9,
-            #e62da7,
-            #f13b95,
-            #f64d86,
-            #f85f7a,
-            #fc7169,
-            #f9845b,
-            #e8ab52
-        ) !important;
-}*/
-
-tab:not([pinned])[selected="true"] .tab-content {
-  /*background-image: url(images/tabbackground.png);*/
+tab:not([pinned])[selected="true"] .tab-background {
+  border-radius: 5px !important;
+  height: 32px !important;
   background-image: radial-gradient(
     circle at bottom center,
     #551dfc,
     #000134d3
   ) !important;
+  transition-duration: 0ms !important;
+  border: 1 0 0 0 solid transparent !important;
+  border-image: 1 0 0 0
+    linear-gradient(
+      90deg,
+      #9400ff,
+      #ba00e5,
+      #df06b9,
+      #e62da7,
+      #f13b95,
+      #f64d86,
+      #f85f7a,
+      #fc7169,
+      #f9845b,
+      #e8ab52
+    ) !important;
+}
+tab:not([pinned])[selected="true"] .tab-content {
+  /*background-image: url(images/tabbackground.png);*/
   margin-top: 0px !important;
   margin-left: 0px !important;
   margin-right: 0px !important;
@@ -2512,11 +2512,11 @@ description#identity-popup-content-verifier,
 }
 /****************************************************************/
 .tab-stack:hover > .tab-background::before {
-  background-color: inherit;
+  background: inherit;
 }
 
 .tab-stack > .tab-background[selected]::after {
-  background-color: inherit;
+  background: inherit;
   background-image: linear-gradient(
     90deg,
     #9400ff,
@@ -2540,7 +2540,8 @@ description#identity-popup-content-verifier,
 #tabbrowser-tabs:not([closebuttons="activetab"])
   > #tabbrowser-arrowscrollbox
   > .tabbrowser-tab:not([visuallyselected="true"]):hover {
-  --tab-label-mask-size: 1.3em !important;
+  --tab-label-mask-size: 2em !important;
+  /* --tab-label-mask-size: 1.3em !important;*/
 }
 
 .tab-content {
@@ -3290,7 +3291,7 @@ tab {
 }
 
 #urlbar {
-  min-height: 28px !important;
+  min-height: 26px !important;
   margin-block: 0px 0px !important;
   text-shadow: none !important;
   background-image: linear-gradient(
@@ -3337,7 +3338,7 @@ tab {
 }
 
 #searchbar {
-  min-height: 28px !important;
+  min-height: 26px !important;
   text-shadow: none !important;
   margin-block: -3px !important;
 }
@@ -3367,7 +3368,7 @@ tab {
 }
 
 #urlbar {
-  min-height: 28px !important;
+  min-height: 26px !important;
   margin-block: 0px 0px !important;
   font-size: 1.12rem !important;
   /*text-shadow: 0px 0px 5px #272727 !important;*/

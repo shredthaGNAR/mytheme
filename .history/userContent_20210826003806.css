@@ -365,12 +365,16 @@ url('about:newtab') {
   }
 }
 
-/*
 @-moz-document url("about:newtab") {
-	body { background-color: #0113268c !important;}
+  body {
+    background-color: #3c3d79aa !important;
+  }
 }
-@-moz-document url(chrome://browser/content/browser.xhtml) {
-	browser[type="content-primary"] {background: #01132696 !important}
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
+  browser[type="content-primary"] {
+    background: #3c3d79aa !important;
+  }
 }
 /*(chrome://browser/content/browser.xul)*/
 @-moz-document url(about:newtab),
@@ -823,6 +827,21 @@ url('about:newtab') {
   }
 }
 
+/*For Home Screen*/
+@-moz-document url(about:home),
+url(about:newtab) {
+  .logo {
+    background-image: url("images/firefox-wordmark.svg") !important;
+  }
+}
+
+/*For Private Home Screen*/
+@-moz-document url(about:privatebrowsing) {
+  .logo {
+    background-image: url("images/firefox-wordmark.svg") !important;
+  }
+}
+
 /* bitwarden */
 
 @-moz-document url-prefix(moz-extension: //c1ea5f85-7682-4d41-86cf-4946657a717e/popup/index.html)
@@ -842,7 +861,7 @@ url('about:newtab') {
 @-moz-document url("about:blank") {
   @media (prefers-color-scheme: dark) {
     :root {
-      background-color: #181735 !important;
+      background-color: #181735;
     }
   }
 }
@@ -854,7 +873,7 @@ url('about:newtab') {
     }
 
     body:not([style*="background"], [class], [id]) {
-      background-color: #181735 !important;
+      background-color: transparent !important;
     }
   }
 }
@@ -868,13 +887,8 @@ url('about:newtab') {
   }
 }
 
-@-moz-document url(about:blank) {
+@-moz-document url-prefix(about:blank) {
   * {
     background-color: #181735 !important;
-  }
-}
-@-moz-document url("about:blank") {
-  html {
-    background-color: rgb(40, 40, 40) !important;
   }
 }

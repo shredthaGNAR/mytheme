@@ -1114,29 +1114,29 @@ menuitem.subviewbutton:not([disabled], :active)[_moz-menuactive],
   background-color: color-mix(in srgb, #4e6bfd 43%, transparent) !important;
 }
 
-/* Line gradient in active tab *
+/* Line gradient in active tab */
 
-tab:not([pinned])[selected='true'] .tab-background {
-    border-radius: 5px !important;
-    height: 32px !important;
-    transition-duration: 0ms !important;
-    border-image: 1 0 0 0
-        linear-gradient(
-            90deg,
-            #9400ff,
-            #ba00e5,
-            #df06b9,
-            #e62da7,
-            #f13b95,
-            #f64d86,
-            #f85f7a,
-            #fc7169,
-            #f9845b,
-            #e8ab52
-        ) !important;
-}*/
-
-tab:not([pinned])[selected="true"] .tab-content {
+tab:not([pinned])[selected="true"] .tab-background {
+  border-radius: 5px !important;
+  height: 32px !important;
+  transition-duration: 0ms !important;
+  border: 1 0 0 0 solid transparent !important;
+  border-image: 1 0 0 0
+    linear-gradient(
+      90deg,
+      #9400ff,
+      #ba00e5,
+      #df06b9,
+      #e62da7,
+      #f13b95,
+      #f64d86,
+      #f85f7a,
+      #fc7169,
+      #f9845b,
+      #e8ab52
+    ) !important;
+}
+*/ tab:not([pinned])[selected="true"] .tab-content {
   /*background-image: url(images/tabbackground.png);*/
   background-image: radial-gradient(
     circle at bottom center,

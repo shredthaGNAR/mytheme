@@ -164,6 +164,8 @@ image.panel-arrow {
   background-color: var(--autocomplete-popup-highlight-background) !important;
 }
 
+/*Color of Text and Highlight Color in Find Bar Input Field */
+
 ::-moz-selection {
   color: var(--lwt-toolbar-field-color) !important;
   /*Colour of text*/
@@ -943,15 +945,9 @@ tab:not([pinned])[selected]
   display: -moz-box !important;
   margin-top: -5px !important;
   margin-bottom: 7px !important;
-  /*text-shadow: 0px 0px 5px #272727 !important;*/
-  font-size: 10px !important;
+  text-shadow: 0px 0px 5px #272727 !important;
+  font-size: 11px !important;
   background: linear-gradient(
-    to left,
-    rgb(144, 89, 255, 1),
-    rgb(255, 74, 162),
-    #ffbd4f
-  ) !important;
-  /* background: linear-gradient(
     90deg,
     #1f005c,
     #48005f,
@@ -965,7 +961,7 @@ tab:not([pinned])[selected]
     #ef865e,
     #f89d63,
     #ffb56b
-  ) !important;*/
+  ) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -1082,6 +1078,7 @@ tab:not([pinned], [selected])
 
 .tabbrowser-tab > .tab-stack > .tab-background:is([multiselected]) {
   background-image: #4d4dfeff !important;
+  box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
 }
 
 /* Color of drop-down menus arrows */
@@ -1117,6 +1114,10 @@ menuitem.subviewbutton:not([disabled], :active)[_moz-menuactive],
 /* Line gradient in active tab *
 
 tab:not([pinned])[selected='true'] .tab-background {
+    /*background-image: linear-gradient( 160deg, #af00bf 0%, #551dfc, #2525ff, #10afff, #2525ff, #551dfc, #af00bf 100%) !important;
+    */
+
+/*
     border-radius: 5px !important;
     height: 32px !important;
     transition-duration: 0ms !important;
@@ -1138,10 +1139,11 @@ tab:not([pinned])[selected='true'] .tab-background {
 
 tab:not([pinned])[selected="true"] .tab-content {
   /*background-image: url(images/tabbackground.png);*/
-  background-image: radial-gradient(
-    circle at bottom center,
+  background-image: linear-gradient(
+    90deg,
     #551dfc,
-    #000134d3
+    #1293dd,
+    #551dfc
   ) !important;
   margin-top: 0px !important;
   margin-left: 0px !important;
@@ -3294,7 +3296,7 @@ tab {
   margin-block: 0px 0px !important;
   text-shadow: none !important;
   background-image: linear-gradient(
-    160deg,
+    270deg,
     #9400ff,
     #ba00e5,
     #df06b9,
@@ -4117,14 +4119,14 @@ toolbarbutton {
   --lwt-accent-color-inactive: rgb(40, 40, 40) !important;
 }
 .tabbrowser-tab {
-  --tab-label-mask-size: 1em !important;
+  --tab-label-mask-size: 2em !important;
 }
 /* Disable tab label mask on hover */
 .tabbrowser-tab[visuallyselected="true"]:hover,
 #tabbrowser-tabs:not([closebuttons="activetab"])
   > #tabbrowser-arrowscrollbox
   > .tabbrowser-tab:not([visuallyselected="true"]):hover {
-  --tab-label-mask-size: 1em !important;
+  --tab-label-mask-size: 2em !important;
 }
 /** Enable urlbar border when focused *
 #urlbar:focus-within > #urlbar-background {
@@ -4551,7 +4553,7 @@ menupopup {
 }*/
 /* Fix mask size */
 .tabbrowser-tab {
-  --tab-label-mask-size: 1em !important;
+  --tab-label-mask-size: 2em !important;
 }
 #urlbar-background,
 #urlbar {
@@ -4561,7 +4563,7 @@ menupopup {
 }
 #urlbar {
   background-image: linear-gradient(
-    160deg,
+    270deg,
     #9400ff,
     #ba00e5,
     #df06b9,
@@ -4678,12 +4680,17 @@ menupopup {
     rgb(255, 74, 162),
     #ffbd4f
   ) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .tab-secondary-label:is([muted], [activemedia-blocked]) {
   display: none !important;
   animation-duration: 0s !important;
+}
+/*Mover el label de las pestañas al centro vertical de la pestaña*/
+.tab-label {
+  margin-top: -3px !important;
+  text-shadow: none !important;
 }
 /* Remove Border Above Tab bar When Windowed *
 #main-window:not([sizemode="maximized"]) #navigator-toolbox {
@@ -4728,6 +4735,14 @@ menupopup {
   background-color: #4e6bfdbb !important;
 }
 
+/*Color de página verificada"*/
+description#identity-popup-content-owner-label,
+description#identity-popup-content-owner,
+description#identity-popup-content-verifier,
+#identity-popup-securityView-body > button {
+  color: #2cf62c !important;
+}
+
 /*Páginas seguras de firefox"*/
 #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button {
   background-color: #2e3075 !important;
@@ -4764,27 +4779,3 @@ menupopup {
 .identity-box-button[open="true"] {
   background-color: #3118a4 !important;
 }
-/** Multi Selected Color - More Contrast ************************************
-#tabbrowser-tabs:not([movingtab])
-  > #tabbrowser-arrowscrollbox
-  > .tabbrowser-tab
-  > .tab-stack
-  > .tab-background[multiselected]:not([selected]):-moz-lwtheme {
-  background-image: linear-gradient(
-      var(--toolbar-bgcolor, transparent),
-      var(--toolbar-bgcolor, transparent)
-    ),
-    linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)),
-    var(--lwt-header-image, none) !important;
-}
-
-.tab-background[multiselected="true"]:not([selected="true"])
-  > .tab-loading-burst:not([bursting]) {
-  background: color-mix(in srgb, currentColor 65%, transparent);
-  opacity: 0.3;
-}
-#TabsToolbar[brighttext]
-  .tab-background[multiselected="true"]:not([selected="true"])
-  > .tab-loading-burst:not([bursting]) {
-  opacity: 0.15;
-}*/
