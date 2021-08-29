@@ -36,7 +36,7 @@
 :host,
 :root {
   /*Colores varios de paginas de about:addons y about:settings*/
-  --in-content-page-background: #1d1d3bfa !important;
+  --in-content-page-background: #1c1b32 !important;
   /*Fondo general*/
   --in-content-text-color: #fff !important;
   /*Color general de label*/
@@ -265,15 +265,15 @@ url(about:home) {
 /*Payment Management Favicon background from the anchored sites*/
 
 .top-site-outer .top-site-icon {
-  background-color: #7171af40 !important;
+  background-color: #00000000 !important;
 }
 
 /*Various colors of the accession interface and configuredn*/
 
-@-moz-document url("about:preferences"),
-url("about:addons") {
+@-moz-document url('about:preferences'),
+url('about:addons') {
   .dialogBox {
-    --in-content-page-background: #1d1d3bfa !important;
+    --in-content-page-background: #282869fa !important;
   }
 
   /*COlor de background de dialogWindow*/
@@ -308,9 +308,9 @@ url("about:addons") {
   }
 }
 
-@-moz-document url("about:home"),
-url("about:newtab") {
-  /*Customization of the Newtab page *
+@-moz-document url('about:home'),
+url('about:newtab') {
+  /*Customization of the Newtab page */
   .logo-and-wordmark .logo {
     background: url("images/foxlogo.png") no-repeat !important;
     background-size: cover !important;
@@ -321,7 +321,7 @@ url("about:newtab") {
     height: 110px !important;
     width: 120px !important;
   }
-*/
+
   .wordmark {
     background: url("images/firefox-wordmark.svg") no-repeat center center !important;
     background-size: 134px !important;
@@ -337,7 +337,7 @@ url("about:newtab") {
   }
 }
 
-@-moz-document url("about:privatebrowsing") {
+@-moz-document url(about:privatebrowsing) {
   .wordmark {
     background: url("images/firefox-wordmark.svg") no-repeat center center !important;
     background-size: 134px !important;
@@ -358,7 +358,7 @@ url("about:newtab") {
 
 /*  Sets up minimal incognito scrollbar */
 
-@-moz-document url"(about:privatebrowsing") {
+@-moz-document url(about:privatebrowsing) {
   :root {
     scrollbar-width: thin !important;
     scrollbar-color: #38375580 transparent !important;
@@ -373,14 +373,14 @@ url("about:newtab") {
 	browser[type="content-primary"] {background: #01132696 !important}
 }
 /*(chrome://browser/content/browser.xul)*/
-@-moz-document url"(about:newtab"),
-url"(about:home") {
+@-moz-document url(about:newtab),
+url(about:home) {
   .outer-wrapper.newtab-experience .search-wrapper {
     padding-bottom: 0px !important;
   }
 
   body {
-    background-color: #1d1d3bfa !important;
+    background-color: #1a185371 !important;
     /*ntp*/
     --newtab-textbox-background-color: #3c3d79aa !important;
     --newtab-topsites-background-color: #3c3d59aa !important;
@@ -413,8 +413,8 @@ url"(about:home") {
   }
 }
 
-@-moz-document url("about:home"),
-url("about:newtab") {
+@-moz-document url('about:home'),
+url('about:newtab') {
   .personalize-button {
     background-color: #3c3d9970 !important;
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%) !important;
@@ -431,7 +431,7 @@ url("about:newtab") {
   }
 
   .activity-stream {
-    background-color: #1d1d3bfa !important;
+    background-color: #181735 !important;
   }
 
   /*Shape of the Top Sites Container*/
@@ -569,18 +569,19 @@ url("about:newtab") {
 
 /* Various colors of the accession and configuration interface */
 
-@-moz-document url("about:preferences"),
-url("about:addons") {
+@-moz-document url('about:preferences'),
+url('about:addons') {
   .dialogBox {
     --in-content-page-background: #1d1d3bfa !important;
   }
 }
 
-@-moz-document url("about:home"),
-url("about:newtab") {
+@-moz-document url('about:home'),
+url('about:newtab') {
   /* Customization of the NewTab page*/
   body {
-    background-color: #1d1d3bfa !important;
+    background-color: #23207046 !important;
+    /*background-image: url(images/firefoxbackground1.jpg);*/
     background-repeat: no-repeat !important;
     background-position: center top !important;
     background-size: cover !important;
@@ -613,7 +614,7 @@ url("about:newtab") {
 /*ntp*/
 
 .activity-stream {
-  background-color: #1d1d3bfa !important;
+  background-color: #181735 !important;
 }
 
 @-moz-document url("moz-extension://230bbecf-4f03-ae44-b003-63054bbc7c0d/onetab.html")
@@ -626,7 +627,7 @@ url("about:newtab") {
   body[class],
   body[id],
   input {
-    background: #1d1d3bfa !important;
+    background: #242c70 !important;
   }
 
   div:last-child,
@@ -783,21 +784,21 @@ url("about:newtab") {
   }
 }
 
-@-moz-document url-prefix("about:blank") {
+@-moz-document url-prefix(about:blank) {
   html > body:empty {
-    background-color: #1d1d3bfa !important;
+    background-color: #181735 !important;
   }
 }
 
-@-moz-document url"(about:blank") {
+@-moz-document url(about:blank) {
   html > body:empty {
-    background-color: #1d1d3bfa !important;
+    background-color: #181735 !important;
   }
 }
 
 @-moz-document url("about:blank") {
   :root {
-    background-color: #1d1d3bfa !important;
+    background-color: #181735 !important;
   }
 }
 
@@ -824,7 +825,7 @@ url("about:newtab") {
 
 /* bitwarden */
 
-@-moz-document url-prefix("moz-extension://c1ea5f85-7682-4d41-86cf-4946657a717e/popup/index.html")
+@-moz-document url-prefix(moz-extension: //c1ea5f85-7682-4d41-86cf-4946657a717e/popup/index.html)
 {
   @supports -moz-bool-pref("userChrome.css.mac-ui-fonts") {
     body,
@@ -841,7 +842,7 @@ url("about:newtab") {
 @-moz-document url("about:blank") {
   @media (prefers-color-scheme: dark) {
     :root {
-      background-color: #1d1d3bfa !important;
+      background-color: #181735 !important;
     }
   }
 }
@@ -849,11 +850,11 @@ url("about:newtab") {
 @-moz-document plain-text-document(), media-document(all) {
   @media (prefers-color-scheme: dark) {
     :root {
-      background-color: #1d1d3bfa !important;
+      background-color: #181735 !important;
     }
 
     body:not([style*="background"], [class], [id]) {
-      background-color: #1d1d3bfa !important;
+      background-color: #181735 !important;
     }
   }
 }
@@ -864,24 +865,24 @@ url("about:newtab") {
 {
   :root,
   #background {
-    background-color: #1d1d3bfa !important;
+    background-color: #181735 !important;
   }
 }
 
-@-moz-document url("about:blank") {
+@-moz-document url(about:blank) {
   * {
-    background-color: #1d1d3bfa !important;
+    background-color: #181735 !important;
   }
 }
 @-moz-document url("about:blank") {
   html {
-    background-color: #1d1d3bfa !important;
+    background-color: rgb(40, 40, 40) !important;
   }
 }
 @-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*")
 {
   :root,
   #background {
-    background-color: #1d1d3bfa !important; /* https://github.com/piroor/treestyletab/blob/0eede581d763f92344fe64b1c042839f3b8ca955/webextensions/resources/ui-color.css#L198 */
+    background-color: #2a2a2e !important; /* https://github.com/piroor/treestyletab/blob/0eede581d763f92344fe64b1c042839f3b8ca955/webextensions/resources/ui-color.css#L198 */
   }
 }

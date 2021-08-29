@@ -4806,169 +4806,28 @@ menupopup {
   box-shadow: inset 0 0 0 1px
     var(--toolbar-field-border-color, hsla(240, 5%, 5%, 0.55));
 }
-/* Firefox userChrome.css tweaks ********************************************************/
-/* Github: https://github.com/aris-t2/customcssforfx ************************************/
-/****************************************************************************************/
+/* ----- SIDEBAR ELEMENTS ----- */
 
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem):not([disabled="true"])
-  > .toolbarbutton-menubutton-button[open]
-  + .toolbarbutton-menubutton-dropmarker
-  > .dropmarker-icon,
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem):not([disabled="true"]):is(:hover, [open])
-  > .toolbarbutton-menubutton-button,
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem):not([disabled="true"]):is(:hover, [open])
-  > .toolbarbutton-menubutton-dropmarker
-  > .dropmarker-icon,
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem):not([disabled="true"]):not([checked]):not([open]):not(:active):hover,
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem):not([buttonover]):not([open]):not(:active):hover
-  > .toolbarbutton-menubutton-dropmarker:not([disabled])
-  > .dropmarker-icon {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.4) 0px,
-      transparent 0px
-    ),
-    linear-gradient(to left, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
-    linear-gradient(to top, rgba(255, 255, 255, 0.3) 0px, transparent 0px),
-    linear-gradient(
-      to bottom,
-      rgba(163, 196, 247, 0.2),
-      rgba(122, 180, 246, 0.2)
-    ) !important;
-  border-radius: 6px !important;
-  outline: 1px solid rgba(124, 163, 206, 0.7) !important;
-  transition: background-color 0.3s ease-in, border-color 0.2s ease-in,
-    box-shadow 0.2s ease-in !important;
+#browser {
+  --sidebar-border-color: rgba(22, 22, 65, 0.1);
 }
 
-#PlacesToolbar toolbarbutton[type="menu"][open]:not([disabled]),
-#PlacesToolbar
-  toolbarbutton[type="menu-button"]:not([open]):hover:not([disabled]):active,
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem)
-  > .toolbarbutton-menubutton-button:not([disabled="true"]):is(:hover:active, :active, [open]),
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem)[open]
-  > .toolbarbutton-menubutton-dropmarker:not([disabled="true"])
-  > .dropmarker-icon,
-#PlacesToolbar
-  .bookmark-item:not(menu):not(menuitem):not([disabled="true"]):is([open], [checked], :hover:active, :active) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.4) 0px,
-      transparent 0px
-    ),
-    linear-gradient(to left, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
-    linear-gradient(to top, rgba(255, 255, 255, 0.3) 0px, transparent 0px),
-    linear-gradient(
-      to bottom,
-      rgba(163, 196, 247, 0.6),
-      rgba(122, 180, 246, 0.6)
-    ) !important;
-  border-radius: 6px !important;
-  outline: 1px solid rgba(124, 163, 206, 0.99) !important;
-  transition: background-color 0.3s ease-in, border-color 0.2s ease-in,
-    box-shadow 0.2s ease-in !important;
+#sidebar-box {
+  /* Default font size is 11px on mac, so this is 12px */
+  font-size: 1.0909rem;
+  --sidebar-background-color: transparent !important;
+  appearance: auto;
+  -moz-default-appearance: -moz-mac-vibrant-titlebar-dark !important;
+  -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;
 }
 
-/* Firefox userChrome.css tweaks ********************************************************/
-/* Github: https://github.com/aris-t2/customcssforfx ************************************/
-/****************************************************************************************/
-
-#nav-bar
-  .toolbarbutton-1:not([disabled="true"])
-  > .toolbarbutton-menubutton-button[open]
-  + .toolbarbutton-menubutton-dropmarker
-  > .dropmarker-icon,
-#nav-bar
-  .toolbarbutton-1:not([disabled="true"]):is(:hover, [open])
-  > .toolbarbutton-menubutton-button
-  > .toolbarbutton-icon,
-#nav-bar
-  .toolbarbutton-1:not([disabled="true"]):is(:hover, [open])
-  > .toolbarbutton-menubutton-dropmarker
-  > .dropmarker-icon,
-#nav-bar
-  .toolbarbutton-1:not(#PlacesChevron):not([disabled="true"]):not([checked]):not([open]):not(:active):hover
-  > .toolbarbutton-icon,
-#nav-bar
-  .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover
-  > .toolbarbutton-text,
-#nav-bar
-  .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover
-  > .toolbarbutton-badge-stack,
-#nav-bar
-  .toolbarbutton-1:not([buttonover]):not([open]):not(:active):hover
-  > .toolbarbutton-menubutton-dropmarker:not([disabled])
-  > .dropmarker-icon {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.4) 0px,
-      transparent 0px
-    ),
-    linear-gradient(to left, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
-    linear-gradient(to top, rgba(255, 255, 255, 0.3) 0px, transparent 0px),
-    linear-gradient(
-      to bottom,
-      rgba(163, 196, 247, 0.2),
-      rgba(122, 180, 246, 0.2)
-    ) !important;
-  border-radius: 6px !important;
-  outline: 1px solid rgba(124, 163, 206, 0.7) !important;
-  transition: background-color 0.3s ease-in, border-color 0.2s ease-in,
-    box-shadow 0.2s ease-in !important;
-}
-
-#nav-bar
-  toolbarbutton:not(#PlacesChevron)[type="menu"][open]:not([disabled]):not(.bookmark-item):not([container="true"])
-  > .toolbarbutton-icon,
-#nav-bar
-  toolbarbutton:not(#PlacesChevron)[type="menu-button"]:not([open]):hover:not([disabled]):not(.bookmark-item):active
-  > .toolbarbutton-icon,
-#nav-bar
-  .toolbarbutton-1
-  > .toolbarbutton-menubutton-button:not([disabled="true"]):is(:hover:active, :active, [open])
-  > .toolbarbutton-icon,
-#nav-bar
-  .toolbarbutton-1[open]
-  > .toolbarbutton-menubutton-dropmarker:not([disabled="true"])
-  > .dropmarker-icon,
-#nav-bar
-  .toolbarbutton-1:not(#PlacesChevron):not([disabled="true"]):is([open], [checked], :hover:active, :active)
-  > .toolbarbutton-icon,
-#nav-bar
-  .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active, :active)
-  > .toolbarbutton-text,
-#nav-bar
-  .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active, :active)
-  > .toolbarbutton-badge-stack {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.4) 0px,
-      transparent 0px
-    ),
-    linear-gradient(to left, rgba(255, 255, 255, 0.4) 0px, transparent 0px),
-    linear-gradient(to top, rgba(255, 255, 255, 0.3) 0px, transparent 0px),
-    linear-gradient(
-      to bottom,
-      rgba(163, 196, 247, 0.6),
-      rgba(122, 180, 246, 0.6)
-    ) !important;
-  border-radius: 6px !important;
-  outline: 1px solid rgba(124, 163, 206, 0.99) !important;
-  transition: background-color 0.3s ease-in, border-color 0.2s ease-in,
-    box-shadow 0.2s ease-in !important;
+/* Give the sidebar a vibrant appearance. Only do this when no lwtheme sidebar
+ * rules are in use. Vibrant appearance values only work if there is no
+ * background-color rendered behind the element. If the active theme has sidebar
+ * rules, we want to show the theme's background-color in the sidebar. */
+:root[moztheme] #sidebar-box {
+  appearance: auto;
+  -moz-default-appearance: -moz-mac-vibrant-titlebar-dark !important;
+  -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;
+  --sidebar-background-color: transparent;
 }
