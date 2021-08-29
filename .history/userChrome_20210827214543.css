@@ -4796,13 +4796,7 @@ menupopup {
   border-bottom: none !important;
 }
 
-.tabbrowser-tab[multiselected]:-moz-lwtheme/*,
-.tabbrowser-tab[visuallyselected="true"]:-moz-lwtheme */ {
-  filter: drop-shadow(0 0 7px rgb(32, 32, 32)) !important;
-}
-
-/* stacks use box-shadow as a border to prevent size from changing */
-#navigator-toolbox > toolbar .chromeclass-toolbar-additional > stack {
-  box-shadow: inset 0 0 0 1px
-    var(--toolbar-field-border-color, hsla(240, 5%, 5%, 0.55));
+.tabbrowser-tab[multiselected]:-moz-lwtheme,
+.tabbrowser-tab[visuallyselected="true"]:-moz-lwtheme {
+  filter: drop-shadow(0 0 7px gray) !important;
 }

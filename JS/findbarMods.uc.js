@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Findbar Mods
-// @version        1.2
+// @version        1.2.3
 // @author         aminomancer
 // @homepage       https://github.com/aminomancer
 // @description    1) Make a custom context menu for the findbar that lets you permanently configure findbar-related settings. You can set "Highlight All" and "Whole Words" just like you can with the built-in checkboxes, but this also lets you choose any setting for "Match Case" and "Match Diacritics." The built-in checkboxes for these settings only let you choose between states 1 and 0, true and false. There's actually a 2 state which enables a more useful and intuitive mode. Read the notes in the "l10n" section below for more info. Additionally, most of the built-in checkboxes are only temporary. They only apply to the current browser. This can be useful, but since a context menu requires more intention to reach, its actions should be more permanent. Instead of just setting the browser state, the context menu sets the user preferences just like you could in about:config. 2) Set up a hotkey system that allows you to close the findbar by pressing Escape or Ctrl+F while the findbar is focused. Normally, Ctrl+F only opens the findbar. With this script, Ctrl+F acts more like a toggle. As normal, when the findbar is closed, Ctrl+F will open it. When the findbar is open but not focused, Ctrl+F will focus it and select all text in the input box. From there, pressing Ctrl+F once more will close it. If you're in 'find as you type' mode, ctrl+f switches to regular find mode. 3) (Optional) Miniaturize the findbar matches label and the "Match case" and "Whole words" buttons. Instead of "1 of 500 matches" this one says "1/500" and floats inside the input box. This is enabled by default by the "usingDuskfox" setting below. It's mainly intended for people who use CSS themes that make the findbar much more compact, like my theme duskFox. If you don't use one of these themes already, you can grab the relevant code from uc-findbar.css on my repo, or if you like having a big findbar, you can just set "usingDuskfox" to false below. For those interested in customizing this with CSS, the mini matches indicator can be styled with the selector .matches-indicator. It's the next sibling of the findbar input box. See uc-findbar.css in this repo for how I styled it. Specific methods used are documented in more detail in the code comments below.
@@ -221,6 +221,56 @@
                 })
             );
         }
+        modClassMethods() {
+            let findbarClass = customElements.get("findbar").prototype;
+            findbarClass.ucFindbarMods = this;
+            // make sure the new mini buttons are never hidden,
+            // since the position of the new matches indicator depends on the position of the buttons.
+            // instead of hiding them while state 2 is applied via pref,
+            // just disable them so they're grayed out and unclickable.
+            eval(
+                `findbarClass._updateCaseSensitivity = function ` +
+                    findbarClass._updateCaseSensitivity
+                        .toSource()
+                        .replace(/_updateCaseSensitivity/, ``)
+                        .replace(/checkbox\.hidden/, `checkbox.disabled`)
+            );
+            eval(
+                `findbarClass._setEntireWord = function ` +
+                    findbarClass._setEntireWord
+                        .toSource()
+                        .replace(/_setEntireWord/, ``)
+                        .replace(/checkbox\.hidden/, `checkbox.disabled`)
+            );
+            // override the native on-results function so it updates both labels.
+            findbarClass.onMatchesCountResult = function (result) {
+                if (result.total !== 0) {
+                    if (result.total == -1) {
+                        this._foundMatches.value = PluralForm.get(
+                            result.limit,
+                            this.strBundle.GetStringFromName("FoundMatchesCountLimit")
+                        ).replace("#1", result.limit);
+                        this._tinyIndicator.innerText = `${result.limit}+`;
+                    } else {
+                        this._foundMatches.value = PluralForm.get(
+                            result.total,
+                            this.strBundle.GetStringFromName("FoundMatches")
+                        )
+                            .replace("#1", result.current)
+                            .replace("#2", result.total);
+                        this._tinyIndicator.innerText = `${result.current}/${result.total}`;
+                    }
+                    this._foundMatches.hidden = false;
+                    this._tinyIndicator.removeAttribute("empty"); // bring it back if it's not blank.
+                } else {
+                    this._foundMatches.hidden = true;
+                    this._foundMatches.value = "";
+                    this._tinyIndicator.innerText = "   ";
+                    this._tinyIndicator.setAttribute("empty", "true"); // hide the indicator background with CSS if it's blank.
+                }
+                this.ucFindbarMods.setLabelPosition(this);
+            };
+        }
         // when the context menu opens, ensure the menuitems are checked/unchecked appropriately.
         onPopupShowing(e) {
             let node = e.target.triggerNode;
@@ -257,100 +307,6 @@
             if (usingDuskfox) this.miniaturize(findbar);
         }
         miniaturize(findbar) {
-            // the new mini indicator that will read something like 1/27 instead of 1 of 27 matches.
-            findbar._tinyIndicator = document.createElement("label");
-            let caseSensitiveButton = findbar.querySelector(".findbar-case-sensitive");
-            let entireWordButton = findbar.querySelector(".findbar-entire-word");
-            // my own findbar CSS is pretty complicated. it turns the findbar into a small floating box. in vanilla firefox the findbar is a bar that covers the full width of the window and flexes the browser out of the way. mine hovers over the content area without pushing anything out of its way. I also hide a few of the less frequently used buttons.
-            // so my findbar is tiny but since we're adding an indicator, we might as well make the text field bigger to get something in return. the default firefox findbar is really silly, why have such a giant findbar if the text field can't stretch to fill that space?
-            // there's also some CSS in my stylesheets that gives the findbar a smooth transition and starting animation and compresses the buttons and stuff. the effects of this might look really weird without those rules so I'd definitely either 1) look at uc-findbar.css, or 2) set usingDuskfox to false at the top of this script.
-            findbar._findField.style.width = "20em";
-            // this could all be set in a stylesheet, i just put it here so the core CSS won't get separated from the javascript it depends on. the other stuff in the stylesheets works with or without this script. whereas this code is exclusive to the custom matches indicator.
-            findbar._tinyIndicator.style.cssText =
-                "box-sizing: border-box; display: inline-block; -moz-box-align: center; margin: 0; line-height: 20px; position: absolute; font-size: 10px; right: 110px; color: hsla(0, 0%, 100%, 0.25); pointer-events: none; padding-inline-start: 20px; mask-image: linear-gradient(to right, transparent 0px, black 20px);";
-            // for styling the background color changes which depend on the status of the findbar and whether it's focused
-            findbar._tinyIndicator.className = "matches-indicator";
-            // we want the close button to be on the far right end of the findbar.
-            findbar._findField.parentNode.after(findbar.querySelector(".findbar-closebutton"));
-            // put it after the input box so we can use the ~ squiggly combinator
-            findbar._findField.after(findbar._tinyIndicator);
-            // move the match-case and entire-word buttons into the text field. uc-findbar.css turns these buttons into mini icons, same size as the next/previous buttons. this way we can fit everything important into one row.
-            findbar._tinyIndicator.after(caseSensitiveButton, entireWordButton);
-
-            // listen for access keys, arrow keys etc. since these buttons are now inside the text area.
-            caseSensitiveButton.addEventListener("keypress", onKey);
-            entireWordButton.addEventListener("keypress", onKey);
-
-            // make sure the matches label is an appropriate distance from the other buttons. explaining this is kinda complicated.
-            setTimeout(() => {
-                this.setLabelPosition(findbar);
-            }, 500);
-
-            // override the native on-results function so it updates both labels.
-            findbar.onMatchesCountResult = (result) => {
-                if (result.total !== 0) {
-                    if (result.total == -1) {
-                        findbar._foundMatches.value = PluralForm.get(
-                            result.limit,
-                            findbar.strBundle.GetStringFromName("FoundMatchesCountLimit")
-                        ).replace("#1", result.limit);
-                        findbar._tinyIndicator.innerText = `${result.limit}+`;
-                    } else {
-                        findbar._foundMatches.value = PluralForm.get(
-                            result.total,
-                            findbar.strBundle.GetStringFromName("FoundMatches")
-                        )
-                            .replace("#1", result.current)
-                            .replace("#2", result.total);
-                        findbar._tinyIndicator.innerText = `${result.current}/${result.total}`;
-                    }
-                    findbar._foundMatches.hidden = false;
-                    findbar._tinyIndicator.removeAttribute("empty"); // bring it back if it's not blank.
-                } else {
-                    findbar._foundMatches.hidden = true;
-                    findbar._foundMatches.value = "";
-                    findbar._tinyIndicator.innerText = "   ";
-                    findbar._tinyIndicator.setAttribute("empty", "true"); // hide the indicator background with CSS if it's blank.
-                }
-                this.setLabelPosition(findbar);
-            };
-        }
-        // for a given findbar, move its label into the proper position.
-        setLabelPosition(findbar) {
-            let getBounds = window.windowUtils.getBoundsWithoutFlushing;
-            let distanceFromEdge =
-                getBounds(findbar).right - getBounds(findbar._caseSensitiveButton).left;
-            findbar._tinyIndicator.style.right = `${distanceFromEdge + 1}px`;
-        }
-        // when a new tab is opened and the findbar somehow activated, a new findbar is born.
-        // so we have to manage it every time.
-        onTabFindInitialized(e) {
-            if (e.target.ownerGlobal !== window) return;
-            let findbar = e.target._findBar;
-
-            // determine what to do when the hotkey is pressed
-            function exitFindBar(e) {
-                if (e.repeat || e.shiftKey || e.altKey) return;
-                if (e.code === "KeyF" && (e.ctrlKey || e.metaKey)) {
-                    if (this.hidden) return; // if it's already hidden then let the built-in command open it.
-                    let field = this._findField;
-                    try {
-                        this.findMode > 0 // if we're in 'find as you type' mode...
-                            ? this.open(0) // switch to normal find mode.
-                            : field.contains(document.activeElement) // if we're in normal mode already then check if the input box is focused...
-                            ? field.selectionEnd - field.selectionStart === field.textLength // if already focused, check if all input text is selected. difference between end and start only equals length if every character is within the selection range.
-                                ? this.close() // if there's already a selection, close the findbar.
-                                : (field.select(), field.focus()) // if nothing is selected, select the full contents of the input box.
-                            : (field.select(), field.focus()); // if not focused, focus and select the input box.
-                    } catch (e) {
-                        // i haven't seen an error here but if any of these references don't exist it probably means the built-in findbar object initialized wrong for some reason.
-                        // in which case it's probably not open. it definitely exists though, since this event listener can't exist in the first place unless the findbar object exists. so just try opening it
-                        this.open(0);
-                    }
-                    e.preventDefault();
-                }
-            }
-
             function onKey(e) {
                 if (this.hasMenu() && this.open) return;
                 // handle arrow key focus navigation
@@ -396,6 +352,75 @@
                         el.click();
                         return;
                     }
+            }
+            // the new mini indicator that will read something like 1/27 instead of 1 of 27 matches.
+            findbar._tinyIndicator = document.createElement("label");
+            let caseSensitiveButton = findbar.querySelector(".findbar-case-sensitive");
+            let entireWordButton = findbar.querySelector(".findbar-entire-word");
+            // my own findbar CSS is pretty complicated. it turns the findbar into a small floating box. in vanilla firefox the findbar is a bar that covers the full width of the window and flexes the browser out of the way. mine hovers over the content area without pushing anything out of its way. I also hide a few of the less frequently used buttons.
+            // so my findbar is tiny but since we're adding an indicator, we might as well make the text field bigger to get something in return. the default firefox findbar is really silly, why have such a giant findbar if the text field can't stretch to fill that space?
+            // there's also some CSS in my stylesheets that gives the findbar a smooth transition and starting animation and compresses the buttons and stuff. the effects of this might look really weird without those rules so I'd definitely either 1) look at uc-findbar.css, or 2) set usingDuskfox to false at the top of this script.
+            findbar._findField.style.width = "20em";
+            // this could all be set in a stylesheet, i just put it here so the core CSS won't get separated from the javascript it depends on. the other stuff in the stylesheets works with or without this script. whereas this code is exclusive to the custom matches indicator.
+            findbar._tinyIndicator.style.cssText =
+                "box-sizing: border-box; display: inline-block; -moz-box-align: center; margin: 0; line-height: 20px; position: absolute; font-size: 10px; right: 110px; color: hsla(0, 0%, 100%, 0.25); pointer-events: none; padding-inline-start: 20px; mask-image: linear-gradient(to right, transparent 0px, black 20px);";
+            // for styling the background color changes which depend on the status of the findbar and whether it's focused
+            findbar._tinyIndicator.className = "matches-indicator";
+            // we want the close button to be on the far right end of the findbar.
+            findbar._findField.parentNode.after(findbar.querySelector(".findbar-closebutton"));
+            // put it after the input box so we can use the ~ squiggly combinator
+            findbar._findField.after(findbar._tinyIndicator);
+            // move the match-case and entire-word buttons into the text field. uc-findbar.css turns these buttons into mini icons, same size as the next/previous buttons. this way we can fit everything important into one row.
+            findbar._tinyIndicator.after(caseSensitiveButton, entireWordButton);
+
+            // listen for access keys, arrow keys etc. since these buttons are now inside the text area.
+            caseSensitiveButton.addEventListener("keypress", onKey);
+            entireWordButton.addEventListener("keypress", onKey);
+
+            // make sure the matches label is an appropriate distance from the other buttons. explaining this is kinda complicated.
+            setTimeout(() => {
+                this.setLabelPosition(findbar);
+            }, 500);
+        }
+        // for a given findbar, move its label into the proper position.
+        setLabelPosition(findbar) {
+            let getBounds = window.windowUtils.getBoundsWithoutFlushing;
+            let distanceFromEdge =
+                getBounds(findbar).right -
+                getBounds(findbar.querySelector(".findbar-case-sensitive")).left;
+            findbar._tinyIndicator.style.right = `${distanceFromEdge + 1}px`;
+        }
+        // when a new tab is opened and the findbar somehow activated, a new findbar is born.
+        // so we have to manage it every time.
+        onTabFindInitialized(e) {
+            if (e.target.ownerGlobal !== window) return;
+            if (!this.initialized) {
+                this.initialized = true;
+                if (usingDuskfox) this.modClassMethods();
+            }
+            let findbar = e.target._findBar;
+
+            // determine what to do when the hotkey is pressed
+            function exitFindBar(e) {
+                if (e.repeat || e.shiftKey || e.altKey) return;
+                if (e.code === "KeyF" && (e.ctrlKey || e.metaKey)) {
+                    if (this.hidden) return; // if it's already hidden then let the built-in command open it.
+                    let field = this._findField;
+                    try {
+                        this.findMode > 0 // if we're in 'find as you type' mode...
+                            ? this.open(0) // switch to normal find mode.
+                            : field.contains(document.activeElement) // if we're in normal mode already then check if the input box is focused...
+                            ? field.selectionEnd - field.selectionStart === field.textLength // if already focused, check if all input text is selected. difference between end and start only equals length if every character is within the selection range.
+                                ? this.close() // if there's already a selection, close the findbar.
+                                : (field.select(), field.focus()) // if nothing is selected, select the full contents of the input box.
+                            : (field.select(), field.focus()); // if not focused, focus and select the input box.
+                    } catch (e) {
+                        // i haven't seen an error here but if any of these references don't exist it probably means the built-in findbar object initialized wrong for some reason.
+                        // in which case it's probably not open. it definitely exists though, since this event listener can't exist in the first place unless the findbar object exists. so just try opening it
+                        this.open(0);
+                    }
+                    e.preventDefault();
+                }
             }
 
             this.domSetup(findbar);
