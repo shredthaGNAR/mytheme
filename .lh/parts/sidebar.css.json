@@ -1,0 +1,18 @@
+{
+    "sourceFile": "parts/sidebar.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1630222960072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1630222960072,
+            "name": "Commit-0",
+            "content": "/*\n░█▀▀░▀█▀░█▀▄░█▀▀░█▀▄░█▀█░█▀▄\n░▀▀█░░█░░█░█░█▀▀░█▀▄░█▀█░█▀▄\n░▀▀▀░▀▀▀░▀▀░░▀▀▀░▀▀░░▀░▀░▀░▀\n\nSidebar\n*/\n\n/*\n#sidebar-box {}\n\n#sidebar-box:-moz-lwtheme-darktext, #sidebar-box:-moz-lwtheme-brighttext {\n\t--sidebar-background-color: var(--bf-sidebar-bg) !important;\n\t--sidebar-text-color: var(--bf-sidebar-color) !important;\n}\n*/\n\n#sidebar,\n.sidebar-panel {\n  background-color: transparent !important;\n  background-image: linear-gradient(\n    rgba(255, 255, 255, 0),\n    rgba(255, 255, 255, 0.1)\n  ) !important;\n  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n}\n\n/* Sidebar searchbar */\n\n#sidebar-search-container #search-box {\n  border: none !important;\n  padding: 6px !important;\n  border-radius: var(--bf-sidebar-searchbar-radius) !important;\n}\n\n#sidebar-box:-moz-lwtheme {\n  appearance: auto !important;\n  -moz-default-appearance: -moz-mac-vibrant-titlebar-dark !important;\n  -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;\n}\n\n/*\n#sidebar-box:lwt-sidebar {\n\tappearance: auto;\n\t-moz-default-appearance: -moz-mac-source-list;\n\t-moz-font-smoothing-background-color: -moz-mac-source-list;\n}*/\n"
+        }
+    ]
+}

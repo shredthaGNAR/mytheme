@@ -1,0 +1,18 @@
+{
+    "sourceFile": "parts/findbar.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1630222886366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1630222886366,
+            "name": "Commit-0",
+            "content": "\n/*\n░█▀▀░▀█▀░█▀█░█▀▄░█▀▄░█▀█░█▀▄\n░█▀▀░░█░░█░█░█░█░█▀▄░█▀█░█▀▄\n░▀░░░▀▀▀░▀░▀░▀▀░░▀▀░░▀░▀░▀░▀\n \nThe findbar\n*/\n\n#browser #appcontent #tabbrowser-tabbox findbar,\n#browser #appcontent #tabbrowser-tabbox tabpanels {\n\t-moz-appearance: auto !important;\n\tborder: none !important;\n}\n\n#browser #appcontent #tabbrowser-tabbox findbar:-moz-lwtheme-darktext,\n#browser #appcontent #tabbrowser-tabbox findbar:-moz-lwtheme-brighttext,\n#browser #appcontent #tabbrowser-tabbox tabpanels:-moz-lwtheme-darktext,\n#browser #appcontent #tabbrowser-tabbox tabpanels:-moz-lwtheme-brighttext {\n\tbackground: transparent !important;\n}/*\n\n#browser #appcontent #tabbrowser-tabbox findbar {\n}\n\n#browser #appcontent #tabbrowser-tabbox findbar:-moz-lwtheme-darktext,\n#browser #appcontent #tabbrowser-tabbox findbar:-moz-lwtheme-brighttext {\n\tbackground-color: var(--bf-bg) !important;\n}\n\n.findbar-find-previous,\n.findbar-find-next {\n\tmargin: 0 !important;\n\tborder: none !important;\n}\n\n#browser #appcontent #tabbrowser-tabbox .findbar-find-fast {\n}\n\n#browser #appcontent #tabbrowser-tabbox .findbar-find-fast:not([status=\"notfound\"]):-moz-lwtheme-darktext,\n#browser #appcontent #tabbrowser-tabbox .findbar-find-fast:not([status=\"notfound\"]):-moz-lwtheme-brighttext {\n\tbackground-color: var(--bf-bg) !important;\n}\n"
+        }
+    ]
+}

@@ -687,6 +687,7 @@ domain("wikimedia.org") {
         font-weight: normal !important;
         text-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.5) !important;
         color: hsl(0, 0%, 93.3%) !important;
+        border-color: hsl(212, 8.8%, 25.5%) !important;
     }
 
     #bodyContent h1,
@@ -701,6 +702,7 @@ domain("wikimedia.org") {
         font-family: "Source Serif Pro", sans-serif !important;
         text-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.5) !important;
         color: hsl(0, 0%, 93.3%) !important;
+        border-color: hsl(212, 8.8%, 25.5%) !important;
     }
 
     #bodyContent h1 span.mw-editsection,
@@ -942,15 +944,19 @@ domain("wikimedia.org") {
         line-height: 17px !important;
     }
 
-    .mw-body-content blockquote {
+    .vector-body blockquote {
         border-left: 3px double hsl(220, 5%, 18%) !important;
         padding: 6px 16px !important;
     }
 
-    .mw-parser-output .flexquote {
+    .vector-body .flexquote {
         background-color: hsla(0, 0%, 32%, 0.1) !important;
         border-left: 3px double hsl(220, 5%, 18%) !important;
         border-radius: 0 3px 3px 0 !important;
+    }
+
+    .mw-body-content blockquote blockquote {
+        border: none !important;
     }
 
     /* boxes */
@@ -1040,8 +1046,7 @@ domain("wikimedia.org") {
     .portal,
     .catlinks,
     .navbox,
-    .hintergrundfarbe1,
-    table {
+    .hintergrundfarbe1 {
         border: none !important;
     }
 
@@ -1242,19 +1247,23 @@ domain("wikimedia.org") {
         color: hsl(30, 4.5%, 91.4%) !important;
     }
 
+    table.wikitable {
+        border-color: hsl(212, 8.8%, 15.5%) !important;
+    }
+
     table.wikitable > tr > th,
     table.wikitable > tr > td,
     table.wikitable > * > tr > th,
     table.wikitable > * > tr > td {
         font-size: 1rem !important;
         color: hsl(0, 0%, 80%) !important;
-        border-color: hsla(212, 8.8%, 66.5%, 0.1) !important;
+        border-color: hsl(212, 8.8%, 15.5%) !important;
     }
 
     table.wikitable > * > tr > th.headerSort {
         font-size: 1rem !important;
         color: #000 !important;
-        border-color: hsla(212, 8.8%, 66.5%, 0.1) !important;
+        border-color: hsl(212, 8.8%, 15.5%) !important;
     }
 
     table.wikitable > tr > th,
@@ -2363,7 +2372,7 @@ domain("wikimedia.org") {
 
     table.jquery-tablesorter thead tr th.headerSort,
     table.wikitable > tbody > tr > th {
-        background-color: hsl(240, 4.3%, 4.5%) !important;
+        background-color: hsl(240, 5.6%, 7.1%) !important;
         color: hsl(0, 0%, 98%) !important;
         font-weight: normal !important;
         font-family: Patua One;
@@ -2397,7 +2406,7 @@ domain("wikimedia.org") {
 
     table:not([class]) > tr > th,
     table:not([class]) > * > tr > th {
-        background-color: hsl(240, 4.3%, 4.5%) !important;
+        background-color: hsl(240, 5.6%, 7.1%) !important;
         color: hsl(0, 0%, 98%) !important;
         font-weight: normal !important;
         font-family: Patua One;
@@ -2414,6 +2423,15 @@ domain("wikimedia.org") {
     tbody tr,
     tbody tr td {
         background-color: hsla(205.7, 7.5%, 18.2%, 0) !important;
+    }
+
+    .mw-parser-output .srn-white-background {
+        background-color: transparent !important;
+    }
+
+    .mw-parser-output .static-row-numbers.wikitable tr::before {
+        background-color: hsl(240, 5.6%, 7.1%) !important;
+        border-color: hsl(212, 8.8%, 15.5%) !important;
     }
 
     tbody tr td div[style*="background-color: lavender" i] {
@@ -3260,7 +3278,7 @@ domain("wikimedia.org") {
     .infobox,
     .vertical-navbox,
     .mergedtoprow,
-    .metadata:not(.ambox),
+    .metadata:not(.ambox, .audiolinkinfo),
     .mbox-small,
     .quotebox,
     .portal,
@@ -3691,9 +3709,13 @@ domain("wikimedia.org") {
     }
 
     /* fix audio pronunciation images */
-    span.unicode.haudio span.fn span a img {
+    span.unicode.haudio img {
         filter: invert(1) !important;
         opacity: 0.93 !important;
+    }
+
+    span.unicode.haudio > span > span:not([style]) img {
+        margin-right: .25em !important;
     }
 
     img[src*="Speaker_Icon.svg"] {
@@ -4092,7 +4114,7 @@ domain("wikimedia.org") {
 
     .mw-parser-output .spoken-wikipedia,
     .mw-parser-output .unsolved {
-        border-color: hsla(212, 8.8%, 66.5%, 0.1) !important;
+        border-color: hsl(212, 8.8%, 15.5%) !important;
         background-color: hsl(240, 5.6%, 7.1%) !important;
         border-width: 1px !important;
         border-radius: 3px !important;
