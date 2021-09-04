@@ -5131,11 +5131,3 @@ menupopup {
   border-top-right-radius: 5px !important;
 }
 */
-
-#back-button,
-#forward-button {
-  list-style-image: url("chrome://devtools/skin/images/play.svg") !important;
-}
-#back-button > .toolbarbutton-icon {
-  transform: scaleX(-1);
-}

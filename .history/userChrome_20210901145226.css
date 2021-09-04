@@ -3786,7 +3786,7 @@ slider,
 
 .toolbarbutton-badge {
   color: #6200ff !important;
-  background-color: #1b1a38e8 !important;
+  background-color: #1b1a3881 !important;
   min-width: 14px !important;
   min-height: 14px !important;
   padding: 0px !important;
@@ -5082,7 +5082,7 @@ menupopup {
   /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/
 }
 #PlacesToolbarItems {
-  background-color: #11092300 !important;
+  background-color: #3b2a9c8f !important;
   backdrop-filter: blur(30px) !important;
 }
 
@@ -5131,11 +5131,3 @@ menupopup {
   border-top-right-radius: 5px !important;
 }
 */
-
-#back-button,
-#forward-button {
-  list-style-image: url("chrome://devtools/skin/images/play.svg") !important;
-}
-#back-button > .toolbarbutton-icon {
-  transform: scaleX(-1);
-}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 344,
+            "activePatchIndex": 352,
             "patches": [
                 {
                     "date": 1629628141435,
@@ -1384,6 +1384,38 @@
                 {
                     "date": 1630529287883,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5119,10 +5119,11 @@\n ****************************************************************************/\n \n #urlbar,\n .searchbar-textbox {\n-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n-  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2) !important;\n+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;\n+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),\n+    1px 1px 1px rgba(0, 0, 0, 0.5) !important;\n }\n /*\n .tab-loading-burst {\n   border: none !important;\n"
+                },
+                {
+                    "date": 1630532860963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5102,15 +5102,15 @@\n   margin-left: 2px !important;\n   margin-right: 2px !important;\n   animation-duration: 0ms !important;\n   backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;\n-  background-color: rgb(29, 0, 83) !important;\n+  background-color: #212142 !important;\n   border-radius: 5px !important;\n }\n /*\"toolbar_bottom_separator\"*/\n \n #navigator-toolbox {\n-  border-bottom: 2px solid #131230 !important;\n+  border-bottom: 2px solid #212142 !important;\n }\n /********************************\n * {\n   font-family: \"Source code pro\", \"Ropa Sans\", \"JetBrains Mono\" !important;\n"
+                },
+                {
+                    "date": 1630532988519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5077,10 +5077,10 @@\n   backdrop-filter: blur(30px) !important;\n }\n \n #PersonalToolbar {\n-  -moz-appearance: -moz-mac-vibrant-titlebar-light !important;\n-  backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;\n+  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n+  /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n }\n #PlacesToolbarItems {\n   background-color: #3b2a9c8f !important;\n   backdrop-filter: blur(30px) !important;\n"
+                },
+                {
+                    "date": 1630533090146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5077,9 +5077,9 @@\n   backdrop-filter: blur(30px) !important;\n }\n \n #PersonalToolbar {\n-  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n+  -moz-appearance: auto !important;\n   /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n }\n #PlacesToolbarItems {\n   background-color: #3b2a9c8f !important;\n"
+                },
+                {
+                    "date": 1630533147633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5077,9 +5077,9 @@\n   backdrop-filter: blur(30px) !important;\n }\n \n #PersonalToolbar {\n-  -moz-appearance: auto !important;\n+  -moz-appearance: none !important;\n   /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n }\n #PlacesToolbarItems {\n   background-color: #3b2a9c8f !important;\n"
+                },
+                {
+                    "date": 1630533405711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3785,9 +3785,9 @@\n */\n \n .toolbarbutton-badge {\n   color: #6200ff !important;\n-  background-color: #1b1a3881 !important;\n+  background-color: #1b1a38e8 !important;\n   min-width: 14px !important;\n   min-height: 14px !important;\n   padding: 0px !important;\n   margin-right: -6px !important;\n@@ -5081,9 +5081,9 @@\n   -moz-appearance: none !important;\n   /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n }\n #PlacesToolbarItems {\n-  background-color: #3b2a9c8f !important;\n+  background-color: #10102a !important;\n   backdrop-filter: blur(30px) !important;\n }\n \n #urlbar[focused=\"true\"] #urlbar-background {\n"
+                },
+                {
+                    "date": 1630533487156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5081,9 +5081,9 @@\n   -moz-appearance: none !important;\n   /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n }\n #PlacesToolbarItems {\n-  background-color: #10102a !important;\n+  background-color: #3e4cff95 !important;\n   backdrop-filter: blur(30px) !important;\n }\n \n #urlbar[focused=\"true\"] #urlbar-background {\n"
+                },
+                {
+                    "date": 1630533609646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5081,9 +5081,9 @@\n   -moz-appearance: none !important;\n   /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n }\n #PlacesToolbarItems {\n-  background-color: #3e4cff95 !important;\n+  background-color: #11092300 !important;\n   backdrop-filter: blur(30px) !important;\n }\n \n #urlbar[focused=\"true\"] #urlbar-background {\n"
+                },
+                {
+                    "date": 1630786491899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5130,4 +5130,12 @@\n   border-top-left-radius: 5px !important;\n   border-top-right-radius: 5px !important;\n }\n */\n+\n+#back-button,\n+#forward-button {\n+  list-style-image: url(\"chrome://devtools/skin/images/play.svg\") !important;\n+}\n+#back-button > .toolbarbutton-icon {\n+  transform: scaleX(-1);\n+}\n"
                 }
             ],
             "date": 1629628141435,

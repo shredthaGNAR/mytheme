@@ -5082,7 +5082,7 @@ menupopup {
   /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/
 }
 #PlacesToolbarItems {
-  background-color: #11092300 !important;
+  background-color: #10102a !important;
   backdrop-filter: blur(30px) !important;
 }
 
@@ -5131,11 +5131,3 @@ menupopup {
   border-top-right-radius: 5px !important;
 }
 */
-
-#back-button,
-#forward-button {
-  list-style-image: url("chrome://devtools/skin/images/play.svg") !important;
-}
-#back-button > .toolbarbutton-icon {
-  transform: scaleX(-1);
-}
