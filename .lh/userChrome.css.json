@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 352,
+            "activePatchIndex": 363,
             "patches": [
                 {
                     "date": 1629628141435,
@@ -1416,6 +1416,50 @@
                 {
                     "date": 1630786491899,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5130,4 +5130,12 @@\n   border-top-left-radius: 5px !important;\n   border-top-right-radius: 5px !important;\n }\n */\n+\n+#back-button,\n+#forward-button {\n+  list-style-image: url(\"chrome://devtools/skin/images/play.svg\") !important;\n+}\n+#back-button > .toolbarbutton-icon {\n+  transform: scaleX(-1);\n+}\n"
+                },
+                {
+                    "date": 1630801281733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5116,9 +5116,9 @@\n   font-family: \"Source code pro\", \"Ropa Sans\", \"JetBrains Mono\" !important;\n   font-size: 13px !important;\n }\n ****************************************************************************/\n-\n+/*\n #urlbar,\n .searchbar-textbox {\n   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;\n   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),\n"
+                },
+                {
+                    "date": 1630801460829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5055,9 +5055,9 @@\n   transition: background-color 0.3s ease-in, border-color 0.2s ease-in,\n     box-shadow 0.2s ease-in !important;\n }\n .tab-label {\n-  line-height: 1.7em;\n+  line-height: 1.7em !important;\n }\n .tab-icon-overlay {\n   fill-opacity: 1 !important;\n   opacity: 1 !important;\n@@ -5078,9 +5078,9 @@\n }\n \n #PersonalToolbar {\n   -moz-appearance: none !important;\n-  /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n+  backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;\n }\n #PlacesToolbarItems {\n   background-color: #11092300 !important;\n   backdrop-filter: blur(30px) !important;\n"
+                },
+                {
+                    "date": 1630801577014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5078,9 +5078,9 @@\n }\n \n #PersonalToolbar {\n   -moz-appearance: none !important;\n-  backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;\n+  /* backdrop-filter: contrast(100%) blur(12px) saturate(25%) !important;*/\n }\n #PlacesToolbarItems {\n   background-color: #11092300 !important;\n   backdrop-filter: blur(30px) !important;\n"
+                },
+                {
+                    "date": 1630801604503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5108,9 +5108,10 @@\n }\n /*\"toolbar_bottom_separator\"*/\n \n #navigator-toolbox {\n-  border-bottom: 2px solid #212142 !important;\n+  /*border-bottom: 2px solid #212142 !important;*/\n+  border-bottom: none !important;\n }\n /********************************\n * {\n   font-family: \"Source code pro\", \"Ropa Sans\", \"JetBrains Mono\" !important;\n"
+                },
+                {
+                    "date": 1630801895387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5117,9 +5117,9 @@\n   font-family: \"Source code pro\", \"Ropa Sans\", \"JetBrains Mono\" !important;\n   font-size: 13px !important;\n }\n ****************************************************************************/\n-/*\n+\n #urlbar,\n .searchbar-textbox {\n   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;\n   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),\n@@ -5139,4 +5139,6 @@\n }\n #back-button > .toolbarbutton-icon {\n   transform: scaleX(-1);\n }\n+.tab-background[selected=\"true\"] {\n+\tbackground: linear-gradient(to bottom, transparent 2px, var(--toolbar-bgcolor) 2px,var(--toolbar-bgcolor) 100%), linear-gradient(to right, #9f1aff, #9f1aff, #8a46ff, #765dff, #5d7dff, #3e8cff, #1c99ff, #00a5ff, #00b4ff, #00c3ff, #00d0ff, #00ddff) !important; \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630801904467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5140,5 +5140,26 @@\n #back-button > .toolbarbutton-icon {\n   transform: scaleX(-1);\n }\n .tab-background[selected=\"true\"] {\n-\tbackground: linear-gradient(to bottom, transparent 2px, var(--toolbar-bgcolor) 2px,var(--toolbar-bgcolor) 100%), linear-gradient(to right, #9f1aff, #9f1aff, #8a46ff, #765dff, #5d7dff, #3e8cff, #1c99ff, #00a5ff, #00b4ff, #00c3ff, #00d0ff, #00ddff) !important; \n\\ No newline at end of file\n+  background: linear-gradient(\n+      to bottom,\n+      transparent 2px,\n+      var(--toolbar-bgcolor) 2px,\n+      var(--toolbar-bgcolor) 100%\n+    ),\n+    linear-gradient(\n+      to right,\n+      #9f1aff,\n+      #9f1aff,\n+      #8a46ff,\n+      #765dff,\n+      #5d7dff,\n+      #3e8cff,\n+      #1c99ff,\n+      #00a5ff,\n+      #00b4ff,\n+      #00c3ff,\n+      #00d0ff,\n+      #00ddff\n+    ) !important;\n+}\n"
+                },
+                {
+                    "date": 1630802047541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5139,8 +5139,9 @@\n }\n #back-button > .toolbarbutton-icon {\n   transform: scaleX(-1);\n }\n+/********************************\n .tab-background[selected=\"true\"] {\n   background: linear-gradient(\n       to bottom,\n       transparent 2px,\n@@ -5162,4 +5163,5 @@\n       #00d0ff,\n       #00ddff\n     ) !important;\n }\n+****/\n"
+                },
+                {
+                    "date": 1630802114481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5164,4 +5164,9 @@\n       #00ddff\n     ) !important;\n }\n ****/\n+.tabbrowser-tab\n+  > .tab-stack\n+  > .tab-content[pinned][titlechanged]:not([selected=\"true\"]) {\n+  background-position: bottom !important;\n+}\n"
+                },
+                {
+                    "date": 1630802349932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5120,9 +5120,9 @@\n ****************************************************************************/\n \n #urlbar,\n .searchbar-textbox {\n-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;\n+  box-shadow: none !important;\n   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),\n     1px 1px 1px rgba(0, 0, 0, 0.5) !important;\n }\n /*\n"
+                },
+                {
+                    "date": 1630894365368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5169,4 +5169,32 @@\n   > .tab-stack\n   > .tab-content[pinned][titlechanged]:not([selected=\"true\"]) {\n   background-position: bottom !important;\n }\n+#navigator-toolbox{\n+\tborder-bottom: none !important;\n+}\n+#urlbar-background,#urlbar{ \n+  border-radius: 16px !important ;\n+  background-color: #1C1B22 !important;\n+  border: transparent !important;\n+}\n+\n+#urlbar{\n+  background-image: linear-gradient(90deg, #9400FF, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52);\n+  /*background-size: auto 10px;\n+    background-repeat: no-repeat;\n+    background-position: bottom; */\n+\n+}\n+#urlbar-background{ \n+  margin-bottom: 2px !important;\n+  margin-top: 2px !important;\n+  margin-left: 2px !important;\n+  margin-right: 2px !important; }\n+\n+#urlbar[focused=true] #urlbar-background{\n+\tbackground-color: rgb(43, 42, 51, 0.85) !important;\n+}\n+\n+#urlbar[open=true] #urlbar-background {\n+  background-color: rgb(43, 42, 51, 0.85) !important;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630894485042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5169,11 +5169,12 @@\n   > .tab-stack\n   > .tab-content[pinned][titlechanged]:not([selected=\"true\"]) {\n   background-position: bottom !important;\n }\n-#navigator-toolbox{\n-\tborder-bottom: none !important;\n+#navigator-toolbox {\n+  border-bottom: none !important;\n }\n+/*\n #urlbar-background,#urlbar{ \n   border-radius: 16px !important ;\n   background-color: #1C1B22 !important;\n   border: transparent !important;\n@@ -5182,11 +5183,10 @@\n #urlbar{\n   background-image: linear-gradient(90deg, #9400FF, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52);\n   /*background-size: auto 10px;\n     background-repeat: no-repeat;\n-    background-position: bottom; */\n+    background-position: bottom;}\n \n-}\n #urlbar-background{ \n   margin-bottom: 2px !important;\n   margin-top: 2px !important;\n   margin-left: 2px !important;\n@@ -5196,5 +5196,5 @@\n \tbackground-color: rgb(43, 42, 51, 0.85) !important;\n }\n \n #urlbar[open=true] #urlbar-background {\n-  background-color: rgb(43, 42, 51, 0.85) !important;\n\\ No newline at end of file\n+  background-color: rgb(43, 42, 51, 0.85) !important; */\n"
                 }
             ],
             "date": 1629628141435,

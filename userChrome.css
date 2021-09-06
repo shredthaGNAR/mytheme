@@ -5056,7 +5056,7 @@ menupopup {
     box-shadow 0.2s ease-in !important;
 }
 .tab-label {
-  line-height: 1.7em;
+  line-height: 1.7em !important;
 }
 .tab-icon-overlay {
   fill-opacity: 1 !important;
@@ -5109,7 +5109,8 @@ menupopup {
 /*"toolbar_bottom_separator"*/
 
 #navigator-toolbox {
-  border-bottom: 2px solid #212142 !important;
+  /*border-bottom: 2px solid #212142 !important;*/
+  border-bottom: none !important;
 }
 /********************************
 * {
@@ -5120,7 +5121,7 @@ menupopup {
 
 #urlbar,
 .searchbar-textbox {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  box-shadow: none !important;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
     1px 1px 1px rgba(0, 0, 0, 0.5) !important;
 }
@@ -5139,3 +5140,61 @@ menupopup {
 #back-button > .toolbarbutton-icon {
   transform: scaleX(-1);
 }
+/********************************
+.tab-background[selected="true"] {
+  background: linear-gradient(
+      to bottom,
+      transparent 2px,
+      var(--toolbar-bgcolor) 2px,
+      var(--toolbar-bgcolor) 100%
+    ),
+    linear-gradient(
+      to right,
+      #9f1aff,
+      #9f1aff,
+      #8a46ff,
+      #765dff,
+      #5d7dff,
+      #3e8cff,
+      #1c99ff,
+      #00a5ff,
+      #00b4ff,
+      #00c3ff,
+      #00d0ff,
+      #00ddff
+    ) !important;
+}
+****/
+.tabbrowser-tab
+  > .tab-stack
+  > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+  background-position: bottom !important;
+}
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+/*
+#urlbar-background,#urlbar{ 
+  border-radius: 16px !important ;
+  background-color: #1C1B22 !important;
+  border: transparent !important;
+}
+
+#urlbar{
+  background-image: linear-gradient(90deg, #9400FF, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52);
+  /*background-size: auto 10px;
+    background-repeat: no-repeat;
+    background-position: bottom;}
+
+#urlbar-background{ 
+  margin-bottom: 2px !important;
+  margin-top: 2px !important;
+  margin-left: 2px !important;
+  margin-right: 2px !important; }
+
+#urlbar[focused=true] #urlbar-background{
+	background-color: rgb(43, 42, 51, 0.85) !important;
+}
+
+#urlbar[open=true] #urlbar-background {
+  background-color: rgb(43, 42, 51, 0.85) !important; */

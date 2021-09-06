@@ -1150,7 +1150,6 @@ richlistitem.download-state {
     margin: 0 var(--arrowpanel-menuitem-inline-margin) !important;
     border: 0 !important;
     outline: 0 !important;
-    padding-inline-start: 12px !important;
     background: none !important;
 }
 
@@ -1159,6 +1158,14 @@ richlistitem.download-state {
     height: 60px !important;
     -moz-box-align: center !important;
     border: none !important;
+}
+
+.downloadMainArea {
+    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
+}
+
+richlistitem.download-state .downloadMainArea {
+	padding-inline: 12px 4px !important;
 }
 
 .downloadsPanelFooterButton:hover {
@@ -1171,8 +1178,18 @@ richlistitem.download-state[verdict]:hover {
     background-color: unset !important;
 }
 
-richlistitem.download-state:is(:hover, :focus-within) {
+richlistitem.download-state[state="1"][exists]:is(:hover, :focus-within),
+richlistitem.download-state:is([verdict], .openWhenFinished):is(:hover, :focus-within) {
     background: var(--download-button-hover-bg) !important;
+}
+
+panel richlistitem.download-state[state="1"]:not([exists]) .downloadTarget {
+    color: var(--panel-description-color);
+}
+
+panel richlistitem.download-state .downloadDetails {
+    opacity: 1 !important;
+    color: var(--panel-description-color);
 }
 
 #downloadsListBox .downloadContainer {
@@ -1185,9 +1202,11 @@ richlistitem.download-state > .downloadButton {
     height: auto !important;
     width: auto !important;
     box-sizing: content-box !important;
-    padding: 0px !important;
-    -moz-box-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background: none !important;
+    border-radius: 0 !important;
+    -moz-box-align: center !important;
     -moz-box-pack: center !important;
 }
 
@@ -1202,7 +1221,7 @@ richlistitem.download-state > .downloadButton:hover:active .button-box {
 richlistitem.download-state > .downloadButton .button-box {
     max-width: 34px !important;
     height: 34px !important;
-    border-radius: 4px !important;
+    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
     padding: 0 !important;
 }
 
@@ -1264,6 +1283,15 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
 
     richlistitem.download-state[selected]:not(:hover, :focus-within) {
         background: hsl(230, 5%, 15%) !important;
+    }
+
+    richlistitem.download-state[state="1"]:not([exists]) .downloadTarget {
+        color: var(--organizer-deemphasized-color);
+    }
+
+    richlistitem.download-state .downloadDetails {
+        opacity: 1 !important;
+        color: var(--organizer-deemphasized-color);
     }
 }
 
