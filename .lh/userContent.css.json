@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 18,
+            "activePatchIndex": 35,
             "patches": [
                 {
                     "date": 1629755073787,
@@ -80,6 +80,74 @@
                 {
                     "date": 1630442524525,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -893,4 +893,17 @@\n   #background {\n     background-color: #1d1d3bfa !important; /* https://github.com/piroor/treestyletab/blob/0eede581d763f92344fe64b1c042839f3b8ca955/webextensions/resources/ui-color.css#L198 */\n   }\n }\n+@-moz-document url(\"about:home\"), url(\"about:newtab\") {\n+  /*\n+\tbody {\n+\t\tbackground-image: url(\"bg.jpg\");\n+\t\tbackground-size: cover;\n+\t\t--newtab-search-border-color: none !important;\n+\t}\n+\n+\t/* Rounded searchbar */\n+  .search-wrapper input {\n+    border-radius: 5px !important;\n+  }\n+}\n"
+                },
+                {
+                    "date": 1630990276483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -818,9 +818,9 @@\n }\n \n * {\n   scrollbar-width: thin !important;\n-  scrollbar-color: transpare transparent !important;\n+  scrollbar-color: transparent transparent !important;\n }\n \n /*  Sets up minimal incognito scrollbar */\n \n"
+                },
+                {
+                    "date": 1630990496444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -671,9 +671,9 @@\n   div[style*=\"background-image:\"] *,\n   [style*=\".gif\"],\n   [style*=\".jpg\"],\n   [style*=\".png\"] {\n-    background-color: transparent !important;\n+    background-color: #181735 !important;\n   }\n \n   a,\n   a[class] {\n"
+                },
+                {
+                    "date": 1630990505764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -671,9 +671,9 @@\n   div[style*=\"background-image:\"] *,\n   [style*=\".gif\"],\n   [style*=\".jpg\"],\n   [style*=\".png\"] {\n-    background-color: #181735 !important;\n+    background-color: #1d1d3bfa !important;\n   }\n \n   a,\n   a[class] {\n"
+                },
+                {
+                    "date": 1630990552424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -554,9 +554,9 @@\n \n .outer-wrapper.newtab-experience\n   .top-site-outer:is(.active, :focus, :hover)\n   .title {\n-  color: #ffffff !important;\n+  color: #fff !important;\n }\n \n /* Color of the bottom of the three-point menu */\n \n@@ -566,9 +566,9 @@\n \n /* 3-point button */\n \n .outer-wrapper.newtab-experience .top-site-outer .context-menu-button {\n-  fill: #ffffff !important;\n+  fill: #fff !important;\n }\n \n /* Favicon background of anchored sites */\n \n"
+                },
+                {
+                    "date": 1630990663880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,21 +5,16 @@\n @import url(resources/in-content/picture-in-picture.css);\n @import url(resources/in-content/system.css);\n @import url(resources/in-content/ext-containers.css);\n @import url(resources/in-content/ext-darkreader.css);\n-@import url(resources/in-content/ext-nordvpn.css);\n @import url(resources/in-content/ext-mdm.css);\n @import url(resources/in-content/ext-bitwarden.css);\n @import url(resources/in-content/ext-ublock.css);\n-@import url(resources/in-content/ext-simpletranslate.css);\n @import url(resources/in-content/ext-tabnotes.css);\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n @import url(resources/in-content/site-youtube.css);\n @import url(resources/in-content/site-wiki.css);\n-@import url(resources/in-content/site-github.css);\n-@import url(resources/in-content/site-reddit.css);\n-@import url(resources/in-content/site-subscene.css);\n @import url(resources/in-content/misc.css);\n @import url(resources/in-content/custom-content.css);\n \n /* Removes the white loading page */\n"
+                },
+                {
+                    "date": 1630990691846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n }\n */\n \n ::-moz-selection {\n-  color: rgb(255, 255, 255) !important;\n+  color: #fff !important;\n   /*Colour of text*/\n   background: #985effcc !important;\n   /*Highlighting colour*/\n }\n"
+                },
+                {
+                    "date": 1630990709004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   /*Highlighting colour*/\n }\n \n :root {\n-  scrollbar-color: transparent, transparent !important;\n+  scrollbar-color: transparent transparent !important;\n }\n \n :host,\n :root {\n"
+                },
+                {
+                    "date": 1630990850402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n }\n \n :host,\n :root {\n-  /*Colores varios de paginas de about:addons y about:settings*/\n+  /***Colors - about:addons & about:settings - Pages***/\n   --in-content-page-background: #1d1d3bfa !important;\n   /*Fondo general*/\n   --in-content-text-color: #fff !important;\n   /*Color general de label*/\n"
+                },
+                {
+                    "date": 1630990886632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -193,9 +193,9 @@\n   }\n \n   /*Colors of the interface to customize the newtab*/\n   .customize-menu {\n-    color: white !important;\n+    color: #fff !important;\n     background-color: #292759 !important;\n   }\n \n   .home-section .section .selector {\n"
+                },
+                {
+                    "date": 1631051055949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n @import url(resources/in-content/ext-ublock.css);\n @import url(resources/in-content/ext-tabnotes.css);\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n-@import url(resources/in-content/site-youtube.css);\n @import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/misc.css);\n @import url(resources/in-content/custom-content.css);\n \n"
+                },
+                {
+                    "date": 1631051144460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,8 @@\n   /*Colour of text*/\n   background: #985effcc !important;\n   /*Highlighting colour*/\n }\n-\n :root {\n   scrollbar-color: transparent transparent !important;\n }\n \n"
+                },
+                {
+                    "date": 1631051150610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,11 +21,9 @@\n /*\n @-moz-document url(about:blank), url(about:newtab), url(about:home) {\n \thtml:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {\n \t\tbackground: #30325e70,var(--bf-bg) !important;\n-}\n-*/\n-\n+}*/\n ::-moz-selection {\n   color: #fff !important;\n   /*Colour of text*/\n   background: #985effcc !important;\n"
+                },
+                {
+                    "date": 1631061955740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,10 @@\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n @import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/misc.css);\n+@import url(parts/css_scrollbar_width_color.css);\n+@import url(parts/newtab_background_color.css);\n @import url(resources/in-content/custom-content.css);\n \n /* Removes the white loading page */\n /*url(about:newtab), url(about:home)*/\n"
+                },
+                {
+                    "date": 1631061992470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-@import url(uc-globals.css);\n+@import url(\"uc-globals.css\");\n @import url(resources/in-content/root.css);\n @import url(resources/in-content/menus.css);\n @import url(resources/in-content/devtools.css);\n @import url(resources/in-content/picture-in-picture.css);\n@@ -11,9 +11,9 @@\n @import url(resources/in-content/ext-ublock.css);\n @import url(resources/in-content/ext-tabnotes.css);\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n-@import url(resources/in-content/site-wiki.css);\n+@import url(\"resources/in-content/site-wiki.css\");\n @import url(resources/in-content/misc.css);\n @import url(parts/css_scrollbar_width_color.css);\n @import url(parts/newtab_background_color.css);\n @import url(resources/in-content/custom-content.css);\n"
+                },
+                {
+                    "date": 1631062615599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-@import url(\"uc-globals.css\");\n+@import url(uc-globals.css);\n @import url(resources/in-content/root.css);\n @import url(resources/in-content/menus.css);\n @import url(resources/in-content/devtools.css);\n @import url(resources/in-content/picture-in-picture.css);\n@@ -11,9 +11,9 @@\n @import url(resources/in-content/ext-ublock.css);\n @import url(resources/in-content/ext-tabnotes.css);\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n-@import url(\"resources/in-content/site-wiki.css\");\n+@import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/misc.css);\n @import url(parts/css_scrollbar_width_color.css);\n @import url(parts/newtab_background_color.css);\n @import url(resources/in-content/custom-content.css);\n"
+                },
+                {
+                    "date": 1631063497748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n @import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/misc.css);\n-@import url(parts/css_scrollbar_width_color.css);\n-@import url(parts/newtab_background_color.css);\n+/*@import url(parts/css_scrollbar_width_color.css);\n+@import url(parts/newtab_background_color.css);*/\n @import url(resources/in-content/custom-content.css);\n \n /* Removes the white loading page */\n /*url(about:newtab), url(about:home)*/\n"
+                },
+                {
+                    "date": 1631063866986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n @import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/misc.css);\n+@import url(parts/remove-white-flash.css);\n /*@import url(parts/css_scrollbar_width_color.css);\n @import url(parts/newtab_background_color.css);*/\n @import url(resources/in-content/custom-content.css);\n \n"
                 }
             ],
             "date": 1629755073787,
