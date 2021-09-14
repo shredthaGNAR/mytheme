@@ -3539,16 +3539,7 @@ tab {
     background-color: color-mix(in srgb, currentColor 2%, transparent) !important;
 }
 
-/***
- background: radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%);
-background-blend-mode: overlay, hard-light, overlay, normal; */
 
-/* fullscreen fixes for the nav bar *
-:root[sizemode="fullscreen"] #nav-bar {
-  padding: 0px 6px 0px 6px !important;
-}
-
-*/
 #TabsToolbar tab:not([visuallyselected="true"]):not(:hover) .tab-close-button {
   opacity: 0 !important;
 }
@@ -4811,7 +4802,7 @@ menupopup {
 #navigator-toolbox {
   border-bottom: none !important;
 }
-
+/*
 .tabbrowser-tab[multiselected]:-moz-lwtheme,
 .tabbrowser-tab[visuallyselected="true"]:-moz-lwtheme {
   filter: drop-shadow(0 0 7px rgb(32, 32, 32)) !important;
@@ -5638,8 +5629,70 @@ hbox[anonid="findbar-textbox-wrapper"] {
 .findbar-container > :is(image, description, label) {
   -moz-box-ordinal-group: 0;
 }
-.tab-content:not([selected="true"]) {
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
-    1px 1px 1px rgba(0, 0, 0, 0.5) !important;
+* {
+  scrollbar-width: thin !important;
+}
+
+findbar {
+  -moz-box-ordinal-group: 0;
+  margin-bottom: -33px;
+  position: relative;
+  border-top: none !important;
+  padding: 0 !important;
+  transition: transform 82ms linear, opacity 82ms linear 32ms !important;
+  background: none !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.findbar-container > .findbar-find-fast {
+  padding: var(--toolbarbutton-inner-padding) 1px;
+  margin: 0 !important;
+}
+
+findbar[hidden] {
+  transform: translateY(-30px);
+}
+
+findbar > .findbar-container,
+findbar > .close-icon {
+  border: 1px solid var(--chrome-content-separator-color);
+  border-width: 0 0 1px 0px;
+  background: var(--uc-light-bkgnd-color, var(--toolbar-bgcolor)) !important;
+  pointer-events: auto;
+}
+findbar > .findbar-container {
+  -moz-box-direction: reverse;
+  border-left-width: 1px;
+  border-bottom-left-radius: 4px;
+}
+
+.findbar-closebutton {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  padding: 5px !important;
+}
+.findbar-closebutton > image {
+  padding: 3px;
+}
+.findbar-closebutton:hover > image {
+  background: var(--toolbarbutton-hover-background) !important;
+  border-radius: 4px;
+}
+findbar > .findbar-container > hbox {
+  margin: 0 5px;
+}
+
+findbar::before {
+  content: "";
+  display: -moz-box;
+  -moz-box-flex: 100;
+}
+/*ícono  reproduciendose*/
+.tab-icon-overlay:is([sharing], [soundplaying]):not([pinned]) {
+  transition-duration: 150ms !important;
   opacity: 1 !important;
+  border-radius: 9px !important;
+  top: 10px;
+  left: 20px !important;
 }
