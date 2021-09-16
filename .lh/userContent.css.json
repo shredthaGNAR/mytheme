@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 35,
+            "activePatchIndex": 36,
             "patches": [
                 {
                     "date": 1629755073787,
@@ -148,6 +148,10 @@
                 {
                     "date": 1631063866986,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n @import url(resources/in-content/ext-sortbookmarks.css);\n @import url(resources/in-content/site-google.css);\n @import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/misc.css);\n+@import url(parts/remove-white-flash.css);\n /*@import url(parts/css_scrollbar_width_color.css);\n @import url(parts/newtab_background_color.css);*/\n @import url(resources/in-content/custom-content.css);\n \n"
+                },
+                {
+                    "date": 1631764027852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -900,4 +900,15 @@\n   .search-wrapper input {\n     border-radius: 5px !important;\n   }\n }\n+/* Tab notes background color change */\n+@-moz-document url-prefix(\"moz-extension://5a05da5c-263b-488d-9559-cdc6d61d7654/newtab.html\")\n+{\n+  #body,\n+  #note-content {\n+    background-color: #1c1b22 !important;\n+  }\n+  #list {\n+    background-color: #1c1b22 !important;\n+  }\n+}\n"
                 }
             ],
             "date": 1629755073787,

@@ -14,6 +14,7 @@
 @import url(resources/in-content/site-google.css);
 @import url(resources/in-content/site-wiki.css);
 @import url(resources/in-content/misc.css);
+@import url(parts/remove-white-flash.css);
 /*@import url(parts/css_scrollbar_width_color.css);
 @import url(parts/newtab_background_color.css);*/
 @import url(resources/in-content/custom-content.css);
@@ -898,5 +899,16 @@ url(about:newtab) {
 	/* Rounded searchbar */
   .search-wrapper input {
     border-radius: 5px !important;
+  }
+}
+/* Tab notes background color change */
+@-moz-document url-prefix("moz-extension://5a05da5c-263b-488d-9559-cdc6d61d7654/newtab.html")
+{
+  #body,
+  #note-content {
+    background-color: #1c1b22 !important;
+  }
+  #list {
+    background-color: #1c1b22 !important;
   }
 }

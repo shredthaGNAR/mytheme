@@ -901,3 +901,14 @@ url(about:newtab) {
     border-radius: 5px !important;
   }
 }
+/* Tab notes background color change */
+@-moz-document url-prefix("moz-extension://5a05da5c-263b-488d-9559-cdc6d61d7654/newtab.html")
+{
+  #body,
+  #note-content {
+    background-color: #1c1b22 !important;
+  }
+  #list {
+    background-color: #1c1b22 !important;
+  }
+}
