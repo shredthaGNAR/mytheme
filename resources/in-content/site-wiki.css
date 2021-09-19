@@ -1,7 +1,7 @@
 /* my personal wikipedia dark mode theme. */
 
-@-moz-document domain("wikipedia.org"),
-domain("wikimedia.org") {
+@supports -moz-bool-pref("userChrome.css.wikipedia.dark-theme-enabled") {
+@-moz-document domain("wikipedia.org"), domain("wikimedia.org") {
     /* latin-ext */
     @font-face {
         font-family: "Source Code Pro";
@@ -527,13 +527,6 @@ domain("wikimedia.org") {
         font-size: 1rem !important;
         margin-left: 5px !important;
         padding-bottom: 1px !important;
-        /* background-image: linear-gradient(
-            to right,
-            hsla(0, 0%, 100%, 0.05) 0,
-            hsla(0, 0%, 100%, 0.2) 10%,
-            transparent 100%
-        ) !important;
-        background-size: 100% 0.5px !important; */
         background: none !important;
         border-bottom: 1px solid transparent !important;
         border-image: linear-gradient(
@@ -860,9 +853,7 @@ domain("wikimedia.org") {
         visibility: collapse !important;
     }
 
-    html[lang="de"] #bodyContent #coordinates
-
-    /* .de fix */ {
+    html[lang="de"] #bodyContent #coordinates {
         top: 53px !important;
         right: 32px !important;
     }
@@ -941,9 +932,7 @@ domain("wikimedia.org") {
         color: var(--uc-wiki-text-90) !important;
     }
 
-    #bodyContent #contentSub
-
-    /* redirected from msg */ {
+    #bodyContent #contentSub {
         margin: 5px 0 12px -5px !important;
         padding: 0 !important;
         font-size: 12px !important;
@@ -1029,9 +1018,9 @@ domain("wikimedia.org") {
         border-style: hidden !important;
     }
 
-    table.infobox th,
-    table.infobox .summary,
-    table.infobox td:not([class], [id]) {
+    :root table.infobox th,
+    :root table.infobox .summary,
+    :root table.infobox td:not([class], [id]) {
         background: none !important;
     }
 
@@ -1239,10 +1228,6 @@ domain("wikimedia.org") {
         align-items: center !important;
     }
 
-    /*     #bodyContent #toc ul li a .tocnumber:after {
-        content: "\00a0)" !important;
-    } */
-
     #bodyContent #toc li {
         padding: 0 !important;
     }
@@ -1318,11 +1303,13 @@ domain("wikimedia.org") {
     }
 
     .sidebar .sidebar-content .sidebar-list-title,
-    .infobox-header {
+    .infobox-header,
+    .sidebar-above {
         background-color: transparent !important;
         color: revert !important;
     }
 
+    .sidebar-navbar,
     .sidebar .navbox-list {
         border-color: transparent !important;
     }
@@ -1337,6 +1324,19 @@ domain("wikimedia.org") {
         text-align: start !important;
         border-top: none !important;
         border-bottom: 1px solid var(--uc-wiki-popup-border-color) !important;
+    }
+
+    .sidebar-above {
+        border-bottom: 1px solid var(--uc-wiki-popup-border-color) !important;
+    }
+
+    .sidebar-below {
+        border-top: 1px solid var(--uc-wiki-popup-border-color) !important;
+    }
+
+    .mw-parser-output .sidebar-collapse .sidebar-above,
+    .mw-parser-output .sidebar-collapse .sidebar-below {
+        border-color: var(--uc-wiki-popup-border-color) !important;
     }
 
     .sidebar-list-content {
@@ -1363,7 +1363,7 @@ domain("wikimedia.org") {
     }
 
     th.navbox-group {
-        border-radius: 2px !important;
+        border-radius: 0 !important;
         background-color: var(--uc-wiki-popup-bg) !important;
         box-shadow: none !important;
     }
@@ -1503,7 +1503,8 @@ domain("wikimedia.org") {
         background-color: var(--uc-wiki-popup-bg) !important;
     }
 
-    :is(.oo-ui-toolbar-bar, .ve-ce-branchNode-slug, .toolbar.section-main) .oo-ui-iconElement-icon,
+    :is(.oo-ui-toolbar-bar, .ve-ce-branchNode-slug, .toolbar.section-main)
+        .oo-ui-iconElement-icon,
     :is(.oo-ui-toolbar-bar, .ve-ce-branchNode-slug, .toolbar.section-main)
         .oo-ui-indicatorElement-indicator {
         filter: invert();
@@ -1523,7 +1524,8 @@ domain("wikimedia.org") {
         color: var(--uc-wiki-text-90) !important;
     }
 
-    :is(.oo-ui-popupToolGroup-active, .oo-ui-popupToolGroup-active-tools) .oo-ui-iconElement-icon {
+    :is(.oo-ui-popupToolGroup-active, .oo-ui-popupToolGroup-active-tools)
+        .oo-ui-iconElement-icon {
         opacity: 1 !important;
         filter: invert(1) hue-rotate(190deg) brightness(1) !important;
     }
@@ -1742,7 +1744,9 @@ domain("wikimedia.org") {
         border: none !important;
     }
 
-    .oo-ui-processDialog-actions-safe .oo-ui-buttonElement-button:hover > .oo-ui-iconElement-icon {
+    .oo-ui-processDialog-actions-safe
+        .oo-ui-buttonElement-button:hover
+        > .oo-ui-iconElement-icon {
         opacity: 1 !important;
     }
 
@@ -1750,7 +1754,9 @@ domain("wikimedia.org") {
         background-color: hsla(0, 0%, 0%, 0.8) !important;
     }
 
-    .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
+    .oo-ui-windowManager-modal.oo-ui-windowManager-floating
+        > .oo-ui-dialog
+        > .oo-ui-window-frame {
         background-color: hsl(0, 0%, 3.6%) !important;
         border: none !important;
         border-radius: 4px !important;
@@ -2227,7 +2233,9 @@ domain("wikimedia.org") {
         width: 1.5em !important;
     }
 
-    .mwe-popups.mwe-popups-type-reference .mwe-popups-title .mw-ui-icon.mw-ui-icon-element:before {
+    .mwe-popups.mwe-popups-type-reference
+        .mwe-popups-title
+        .mw-ui-icon.mw-ui-icon-element:before {
         margin: 0 !important;
     }
 
@@ -2252,7 +2260,11 @@ domain("wikimedia.org") {
         width: 100% !important;
         height: 20px !important;
         background-color: transparent !important;
-        background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0), #ffffff) !important;
+        background-image: -webkit-linear-gradient(
+            top,
+            hsla(0, 0%, 100%, 0),
+            #ffffff
+        ) !important;
         background-image: -moz-linear-gradient(top, hsla(0, 0%, 100%, 0), #ffffff) !important;
         background-image: linear-gradient(hsla(0, 0%, 100%, 0), #ffffff) !important;
         opacity: 0 !important;
@@ -2262,7 +2274,9 @@ domain("wikimedia.org") {
         transition: opacity 250ms ease !important;
     }
 
-    .mwe-popups.mwe-popups-type-reference .mwe-popups-extract.mwe-popups-fade-out .mwe-popups-fade {
+    .mwe-popups.mwe-popups-type-reference
+        .mwe-popups-extract.mwe-popups-fade-out
+        .mwe-popups-fade {
         opacity: 1 !important;
     }
 
@@ -2515,19 +2529,17 @@ domain("wikimedia.org") {
     table:not([class]) > * > tr > th,
     table:not([class]) > * > tr > td,
     .thumbborder,
-    .infobox.bordered td, .infobox.bordered th,
+    .infobox.bordered td,
+    .infobox.bordered th,
     .mw-parser-output .ib-country td,
     .mw-parser-output .ib-country th,
     table:is(.infobox, .sidebar)
         :is(td, th):not([class], [id], [style*="border"][style*="transparent"]),
-    table:is(.infobox, .sidebar)
-        .sidebar-content:not([style*="border"][style*="transparent"]),
-    .mw-parser-output
-        .ib-chembox
-        :is(td, th):not([style*="border"][style*="transparent"]) {
+    table:is(.infobox, .sidebar) .sidebar-content:not([style*="border"][style*="transparent"]),
+    .mw-parser-output .ib-chembox :is(td, th):not([style*="border"][style*="transparent"]) {
         border-color: hsla(212, 8.8%, 66.5%, 0.4) !important;
     }
-    
+
     table.infobox .thumbborder {
         border-color: transparent !important;
     }
@@ -2548,6 +2560,12 @@ domain("wikimedia.org") {
         color: hsl(0, 0%, 98%) !important;
         font-weight: normal !important;
         font-family: Patua One;
+        border-radius: revert !important;
+    }
+
+    table caption {
+        border: none !important;
+        background: none !important;
     }
 
     table.wikitable.sortable.jquery-tablesorter thead tr th.headerSort {
@@ -2666,7 +2684,7 @@ domain("wikimedia.org") {
         box-shadow: revert !important;
         color: inherit !important;
     }
-    
+
     .navbar-mini a abbr {
         color: inherit !important;
     }
@@ -2683,9 +2701,13 @@ domain("wikimedia.org") {
         box-shadow: none !important;
     }
 
-    #content .infobox,
-    #bodyContent table.ambox {
+    #content :where(.infobox),
+    #bodyContent :where(table.ambox) {
         box-shadow: 0 0 15px 2px hsla(0, 0%, 0%, 0.1), 0 0 3px 1px hsla(0, 0%, 0%, 0.2) !important;
+    }
+
+    #bodyContent table :is(table, .infobox, .thumb) {
+        box-shadow: none !important;
     }
 
     #content .thumbinner {
@@ -2810,7 +2832,10 @@ domain("wikimedia.org") {
         color: var(--uc-wiki-text-60) !important;
     }
 
-    .mw-mmv-download-pane .mw-mmv-download-attribution:hover .mw-mmv-download-attribution-cta * {
+    .mw-mmv-download-pane
+        .mw-mmv-download-attribution:hover
+        .mw-mmv-download-attribution-cta
+        * {
         color: var(--uc-wiki-text-90) !important;
     }
 
@@ -2959,7 +2984,10 @@ domain("wikimedia.org") {
 
     .mw-advancedSearch-namespace-selection,
     .mw-advancedSearch-fieldContainer {
-        background: linear-gradient(hsla(0, 0%, 0%, 0.1), var(--uc-wiki-box-bg) 0.5em) !important;
+        background: linear-gradient(
+            hsla(0, 0%, 0%, 0.1),
+            var(--uc-wiki-box-bg) 0.5em
+        ) !important;
         border: solid 1px transparent !important;
     }
 
@@ -3166,7 +3194,9 @@ domain("wikimedia.org") {
         box-shadow: none !important;
     }
 
-    .mw-mmv-embed-select .oo-ui-buttonElement.oo-ui-labelElement > input.oo-ui-buttonElement-button,
+    .mw-mmv-embed-select
+        .oo-ui-buttonElement.oo-ui-labelElement
+        > input.oo-ui-buttonElement-button,
     .mw-mmv-embed-select
         .oo-ui-buttonElement.oo-ui-labelElement
         > .oo-ui-buttonElement-button
@@ -3272,7 +3302,9 @@ domain("wikimedia.org") {
         font-size: 13px !important;
     }
 
-    .mw-mmv-reuse-dialog .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+    .mw-mmv-reuse-dialog
+        .oo-ui-dropdownWidget.oo-ui-widget-enabled
+        .oo-ui-dropdownWidget-handle {
         background-color: hsl(0, 0%, 8%) !important;
         color: var(--uc-wiki-text-90) !important;
         border: none !important;
@@ -3433,7 +3465,7 @@ domain("wikimedia.org") {
     .infobox,
     .vertical-navbox,
     .mergedtoprow,
-    .metadata:not(.ambox, .audiolinkinfo),
+    .metadata:not(.ambox, .audiolinkinfo, .asbox),
     .mbox-small,
     .quotebox,
     .portal,
@@ -3442,9 +3474,13 @@ domain("wikimedia.org") {
     .navbox {
         box-shadow: 0 0 15px 2px hsla(0, 0%, 0%, 0.1), 0 0 3px 1px hsla(0, 0%, 0%, 0.2) !important;
     }
-    
+
     table .mergedtoprow {
         box-shadow: revert !important;
+    }
+
+    .asbox table {
+        background: transparent !important;
     }
 
     .navbox {
@@ -3660,7 +3696,8 @@ domain("wikimedia.org") {
         background-color: hsla(0, 0%, 100%, 0.3) !important;
     }
 
-    #pt-notifications-notice .mw-echo-notifications-badge.oo-ui-flaggedElement-unseen:hover::after,
+    #pt-notifications-notice
+        .mw-echo-notifications-badge.oo-ui-flaggedElement-unseen:hover::after,
     #pt-notifications-notice
         .mw-echo-notifications-badge.mw-echo-unseen-notifications:hover::after {
         background-color: hsla(0, 0%, 100%, 0.4) !important;
@@ -3805,7 +3842,11 @@ domain("wikimedia.org") {
 
     /* media viewer colors, buttons and shit */
     .mw-mmv-permission-box .mw-mmv-permission-text .mw-mmv-permission-text-fader {
-        background-image: linear-gradient(to bottom, #0000 0%, hsl(0, 0%, 9.4%) 100%) !important;
+        background-image: linear-gradient(
+            to bottom,
+            #0000 0%,
+            hsl(0, 0%, 9.4%) 100%
+        ) !important;
     }
 
     .mw-mmv-info-box {
@@ -3884,14 +3925,14 @@ domain("wikimedia.org") {
     }
 
     span.unicode.haudio > span > span:not([style]) img {
-        margin-right: .25em !important;
+        margin-right: 0.25em !important;
     }
 
     img[src*="Speaker_Icon.svg"] {
         filter: invert(1) brightness(4) !important;
         opacity: 0.9 !important;
     }
-    
+
     a[title="Edit this at Wikidata"] > img {
         filter: invert(1) hue-rotate(170deg) saturate(0.7) brightness(1.2) !important;
     }
@@ -3929,7 +3970,6 @@ domain("wikimedia.org") {
     .image[href*="/wiki/File:Braille" i]:is([href$=".svg"], [href$=".png"]) > img,
     .svg:not(.mw-mmv-final-image),
     .thumbimage[src*=".svg"][alt*="line drawing" i],
-    .fullImageLink [src*=".svg"],
     .mw-parser-output a[href$=".svg"] > img[src$=".svg"],
     img[alt="<?>"] {
         filter: contrast(0.85) invert(1) hue-rotate(180deg);
@@ -3955,8 +3995,8 @@ domain("wikimedia.org") {
 
     /* translate page arrow */
     img[src*="Translation_to_english_arrow"] {
-        filter: invert(1) hue-rotate(190deg) brightness(0.8) brightness(0.8) contrast(2) saturate(2)
-            brightness(1.6);
+        filter: invert(1) hue-rotate(190deg) brightness(0.8) brightness(0.8) contrast(2)
+            saturate(2) brightness(1.6);
     }
 
     /* pdf external link */
@@ -4311,7 +4351,7 @@ domain("wikimedia.org") {
     .mw-parser-output .vanchor > :target ~ .vanchor-text {
         background-color: var(--purple-35) !important;
     }
-    
+
     .mw-parser-output .thumbinner > table {
         border: 0 !important;
     }
@@ -4328,4 +4368,5 @@ domain("wikimedia.org") {
     .ve-ce-mwEntityNode-nbsp {
         background-color: hsl(240, 2%, 20%) !important;
     }
+}
 }
