@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1630223218267,
@@ -16,6 +16,18 @@
                 {
                     "date": 1630248915756,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,27 +183,27 @@\n hbox.tab-content[pinned=\"true\"] .tab-text {\n   display: none !important;\n }\n \n-/* \tHide the blue line on top of tab *\n+/* \tHide the blue line on top of tab */\n .tab-line {\n-\tdisplay: none !important;\n+  display: none !important;\n }\n \n .tab-bottom-line {\n }\n \n .tabbrowser-tab {\n-\tborder-radius: var(--bf-tab-border-radius) !important;\n-\tborder-width: 0 !important;\n-\theight: var(--bf-tab-height) !important;\n-\toverflow: hidden;\n-\tmargin-top: 0 !important;\n-\tmargin-bottom: 0 !important;\n+  border-radius: var(--bf-tab-border-radius) !important;\n+  border-width: 0 !important;\n+  height: var(--bf-tab-height) !important;\n+  overflow: hidden;\n+  margin-top: 0 !important;\n+  margin-bottom: 0 !important;\n }\n \n :root[uidensity=\"compact\"] .tabbrowser-tab {\n-\tborder-radius: var(--bf-tab-border-radius) !important;\n+  border-radius: var(--bf-tab-border-radius) !important;\n }\n /*\n .tabbrowser-tab:hover {\n \tmargin-top: 0px !important;\n"
+                },
+                {
+                    "date": 1633309475925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n .tabbrowser-tab::after,\n .tabbrowser-tab::before {\n \tborder-width: 1px !important;\n }\n-*/\n+\n .tabbrowser-arrowscrollbox {\n   margin-inline-start: 4px !important;\n   margin-inline-end: 0 !important;\n }\n"
+                },
+                {
+                    "date": 1633311857934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n .tabbrowser-tab::after,\n .tabbrowser-tab::before {\n \tborder-width: 1px !important;\n }\n-\n+*/\n .tabbrowser-arrowscrollbox {\n   margin-inline-start: 4px !important;\n   margin-inline-end: 0 !important;\n }\n"
+                },
+                {
+                    "date": 1633332447403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,13 +97,13 @@\n .tabbrowser-tab::after,\n .tabbrowser-tab::before {\n \tborder-width: 1px !important;\n }\n-*/\n+\n .tabbrowser-arrowscrollbox {\n   margin-inline-start: 4px !important;\n   margin-inline-end: 0 !important;\n-}\n+}*/\n \n .tab-text {\n   font-weight: var(--bf-tab-font-weight) !important;\n   font-size: var(--bf-tab-font-size) !important;\n@@ -216,9 +216,9 @@\n \t\t\t90deg,\n \t\t\t#9400ff,\n \t\t\t#ba00e5,\n \t\t\t#df06b9,\n-\t\t\t#e62da7,\n+\t\t\t#e62da7,    \n \t\t\t#f13b95,\n \t\t\t#f64d86,\n \t\t\t#f85f7a,\n \t\t\t#fc7169,\n"
                 }
             ],
             "date": 1630223218267,

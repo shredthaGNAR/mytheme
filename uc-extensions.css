@@ -8,6 +8,18 @@ individual extensions' popups and other content documents are styled in userCont
 
 /* extension icon appearance */
 
+/* tree-style-tabs */
+.webextension-browser-action[data-extensionid="treestyletab@piro.sakura.ne.jp"i] .toolbarbutton-icon,
+#sidebarMenu-popup #button_treestyletab_piro_sakura_ne_jp-sidebar-action:not([checked="true"]) {
+    list-style-image: url(chrome://userchrome/content/material/tree-style-tabs-32.svg) !important;
+}
+
+.eom-addon-button[data-extensionid="treestyletab@piro.sakura.ne.jp"i] .toolbarbutton-icon,
+menupopup#viewSidebarMenu
+    menuitem.menuitem-iconic.webextension-menuitem#menu_treestyletab_piro_sakura_ne_jp-sidebar-action[style]:is([type="checkbox"], [type="radio"]):not([checked="true"]) {
+    list-style-image: url(chrome://userchrome/content/material/tree-style-tabs.svg) !important;
+}
+
 /* SVG gobbler */
 :is(.webextension-browser-action, .eom-addon-button)[data-extensionid="{7962ff4a-5985-4cf2-9777-4bb642ad05b8}"i]
     .toolbarbutton-icon {
@@ -426,6 +438,11 @@ there's no need for a context menu item except when right-clicking something par
     background-image: url(chrome://userchrome/content/hide-password.svg);
 }
 
+#ublock0_raymondhill_net-menuitem-_uBlock0-blockElementInFrame:not(.menuitem-iconic, .menu-iconic):before {
+    fill-opacity: 0.3;
+    background-image: url(chrome://userchrome/content/devtools/command-frames.svg);
+}
+
 /* bitwarden context menu icon */
 #contentAreaContextMenu
     :is(.menu-iconic, .menuitem-iconic)[label="Bitwarden"]
@@ -450,6 +467,25 @@ there's no need for a context menu item except when right-clicking something par
 /* toolbar context menu item */
 #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root:not(.menuitem-iconic, .menu-iconic):before {
     background-image: url(chrome://userchrome/content/material/bitwarden.svg);
+}
+
+#contentAreaContextMenu
+    #addon_darkreader_org-menuitem-_DarkReader-top
+    .menu-iconic-left:before {
+    width: 16px;
+    height: 16px;
+    margin-inline: var(--context-iconic-margin);
+    fill: currentColor;
+    -moz-context-properties: fill, fill-opacity, stroke;
+    content: "";
+    display: -moz-inline-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(chrome://userchrome/content/material/darkmode.svg);
+}
+
+#contentAreaContextMenu #addon_darkreader_org-menuitem-_DarkReader-top .menu-iconic-icon {
+    display: none !important;
 }
 
 /* stylus context menu items */

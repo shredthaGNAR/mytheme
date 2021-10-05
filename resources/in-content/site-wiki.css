@@ -1,4 +1,12 @@
-/* my personal wikipedia dark mode theme. */
+/* my personal wikipedia dark mode theme.
+enable/disable by setting this pref in about:config:
+userChrome.css.wikipedia.dark-theme-enabled */
+
+@-moz-document domain("wikipedia.org"), domain("wikimedia.org") {
+    :root {
+        --wiki-dummy-variable: initial;
+    }
+}
 
 @supports -moz-bool-pref("userChrome.css.wikipedia.dark-theme-enabled") {
 @-moz-document domain("wikipedia.org"), domain("wikimedia.org") {
@@ -236,6 +244,7 @@
         --uc-wiki-box-bg: hsl(240, 1.4%, 13.9%);
         --uc-wiki-panel-bg: hsla(0, 0%, 3.1%, 0.7);
         --uc-wiki-table-header-bg: hsl(240, 5.6%, 7.1%);
+        --uc-wiki-table-border-color: hsl(240, 1.4%, 19%);
         --uc-wiki-popup-bg: hsl(240, 1.4%, 19%);
         --uc-wiki-popup-border-color: hsl(240, 1.4%, 29%);
         --uc-wiki-link-color: hsl(211.6, 63.6%, 72%);
@@ -456,10 +465,6 @@
 
     #mw-head #searchform #searchButton:hover {
         fill-opacity: 1 !important;
-    }
-
-    .vector-menu-tabs li a span {
-        filter: invert(1) hue-rotate(180deg) brightness(0.7) contrast(2) !important;
     }
 
     /* logo */
@@ -956,19 +961,24 @@
         line-height: 17px !important;
     }
 
-    .vector-body blockquote {
-        border-left: 3px double hsl(0, 1%, 24%) !important;
-        padding: 6px 16px !important;
-    }
-
+    .vector-body blockquote,
     .vector-body .flexquote {
-        background-color: hsla(0, 0%, 32%, 0.1) !important;
+        padding: 6px 16px !important;
+        background-color: var(--uc-wiki-box-bg) !important;
+        border: none !important;
         border-left: 3px double hsl(0, 1%, 24%) !important;
         border-radius: 0 3px 3px 0 !important;
     }
 
     .mw-body-content blockquote blockquote {
         border: none !important;
+        background: none !important;
+    }
+
+    .quotebox blockquote {
+        border: none !important;
+        background: none !important;
+        padding: 0 !important;
     }
 
     /* boxes */
@@ -977,7 +987,6 @@
     .infobox,
     #bodyContent div.thumb,
     .thumbinner,
-    div.thumb div,
     code,
     pre,
     .thumbcaption,
@@ -1013,6 +1022,10 @@
         border-radius: 3px !important;
     }
 
+    .thumbinner .thumbimage {
+        background-color: transparent !important;
+    }
+
     table,
     table.ib-chembox {
         border-style: hidden !important;
@@ -1045,8 +1058,8 @@
         background: none !important;
     }
 
-    #bodyContent .mw-parser-output > :not([class], [id]) {
-        clear: revert !important;
+    .table-na {
+        background-color: var(--uc-wiki-popup-bg) !important;
     }
 
     code {
@@ -1065,7 +1078,6 @@
     .infobox,
     .vertical-navbox,
     .mergedtoprow,
-    table.infobox > tbody:first-child > tr:first-child > th,
     .metadata:not(.ambox),
     .mbox-small,
     .quotebox,
@@ -1270,7 +1282,7 @@
     }
 
     table.wikitable {
-        border-color: hsl(212, 8.8%, 17.5%) !important;
+        border-color: var(--uc-wiki-table-border-color) !important;
     }
 
     table.wikitable > tr > th,
@@ -1279,13 +1291,13 @@
     table.wikitable > * > tr > td {
         font-size: 1rem !important;
         color: var(--uc-wiki-text-80) !important;
-        border-color: hsl(212, 8.8%, 17.5%) !important;
+        border-color: var(--uc-wiki-table-border-color) !important;
     }
 
     table.wikitable > * > tr > th.headerSort {
         font-size: 1rem !important;
         color: #000 !important;
-        border-color: hsl(212, 8.8%, 17.5%) !important;
+        border-color: var(--uc-wiki-table-border-color) !important;
     }
 
     table.wikitable > tr > th,
@@ -1334,9 +1346,26 @@
         border-top: 1px solid var(--uc-wiki-popup-border-color) !important;
     }
 
-    .mw-parser-output .sidebar-collapse .sidebar-above,
-    .mw-parser-output .sidebar-collapse .sidebar-below {
+    .mw-parser-output .sidebar-collapse :where(.sidebar-above, .sidebar-below) {
         border-color: var(--uc-wiki-popup-border-color) !important;
+        display: flex !important;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        width: -moz-available !important;
+    }
+
+    .mw-parser-output .sidebar-collapse :where(.sidebar-above, .sidebar-below)[style*="background"] {
+        background: var(--uc-wiki-popup-bg) !important;
+        color: inherit !important;
+    }
+
+    .mw-parser-output .sidebar-collapse .sidebar-above {
+        margin-bottom: 4px !important;
+    }
+
+    .mw-parser-output .sidebar-collapse .sidebar-below {
+        margin-top: 4px !important;
     }
 
     .sidebar-list-content {
@@ -1656,6 +1685,11 @@
 
     .ve-ui-mwSaveDialog-summary {
         background-color: transparent !important;
+    }
+
+    .ve-ui-mwSaveDialog-editSummary-count {
+        color: inherit !important;
+        border-color: var(--uc-wiki-popup-border-color) !important;
     }
 
     .ve-ui-overlay a:not([role="button"]) {
@@ -2585,7 +2619,7 @@
 
     .mw-parser-output .static-row-numbers.wikitable tr::before {
         background-color: var(--uc-wiki-table-header-bg) !important;
-        border-color: hsl(212, 8.8%, 17.5%) !important;
+        border-color: var(--uc-wiki-table-border-color) !important;
     }
 
     tbody tr td div[style*="background-color: lavender" i] {
@@ -3623,7 +3657,7 @@
         height: 9.5px !important;
         width: 9.5px !important;
         background-image: none !important;
-        background: hsl(0, 0%, 80.4%) !important;
+        /*! background: hsl(0, 0%, 80.4%) !important; */
         box-shadow: 0 0 10px 0px hsla(0, 0%, 0%, 0.1), 0 0 2px 0px hsla(0, 0%, 0%, 0.2) !important;
     }
 
@@ -3642,11 +3676,13 @@
         color: var(--blue) !important;
     }
 
-    span[style="color:red"] {
+    span[style="color:red"],
+    .example-bad {
         color: var(--red) !important;
     }
 
-    span[style="color:green"] {
+    span[style="color:green"],
+    .example:not(.example-bad)[style*="color: #006400"] {
         color: var(--green) !important;
     }
 
@@ -4159,6 +4195,10 @@
         padding: 0.4em !important;
     }
 
+    .mw-parser-output .sidebar-title-with-pretitle {
+        padding: 0 0.4em 0.4em !important;
+    }
+
     .mw-parser-output .sidebar-pretitle[style*="background"] {
         background-color: var(--uc-wiki-table-header-bg) !important;
     }
@@ -4367,6 +4407,27 @@
 
     .ve-ce-mwEntityNode-nbsp {
         background-color: hsl(240, 2%, 20%) !important;
+    }
+
+    ul.mw-gallery-packed-hover li.gallerybox:hover div.gallerytextwrapper,
+    ul.mw-gallery-packed-overlay li.gallerybox div.gallerytextwrapper,
+    ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapper {
+        left: 5px !important;
+        bottom: 5px !important;
+        margin: 0 5px !important;
+        padding: 5px !important;
+        background: none !important;
+    }
+
+    ul.mw-gallery-packed-hover div.gallerytextwrapper .gallerytext {
+        background: none !important;
+        color: inherit !important;
+        border-radius: 3px !important;
+        margin: 0 -5px !important;
+        border: 1px solid hsla(230, 3.9%, 18%, 0.5) !important;
+        background-image: var(--acrylic-texture) !important;
+        backdrop-filter: blur(7px) !important;
+        background-color: hsla(230, 3.9%, 2%, 0.8) !important;
     }
 }
 }

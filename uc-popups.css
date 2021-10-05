@@ -816,6 +816,12 @@ panel[type="autocomplete-richlistbox"]
         color: var(--ui-selection-color) !important;
     }
 
+    window[role="dialog"] ::selection,
+    window[role="dialog"] textarea::selection {
+        background-color: var(--global-selection-bgcolor) !important;
+        color: var(--global-selection-color) !important;
+    }
+
     input[type="number"] {
         overflow: hidden !important;
         overflow-clip-box: padding-box !important;
@@ -1331,7 +1337,7 @@ link[href="chrome://global/content/printPagination.css"]
     and image content can't be displayed inside the padding box, but background-image can,
     due to "background-clip: border-box" */
     .update-throbber {
-        background-image: url(chrome://userchrome/content/loading-spinner.svg) !important;
+        background-image: url(chrome://userchrome/content/loading-spinner-css.svg) !important;
         padding-left: 16px !important;
         box-sizing: border-box !important;
         -moz-context-properties: fill, fill-opacity !important;
