@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".history/userChrome_20211005015402.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1633425548835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1633425548835,
+            "name": "Commit-0",
+            "content": "/** @format */\n\n/*\n@import url(uc-tabs.css);\n@import url(uc-search-one-offs.css);\n@import url(uc-urlbar.css);\n@import url(parts/urlbar.css);\n@import url(uc-fullscreen.css);*/\n\n@import url(uc-globals.css);\n@import url(uc-variables.css);\n@import url(uc-misc.css);\n@import url(uc-navbar.css);\n@import url(uc-extensions.css);\n@import url(uc-ctrl-tab.css);\n@import url(uc-sidebar.css);\n@import url(uc-app-menu.css);\n@import url(uc-bookmarks.css);\n@import url(uc-search-mode-icons.css);\n@import url(uc-urlbar-results.css);\n@import url(uc-popups.css);\n@import url(uc-panels.css);\n@import url(colors/blurred.css);\n@import url(parts/main-window.css);\n@import url(parts/toolbar.css);\n@import url(parts/tabbar.css);\n@import url(uc-tabs.css);\n@import url(parts/customization-window.css);\n@import url(uc-tabs-bar.css);\n@import url(uc-findbar.css);\n@import url(custom-chrome.css);\n/*@import url(parts/autohide_bookmarks_toolbar.css);\n@import url(parts/compact-bookmarks.css);\n@import url(parts/sidebar.css);\n@import url(parts/window-controls.css);"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1633421624310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1633421624310,
+            "name": "Commit-0",
+            "content": "// skip 1st line\ntry {\n  \n  let {\n  classes: Cc,\n  interfaces: Ci,\n  manager: Cm,\n  utils: Cu\n  } = Components;\n  function traverseToMainProfile(str) {\n    let dir = Cc[\"@mozilla.org/file/directory_service;1\"]\n        .getService(Ci.nsIProperties)\n        .get(str, Ci.nsIFile);\n    if (!dir.exists()) {\n        let toAddChrome = false;\n        while (dir.target.includes(\"chrome_debugger_profile\")) {\n            dir = dir.parent;\n            toAddChrome = true;\n        }\n        if (toAddChrome) dir.append(\"chrome\");\n    }\n    return dir;\n}\nlet cmanifest = traverseToMainProfile('UChrm');\n  cmanifest.append('utils');\n  cmanifest.append('chrome.manifest');\n  \n  if(cmanifest.exists()){\n    Cm.QueryInterface(Ci.nsIComponentRegistrar).autoRegister(cmanifest);\n    Cu.import('chrome://userchromejs/content/boot.jsm');\n  }\n\n} catch(ex) {};"
+        }
+    ]
+}

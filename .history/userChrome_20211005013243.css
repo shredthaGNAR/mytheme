@@ -1,0 +1,35 @@
+/** @format */
+
+/*
+@import url(uc-tabs.css);
+@import url(uc-search-one-offs.css);
+@import url(uc-search-mode-icons.css);
+@import url(uc-tabs-bar.css);
+@import url(uc-urlbar.css);
+@import url(uc-urlbar-results.css)
+@import url(uc-findbar.css);
+@import url(uc-fullscreen.css);*/
+
+@import url(uc-globals.css);
+@import url(uc-variables.css);
+@import url(uc-misc.css);
+@import url(uc-navbar.css);
+@import url(uc-extensions.css);
+@import url(uc-ctrl-tab.css);
+@import url(uc-sidebar.css);
+@import url(uc-app-menu.css);
+@import url(uc-bookmarks.css);
+@import url(uc-popups.css);
+@import url(uc-panels.css);
+@import url(colors/blurred.css);
+@import url(parts/main-window.css);
+@import url(parts/toolbar.css);
+@import url(parts/tabbar.css);
+@import url(parts/urlbar.css);
+@import url(parts/customization-window.css);
+@import url(uc-tabs-bar.css);
+@import url(custom-chrome.css);
+/*@import url(parts/autohide_bookmarks_toolbar.css);
+@import url(parts/compact-bookmarks.css);
+@import url(parts/sidebar.css);
+@import url(parts/window-controls.css);
