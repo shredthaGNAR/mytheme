@@ -1,0 +1,22 @@
+{
+    "sourceFile": "parts/vibrancy.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1633904220154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1633904801461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,36 @@\n /**\n- * /*orginal */\n+ * /*orginal \n+ * \n+ * #TabsToolbar:not(:-moz-window-inactive)\n+ * {\n+ *     background-color: #0001 !important;\n+ * }\n+ * #main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=temporary]) #TabsToolbar:not(:-moz-window-inactive)\n+ * {\n+ *     background-color: #1114 !important;\n+ * }\n+ * \n+ * #main-window\n+ * {\n+ *     -moz-appearance: -moz-mac-vibrant-titlebar-light !important;\n+ * }\n+ * \n+ * #main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=temporary])\n+ * {\n+ *     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n+ * }\n+ * \n+ * :-moz-any(#main-window, #TabsToolbar):-moz-any([inFullscreen=\"true\"], :-moz-window-inactive)\n+ * {\n+ *     -moz-appearance: none !important;\n+ *     background-color: var(--lwt-accent-color) !important;\n+ * }\n+ *\n+ * @format\n+ */\n \n #TabsToolbar:not(:-moz-window-inactive) {\n-  background-color: #0001 !important;\n-}\n-#main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=\"temporary\"])\n-  #TabsToolbar:not(:-moz-window-inactive) {\n-  background-color: #1114 !important;\n-}\n-\n-#main-window {\n-  -moz-appearance: -moz-mac-vibrant-titlebar-light !important;\n-}\n-\n-#main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=\"temporary\"]) {\n-  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n-}\n-\n-:-moz-any(#main-window, #TabsToolbar):-moz-any([inFullscreen=\"true\"], :-moz-window-inactive) {\n-  -moz-appearance: none !important;\n-  background-color: var(--lwt-accent-color) !important;\n-}\n-\n-#TabsToolbar:not(:-moz-window-inactive) {\n   background-color: transparent !important;\n }\n #main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=\"temporary\"])\n   #TabsToolbar:not(:-moz-window-inactive) {\n"
+                }
+            ],
+            "date": 1633904220154,
+            "name": "Commit-0",
+            "content": "/**\n * /*orginal */\n\n#TabsToolbar:not(:-moz-window-inactive) {\n  background-color: #0001 !important;\n}\n#main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=\"temporary\"])\n  #TabsToolbar:not(:-moz-window-inactive) {\n  background-color: #1114 !important;\n}\n\n#main-window {\n  -moz-appearance: -moz-mac-vibrant-titlebar-light !important;\n}\n\n#main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=\"temporary\"]) {\n  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n}\n\n:-moz-any(#main-window, #TabsToolbar):-moz-any([inFullscreen=\"true\"], :-moz-window-inactive) {\n  -moz-appearance: none !important;\n  background-color: var(--lwt-accent-color) !important;\n}\n\n#TabsToolbar:not(:-moz-window-inactive) {\n  background-color: transparent !important;\n}\n#main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=\"temporary\"])\n  #TabsToolbar:not(:-moz-window-inactive) {\n  background-color: var(--lwt-accent-color) !important;\n}\n\n#main-window {\n  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n}\n\n#main-window:-moz-any([lwthemetextcolor=\"bright\"], [privatebrowsingmode=\"temporary\"]) {\n  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n}\n\n:-moz-any(#main-window, #TabsToolbar):-moz-any([inFullscreen=\"true\"], :-moz-window-inactive) {\n  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n  background-color: transparent !important;\n}\n#main-window {\n  background-color: transparent !important;\n}\n"
+        }
+    ]
+}

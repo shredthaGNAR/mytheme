@@ -10,7 +10,6 @@
 
 <window id="config"
         csp="default-src chrome:; object-src 'none'"
-        title="about:config"
         aria-describedby="warningTitle warningText"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
         xmlns:html="http://www.w3.org/1999/xhtml"
@@ -18,6 +17,8 @@
         role="application"
         width="750"
         height="500">
+
+<html:link rel="icon" href="chrome://branding/content/icon32.png"/>
 
 <script src="chrome://userchrome/content/aboutconfig/config.js"/>
 <script src="chrome://global/content/editMenuOverlay.js"/>
