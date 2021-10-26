@@ -15,13 +15,13 @@ radio[focused="true"] > .radio-label-box {
 }
 
 panel,
-menupopup,
-:is(menupopup, panel)[type="arrow"] {
+menupopup {
     --panel-background: var(--arrowpanel-background);
     --panel-color: var(--arrowpanel-color);
     --panel-border-color: var(--arrowpanel-border-color);
     --panel-border-radius: var(--arrowpanel-border-radius);
     --panel-padding: var(--arrowpanel-padding);
+    --uc-panel-border: 1px solid var(--panel-border-color);
 }
 
 panel[type="autocomplete-richlistbox"] {
@@ -49,6 +49,7 @@ panel popupset panel[type="autocomplete-richlistbox"] {
     color: var(--panel-color);
     background: var(--panel-background, Menu);
     border-radius: var(--panel-border-radius);
+    border: var(--uc-panel-border);
     width: var(--panel-width);
 }
 
@@ -88,6 +89,7 @@ panel popupset panel[type="autocomplete-richlistbox"] {
 #BMB_bookmarksPopup menupopup::part(arrowscrollbox),
 #BMB_bookmarksPopup menupopup[placespopup="true"]::part(arrowscrollbox) {
     padding: var(--menupopup-inner-padding);
+    border: var(--uc-panel-border);
 }
 
 #BMB_bookmarksPopup::part(arrowcontent) {
@@ -128,7 +130,7 @@ panelview
 .widget-overflow-list .toolbarbutton-1:not([disabled], [open]):focus-visible,
 .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"])
     > toolbarbutton:not([disabled], [open]):focus-visible {
-    background-color: var(--panel-item-hover-bgcolor);
+    background-color: var(--panelview-toolbarbutton-hover-bgcolor);
 }
 
 panelview
@@ -136,7 +138,7 @@ panelview
 .widget-overflow-list .toolbarbutton-1:not([disabled], [open]):focus-visible:active,
 .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"])
     > toolbarbutton:not([disabled], [open]):focus-visible:active {
-    background-color: var(--panel-item-active-bgcolor);
+    background-color: var(--panelview-toolbarbutton-active-bgcolor);
 }
 
 .panel-footer > button:not([disabled], :active):is(:hover, :focus-visible) {
@@ -346,19 +348,14 @@ panel[type="autocomplete-richlistbox"]
 
 #customization-container,
 #customization-container :is(menupopup, panel)::part(arrowscrollbox) {
+    --button-bgcolor: color-mix(in srgb, var(--toolbar-color) 7%, transparent);
+    --button-hover-bgcolor: color-mix(in srgb, var(--toolbar-color) 12%, transparent);
+    --button-active-bgcolor: color-mix(in srgb, var(--toolbar-color) 15%, transparent);
     --arrowpanel-dimmed: color-mix(in srgb, var(--toolbar-color) 7%, transparent);
     --arrowpanel-dimmed-further: color-mix(in srgb, var(--toolbar-color) 12%, transparent);
     --arrowpanel-dimmed-even-further: color-mix(in srgb, var(--toolbar-color) 15%, transparent);
-    --arrowpanel-background: var(--in-content-button-highlight-dark);
-    --button-bgcolor: var(--arrowpanel-dimmed);
-    --button-hover-bgcolor: var(--arrowpanel-dimmed-further);
-    --button-active-bgcolor: var(--arrowpanel-dimmed-even-further);
-    --panel-item-hover-bgcolor: var(--arrowpanel-dimmed);
-    --panel-item-active-bgcolor: var(--arrowpanel-dimmed-further);
-    --menu-background-color: var(--arrowpanel-background);
-    --menuitem-hover-background-color: var(--button-hover-bgcolor);
-    --menu-disabled-color: var(--ui-text-40);
-    --panel-shortcut-color: var(--ui-text-40);
+    --arrowpanel-background: var(--in-content-button-highlight-dark) !important;
+    --menu-background-color: var(--arrowpanel-background) !important;
     --arrowpanel-border-color: color-mix(
         in srgb,
         currentColor 8%,
@@ -459,11 +456,11 @@ panel[type="autocomplete-richlistbox"]
     }
 
     :is(#customization-lwtheme-menu, #customization-uidensity-menu)[side="top"]::part(arrow) {
-        margin-top: -5px;
+        margin-top: -4.5px;
     }
 
     :is(#customization-lwtheme-menu, #customization-uidensity-menu)[side="bottom"]::part(arrow) {
-        margin-bottom: -5px;
+        margin-bottom: -4.5px;
     }
 
     #customization-panelWrapper > .panel-arrowbox > .panel-arrow[side="top"] {
@@ -472,11 +469,11 @@ panel[type="autocomplete-richlistbox"]
 }
 
 :is(panel, menupopup)[side="top"]::part(arrow) {
-    margin-bottom: -5px;
+    margin-bottom: -4.5px;
 }
 
 :is(panel, menupopup)[side="bottom"]::part(arrow) {
-    margin-top: -5px;
+    margin-top: -4.5px;
 }
 
 #identity-icon {
@@ -548,10 +545,6 @@ panel[type="autocomplete-richlistbox"]
 .menu-text,
 .menu-iconic-text {
     padding-block: 0;
-}
-
-panel button {
-    border: revert;
 }
 
 #nav-bar-customization-target > :is(toolbarbutton, toolbaritem):first-child,
@@ -1818,71 +1811,4 @@ of the animations. */
     -moz-box-pack: center;
     color: inherit;
     padding: 30px 30px 20px 30px;
-}
-
-/* confirmation hint */
-@keyframes confirmation-hint-checkmark-animation {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-252px);
-    }
-}
-
-@keyframes confirmation-hint-checkmark-animation-rtl {
-    from {
-        transform: translateX(252px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-#confirmation-hint-checkmark-animation-container[animate] > #confirmation-hint-checkmark-image {
-    -moz-context-properties: fill;
-    background-image: url(chrome://userchrome/content/skin/success-animation.svg);
-    display: block;
-    position: absolute;
-    background-repeat: no-repeat;
-    min-width: 266px;
-    max-width: 266px;
-    min-height: 14px;
-    max-height: 14px;
-    animation-name: confirmation-hint-checkmark-animation;
-    animation-fill-mode: forwards;
-    animation-timing-function: steps(18);
-}
-
-#confirmation-hint-checkmark-animation-container[animate] > #confirmation-hint-checkmark-image:-moz-locale-dir(rtl) {
-    animation-name: confirmation-hint-checkmark-animation-rtl;
-    transform: translateX(252px);
-}
-
-#confirmation-hint-message {
-    margin-inline: 7px 0;
-}
-
-#confirmation-hint.with-description #confirmation-hint-message {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    #confirmation-hint-checkmark-animation-container[animate] > #confirmation-hint-checkmark-image {
-        animation-duration: 300ms;
-        animation-delay: 0ms;
-    }
-
-    #confirmation-hint-message-container {
-        transform: scale(.8);
-        opacity: 0;
-        transition: transform 120ms cubic-bezier(.25,1.27,.35,1.18),
-            opacity 60ms linear;
-    }
-
-    #confirmation-hint-checkmark-animation-container[animate] + #confirmation-hint-message-container {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
