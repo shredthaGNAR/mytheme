@@ -36,7 +36,7 @@ try {
   var undoicon = '\
 	  #uc_undo_closetab_button .toolbarbutton-icon {\
 		list-style-image: url("chrome://global/skin/icons/reload.svg"); /* icon / path to icon */ \
-		fill: blue; /* icon color name/code */\
+		fill: purple; /* icon color name/code */\
 	  }\
 	  ';
 	  
@@ -51,7 +51,7 @@ try {
 	  undoicon = '\
 	  #uc_undo_closetab_button .toolbarbutton-icon {\
 		list-style-image: url("chrome://browser/skin/undo.svg"); /* icon / path to icon */ \
-		fill: blue; /* icon color name/code */\
+		fill: purple; /* icon color name/code */\
 	  }\
 	  ';
   }

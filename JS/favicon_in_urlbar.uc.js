@@ -13,7 +13,7 @@ var globe = 'chrome://global/skin/icons/defaultFavicon.svg';
 
 var icon_for_pages_without_favicon = brand; // i_icon, sheet, globe or brand (colorized Fx channel icon)
 
-var favicon_click_opens_page_info_window = false;
+var favicon_click_opens_page_info_window = true;
 
 var appversion = parseInt(Services.appinfo.version);
 
