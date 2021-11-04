@@ -25,13 +25,6 @@
 @import url(resources/in-content/custom-content.css);
 @import url(addons.css);
 
-/* a stylesheet for custom user rules. this way you can customize the theme,
-and when you update you can preserve your modifications by just updating everything except this file. */
-
-/* add a dummy rule so this will be loaded by the style editor on any page. */
-:root {
-	--uc-dummy-custom-property: initial;
-}
 /* Removes the white loading page */
 /*url(about:newtab), url(about:home)*/
 /*
@@ -236,8 +229,15 @@ url(about:home) {
 	.outer-wrapper.newtab-experience
 		.top-site-outer
 		.tile:not(.active, :focus, :hover) {
-		background: linear-gradient(to bottom, #2f2f65, #181758);
-		box-shadow: none !important;
+		background-image: linear-gradient(
+			to right,
+			rgb(144, 89, 255, 0.4),
+			rgb(255, 74, 162, 0.6),
+			#ffbd4f,
+			rgb(255, 74, 162, 0.6),
+			rgb(144, 89, 255, 0.4)
+		) !important;
+		box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
 	}
 }
 
@@ -254,8 +254,13 @@ url(about:home) {
 
 .outer-wrapper.newtab-experience:not(.dnd-active)
 	.top-site-outer:is(.active, :focus, :hover) {
-	box-shadow: none !important;
-	background: transparent !important;
+	box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 0px 0px 2px 1px rgb(0 0 0 / 23%) !important;
+	background: linear-gradient(
+		to left,
+		rgb(144, 89, 255, 1),
+		rgb(255, 74, 162),
+		#ffbd4f
+	) !important;
 }
 
 /*Label Color The anchored site: Hover*/
@@ -300,7 +305,7 @@ url("about:addons") {
 
 	/*color de botones */
 	#categories button {
-		box-shadow: none !important;
+		box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 0px 0px 2px 1px rgb(0 0 0 / 23%) !important;
 	}
 
 	#categories > .category[selected] > .category-name {
@@ -396,7 +401,7 @@ url(about:newtab) {
 			rgb(144, 89, 255, 1),
 			rgb(255, 74, 162),
 			#ffbd4f
-		);
+		) !important;
 		box-shadow: none !important;
 		border-radius: 50% !important;
 	}
@@ -530,7 +535,7 @@ url(about:newtab) {
 {
 	html,
 	body {
-		background: #303030 !important;
+		background: #1d1d3bfa !important;
 	}
 
 	#settingsDiv {
@@ -582,7 +587,9 @@ url(about:newtab) {
 		filter: invert(81%) hue-rotate(170deg);
 	}
 }
-/*** ONETAB dark mode *
+/*** ONETAB dark mode */
+@-moz-document url("moz-extension://230bbecf-4f03-ae44-b003-63054bbc7c0d/onetab.html")
+{
 	html,
 	html[class],
 	html[id],
@@ -747,24 +754,6 @@ url(about:newtab) {
 	}
 }
 
-@-moz-document url-prefix(about:blank) {
-	html > body:empty {
-		background-color: #1d1d3bfa !important;
-	}
-}
-
-@-moz-document url(about:blank) {
-	html > body:empty {
-		background-color: #1d1d3bfa !important;
-	}
-}
-
-@-moz-document url(about:blank) {
-	:root {
-		background-color: #1d1d3bfa !important;
-	}
-}
-
 /*  Sets up minimal incognito scrollbar */
 
 @-moz-document url(about:privatebrowsing) {
@@ -848,10 +837,10 @@ url(about:newtab) {
 {
 	#body,
 	#note-content {
-		background-color: #1c1b22 !important;
+		background-color: #1d1d3bfa !important;
 	}
 	#list {
-		background-color: #1c1b22 !important;
+		background-color: #1d1d3bfa !important;
 	}
 }
 ::-moz-selection {

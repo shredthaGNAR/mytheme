@@ -3,7 +3,7 @@
 // @namespace      http://space.geocities.yahoo.co.jp/gl/alice0775
 // @description    replace selection with clipboard text and go/search
 // @include        main
-// @compatibility  Firefox 78
+// @compatibility  Firefox 91
 // @author         Alice0775
 // @version        2021/09/04 0700
 // @version        2021/08/21 12:00
@@ -37,11 +37,11 @@ var replaceAndGoSearch = {
     replaceAndGo.id = "replace-and-go";
     replaceAndGo.setAttribute("label", "Replace and Go");
     replaceAndGo.setAttribute("anonid", "replace-and-go");
-    replaceAndGo.setAttribute("onclick", "checkForMiddleClick(this, event)");
     replaceAndGo.addEventListener("command", (event) => {
       gURLBar._suppressStartQuery = true;
 
       window.goDoCommand("cmd_paste");
+      gURLBar.setResultForCurrentValue(null);
       gURLBar.handleCommand(event);
 
       gURLBar._suppressStartQuery = false;
@@ -75,7 +75,6 @@ var replaceAndGoSearch = {
     replaceAndSearch.id = "replace-and-search";
     replaceAndSearch.setAttribute("label", "Replace & Search");
     replaceAndSearch.setAttribute("anonid", "replace-and-search");
-    replaceAndSearch.setAttribute("onclick", "checkForMiddleClick(this, event)");
     replaceAndSearch.addEventListener("command", (event) => {
 
       goDoCommand("cmd_paste");

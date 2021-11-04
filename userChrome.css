@@ -455,6 +455,15 @@ slider,
 	--lwt-popup-brighttext-url-color: #4da6ff !important;
 	--panel-disabled-color: #99999990 !important;
 	--panel-description-color: #3399ff !important;
+	--gradient: linear-gradient(
+		165deg,
+		#c02c7a 0%,
+		#b02cfc 8%,
+		#3567fd 40%,
+		#4093ff 60%,
+		#3577fd 70%,
+		#c02c7a 100%
+	) !important;
 }
 
 /* Rainbow line in the main menus */
@@ -4296,7 +4305,7 @@ menupopup {
 	min-height: 32px !important;
 }
 
-/* tab close button shows only on hover *
+/* tab close button shows only on hover */
 
 .tabbrowser-tab .tab-close-button {
 	display: none;
@@ -4549,7 +4558,7 @@ scrollbar {
 		opacity 250ms var(--animation-easing-function) !important;
 	--animation-easing-function: cubic-bezier(0.07, 0.95, 0, 1) !important;
 }
-/* Pinned Tab - tabbrowser-arrowscrollbox overflowing */
+/* Pinned Tab - tabbrowser-arrowscrollbox overflowing *
 #tabbrowser-tabs[positionpinnedtabs]
 	> #tabbrowser-arrowscrollbox
 	> .tabbrowser-tab[pinned] {
@@ -4607,8 +4616,8 @@ findbar {
 /* Bar between the bookmarks bar and the page  */
 #sidebar-splitter {
 	border: none !important;
-	opacity: 1 !important;
-	-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+	opacity: 0 !important;
+	-moz-appearance: auto !important;
 	display: none !important;
 }
 #main-window {
@@ -4679,21 +4688,15 @@ slider,
 browser,
 browser.display.background_color,
 tabbrowser tabpanels {
-	background-color: #222355 !important;
+	background-color: #1d1d3bfa !important;
 }
 
 /* white flash fix */
 browser[type="content-primary"],
 browser[type="content"] {
-	background: #222355 !important;
+	background: #1d1d3bfa !important; /*#222355*/
 }
-/* GLOW EFFECT ON TAB ICON */
-/* toolbarbutton.bookmark-item:not([container=true]) .toolbarbutton-icon
-for icons on the bookmarks bar under the url bar *
-.tab-icon-image,
-.bookmark-item:not([container="true"]) .menu-iconic-icon {
-	filter: drop-shadow(0 0 3px rgba(10, 10, 10, 0.274)) !important;
-}
+
 /* Tab Overflow          */
 /* On By Default         */
 /* Thanks u/-SZCMAWO     
@@ -4738,7 +4741,9 @@ spacer[part="overflow-end-indicator"] {
 
 
 /* Uncomment next line to force specific color for tab top line */
-/* #tabbrowser-tabs{ --tab-line-color: blue !important; } */
+#tabbrowser-tabs {
+	--tab-line-color: #9400ff !important;
+}
 
 .tab-background[selected] {
 	/*border-inline: 1px solid color-mix(in srgb, currentcolor 30%, transparent) !important;*/
@@ -4846,21 +4851,6 @@ spacer[part="overflow-end-indicator"] {
 			opacity 250ms var(--animation-easing-function) !important;
 	}
 }
-/* This ensures that the side arrows when tabs become scrollable sideways don't create a gap below tabs */
-#scrollbutton-up,
-#scrollbutton-down {
-	padding: 0 !important;
-	max-height: var(--tab-min-height) !important;
-}
-
-#alltabs-button,
-#tabs-newtab-button,
-#TabsToolbar-customization-target .webextension-browser-action,
-#wrapper-alltabs-button,
-#wrapper-new-tab-button,
-#new-tab-button {
-	margin-bottom: 0 !important;
-}
 
 /* Disable tab label mask on hover */
 .tabbrowser-tab[visuallyselected="true"]:hover,
@@ -4887,7 +4877,7 @@ spacer[part="overflow-end-indicator"] {
 
 /* Loaded but unread (not selected) */
 .tabbrowser-tab:not([selected="true"])[unread] .tab-label {
-	color: rgb(143, 134, 230) !important;
+	color: rgb(147, 142, 187) !important;
 	font-style: italic !important;
 	font-weight: normal !important;
 }
@@ -4899,7 +4889,7 @@ spacer[part="overflow-end-indicator"] {
 /* Not loaded yet (also visited) */
 .tabbrowser-tab:not([selected="true"])[pending] .tab-label,
 .tabbrowser-tab:not([selected="true"])[visited] .tab-label {
-	color: rgba(204, 204, 204, 0.575) !important;
+	color: rgba(146, 146, 146, 0.575) !important;
 	font-style: italic !important;
 	font-weight: normal !important;
 }
@@ -4907,7 +4897,7 @@ spacer[part="overflow-end-indicator"] {
 #scrollbutton-up,
 #scrollbutton-down {
 	padding: 0 !important;
-	max-height: var(--tab-min-height) !important;
+	max-height: var(--tab-min-height) + 2px !important;
 }
 
 #alltabs-button,
@@ -4950,16 +4940,16 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 	.tab-close-button {
 	visibility: collapse !important;
 	opacity: 0;
-	/* Animation - Fade out *
-	transition: opacity 0.1s var(--animation-easing-function) !important;*/
+	/* Animation - Fade out */
+	transition: opacity 0.1s var(--animation-easing-function) !important;
 }
 #tabbrowser-tabs[closebuttons="activetab"]
 	.tabbrowser-tab:hover
 	.tab-close-button {
 	visibility: visible !important;
 	opacity: 1;
-	/* Animation - Fade in *
-	transition: opacity 0.25s var(--animation-easing-function) !important;*/
+	/* Animation - Fade in */
+	transition: opacity 0.1s var(--animation-easing-function) !important;
 }
 /** Clipped tabs - Letters cleary *******************************************/
 #tabbrowser-tabs[closebuttons="activetab"] .tab-content:not([pinned]) {
@@ -5050,6 +5040,7 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 	background-image: url(image/noise-512x512.png) !important;
 	-webkit-backdrop-filter: blur(32px) !important;
 	backdrop-filter: blur(32px) !important;
+	background: rgba(50, 50, 52, 0.85) !important;
 }
 /*
 #tabs-toolbar {
@@ -5063,37 +5054,6 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 	/*Colour of text*/
 	background: #4d4dfe77 !important;
 	/*Highlighting colour*/
-}
-/* Make Not Secure Icon Have Separator Line */
-#identity-box[pageproxystate="valid"].notSecure::after {
-	width: 1px;
-	content: "";
-	margin-left: 0px;
-	display: -moz-box;
-	background-image: linear-gradient(
-		transparent 20%,
-		color-mix(in srgb, currentColor 20%, transparent) 10%,
-		color-mix(in srgb, currentColor 20%, transparent) 85%,
-		transparent 20%
-	);
-	transition: opacity 300ms linear !important;
-}
-#identity-box:hover:after,
-#identity-box:hover:after {
-	opacity: 0 !important;
-}
-
-/* Make Not Secure Box Have Text */
-#identity-box[pageproxystate="valid"].notSecure ::after {
-	content: "Not secure";
-	font-size: 14px;
-	color: #9aa0a6;
-	/* Space Between Icon & Text */
-	text-indent: 5px;
-	/* Make Text Centred */
-	padding: 0 01px 2px 0;
-	display: block;
-	line-height: initial; /* New content takes up original line height */
 }
 
 :root[privatebrowsingmode="temporary"] {
@@ -5143,15 +5103,14 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 }
 
 /*Idk What This Does But This Was The Note Given:
-    "Set A Max Height Based On Min-height Plus Margin-block: 1px 0"
-    Don't Touch The "9px" Tho, That's What's "Perfect" From What I Tested*/
+    "Set A Max Height Based On Min-height Plus Margin-block: 1px 0"*/
 #TabsToolbar,
 #TabsToolbar > hbox,
 #TabsToolbar-customization-target,
 #tabbrowser-arrowscrollbox {
-	max-height: calc(var(--tab-min-height) + 2px) !important;
+	min-height: calc(var(--tab-min-height) + 2px) !important;
 }
-
+/*
 #PlacesToolbarItems > toolbarseparator::before {
 	border-image-source: linear-gradient(
 		transparent 8px,
@@ -5159,7 +5118,7 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 		var(--toolbarseparator-color) calc(100% - 8px),
 		transparent calc(100% - 8px)
 	) !important;
-}
+}*/
 #tabbrowser-tabs .arrowscrollbox-overflow-start-indicator,
 #tabbrowser-tabs .arrowscrollbox-overflow-end-indicator,
 #tabbrowser-tabs::part(arrowscrollbox-overflow-start-indicator),
@@ -5174,14 +5133,14 @@ spacer[part="overflow-end-indicator"] {
 #navigator-toolbox::after {
 	display: none !important;
 }
-/*prevent tab overflow to expand causing height changes 
+/*prevent tab overflow to expand causing height changes */
 #tabbrowser-tabs,
-#tabbrowser-tabs > .tabbrowser-arrowscrollbox{
-  min-height: unset !important;
-}*/
+#tabbrowser-tabs > .tabbrowser-arrowscrollbox {
+	min-height: unset !important;
+}
 /* container tabs indicator customization - different style. this will give rounded borders if tab border radius is there 
-and covers entire bottom outline of tab. Line Position:bottom */
-/*  .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+and covers entire bottom outline of tab. Line Position:bottom 
+  .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
     display: none;
 }
 .tabbrowser-tab[class*="identity-color-"] .tab-background {
@@ -5189,17 +5148,512 @@ and covers entire bottom outline of tab. Line Position:bottom */
 }
 .tabbrowser-tab[selected="true"][class*="identity-color-"] .tab-background {
     background: linear-gradient(to bottom, transparent 2px, var(--toolbar-bgcolor) 2px,var(--toolbar-bgcolor) 95%,var(--identity-tab-color) 1px), linear-gradient(to right, #9f1aff, #9f1aff, #8a46ff, #765dff, #5d7dff, #3e8cff, #1c99ff, #00a5ff, #00b4ff, #00c3ff, #00d0ff, #00ddff) !important;
-} */
-/* Tab: Ensure tab height doesn't augment when arrowscrollbox is visible  
+}
+/* Tab: Ensure tab height doesn't augment when arrowscrollbox is visible */
 #tabbrowser-arrowscrollbox {
-  --tab-min-height: 31px !important;
-  max-height: var(--tab-min-height);
-}*/
+	--tab-min-height: 32px !important;
+	max-height: calc(var(--tab-min-height)+2px) !important;
+}
 .urlbarView-title[all-whitespace] {
 	text-decoration: underline;
 }
-/*
+
 .tabbrowser-tab[notselectedsinceload]:not([pending]:not([busy])) {
 	font-style: italic !important;
 }
-*/
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab[first-visible-unpinned-tab] {
+	/* Disable gap between the last pinned tab and the first visible tab */
+	margin-inline-start: 0 !important;
+}
+:root[uidensity="compact"]
+	#tabbrowser-tabs[positionpinnedtabs]
+	.tabbrowser-tab[pinned] {
+	min-height: calc(var(--tab-min-height) + 2px) !important;
+}
+/* Sets tab bar transition durations */
+#tabbrowser-tabs:not(:hover) tab {
+	transition: all 200ms ease 0ms !important;
+}
+/********
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]),
+.tab-label-container[textoverflow]:not([labeldirection]):not([pinned]):-moz-locale-dir(ltr) {
+	mask-image: linear-gradient(to left, transparent, black 1.3em) !important;
+}
+
+/* Highlight tabs that were changed or shared from other devices by adding a small colored line 
+ 
+.tab-label[attention]:not([selected="true"]) {
+	font-weight: normal !important;
+}
+
+.tabbrowser-tab:-moz-any([image], [pinned])
+	> .tab-stack
+	> .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab
+	> .tab-stack
+	> .tab-content[pinned][titlechanged]:not([selected="true"]) {
+	background-image: none !important;
+}
+.tabbrowser-tab[attention] > .tab-stack > .tab-background > .tab-bottom-line {
+	height: 1px !important;
+	background: linear-gradient(
+		to right,
+		transparent 35%,
+		#1abc9c 35% 65%,
+		transparent 65%
+	) !important;
+}
+ /* Dim discarded tabs*
+.tabbrowser-tab[pending] .tab-content:not(:hover) .tab-label {
+	opacity: 0.7 !important;
+}
+/* unloaded tab hover */
+.tabbrowser-tab[pending="true"] .tab-text:hover {
+	filter: brightness(100%) !important;
+}
+.tabbrowser-tab:hover .tab-close-button {
+	visibility: visible !important;
+	opacity: 1;
+	/*transition: visibility 0.5s, opacity 0.6s ease !important;*/
+	font-weight: bold !important;
+}
+/* inactive tab hover */
+.tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):hover,
+.tabbrowser-tab:-moz-lwtheme:hover {
+	/*filter: grayscale(25%) !important;*/
+	opacity: 1 !important;
+	filter: brightness(125%) !important;
+	backdrop-filter: blur(14px) !important;
+}
+#urlbar[open="true"] {
+	backdrop-filter: blur(14px) !important;
+}
+/*Regla para visualizar mejor el seleccionar varias pestañas*/
+.tabbrowser-tab[multiselected]:-moz-lwtheme {
+	color: var(--lwt-tab-text) !important;
+	--tab-line-color: transparent !important;
+}
+.tabbrowser-tab > .tab-stack > .tab-background:is([multiselected]),
+.tabbrowser-tab > .tab-stack > .tab-content:is([multiselected]) {
+	background: #4d4dfe !important;
+}
+.tabbrowser-tab:hover
+	> .tab-stack
+	> .tab-background:not([selected="true"], [multiselected]) {
+	background-color: color-mix(
+		in srgb,
+		var(--button-hover-bgcolor) 60%,
+		transparent
+	) !important;
+}
+#tabbrowser-tabs {
+	--tab-line-color: (var(--gradient), transparent) !important;
+}
+.tab-label[attention]:not([selected="true"]) {
+	font-weight: unset !important;
+}
+
+.tabbrowser-tab:is([image], [pinned])
+	> .tab-stack
+	> .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab
+	> .tab-stack
+	> .tab-content[pinned][titlechanged]:not([selected="true"]) {
+	background-image: unset !important;
+	background-position: unset !important;
+	background-repeat: unset !important;
+}
+
+/* highlight unread tabs; requires italicizeUnreadTabs.uc.js */
+:root[italic-unread-tabs] .tabbrowser-tab[notselectedsinceload]:not([pending]),
+:root[italic-unread-tabs] .tabbrowser-tab[notselectedsinceload][pending][busy] {
+	font-style: italic !important;
+}
+
+/* tab top border roundness */
+#TabsToolbar .tabbrowser-tab,
+#TabsToolbar
+	.tabbrowser-tab
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
+	border-top-right-radius: 5px !important;
+	border-top-left-radius: 5px !important;
+	overflow: hidden;
+}
+
+#TabsToolbar .tabbrowser-tab[selected],
+#TabsToolbar
+	.tabbrowser-tab[selected]
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
+	border-top-right-radius: 5px !important;
+	border-top-left-radius: 5px !important;
+}
+#TabsToolbar .tabbrowser-tab[multiselected]:not([pinned]),
+#TabsToolbar
+	.tabbrowser-tab[multiselected]:not([pinned])
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
+	border-top-left-radius: 5px !important;
+	border-top-right-radius: 5px !important;
+}
+
+#TabsToolbar
+	.tabbrowser-tab:not([selected]):is(:hover, .keyboard-focused-tab, [open]),
+#TabsToolbar
+	.tabbrowser-tab:not([selected]):is(:hover, .keyboard-focused-tab, [open])
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
+	border-top-right-radius: 5px !important;
+}
+/* unround top left/right corner for first/last tab.
+this is complicated because we don't want to unround a tab unless it's really in place as the first/last tab.
+that means we don't unround tabs when 1) a tab is being dragged/dropped, 2) a tab is being moved by an animation,
+or 3) tabs are being closed from the end and the mouse is still in the navbar,
+because in this condition tabs are prevented from flexing to the end by the closing tabs spacer, until mouse leaves the navbar. */
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[last-visible-tab]:not([justmoved], [style*="transform"]),
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[last-visible-tab]:not([justmoved], [style*="transform"])
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst),
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[last-visible-tab]:not([justmoved], [style*="transform"]):is(:hover, .keyboard-focused-tab, [open]),
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[last-visible-tab]:not([justmoved], [style*="transform"]):is(:hover, .keyboard-focused-tab, [open])
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
+	border-top-right-radius: 0 !important;
+}
+
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[first-visible-tab]:not([justmoved], [style*="transform"]),
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[first-visible-tab]:not([justmoved], [style*="transform"])
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst),
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[first-visible-tab]:not([justmoved], [style*="transform"]):is(:hover, .keyboard-focused-tab, [open]),
+#TabsToolbar
+	#tabbrowser-tabs:not([using-closing-tabs-spacer])
+	.tabbrowser-tab[first-visible-tab]:not([justmoved], [style*="transform"]):is(:hover, .keyboard-focused-tab, [open])
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
+	border-top-left-radius: 0 !important;
+}
+
+#TabsToolbar
+	#tabbrowser-tabs
+	#tabbrowser-arrowscrollbox:not([overflowing="true"])
+	.tabbrowser-tab[last-visible-tab][pinned]
+	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
+	border-top-right-radius: 5px !important;
+}
+
+/* set rounded outside corners on tabs so they look like folder labels.
+you can disable this by making a new pref in about:config and setting it to true: "userChrome.tabs.rounded-outer-corners.disabled"
+this CSS is complicated because the outside corner needs to take on the color of the tab,
+but it's not part of the tab background so it doesn't do so automatically. */
+
+/* overflow needs to be visible since the corners need to be outside the bounding box of the tab,
+otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar. */
+#TabsToolbar .tabbrowser-tab,
+#TabsToolbar .tabbrowser-tab .tab-stack {
+	overflow: visible;
+}
+
+.tabbrowser-tab .tab-stack:before,
+.tabbrowser-tab .tab-stack:after {
+	bottom: 0;
+	content: "";
+	display: block;
+	position: absolute;
+	pointer-events: none;
+	width: 5px;
+	height: 5px;
+	z-index: 2;
+}
+.tabbrowser-tab .tab-stack:before {
+	mask: url(chrome://userchrome/content/skin/tab-corner-mask-left.svg) 0/100%
+			100%,
+		linear-gradient(#fff, #fff);
+	mask-composite: exclude;
+	left: -5px;
+}
+
+.tabbrowser-tab .tab-stack:after {
+	mask: url(chrome://userchrome/content/skin/tab-corner-mask-right.svg) 0/100%
+			100%,
+		linear-gradient(#fff, #fff);
+	mask-composite: exclude;
+	right: -5px;
+}
+
+.tabbrowser-tab[usercontextid]:is(:hover, .keyboard-focused-tab, [selected], [visuallyselected], [open]):not([multiselected])
+	.tab-stack:before {
+	left: -4.6px;
+}
+
+.tabbrowser-tab[usercontextid]:is(:hover, .keyboard-focused-tab, [selected], [visuallyselected], [open]):not([multiselected])
+	.tab-stack:after {
+	right: -4.6px;
+}
+/* z-index of these corners is very complicated because the z-index of other elements needs to be set directly,
+to create the impression that tabs are layering on top of each other, with rightmost tabs on top and leftmost tabs on bottom.
+this is the normal state but hovering, selecting, pinning, etc. needs to change the z-index so tabs can "pop out" of the stack.
+so because z-index is being modulated so heavily we need to do the same with our outside corners,
+or else they'll end up being covered up or showing through things they shouldn't. */
+.tabbrowser-tab :is(.tab-line, .tab-context-line) {
+	z-index: 3;
+	position: relative !important;
+}
+
+.tabbrowser-tab {
+	z-index: 0;
+}
+
+.tabbrowser-tab .tab-content {
+	z-index: 1;
+}
+
+.tabbrowser-tab[pinned] .tab-stack:before,
+.tabbrowser-tab[pinned] .tab-stack:after {
+	z-index: 6;
+}
+
+.tab-icon-stack {
+	z-index: -1;
+}
+/* hide the corners on first/last visible tabs, just like we unround the top corners */
+#tabbrowser-tabs:not([movingtab], [using-closing-tabs-spacer])
+	.tabbrowser-tab[first-visible-tab]:not([justmoved], [style*="transform"])
+	.tab-stack:before,
+#tabbrowser-tabs:not([movingtab], [using-closing-tabs-spacer])
+	.tabbrowser-tab[last-visible-tab]:not([justmoved], [style*="transform"])
+	.tab-stack:after {
+	display: none;
+}
+
+#TabsToolbar
+	#tabbrowser-tabs
+	#tabbrowser-arrowscrollbox:not([overflowing="true"])
+	.tabbrowser-tab[last-visible-tab][pinned]
+	.tab-stack:after {
+	display: block;
+}
+/* how the background color is applied. it's not as convoluted as it looks,
+it needs to be a gradient image because the bottom line .tab-context-line overlaps with the outside corners.
+we want the corners to take on the color of the bottom line, but the corners are taller than the bottom line, so they can't be fully the same color as the line.
+they must have a 1px tall stripe at the bottom, the color of the bottom line (should it exist), with the remaining 4px being the current bg color of the tab. */
+.tabbrowser-tab:not([selected], [multiselected]) .tab-stack:after,
+.tabbrowser-tab:not([selected], [multiselected]) .tab-stack:before {
+	background-image: linear-gradient(
+		var(--tab-bg-current),
+		var(--tab-bg-current)
+	);
+}
+
+.tabbrowser-tab[selected] .tab-stack:after,
+.tabbrowser-tab[selected] .tab-stack:before {
+	background-image: linear-gradient(
+		var(--tab-bg-current),
+		var(--tab-bg-current)
+	);
+}
+
+.tabbrowser-tab[multiselected] .tab-stack:after,
+.tabbrowser-tab[multiselected] .tab-stack:before {
+	background-image: linear-gradient(
+		0deg,
+		var(--multiselected-color) 0px,
+		var(--multiselected-color) 1px,
+		var(--tab-bg-current) 1px
+	);
+}
+
+.tabbrowser-tab[usercontextid]:is([selected], :hover, .keyboard-focused-tab, [open])
+	.tab-stack:after,
+.tabbrowser-tab[usercontextid]:is([selected], :hover, .keyboard-focused-tab, [open])
+	.tab-stack:before {
+	background-image: linear-gradient(
+		0deg,
+		var(--identity-tab-color) 0px,
+		var(--identity-tab-color) 1px,
+		var(--tab-bg-current) 1px
+	);
+}
+
+.tabbrowser-tab[usercontextid][multiselected] .tab-stack:after,
+.tabbrowser-tab[usercontextid][multiselected] .tab-stack:before {
+	background-image: linear-gradient(
+		0deg,
+		var(--multiselected-color) 0px,
+		var(--multiselected-color) 1px,
+		var(--tab-bg-current) 1px
+	) !important;
+}
+
+/* the corners inherit these variables from the tab, just like they do with --identity-tab-color */
+.tabbrowser-tab:not([selected], [pinned]) {
+	--tab-bg-current: var(--lwt-accent-color);
+}
+
+.tabbrowser-tab[selected],
+.tabbrowser-tab[pinned]:not([selected]) {
+	--tab-bg-current: var(--toolbar-bgcolor);
+}
+
+.tabbrowser-tab:not([selected], [pinned], [multiselected]):is(:hover, .keyboard-focused-tab, [open]) {
+	--tab-bg-current: hsl(233, 55%, 8%);
+}
+
+.tabbrowser-tab[multiselected]:not([selected], [pinned]) {
+	--tab-bg-current: hsl(233, 53%, 8%);
+}
+
+.tabbrowser-tab[multiselected]:not([selected], [pinned]):is(:hover, .keyboard-focused-tab, [open]) {
+	--tab-bg-current: hsl(233, 51%, 10%);
+}
+/* style the loading burst that triggers when tab loading finishes */
+.tab-loading-burst {
+	z-index: 2;
+	pointer-events: none;
+}
+
+#TabsToolbar .tab-loading-burst::before {
+	backface-visibility: hidden;
+}
+
+/* this is all the convoluted z-index stuff I was talking about — how tab depth is controlled. */
+
+/* default position is for tabs to be stacked on top of the tab to their left.
+so shadows are cast to the left but not to the right. */
+.tabbrowser-tab {
+	position: relative;
+}
+
+/* hovered tabs stack on top of normal tabs in either direction.
+so shadows are cast in both directions, unless the neighboring tab is selected or something. */
+.tabbrowser-tab:not([visuallyselected="true"], [pinned], [multiselected]):is(:hover, .keyboard-focused-tab, [open]) {
+	z-index: 3 !important;
+}
+
+/* selected tabs stack over hovered tabs */
+.tabbrowser-tab[visuallyselected="true"] {
+	z-index: 6 !important;
+}
+
+/* multiselected tabs do too, but lower than selected tabs */
+.tabbrowser-tab[multiselected] {
+	z-index: 4 !important;
+}
+
+/* multiselected gets 1 extra point for being hovered */
+.tabbrowser-tab[multiselected]:not([visuallyselected="true"], [pinned]):is(:hover, .keyboard-focused-tab, [open]) {
+	z-index: 5 !important;
+}
+
+.tabbrowser-tab[multiselected][visuallyselected="true"] {
+	z-index: 6 !important;
+}
+
+/* pinned tabs stack over everything except selected tabs */
+.tabbrowser-tab[pinned] {
+	z-index: 7 !important;
+}
+
+/* and the same formula applies to them too */
+.tabbrowser-tab[pinned]:not([visuallyselected="true"], [multiselected]):is(:hover, .keyboard-focused-tab, [open]) {
+	z-index: 8 !important;
+}
+
+.tabbrowser-tab[pinned][multiselected] {
+	z-index: 9 !important;
+}
+
+.tabbrowser-tab[pinned][multiselected]:not([visuallyselected="true"]):is(:hover, .keyboard-focused-tab, [open]) {
+	z-index: 10 !important;
+}
+
+.tabbrowser-tab[pinned][visuallyselected="true"],
+.tabbrowser-tab[pinned][multiselected][visuallyselected="true"] {
+	z-index: 11 !important;
+}
+
+/* pinned tabs should style just like regular tabs except without labels and buttons */
+#tabbrowser-tabs[positionpinnedtabs]
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab[pinned]
+	> .tab-stack {
+	border-inline: none !important;
+}
+
+#tabbrowser-tabs[positionpinnedtabs]
+	> .tabbrowser-arrowscrollbox
+	> .tabbrowser-tab[pinned]
+	> .tab-stack {
+	border: none !important;
+}
+/* block our animations while tabs are being dragged & dropped */
+#tabbrowser-tabs[movingtab] .tabbrowser-tab *,
+#tabbrowser-tabs .tabbrowser-tab[justmoved] * {
+	transform: none !important;
+}
+
+.tab-background {
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	opacity: 1 !important;
+	z-index: 1;
+}
+
+/* different tab shadows in various states. to produce the illusion of modulated depth */
+.tabbrowser-tab .tab-content {
+	box-shadow: 0px 0px 15px 0px hsla(0, 0%, 0%, 0.2),
+		0px 0px 5px 0px hsla(0, 0%, 0%, 0.1);
+}
+
+.tabbrowser-tab:not([selected], [multiselected]):is(:hover, .keyboard-focused-tab, [open])
+	.tab-content,
+.tabbrowser-tab:is([multiselected], [pinned]) .tab-content {
+	box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1),
+		0px 0px 15px 0px hsla(0, 0%, 0%, 0.25) !important;
+}
+
+.tabbrowser-tab[selected] .tab-content,
+.tabbrowser-tab:is([multiselected], [pinned])[selected] .tab-content {
+	box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1),
+		0px 0px 15px 0px hsla(0, 0%, 0%, 0.35) !important;
+}
+
+.tabbrowser-tab:focus:not([aria-activedescendant]) .tab-content {
+	box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.1),
+		0px 0px 15px 0px hsla(0, 0%, 0%, 0.35) !important;
+}
+
+#TabsToolbar tab:not([visuallyselected="true"]):not(:hover) .tab-close-button {
+	opacity: 0 !important;
+}
+
+#TabsToolbar tab:hover .tab-close-button {
+	opacity: 1 !important;
+}
+
+#TabsToolbar tab .close-icon:hover {
+	-moz-image-region: unset !important;
+	background-clip: padding-box !important;
+}
+
+/* Hide close buttons on tabs */
+
+tab[selected="true"] > stack > hbox > .tab-close-button {
+	transition: 0.25s all ease-in-out !important;
+}
+
+tab:not([selected="true"]) > stack > hbox > .tab-close-button {
+	transform: scale(0) !important;
+	transition: 0.25s all ease-in-out !important;
+}

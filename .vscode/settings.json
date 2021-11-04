@@ -1,4 +1,5 @@
 {
     "editor.fontFamily": "JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "workbench.editor.enablePreview": false
 }
