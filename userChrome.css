@@ -7,6 +7,7 @@
 @import url(uc-panels.css);
 @import url(uc-findbar.css);
 @import url(uc-navbar.css);
+@import url(uc-tabs-bar.css);
 @import url(uc-ctrl-tab.css);
 @import url(uc-sidebar.css);
 @import url(uc-bookmarks.css);
@@ -5152,10 +5153,10 @@ and covers entire bottom outline of tab. Line Position:bottom
 /* Tab: Ensure tab height doesn't augment when arrowscrollbox is visible */
 #tabbrowser-arrowscrollbox {
 	--tab-min-height: 32px !important;
-	max-height: calc(var(--tab-min-height)+2px) !important;
+	max-height: var(--tab-min-height) !important;
 }
 .urlbarView-title[all-whitespace] {
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 .tabbrowser-tab[notselectedsinceload]:not([pending]:not([busy])) {
@@ -5171,9 +5172,9 @@ and covers entire bottom outline of tab. Line Position:bottom
 :root[uidensity="compact"]
 	#tabbrowser-tabs[positionpinnedtabs]
 	.tabbrowser-tab[pinned] {
-	min-height: calc(var(--tab-min-height) + 2px) !important;
+	min-height: var(--tab-min-height) !important;
 }
-/* Sets tab bar transition durations */
+/* Sets tab bar transition durations *
 #tabbrowser-tabs:not(:hover) tab {
 	transition: all 200ms ease 0ms !important;
 }
@@ -5361,7 +5362,7 @@ but it's not part of the tab background so it doesn't do so automatically. */
 otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar. */
 #TabsToolbar .tabbrowser-tab,
 #TabsToolbar .tabbrowser-tab .tab-stack {
-	overflow: visible;
+	overflow: visible !important;
 }
 
 .tabbrowser-tab .tab-stack:before,
@@ -5371,34 +5372,34 @@ otherwise they won't overlap with other tabs, they'll just push tabs 10px away f
 	display: block;
 	position: absolute;
 	pointer-events: none;
-	width: 5px;
-	height: 5px;
-	z-index: 2;
+	width: 5px !important;
+	height: 5px !important;
+	z-index: 2 !important;
 }
 .tabbrowser-tab .tab-stack:before {
 	mask: url(chrome://userchrome/content/skin/tab-corner-mask-left.svg) 0/100%
 			100%,
-		linear-gradient(#fff, #fff);
+		linear-gradient(#fff, #fff) !important;
 	mask-composite: exclude;
-	left: -5px;
+	left: -5px !important;
 }
 
 .tabbrowser-tab .tab-stack:after {
 	mask: url(chrome://userchrome/content/skin/tab-corner-mask-right.svg) 0/100%
 			100%,
-		linear-gradient(#fff, #fff);
+		linear-gradient(#fff, #fff) !important;
 	mask-composite: exclude;
-	right: -5px;
+	right: -5px !important;
 }
 
 .tabbrowser-tab[usercontextid]:is(:hover, .keyboard-focused-tab, [selected], [visuallyselected], [open]):not([multiselected])
 	.tab-stack:before {
-	left: -4.6px;
+	left: -4.6px !important;
 }
 
 .tabbrowser-tab[usercontextid]:is(:hover, .keyboard-focused-tab, [selected], [visuallyselected], [open]):not([multiselected])
 	.tab-stack:after {
-	right: -4.6px;
+	right: -4.6px !important;
 }
 /* z-index of these corners is very complicated because the z-index of other elements needs to be set directly,
 to create the impression that tabs are layering on top of each other, with rightmost tabs on top and leftmost tabs on bottom.
@@ -5406,25 +5407,25 @@ this is the normal state but hovering, selecting, pinning, etc. needs to change 
 so because z-index is being modulated so heavily we need to do the same with our outside corners,
 or else they'll end up being covered up or showing through things they shouldn't. */
 .tabbrowser-tab :is(.tab-line, .tab-context-line) {
-	z-index: 3;
+	z-index: 3 !important;
 	position: relative !important;
 }
 
 .tabbrowser-tab {
-	z-index: 0;
+	z-index: 0 !important;
 }
 
 .tabbrowser-tab .tab-content {
-	z-index: 1;
+	z-index: 1 !important;
 }
 
 .tabbrowser-tab[pinned] .tab-stack:before,
 .tabbrowser-tab[pinned] .tab-stack:after {
-	z-index: 6;
+	z-index: 6 !important;
 }
 
 .tab-icon-stack {
-	z-index: -1;
+	z-index: -1 !important;
 }
 /* hide the corners on first/last visible tabs, just like we unround the top corners */
 #tabbrowser-tabs:not([movingtab], [using-closing-tabs-spacer])
@@ -5433,7 +5434,7 @@ or else they'll end up being covered up or showing through things they shouldn't
 #tabbrowser-tabs:not([movingtab], [using-closing-tabs-spacer])
 	.tabbrowser-tab[last-visible-tab]:not([justmoved], [style*="transform"])
 	.tab-stack:after {
-	display: none;
+	display: none !important;
 }
 
 #TabsToolbar
@@ -5441,7 +5442,7 @@ or else they'll end up being covered up or showing through things they shouldn't
 	#tabbrowser-arrowscrollbox:not([overflowing="true"])
 	.tabbrowser-tab[last-visible-tab][pinned]
 	.tab-stack:after {
-	display: block;
+	display: block !important;
 }
 /* how the background color is applied. it's not as convoluted as it looks,
 it needs to be a gradient image because the bottom line .tab-context-line overlaps with the outside corners.
@@ -5596,7 +5597,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 	> .tab-stack {
 	border: none !important;
 }
-/* block our animations while tabs are being dragged & dropped */
+/* block our animations while tabs are being dragged & dropped *
 #tabbrowser-tabs[movingtab] .tabbrowser-tab *,
 #tabbrowser-tabs .tabbrowser-tab[justmoved] * {
 	transform: none !important;
@@ -5641,7 +5642,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 #TabsToolbar tab:hover .tab-close-button {
 	opacity: 1 !important;
 }
-
+/*
 #TabsToolbar tab .close-icon:hover {
 	-moz-image-region: unset !important;
 	background-clip: padding-box !important;
@@ -5650,10 +5651,174 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 /* Hide close buttons on tabs */
 
 tab[selected="true"] > stack > hbox > .tab-close-button {
-	transition: 0.25s all ease-in-out !important;
+	transition: 0.05s all ease-in-out !important;
 }
 
 tab:not([selected="true"]) > stack > hbox > .tab-close-button {
 	transform: scale(0) !important;
-	transition: 0.25s all ease-in-out !important;
+	transition: 0.15s all ease-in-out !important;
+}
+
+/* Firefox userChrome.css tweaks ********************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************
+
+#TabsToolbar
+	#tabbrowser-tabs
+	.tabbrowser-tab:not([pinned]):not(:hover)
+	.tab-close-button {
+	visibility: collapse !important;
+	display: none !important;
+}
+
+#TabsToolbar
+	#tabbrowser-tabs
+	.tabbrowser-tab:not([pinned]):hover
+	.tab-close-button {
+	visibility: visible !important;
+	display: block !important;
+}
+/* indicator for multiselected tabs */
+.tabbrowser-tab[multiselected="true"] .tab-stack .tab-content {
+	box-shadow: inset 2px 0 0 Highlight, inset -2px 0 0 Highlight,
+		inset 0 2px 0 Highlight, inset 0 -2px 0 Highlight !important;
+}
+
+#tabbrowser-tabs[overflow="true"]
+	.tabbrowser-tab[pinned]
+	:is(.tab-background, .tab-stack) {
+	min-height: var(--tab-min-height) !important;
+}
+/* reduce minimum tab height */
+#tabbrowser-tabs,
+#tabbrowser-tabs > .tabbrowser-arrowscrollbox,
+.tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+	min-height: var(--tab-min-height) !important;
+}
+#TabsToolbar #tabbrowser-tabs[overflow="true"] .tabbrowser-tab[pinned] {
+	/*min-height: calc(var(--tab-min-height) - 1px) !important;
+	max-height: calc(var(--tab-min-height) - 1px) !important;*/
+	min-height: var(--tab-min-height) !important;
+	max-height: var(--tab-min-height) !important;
+}
+/* [Optional] Animation when hovering non-active/non-selected tabs *
+
+.tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
+	transform: scaleX(0.8);
+	transition: transform 100ms linear;
+}*/
+/* URL Bar Fade Animation On Hover */
+/* Thanks u/It_Was_The_Other_Guy   */
+:root[privatebrowsingmode="temporary"] #urlbar-input-container:hover {
+	background-color: #1f1b36 !important;
+}
+:root[privatebrowsingmode="temporary"] {
+	/* Toolbar */
+	--toolbar-bgcolor: #322560 !important;
+
+	/* Behind Tabs */
+	--lwt-accent-color: #19162f !important;
+
+	/* Search Bar Colour */
+	--toolbar-field-background-color: #0b0724 !important;
+
+	/* Turns Tab Into Same Colour As Toolbar */
+	--lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
+
+	/* What Happens When You Hover Over A Button */
+	--toolbarbutton-hover-background: rgba(255, 255, 255, 0.05) !important;
+
+	/* Click On A Button, This Colour Is What The Button Will Be */
+	--toolbarbutton-active-background: #4d4175 !important;
+
+	/* Click A Button With A Context Menu? This Is The Menu Colour */
+	--arrowpanel-background: #1d1935 !important;
+
+	/* Tool Bar Context Menu Outline */
+	--arrowpanel-border-color: #322560 !important;
+
+	/* Line Between Toobar And Site */
+	--chrome-content-separator-color: none !important;
+
+	/* Colour Of The Expanded Address Bar */
+	--toolbar-field-focus-background-color: var(
+		--toolbar-field-background-color
+	) !important;
+
+	/* Hovering Over The Autocomplete Items Colour */
+	--autocomplete-popup-hover-background: #1d1935 !important;
+
+	/* Clicking On Said Autocomplete Item Colour */
+	--autocomplete-popup-highlight-background: rgba(65, 48, 117, 0.5) !important;
+}
+
+/* Right Click Menu */
+:root[privatebrowsingmode="temporary"] menupopup {
+	--menuitem-hover-background-color: #413d54 !important;
+	--menu-background-color: #1d1935 !important;
+	--menu-color: #eeeeee !important;
+	--menuitem-disabled-hover-background-color: #ffffff00 !important;
+	--menu-disabled-color: #ffffff50 !important;
+	--menu-border-color: #322560 !important;
+}
+/* Set Value For Radius For Both Top Corners */
+#tabbrowser-tabs {
+	--user-tab-rounding: 5px;
+}
+/* Adjust Tab Corner Shape */
+.tab-background {
+	border-radius: 5px !important;
+	margin-block: 0px 0 !important;
+}
+
+/* Make Tab Name Semi-Bold When Selected *
+.tab-text[selected] {
+	font-weight: 600 !important;
+}
+/* Changes Minimum Height For Tabs [Do Not Touch] */
+#TabsToolbar,
+#tabbrowser-tabs {
+	--tab-min-height: 32px !important;
+}
+#TabsToolbar,
+#TabsToolbar > hbox,
+#TabsToolbar-customization-target,
+#tabbrowser-arrowscrollbox {
+	max-height: var(--tab-min-height) !important;
+}
+
+/* Always Show Close Icon - Selected Tabs */
+#TabsToolbar .tabbrowser-tab[selected]:not([pinned]) .close-icon {
+	display: inline-block !important;
+}
+
+/*** URL Bar Fade Animation On Hover *
+#urlbar-input-container:hover {
+	background-color: #322560 !important;
+}
+#urlbar-input-container {
+	transition: background-color 0.3s ease-in;
+}
+/*
+#urlbar-background {
+	backdrop-filter: blur(20px) !important;
+}*/
+#PlacesToolbarItems toolbarbutton {
+	border-radius: 20px !important;
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+	transition: background 0.05s !important;
+}
+.tab-background[selected="true"] {
+	backdrop-filter: blur(20px) !important;
+}
+:root[uidensity="compact"]
+	#tabbrowser-tabs[positionpinnedtabs]
+	.tabbrowser-tab[pinned] {
+	min-height: var(--tab-min-height) !important;
+}
+/* This ensures that the side arrows when tabs become scrollable sideways don't create a gap below tabs */
+#scrollbutton-up, #scrollbutton-down {
+  padding: 0 !important;
+  max-height: var(--tab-min-height) !important;
 }

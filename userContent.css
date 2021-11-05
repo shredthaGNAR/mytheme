@@ -419,15 +419,6 @@ url(about:newtab) {
 		) !important;
 		box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
 	}
-
-	.top-site-outer .tile .icon-wrapper {
-		background-color: transparent !important;
-	}
-
-	/*Favicon background of anchored sites*/
-	.top-site-outer .top-site-icon {
-		background-color: transparent !important;
-	}
 }
 /*Interface colors to customize the newtab */
 
@@ -779,23 +770,13 @@ url(about:newtab) {
 	}
 }
 
-@-moz-document url("about:blank") {
-	@media (prefers-color-scheme: dark) {
-		:root {
-			background-color: #1d1d3bfa !important;
-		}
-	}
-}
-
 @-moz-document plain-text-document(), media-document(all) {
-	@media (prefers-color-scheme: dark) {
-		:root {
-			background-color: #1d1d3bfa !important;
-		}
+	:root {
+		background-color: #1d1d3bfa !important;
+	}
 
-		body:not([style*="background"], [class], [id]) {
-			background-color: #1d1d3bfa !important;
-		}
+	body:not([style*="background"], [class], [id]) {
+		background-color: #1d1d3bfa !important;
 	}
 }
 
@@ -819,13 +800,7 @@ url(about:newtab) {
 		background-color: #1d1d3bfa !important;
 	}
 }
-@-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*")
-{
-	:root,
-	#background {
-		background-color: #1d1d3bfa !important; /* https://github.com/piroor/treestyletab/blob/0eede581d763f92344fe64b1c042839f3b8ca955/webextensions/resources/ui-color.css#L198 */
-	}
-}
+
 @-moz-document url("about:home"), url("about:newtab") {
 	/* Rounded searchbar */
 	.search-wrapper input {
@@ -848,4 +823,33 @@ url(about:newtab) {
 	/*Colour of text*/
 	background: #4d4dfe77 !important;
 	/*Highlighting colour*/
+}
+
+@-moz-document regexp("(.*\.(apng|png|jpg|jpeg|gif|webp|avif|ico|bmp|APNG|PNG|JPG|JPEG|GIF|WEBP|AVIF|ICO|BMP)([\?#].*)*$)|(^data:image/.*)") {
+	@media not print {
+		/* set solid color background */
+		html {
+			background-color: #1d1d3bfa !important;
+		}
+		/* remove default background */
+		body {
+			background-image: none !important;
+		}
+
+		/* Position of the image, auto = default */
+		img:only-child {
+			margin: auto !important; /* auto = center, 0 = top-left */
+		}
+
+		/* Checkerboard pattern for transparent images, slight blue hue */
+		img.transparent:only-child {
+			background: conic-gradient(
+					#eef 0.25turn,
+					#bbc 0.25turn 0.5turn,
+					#eef 0.5turn 0.75turn,
+					#bbc 0.75turn
+				)
+				top left / 24px 24px repeat !important;
+		}
+	}
 }
