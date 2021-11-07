@@ -165,10 +165,9 @@ url(about:home) {
 		/*borde del botón "Cancelar"*/
 	}
 
-	/*Eliminar barra de busqueda en NewTab
-  .search-inner-wrapper{ display: none !important; }
-  .outer-wrapper.newtab-experience .search-wrapper {padding-bottom: 0px !important;}*/
-	/*Button edge color "Save" and "Cancel" :hover*/
+	.outer-wrapper.newtab-experience .search-wrapper {
+		padding-bottom: 0px !important;
+	}
 	.button:not(.dismiss),
 	.button:focus:not(.dismiss),
 	.actions button:hover:not(.dismiss),
@@ -263,7 +262,7 @@ url(about:home) {
 	) !important;
 }
 
-/*Label Color The anchored site: Hover*/
+/*Label Color The anchored site: Hover*
 
 .outer-wrapper.newtab-experience
 	.top-site-outer:is(.active, :focus, :hover)
@@ -277,13 +276,13 @@ url(about:home) {
 	background: #1d1d38 !important;
 }
 
-/* 3-point button*/
+/* 3-point button*
 
 .outer-wrapper.newtab-experience .top-site-outer .context-menu-button {
 	fill: #ffffff !important;
 }
 
-/*Payment Management Favicon background from the anchored sites*/
+/*Payment Management Favicon background from the anchored sites*
 
 .top-site-outer .top-site-icon {
 	background-color: #7171af40 !important;
@@ -478,7 +477,7 @@ url(about:newtab) {
 	background: linear-gradient(to bottom, #2f2f65, #26255e, #202075) !important;
 }
 
-/* Label Color The anchored site: Hover */
+/* Label Color The anchored site: Hover /
 
 .outer-wrapper.newtab-experience
 	.top-site-outer:is(.active, :focus, :hover)
@@ -521,7 +520,7 @@ url(about:newtab) {
 	background-color: #1d1d3bfa !important;
 }
 
-/*------ ONETAB ADDON ------*/
+/*------ ONETAB ADDON ------*
 @-moz-document url("moz-extension://230bbecf-4f03-ae44-b003-63054bbc7c0d/onetab.html")
 {
 	html,
@@ -594,7 +593,7 @@ url(about:newtab) {
 	div:last-child,
 	:not(span),
 	:not(a) {
-		border-color: #4af !important;
+		border-color: #ffbd4f !important;
 		background-color: #1d1d3bfa !important;
 	}
 
@@ -630,11 +629,11 @@ url(about:newtab) {
 
 	a,
 	a[class] {
-		color: #9cf !important;
+		color: #0ff !important;
 	}
 
 	a:hover {
-		color: #39f !important;
+		color: #4a4a9b !important;
 	}
 
 	li {
@@ -690,7 +689,7 @@ url(about:newtab) {
 	}
 
 	* {
-		color: #7cf !important;
+		color: rgb(255, 74, 162) !important;
 	}
 
 	b {
@@ -704,24 +703,24 @@ url(about:newtab) {
 	textarea,
 	i,
 	td {
-		color: #ace !important;
+		color: #fff !important;
 		text-shadow: -1px -1px #0c0c0c, 1px -1px #0c0c0c, -1px 1px #0c0c0c,
 			1px 1px #0c0c0c !important;
 	}
 
 	::-moz-selection {
-		color: #7af !important;
-		background-color: #181735 !important;
+		color: #fff !important;
+		background-color: #4a4a9b !important;
 	}
 
 	::selection {
-		color: #7af !important;
-		background-color: #181735 !important;
+		color: #fff !important;
+		background-color: #4a4a9b !important;
 	}
 
 	::-webkit-selection {
-		color: #7af !important;
-		background-color: #181735 !important;
+		color: #fff !important;
+		background-color: #4a4a9b !important;
 	}
 
 	a > span.Sprite16 {
@@ -731,7 +730,7 @@ url(about:newtab) {
 
 	.clickable {
 		cursor: pointer;
-		color: #234da7;
+		color: #0ff !important;
 	}
 
 	input[type="text"] {

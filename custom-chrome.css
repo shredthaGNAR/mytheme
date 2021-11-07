@@ -4349,7 +4349,7 @@ otherwise will change height when tabs overflow */
 	opacity: 0.7;
 }
 
-/******************************** close icon size 
+/******************************** close icon size
 :root {
   --tab_close_icons_size: 16px;
 }
@@ -4390,7 +4390,7 @@ otherwise will change height when tabs overflow */
 	min-height: var(--tab-min-height) !important;
 }
 
-/* tab top border roundness 
+/* tab top border roundness
 #TabsToolbar :is(.tabs-newtab-button, #tabs-newtab-button),*/
 
 #TabsToolbar .tabbrowser-tab,
@@ -4606,7 +4606,7 @@ menupopup {
 
 
 #nav-bar {
-  /* This overrides value in compact_proton.css 
+  /* This overrides value in compact_proton.css
   box-shadow: none !important;
 }
 
@@ -4788,7 +4788,7 @@ menupopup {
 /* Remove Border Above Tab bar When Windowed *
 #main-window:not([sizemode="maximized"]) #navigator-toolbox {
   margin-top: -8px !important;
-} 
+}
 :root[tabsintitlebar][sizemode="normal"] #titlebar {
   appearance: none !important;
 }*/
@@ -4911,15 +4911,6 @@ menupopup {
 	border: none !important;
 	border-top-left-radius: 5px !important;
 	border-top-right-radius: 5px !important;
-}
-
-#back-button,
-#forward-button {
-	list-style-image: url("chrome://devtools/skin/images/play.svg") !important;
-}
-
-#back-button > .toolbarbutton-icon {
-	transform: scaleX(-1);
 }
 
 /********************************

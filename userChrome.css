@@ -3573,6 +3573,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 	--tabs-navbar-shadow-size: 1px !important;
 	--tab-border-color: var(--arrowpanel-border-color) !important;
 	--my-border-color: #1e20406c !important;
+	--arrowpanel-menuitem-padding: 2px 8px !important;
 	--panel-disabled-color: #99999990 !important;
 	--my-gradient: linear-gradient(
 		90deg,
@@ -3657,7 +3658,7 @@ toolbarbutton {
 #tabbrowser-tabs:not([closebuttons="activetab"])
 	> #tabbrowser-arrowscrollbox
 	> .tabbrowser-tab:not([visuallyselected="true"]):hover {
-	--tab-label-mask-size: 1em !important;
+	--tab-label-mask-size: 2em !important;
 }
 
 /** Enable urlbar border when focused *
@@ -3673,12 +3674,12 @@ toolbarbutton {
 	margin-inline-start: 0 !important;
 }
 
-/* highlights the top of active tabs */
+/* highlights the top of active tabs *
 
 .tabbrowser-tab:not([selected="true"]) {
 	padding-top: 3px !important;
 }
-
+*/
 .tabbrowser-tab[selected="true"] {
 	padding-top: 0px !important;
 }
@@ -3711,7 +3712,7 @@ otherwise will change height when tabs overflow */
 :root {
 	--tab-min-height: 32px !important;
 }
-
+/*
 .tabbrowser-tab > stack {
 	width: 100%;
 	height: 100%;
@@ -3741,15 +3742,14 @@ otherwise will change height when tabs overflow */
 
 /*= Tab Bar - Reduce Height, Show more contents ============================*/
 
-/* Toolbar Height */
+/* Toolbar Height *
 
 :root:not([uidensity="touch"]) #TabsToolbar {
 	--toolbarbutton-inner-padding: 9px;
 	/* Original: calc((var(--tab-min-height) - 16px) / 2) = 10px */
-}
 
 :root:not([uidensity]) #TabsToolbar {
-	--tab-min-height: 38px !important;
+	--tab-min-height: 32px !important;
 }
 
 :root[uidensity="compact"] #TabsToolbar {
@@ -4100,7 +4100,7 @@ menupopup {
 /* Remove Border Above Tab bar When Windowed *
 #main-window:not([sizemode="maximized"]) #navigator-toolbox {
   margin-top: -8px !important;
-} 
+}
 :root[tabsintitlebar][sizemode="normal"] #titlebar {
   appearance: none !important;
 }*/
@@ -4239,7 +4239,7 @@ menupopup {
 	border-top-left-radius: 5px !important;
 	border-top-right-radius: 5px !important;
 }
-
+/*
 #back-button,
 #forward-button {
 	list-style-image: url("chrome://devtools/skin/images/play.svg") !important;
@@ -4291,13 +4291,13 @@ menupopup {
 
 /* #home-button { list-style-image: url('home.svg') !important; } */
 
-/***COOL URL BAR BACKGROUND *
+/***COOL URL BAR BACKGROUND */
 
 #urlbar[breakout][breakout-extend] > #urlbar-background {
-  background-color: var(--lwt-accent-color) !important;
-  background-image: var(--lwt-additional-images) !important;
-  background-repeat: var(--lwt-background-tiling) !important;
-  background-position: var(--lwt-background-alignment) !important;
+	background-color: var(--lwt-accent-color) !important;
+	background-image: var(--lwt-additional-images) !important;
+	background-repeat: var(--lwt-background-tiling) !important;
+	background-position: var(--lwt-background-alignment) !important;
 }
 
 /* make tabs vert ically shorter */
@@ -4443,7 +4443,7 @@ menupopup[placespopup="true"] {
 /** Selected Tab - Bottom Rounded Corner ************************************
 #tabbrowser-tabs {
   --tab-corner-rounding: 5px; /* 10px looks about like chromium - 17px looks close to Australis tabs *
-  --tab-corner-padding: 1px !important; 
+  --tab-corner-padding: 1px !important;
 }
 
 :root[lwtheme="true"] tab[visuallyselected] > stack::before,
@@ -4509,29 +4509,21 @@ menupopup[placespopup="true"] {
 #scrollbutton-down {
 	border-radius: 0 !important; /* make the corner clickable */
 }
-/*
+
 .panel-subview-body,
 #permList,
 scrollbar {
-  color: inherit;
-  scrollbar-color: currentColor transparent;
-  scrollbar-width: thin;
+	color: inherit !important;
+	scrollbar-color: currentColor transparent !important;
+	scrollbar-width: thin !important;
 }
-.urlbarView {
-	background-image: url(/images/noise-512x512.png) !important;
-	backdrop-filter: blur(32px) !important;
-}
-*/
+
 .tabbrowser-tab:is([selected], [multiselected]) .tab-context-line {
-	/* Photon like color 
-        Default: var(--tab-line-color, rgb(10, 132, 255)) 
+	/* Photon like color
+        Default: var(--tab-line-color, rgb(10, 132, 255))
         Automatic: color-mix(in srgb, var(--button-primary-bgcolor) 80%, transparent)
 	var(--tab-line-color, rgb(10, 132, 255)) !important;*/
-	background-color: color-mix(
-		in srgb,
-		var(--button-primary-bgcolor) 80%,
-		transparent
-	) !important;
+	background-color: var(--tab-line-color) !important;
 }
 
 .tabbrowser-tab:hover:not([selected="true"], [multiselected])
@@ -4559,7 +4551,7 @@ scrollbar {
 		opacity 250ms var(--animation-easing-function) !important;
 	--animation-easing-function: cubic-bezier(0.07, 0.95, 0, 1) !important;
 }
-/* Pinned Tab - tabbrowser-arrowscrollbox overflowing *
+/* Pinned Tab - tabbrowser-arrowscrollbox overflowing */
 #tabbrowser-tabs[positionpinnedtabs]
 	> #tabbrowser-arrowscrollbox
 	> .tabbrowser-tab[pinned] {
@@ -4700,7 +4692,7 @@ browser[type="content"] {
 
 /* Tab Overflow          */
 /* On By Default         */
-/* Thanks u/-SZCMAWO     
+/* Thanks u/-SZCMAWO
 .tabbrowser-tab {
 	min-width: 0px !important;
 }
@@ -4713,7 +4705,7 @@ browser[type="content"] {
 	margin-inline-end: 0px !important;
 }
 /* Close Tab Icon Fade Animation */
-/* On By Default                 
+/* On By Default
 .tab-close-button,
 .tab-icon-overlay:-moz-any([soundplaying], [muted], [activemedia-blocked]),
 .tab-icon-sound {
@@ -4743,7 +4735,7 @@ spacer[part="overflow-end-indicator"] {
 
 /* Uncomment next line to force specific color for tab top line */
 #tabbrowser-tabs {
-	--tab-line-color: #9400ff !important;
+	--tab-line-color: transparent !important;
 }
 
 .tab-background[selected] {
@@ -4792,7 +4784,7 @@ spacer[part="overflow-end-indicator"] {
 :root[uidensity="compact"]
 	#tabbrowser-tabs[positionpinnedtabs]
 	.tabbrowser-tab[pinned] {
-	min-height: calc(var(--tab-min-height) + 2px) !important;
+	min-height: 32px !important;
 }
 
 .tab-content[pinned] {
@@ -4878,7 +4870,7 @@ spacer[part="overflow-end-indicator"] {
 
 /* Loaded but unread (not selected) */
 .tabbrowser-tab:not([selected="true"])[unread] .tab-label {
-	color: rgb(147, 142, 187) !important;
+	color: rgb(133, 133, 133) !important;
 	font-style: italic !important;
 	font-weight: normal !important;
 }
@@ -4890,16 +4882,16 @@ spacer[part="overflow-end-indicator"] {
 /* Not loaded yet (also visited) */
 .tabbrowser-tab:not([selected="true"])[pending] .tab-label,
 .tabbrowser-tab:not([selected="true"])[visited] .tab-label {
-	color: rgba(146, 146, 146, 0.575) !important;
+	color: rgba(60, 71, 172, 0.993) !important;
 	font-style: italic !important;
-	font-weight: normal !important;
+	font-weight: thin !important;
 }
-/* This ensures that the side arrows when tabs become scrollable sideways don't create a gap below tabs */
+/* This ensures that the side arrows when tabs become scrollable sideways don't create a gap below tabs *
 #scrollbutton-up,
 #scrollbutton-down {
 	padding: 0 !important;
 	max-height: var(--tab-min-height) + 2px !important;
-}
+}*/
 
 #alltabs-button,
 #tabs-newtab-button,
@@ -4952,7 +4944,7 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 	/* Animation - Fade in */
 	transition: opacity 0.1s var(--animation-easing-function) !important;
 }
-/** Clipped tabs - Letters cleary *******************************************/
+/** Clipped tabs - Letters cleary *******************************************
 #tabbrowser-tabs[closebuttons="activetab"] .tab-content:not([pinned]) {
 	padding-inline-start: 8px !important;
 }
@@ -4967,7 +4959,7 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 #tabbrowser-tabs[closebuttons="activetab"]
 	.tab-label-container[textoverflow]:not([labeldirection]):-moz-locale-dir(rtl):not([pinned]) {
 	mask-image: linear-gradient(to left, black 70%, transparent) !important;
-}
+}*/
 
 #urlbar-background,
 #urlbar {
@@ -5057,45 +5049,6 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 	/*Highlighting colour*/
 }
 
-:root[privatebrowsingmode="temporary"] {
-	/* Toolbar */
-	--toolbar-bgcolor: #322560 !important;
-
-	/* Behind Tabs */
-	--lwt-accent-color: #19162f !important;
-
-	/* Search Bar Colour */
-	--toolbar-field-background-color: #0b0724 !important;
-
-	/* Turns Tab Into Same Colour As Toolbar */
-	--lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
-
-	/* What Happens When You Hover Over A Button */
-	--toolbarbutton-hover-background: rgba(255, 255, 255, 0.05) !important;
-
-	/* Click On A Button, This Colour Is What The Button Will Be */
-	--toolbarbutton-active-background: #4d4175 !important;
-
-	/* Click A Button With A Context Menu? This Is The Menu Colour */
-	--arrowpanel-background: #1d1935 !important;
-
-	/* Tool Bar Context Menu Outline */
-	--arrowpanel-border-color: #322560 !important;
-
-	/* Line Between Toobar And Site */
-	--chrome-content-separator-color: none !important;
-
-	/* Colour Of The Expanded Address Bar */
-	--toolbar-field-focus-background-color: var(
-		--toolbar-field-background-color
-	) !important;
-
-	/* Hovering Over The Autocomplete Items Colour */
-	--autocomplete-popup-hover-background: #1d1935 !important;
-
-	/* Clicking On Said Autocomplete Item Colour */
-	--autocomplete-popup-highlight-background: rgba(65, 48, 117, 0.5) !important;
-}
 /* W h a t   d o e s   t h i s   d o */
 #scrollbutton-up,
 #scrollbutton-down {
@@ -5104,7 +5057,7 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 }
 
 /*Idk What This Does But This Was The Note Given:
-    "Set A Max Height Based On Min-height Plus Margin-block: 1px 0"*/
+    "Set A Max Height Based On Min-height Plus Margin-block: 1px 0"*
 #TabsToolbar,
 #TabsToolbar > hbox,
 #TabsToolbar-customization-target,
@@ -5119,7 +5072,7 @@ vbox#customization-panelWrapper box.panel-arrowcontent {
 		var(--toolbarseparator-color) calc(100% - 8px),
 		transparent calc(100% - 8px)
 	) !important;
-}*/
+}*
 #tabbrowser-tabs .arrowscrollbox-overflow-start-indicator,
 #tabbrowser-tabs .arrowscrollbox-overflow-end-indicator,
 #tabbrowser-tabs::part(arrowscrollbox-overflow-start-indicator),
@@ -5134,13 +5087,13 @@ spacer[part="overflow-end-indicator"] {
 #navigator-toolbox::after {
 	display: none !important;
 }
-/*prevent tab overflow to expand causing height changes */
+/*prevent tab overflow to expand causing height changes *
 #tabbrowser-tabs,
 #tabbrowser-tabs > .tabbrowser-arrowscrollbox {
 	min-height: unset !important;
 }
-/* container tabs indicator customization - different style. this will give rounded borders if tab border radius is there 
-and covers entire bottom outline of tab. Line Position:bottom 
+/* container tabs indicator customization - different style. this will give rounded borders if tab border radius is there
+and covers entire bottom outline of tab. Line Position:bottom
   .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
     display: none;
 }
@@ -5184,8 +5137,8 @@ and covers entire bottom outline of tab. Line Position:bottom
 	mask-image: linear-gradient(to left, transparent, black 1.3em) !important;
 }
 
-/* Highlight tabs that were changed or shared from other devices by adding a small colored line 
- 
+/* Highlight tabs that were changed or shared from other devices by adding a small colored line
+
 .tab-label[attention]:not([selected="true"]) {
 	font-weight: normal !important;
 }
@@ -5236,7 +5189,7 @@ and covers entire bottom outline of tab. Line Position:bottom
 .tabbrowser-tab[multiselected]:-moz-lwtheme {
 	color: var(--lwt-tab-text) !important;
 	--tab-line-color: transparent !important;
-}
+} /*
 .tabbrowser-tab > .tab-stack > .tab-background:is([multiselected]),
 .tabbrowser-tab > .tab-stack > .tab-content:is([multiselected]) {
 	background: #4d4dfe !important;
@@ -5281,7 +5234,7 @@ and covers entire bottom outline of tab. Line Position:bottom
 	:is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
 	border-top-right-radius: 5px !important;
 	border-top-left-radius: 5px !important;
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 #TabsToolbar .tabbrowser-tab[selected],
@@ -5519,8 +5472,8 @@ they must have a 1px tall stripe at the bottom, the color of the bottom line (sh
 }
 /* style the loading burst that triggers when tab loading finishes */
 .tab-loading-burst {
-	z-index: 2;
-	pointer-events: none;
+	z-index: 2 !important;
+	pointer-events: none !important;
 }
 
 #TabsToolbar .tab-loading-burst::before {
@@ -5532,7 +5485,7 @@ they must have a 1px tall stripe at the bottom, the color of the bottom line (sh
 /* default position is for tabs to be stacked on top of the tab to their left.
 so shadows are cast to the left but not to the right. */
 .tabbrowser-tab {
-	position: relative;
+	position: relative !important;
 }
 
 /* hovered tabs stack on top of normal tabs in either direction.
@@ -5597,7 +5550,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 	> .tab-stack {
 	border: none !important;
 }
-/* block our animations while tabs are being dragged & dropped *
+/* block our animations while tabs are being dragged & dropped */
 #tabbrowser-tabs[movingtab] .tabbrowser-tab *,
 #tabbrowser-tabs .tabbrowser-tab[justmoved] * {
 	transform: none !important;
@@ -5784,7 +5737,7 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
 #TabsToolbar > hbox,
 #TabsToolbar-customization-target,
 #tabbrowser-arrowscrollbox {
-	max-height: var(--tab-min-height) !important;
+	min-height: 32px !important;
 }
 
 /* Always Show Close Icon - Selected Tabs */
@@ -5804,7 +5757,7 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
 	backdrop-filter: blur(20px) !important;
 }*/
 #PlacesToolbarItems toolbarbutton {
-	border-radius: 20px !important;
+	/*border-radius: 20px !important;*/
 	padding-left: 5px !important;
 	padding-right: 5px !important;
 	transition: background 0.05s !important;
@@ -5815,10 +5768,39 @@ tab:not([selected="true"]) > stack > hbox > .tab-close-button {
 :root[uidensity="compact"]
 	#tabbrowser-tabs[positionpinnedtabs]
 	.tabbrowser-tab[pinned] {
-	min-height: var(--tab-min-height) !important;
+	min-height: 32px !important;
+	max-height: 32px !important;
 }
 /* This ensures that the side arrows when tabs become scrollable sideways don't create a gap below tabs */
-#scrollbutton-up, #scrollbutton-down {
-  padding: 0 !important;
-  max-height: var(--tab-min-height) !important;
+#scrollbutton-up,
+#scrollbutton-down {
+	padding: 0 !important;
+	min-height: 32px !important;
+	max-height: 32px !important;
+} /*
+:root {
+	--lwt-toolbar-field-highlight: red !important;
+	--lwt-toolbar-field-highlight-text: blue !important;
+}
+/*
+* Only show close buttons on background tabs when hovering with the mouse*/
+.tabbrowser-tab:not([selected]) .tab-close-button {
+	visibility: hidden !important;
+}
+.tabbrowser-tab:not([selected]):hover .tab-close-button {
+	visibility: visible !important;
+}
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+	display: -moz-box !important;
+}
+/*
+.tabbrowser-tab:hover .tab-background:not([selected]) {
+  border-color: #dadada !important;
+  border: 1px solid !important;
+}*/
+*::-moz-selection {
+	color: var(--lwt-toolbar-field-color) !important;
+	/*Colour of text*/
+	background: #4d4dfe77 !important;
+	/*Highlighting colour*/
 }
