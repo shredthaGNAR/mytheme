@@ -5260,7 +5260,7 @@ findbar .matches-indicator {
 	background-repeat: var(--lwt-background-tiling) !important;
 	background-position: var(--lwt-background-alignment) !important;
 }
-
+*/
 #urlbar-background,
 #searchbar {
 	text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
