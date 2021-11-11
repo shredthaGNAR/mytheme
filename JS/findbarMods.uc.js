@@ -11,7 +11,7 @@ class FindbarMods {
     // the miniaturized findbar isn't necessary with the default firefox layout, and requires a lot of CSS to implement.
     // so setting this to false will disable the miniaturization features of the script,
     // and solely implement the context menu and hotkey features.
-    static usingDuskfox = false;
+    static usingDuskfox = true;
 
     // firefox has no localization strings for these phrases, since they can only be configured in about:config.
     // change the label and accesskey values for your language. keep the quotes.

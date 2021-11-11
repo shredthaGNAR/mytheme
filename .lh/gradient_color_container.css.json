@@ -1,0 +1,18 @@
+{
+    "sourceFile": "gradient_color_container.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1636608105669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1636608105669,
+            "name": "Commit-0",
+            "content": "/* Gradient color container line */\n.tabbrowser-tab[usercontextid]:not([selected=\"true\"]):not([visuallyselected=\"true\"], [multiselected])\n  > .tab-stack\n  > .tab-background\n  > .tab-context-line {\n  background-color: unset !important;\n  height: 1px !important;\n  border-radius: 0 !important;\n  margin: -1px 20px 0px 0px !important;\n  border-top: 1px solid var(--identity-icon-color) !important;\n  border-image: linear-gradient(\n      90deg,\n      var(--lwt-accent-color),\n      var(--identity-icon-color) 4.5% 80%,\n      var(--lwt-accent-color)\n    )\n    1 !important;\n}\n\n.tabbrowser-tab[usercontextid]:is([selected=\"true\"], [visuallyselected=\"true\"], [multiselected])\n  > .tab-stack\n  > .tab-background\n  > .tab-context-line {\n  background-color: unset !important;\n  height: 1px !important;\n  border-radius: 0 !important;\n  margin: -1px 20px 0px 0px !important;\n  border-top: 1px solid var(--identity-icon-color) !important;\n  border-image: linear-gradient(\n      90deg,\n      var(--tab-line-color),\n      var(--identity-icon-color) 4.5% 80%,\n      var(--tab-line-color)\n    )\n    1 !important;\n}\n"
+        }
+    ]
+}
