@@ -24,7 +24,7 @@
         "Anchor bookmarks menu tooltip to bookmark": true,
 
         // by default, when you hit ctrl+tab it waits 200ms before opening the panel. if you replace the 200 with another number, it will wait that long in milliseconds instead.
-        "Reduce ctrl+tab delay": 0,
+        "Reduce ctrl+tab delay": 200,
 
         // normally, firefox only animates the stop/reload button when it's in the main customizable navbar. if you enter customize mode and move the button to the tabs toolbar, menu bar, or personal/bookmarks toolbar, the animated transition between the stop icon to the reload icon disappears. the icon just instantly changes. I suspect this is done in order to avoid potential problems with density modes, but it doesn't seem necessary. as long as you provide some CSS it works fine:
         // #stop-reload-button {position: relative;}

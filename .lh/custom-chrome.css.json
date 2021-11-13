@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 36,
+            "activePatchIndex": 37,
             "patches": [
                 {
                     "date": 1633422724745,
@@ -152,6 +152,10 @@
                 {
                     "date": 1636710581916,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2469,9 +2469,9 @@\n \n .tab-secondary-label[pictureinpicture] {\n   display: -moz-box !important;\n }\n-\n+/*\n .tab-secondary-label:is([pictureinpicture]) {\n   display: -moz-box !important;\n   margin-top: -1px !important;\n   color: #9400ff !important;\n"
+                },
+                {
+                    "date": 1636774815125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3185,9 +3185,9 @@\n   > .tabbrowser-tab[first-visible-unpinned-tab] {\n   margin-inline-start: 0 !important;\n }\n \n-/* highlights the top of active tabs */\n+/* highlights the top of active tabs *\n \n .tabbrowser-tab:not([selected=\"true\"]) {\n   padding-top: 3px !important;\n }\n@@ -3202,9 +3202,9 @@\n \n #urlbar {\n   max-width: 70% !important;\n   margin: 0 15% !important;\n-  /* URL bar and toolbar height */\n+  /* URL bar and toolbar height \n   --urlbar-height: 28px !important;\n   --urlbar-toolbar-height: 32px !important;\n }\n \n"
                 }
             ],
             "date": 1633422724745,

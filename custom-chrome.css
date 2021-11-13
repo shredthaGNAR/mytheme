@@ -3186,7 +3186,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
   margin-inline-start: 0 !important;
 }
 
-/* highlights the top of active tabs */
+/* highlights the top of active tabs *
 
 .tabbrowser-tab:not([selected="true"]) {
   padding-top: 3px !important;
@@ -3203,7 +3203,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 #urlbar {
   max-width: 70% !important;
   margin: 0 15% !important;
-  /* URL bar and toolbar height */
+  /* URL bar and toolbar height 
   --urlbar-height: 28px !important;
   --urlbar-toolbar-height: 32px !important;
 }

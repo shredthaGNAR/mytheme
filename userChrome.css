@@ -260,7 +260,6 @@ box.panel-header {
 .tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover)
   .tab-icon-image {
   opacity: 0.6 !important;
-  filter: grayscale();
 }
 #tabbrowser-tabpanels {
   background: transparent !important;
@@ -3276,7 +3275,7 @@ otherwise will change height when tabs overflow */
 /* Tab - Max Size */
 
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
-  max-width: 205px !important;
+  max-width: 225px !important;
 }
 
 /* Toolbar Height *
