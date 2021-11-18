@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 37,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1633422724745,
@@ -156,6 +156,18 @@
                 {
                     "date": 1636774815125,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3185,9 +3185,9 @@\n   > .tabbrowser-tab[first-visible-unpinned-tab] {\n   margin-inline-start: 0 !important;\n }\n \n-/* highlights the top of active tabs */\n+/* highlights the top of active tabs *\n \n .tabbrowser-tab:not([selected=\"true\"]) {\n   padding-top: 3px !important;\n }\n@@ -3202,9 +3202,9 @@\n \n #urlbar {\n   max-width: 70% !important;\n   margin: 0 15% !important;\n-  /* URL bar and toolbar height */\n+  /* URL bar and toolbar height \n   --urlbar-height: 28px !important;\n   --urlbar-toolbar-height: 32px !important;\n }\n \n"
+                },
+                {
+                    "date": 1636798328134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2543,9 +2543,9 @@\n   /*font-weight: bold !important;*/\n }\n \n tab {\n-  font-size: 11px !important;\n+  font-size: 10px !important;\n   font-family: sans-serif !important;\n }\n \n /* This may seem pretty weird, but it gets around an issue where the height of urlbar may suddenly change when one starts typing into it */\n"
+                },
+                {
+                    "date": 1637191888150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1617,9 +1617,9 @@\n \n .tabbrowser-tab:hover\n   > .tab-stack\n   > .tab-background:not([selected=\"true\"], [multiselected]) {\n-  background: radial-gradient(\n+  background-image: radial-gradient(\n     circle at bottom center,\n     #551dfc,\n     #000134d3\n   ) !important;\n"
+                },
+                {
+                    "date": 1637191939592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2610,9 +2610,9 @@\n         ) !important;*/\n }\n \n #urlbar {\n-  min-height: 28px !important;\n+  min-height: 26px !important;\n   margin-block: 0px 0px !important;\n   text-shadow: none !important;\n   background-image: linear-gradient(\n     160deg,\n@@ -2663,9 +2663,9 @@\n   animation-duration: 0ms !important;\n }\n \n #urlbar {\n-  min-height: 28px !important;\n+  min-height: 26px !important;\n   margin-block: 0px 0px !important;\n   font-size: 12px !important;\n   text-shadow: 0px 0px 1px #00000052 !important;\n }\n"
                 }
             ],
             "date": 1633422724745,
