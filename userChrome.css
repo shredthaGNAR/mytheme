@@ -5544,3 +5544,25 @@ findbar .matches-indicator {
   margin-top: -1px !important;
   opacity: 0.001 !important;
 }
+/* Hide the whole tab bar in fullscreen *
+#TabsToolbar[inFullscreen] {
+  visibility: collapse !important;
+}
+
+#nav-bar {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/*#titlebar {margin-bottom: -20px !important;}
+#tabbrowser-tabs {
+  visibility: collapse !important;
+}
+
+#titlebar-buttonbox {
+  position: relative !important;
+  overflow-x: hidden !important;
+  height: 10px !important;
+  -moz-transition: all 0.2s ease-out 0.2s !important;
+}
+*/
