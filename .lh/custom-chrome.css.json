@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 40,
+            "activePatchIndex": 41,
             "patches": [
                 {
                     "date": 1633422724745,
@@ -168,6 +168,10 @@
                 {
                     "date": 1637191939592,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2610,9 +2610,9 @@\n         ) !important;*/\n }\n \n #urlbar {\n-  min-height: 28px !important;\n+  min-height: 26px !important;\n   margin-block: 0px 0px !important;\n   text-shadow: none !important;\n   background-image: linear-gradient(\n     160deg,\n@@ -2663,9 +2663,9 @@\n   animation-duration: 0ms !important;\n }\n \n #urlbar {\n-  min-height: 28px !important;\n+  min-height: 26px !important;\n   margin-block: 0px 0px !important;\n   font-size: 12px !important;\n   text-shadow: 0px 0px 1px #00000052 !important;\n }\n"
+                },
+                {
+                    "date": 1637440153001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3565,9 +3565,9 @@\n }\n \n .tabbrowser-tab[multiselected]:-moz-lwtheme,\n .tabbrowser-tab[visuallyselected=\"true\"]:-moz-lwtheme {\n-  filter: drop-shadow(0 0 7px rgb(32, 32, 32)) !important;\n+  filter: drop-shadow(0 0 7px rgba(134, 132, 132, 0.438)) !important;\n }\n \n /* stacks use box-shadow as a border to prevent size from changing */\n \n@@ -3716,9 +3716,9 @@\n   margin: 0 !important;\n }\n \n findbar[hidden] {\n-  transform: translateY(-30px) !important;\n+  transform: translateY(-40px) !important;\n }\n \n findbar > .findbar-container,\n findbar > .close-icon {\n"
                 }
             ],
             "date": 1633422724745,

@@ -12,7 +12,7 @@
    height="144"
    version="1.1"
    id="svg120"
-   sodipodi:docname="derecha.svg"
+   sodipodi:docname="derecha1.svg"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
   <metadata
      id="metadata124">
@@ -35,13 +35,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1304"
-     inkscape:window-height="745"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
      id="namedview122"
      showgrid="false"
      inkscape:zoom="2.5779935"
-     inkscape:cx="134.05505"
-     inkscape:cy="63.415571"
+     inkscape:cx="37.174943"
+     inkscape:cy="50.027378"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -943,13 +943,11 @@
          id="stop2466" />
     </linearGradient>
     <linearGradient
-       x1="65.130875"
-       y1="92.378273"
-       x2="118.98814"
-       y2="76.402931"
-       id="linearGradient4682"
-       gradientTransform="scale(1.0540925,0.94868331)"
-       gradientUnits="userSpaceOnUse">
+       x1="40.05%"
+       y1="65.335%"
+       x2="89.619%"
+       y2="55.891%"
+       id="linearGradient4682">
       <stop
          stop-color="#11002f"
          offset="0%"
@@ -993,14 +991,12 @@
       <stop
          stop-color="#3300a4"
          offset="64.418%"
-         id="stop4756"
-         style="stop-color:#3320c4;stop-opacity:1" />
+         id="stop4756" />
       <stop
          stop-color="#3f00b8"
          stop-opacity="0"
          offset="100%"
-         id="stop4758"
-         style="stop-color:#2f30f8;stop-opacity:0" />
+         id="stop4758" />
     </linearGradient>
     <linearGradient
        x1="0.5255"
@@ -1093,107 +1089,6 @@
          offset="100%"
          id="stop5852" />
     </linearGradient>
-    <filter
-       inkscape:label="In and Out"
-       inkscape:menu="Shadows and Glows"
-       inkscape:menu-tooltip="Inner colorized shadow, outer black shadow"
-       style="color-interpolation-filters:sRGB;"
-       id="filter1083">
-      <feGaussianBlur
-         result="result0"
-         in="SourceAlpha"
-         stdDeviation="4"
-         id="feGaussianBlur1077" />
-      <feOffset
-         dx="5"
-         dy="5"
-         result="result4"
-         id="feOffset1079" />
-      <feComposite
-         in="SourceGraphic"
-         in2="result4"
-         operator="xor"
-         result="fbSourceGraphic"
-         id="feComposite1081" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix1085" />
-      <feGaussianBlur
-         id="feGaussianBlur1087"
-         result="result0"
-         in="fbSourceGraphicAlpha"
-         stdDeviation="4" />
-      <feOffset
-         id="feOffset1089"
-         dx="5"
-         dy="5"
-         result="result4" />
-      <feComposite
-         in2="result4"
-         id="feComposite1091"
-         in="fbSourceGraphic"
-         operator="xor"
-         result="result3" />
-    </filter>
-    <linearGradient
-       x1="84.26355"
-       y1="152.78127"
-       x2="-255.77049"
-       y2="14.536305"
-       id="linearGradient1976"
-       gradientTransform="matrix(0.58237267,0,0,0.88731758,138.10378,0)"
-       gradientUnits="userSpaceOnUse"
-       xlink:href="#linearGradient3371">
-      <stop
-         stop-color="#111344"
-         offset="0%"
-         id="stop1000" />
-      <stop
-         stop-color="#2d29a4"
-         offset="1"
-         id="stop1002" />
-      <stop
-         stop-color="#673cb0"
-         offset="1"
-         id="stop1004" />
-      <stop
-         stop-color="#676073"
-         offset="100%"
-         id="stop1006" />
-      <stop
-         stop-color="#676073"
-         offset="100%"
-         id="stop1008" />
-    </linearGradient>
-    <linearGradient
-       x1="0.35624999"
-       y1="-0.067280002"
-       x2="0.75086999"
-       y2="1.28478"
-       id="linearGradient3371">
-      <stop
-         stop-color="#151753"
-         offset="0%"
-         id="stop446" />
-      <stop
-         stop-color="#3833ca"
-         offset="35.304%"
-         id="stop448" />
-      <stop
-         stop-color="#7f4ad9"
-         offset="73.362%"
-         id="stop450" />
-      <stop
-         stop-color="#7f778e"
-         offset="100%"
-         id="stop452" />
-      <stop
-         stop-color="#7f778e"
-         offset="100%"
-         id="stop454" />
-    </linearGradient>
   </defs>
   <g
      fill="none"
@@ -1204,12 +1099,11 @@
        filter="url(#b)"
        transform="rotate(180 80 72)"
        d="M0 0h160v144H0z"
-       id="path108"
-       style="filter:url(#filter1083);fill:url(#linearGradient4682)" />
+       id="path108" />
     <path
        d="M160 0v143.998l-20.783.002C80.276 130.93 34.071 72.955 25 0h135z"
-       id="path110"
-       style="fill:#160042;fill-opacity:1" />
+       fill="url(#linearGradient282)"
+       id="path110" />
     <path
        d="M160 0v141.76C112.93 119.62 78.896 64.927 76 .003L160 0z"
        fill="url(#linearGradient5144)"
@@ -1226,10 +1120,4 @@
        id="path116"
        style="fill:#004eb9" />
   </g>
-  <path
-     d="m 145,0 v 0 c 27.91179,27.27235 17.19323,82.683999 15.69264,109.47702 L 160,141.76 107.84769,8.1420881 106,0 Z"
-     fill="url(#linearGradient1976)"
-     id="path242"
-     style="fill:url(#linearGradient1976);fill-opacity:1;stroke-width:0.718853"
-     sodipodi:nodetypes="ccccccc" />
 </svg>

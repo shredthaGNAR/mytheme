@@ -11,7 +11,7 @@ menupopup
 #context-viewbgimage .menu-text,
 #context-savepage .menu-text,
 menu#pageStyleMenu > .menu-text,
-#addon_darkreader_org-menuitem-_DarkReader-addSite .menu-text,
+#addon_darkreader_org-menuitem-_DarkReader-addSite:not(.menuitem-iconic) .menu-text,
 #viewFullZoomMenu > .menu-text,
 :is(#menu_zoomEnlarge, #menu_zoomReduce, #menu_zoomReset) .menu-text,
 #viewToolbarsMenu > .menu-text,
@@ -128,13 +128,22 @@ menuitem#repair-text-encoding .menu-text,
 #context-viewframeinfo .menu-text,
 menuitem#menu_openDownloads .menu-text,
 menuitem#menu_openAddons .menu-text,
-#addon_darkreader_org-menuitem-_DarkReader-toggle .menu-text,
-#private-relay_firefox_com-menuitem-_fx-private-relay-generate-alias > .menu-text,
+#addon_darkreader_org-menuitem-_DarkReader-toggle:not(.menuitem-iconic) .menu-text,
+#private-relay_firefox_com-menuitem-_fx-private-relay-generate-alias:not(.menuitem-iconic) > .menu-text,
 #menu_pageInfo .menu-text,
 menuitem:is(#sync-setup, #sync-unverifieditem, #sync-reauthitem) .menu-text,
 menuitem:is(#sync-enable, #sync-syncnowitem) .menu-text,
 menu#browserToolsMenu:not(.menu-iconic) > .menu-text,
-menuitem#menu_preferences .menu-text,
+menuitem#menu_preferences > .menu-text,
+menuitem#menu_openHelp > .menu-text,
+menuitem#feedbackPage > .menu-text,
+menuitem#helpSafeMode > .menu-text,
+menuitem#troubleShooting > .menu-text,
+menuitem#help_reportSiteIssue > .menu-text,
+menuitem#menu_HelpPopup_reportPhishingtoolmenu > .menu-text,
+menuitem#menu_HelpPopup_reportPhishingErrortoolmenu > .menu-text,
+menuitem#aboutName > .menu-text,
+menuitem#helpPolicySupport > .menu-text,
 #context-frameOsPid .menu-text,
 #context-reloadframe .menu-text,
 #context-reloadimage .menu-text,
@@ -235,13 +244,9 @@ menuitem#enableDeveloperTools .menu-text,
 #discardTab .menu-text,
 #historyUndoWindowMenu > .menu-text,
 #historyUndoMenu > .menu-text,
-#historyUndoWindowMenu3 > .menu-text,
-#tabContextMenu-historyUndoWindowMenu3 > .menu-text,
-#toolbar-context-menu-historyUndoWindowMenu3 > .menu-text,
-#tabContextUndoList > .menu-text,
-#tabContextMenu-tabContextUndoList > .menu-text,
-#toolbar-context-menu-tabContextUndoList > .menu-text,
-#tabContextMenu menuitem.restoreallitem .menu-text,
+.recently-closed-windows-menu > .menu-text,
+.recently-closed-tabs-menu > .menu-text,
+:is(.recently-closed-windows-menu, .recently-closed-tabs-menu, #historyUndoMenu, #historyUndoWindowMenu) menuitem.restoreallitem .menu-text,
 #recently-closed-restore > .menu-text,
 #recently-closed-restore-in-new-window > .menu-text,
 #recently-closed-restore-in-new-private-window > .menu-text,
@@ -257,26 +262,26 @@ menu#fill-login > .menu-text,
 menuitem#manage-saved-logins > .menu-text,
 menuitem#fill-login-generated-password > .menu-text,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_autofill"]
     > .menu-text,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-username"]
     > .menu-text,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-password"]
     > .menu-text,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_generate-password"]
     > .menu-text,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-identifier"]
     > .menu-text,
-#_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root:not(.menuitem-iconic, .menu-iconic)
+menu[label="Bitwarden"]:not(.menuitem-iconic, .menu-iconic)
     > .menu-text,
 #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager:not(.menuitem-iconic, .menu-iconic)
     > .menu-text,
@@ -294,7 +299,7 @@ menuitem#fill-login-generated-password > .menu-text,
     > .menu-iconic-text,
 #menu_customizeToolbars .menu-text,
 menuitem.viewCustomizeToolbar > .menu-text,
-#addon_darkreader_org-menuitem-_DarkReader-switchEngine .menu-text,
+#addon_darkreader_org-menuitem-_DarkReader-switchEngine:not(.menuitem-iconic) .menu-text,
 menupopup:not(#contentAreaContextMenu)
     > #addon_darkreader_org-menuitem-_DarkReader-top:not(.menuitem-iconic, .menu-iconic)
     > .menu-text,
@@ -352,16 +357,25 @@ menuitem:not(.menuitem-iconic)[oncommand="_ucUtils.restart(true)"]::before,
 #context-viewframeinfo::before,
 menuitem#menu_openDownloads::before,
 menuitem#menu_openAddons::before,
-#addon_darkreader_org-menuitem-_DarkReader-toggle::before,
-#private-relay_firefox_com-menuitem-_fx-private-relay-generate-alias::before,
+#addon_darkreader_org-menuitem-_DarkReader-toggle:not(.menuitem-iconic)::before,
+#private-relay_firefox_com-menuitem-_fx-private-relay-generate-alias:not(.menuitem-iconic)::before,
 #menu_pageInfo::before,
 menuitem:is(#sync-setup, #sync-unverifieditem, #sync-reauthitem)::before,
 menuitem:is(#sync-enable, #sync-syncnowitem)::before,
 menu#browserToolsMenu:not(.menu-iconic)::before,
 menuitem#menu_preferences::before,
+menuitem#menu_openHelp::before,
+menuitem#feedbackPage::before,
+menuitem#helpSafeMode::before,
+menuitem#troubleShooting::before,
+menuitem#help_reportSiteIssue::before,
+menuitem#menu_HelpPopup_reportPhishingtoolmenu::before,
+menuitem#menu_HelpPopup_reportPhishingErrortoolmenu::before,
+menuitem#aboutName::before,
+menuitem#helpPolicySupport::before,
 #context-viewbgimage::before,
 #context-setDesktopBackground::before,
-:is(#context-savepage, menu#pageStyleMenu, #addon_darkreader_org-menuitem-_DarkReader-addSite)::before,
+:is(#context-savepage, menu#pageStyleMenu, #addon_darkreader_org-menuitem-_DarkReader-addSite:not(.menuitem-iconic))::before,
 #viewFullZoomMenu::before,
 :is(#menu_zoomEnlarge, #menu_zoomReduce, #menu_zoomReset)::before,
 #viewToolbarsMenu::before,
@@ -510,13 +524,9 @@ menuitem#enableDeveloperTools::before,
 #discardTab::before,
 #historyUndoWindowMenu::before,
 #historyUndoMenu::before,
-#historyUndoWindowMenu3::before,
-#tabContextMenu-historyUndoWindowMenu3::before,
-#toolbar-context-menu-historyUndoWindowMenu3::before,
-#tabContextUndoList::before,
-#tabContextMenu-tabContextUndoList::before,
-#toolbar-context-menu-tabContextUndoList::before,
-#tabContextMenu menuitem.restoreallitem::before,
+.recently-closed-windows-menu::before,
+.recently-closed-tabs-menu::before,
+:is(.recently-closed-windows-menu, .recently-closed-tabs-menu, #historyUndoMenu, #historyUndoWindowMenu) menuitem.restoreallitem::before,
 #recently-closed-restore::before,
 #recently-closed-restore-in-new-window::before,
 #recently-closed-restore-in-new-private-window::before,
@@ -553,21 +563,21 @@ menu#fill-login::before,
 menuitem#manage-saved-logins::before,
 menuitem#fill-login-generated-password::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_autofill"]::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-username"]::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-password"]::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_generate-password"]::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-identifier"]::before,
-#_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root:not(.menuitem-iconic, .menu-iconic)::before,
+menu[label="Bitwarden"]:not(.menuitem-iconic, .menu-iconic)::before,
 #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager:not(.menuitem-iconic, .menu-iconic)::before,
 #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options:not(.menuitem-iconic, .menu-iconic)::before,
 #simple-translate_sienori-menuitem-_translatePage:not(.menuitem-iconic, .menu-iconic)::before,
@@ -578,7 +588,7 @@ menuitem#fill-login-generated-password::before,
 :is(menu, menuitem)[id^="multithreaded-download-manager"]:is([label="Open in new tab"], [label="Open in new window"], [label="Open in sidebar"])::before,
 #menu_customizeToolbars::before,
 menuitem.viewCustomizeToolbar::before,
-#addon_darkreader_org-menuitem-_DarkReader-switchEngine::before,
+#addon_darkreader_org-menuitem-_DarkReader-switchEngine:not(.menuitem-iconic)::before,
 menupopup:not(#contentAreaContextMenu)
     > #addon_darkreader_org-menuitem-_DarkReader-top:not(.menuitem-iconic, .menu-iconic)::before,
 menuitem.customize-context-removeFromToolbar::before,
@@ -771,11 +781,11 @@ menuitem#menu_openDownloads::before {
 }
 
 menuitem#menu_openAddons::before,
-#addon_darkreader_org-menuitem-_DarkReader-toggle::before {
+#addon_darkreader_org-menuitem-_DarkReader-toggle:not(.menuitem-iconic)::before {
     background-image: url(chrome://browser/content/extension.svg);
 }
 
-#private-relay_firefox_com-menuitem-_fx-private-relay-generate-alias::before {
+#private-relay_firefox_com-menuitem-_fx-private-relay-generate-alias:not(.menuitem-iconic)::before {
     /* background-image: url(chrome://userchrome/content/material/address-sign.svg);
     stroke: currentColor; */
     background-image: url(chrome://userchrome/content/material/contact-mail.svg);
@@ -805,11 +815,50 @@ menuitem#menu_preferences::before {
     background-image: url(chrome://userchrome/content/settings.svg);
 }
 
+/* menu bar > help menu */
+menuitem#menu_openHelp::before {
+    background-image: url(chrome://userchrome/content/help-solid.svg);
+}
+
+menuitem#feedbackPage::before {
+    background-image: url(chrome://userchrome/content/material/rate.svg);
+}
+
+menuitem#helpSafeMode::before {
+    background-image: url(chrome://userchrome/content/material/auto-fix.svg);
+}
+
+menuitem#troubleShooting::before {
+    background-image: url(chrome://userchrome/content/material/drugs.svg);
+}
+
+menuitem#help_reportSiteIssue::before {
+    background-image: url(chrome://userchrome/content/material/bug.svg);
+}
+
+menuitem#menu_HelpPopup_reportPhishingtoolmenu::before {
+    background-image: url(chrome://userchrome/content/material/phishing.svg);
+    stroke: currentColor !important;
+    -moz-context-properties: fill, fill-opacity, stroke !important;
+}
+
+menuitem#menu_HelpPopup_reportPhishingErrortoolmenu::before {
+    background-image: url(chrome://userchrome/content/material/verified.svg);
+}
+
+menuitem#aboutName::before {
+    background-image: url(chrome://userchrome/content/info-filled.svg);
+}
+
+menuitem#helpPolicySupport::before {
+    background-image: url(chrome://userchrome/content/help-square.svg);
+}
+
 :is(#context-setDesktopBackground, #context-viewbgimage)::before {
     background-image: url(chrome://userchrome/content/notifications/canvas.svg);
 }
 
-:is(#context-savepage, menu#pageStyleMenu, #addon_darkreader_org-menuitem-_DarkReader-addSite)::before {
+:is(#context-savepage, menu#pageStyleMenu, #addon_darkreader_org-menuitem-_DarkReader-addSite:not(.menuitem-iconic))::before {
     background-image: url(chrome://userchrome/content/document.svg);
 }
 
@@ -1223,45 +1272,41 @@ menuitem#enableDeveloperTools::before {
 /* menuitems added by recentlyClosedTabsContextMenu.uc.js */
 /* these are for the tab context menu's submenus */
 #historyUndoWindowMenu::before,
-#historyUndoWindowMenu3::before,
-#tabContextMenu-historyUndoWindowMenu3::before,
-#toolbar-context-menu-historyUndoWindowMenu3::before {
+.recently-closed-windows-menu::before {
     background-image: url(chrome://userchrome/content/skin/window.svg);
 }
 
 #historyUndoMenu::before,
-#tabContextUndoList::before,
-#tabContextMenu-tabContextUndoList::before,
-#toolbar-context-menu-tabContextUndoList::before {
+.recently-closed-tabs-menu::before {
     background-image: url(chrome://userchrome/content/skin/tab.svg);
 }
 
-#tabContextMenu menuitem.restoreallitem::before {
+:is(.recently-closed-windows-menu, .recently-closed-tabs-menu, #historyUndoMenu, #historyUndoWindowMenu) menuitem.restoreallitem::before {
     background-image: url(chrome://userchrome/content/skin/restore-session.svg);
 }
 
-#recently-closed-restore {
+#recently-closed-restore::before {
     background-image: url(chrome://userchrome/content/skin/restore-session.svg);
 }
 
 /* for the context menu that appears when you right-click a recently closed tab/window item in the history panel */
-#recently-closed-restore-in-new-window {
+#recently-closed-restore-in-new-window::before {
     background-image: url(chrome://userchrome/content/skin/new-window.svg);
 }
 
-#recently-closed-restore-in-new-private-window {
+#recently-closed-restore-in-new-private-window::before {
     background-image: url(chrome://userchrome/content/skin/new-private.svg);
 }
 
-#recently-closed-remove-from-list {
+#recently-closed-remove-from-list::before {
     background-image: url(chrome://userchrome/content/delete.svg);
 }
 
-#recently-closed-remove-from-history {
+#recently-closed-remove-from-history::before {
     background-image: url(chrome://userchrome/content/skin/forget.svg);
 }
 
-#recently-closed-bookmark {
+#recently-closed-bookmark::before {
     background-image: url(chrome://userchrome/content/skin/add-bookmark.svg);
 }
 
@@ -1276,34 +1321,34 @@ menuitem#enableDeveloperTools::before {
 }
 
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_autofill"]::before {
     background-image: url(chrome://userchrome/content/formfill.svg);
 }
 
 menuitem#manage-saved-logins::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-username"]::before {
     background-image: url(chrome://userchrome/content/fxa/avatar-empty.svg);
 }
 
 menu#fill-login::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-password"]::before {
     background-image: url(chrome://userchrome/content/skin/login.svg);
 }
 
 menuitem#fill-login-generated-password::before,
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_generate-password"]::before {
     background-image: url(chrome://userchrome/content/generate-password.svg);
 }
 
 :is(#contentAreaContextMenu, #toolbar-context-menu)
-    #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root
+    menu[label="Bitwarden"]
     :is(menu, menuitem)[id$="-menuitem-_copy-identifier"]::before {
     background-image: url(chrome://userchrome/content/devtools/tool-dom.svg);
 }
@@ -1343,7 +1388,7 @@ menuitem#fill-login-generated-password::before,
 
 #menu_customizeToolbars::before,
 menuitem.viewCustomizeToolbar::before,
-#addon_darkreader_org-menuitem-_DarkReader-switchEngine::before {
+#addon_darkreader_org-menuitem-_DarkReader-switchEngine:not(.menuitem-iconic)::before {
     background-image: url(chrome://browser/skin/customize.svg);
 }
 

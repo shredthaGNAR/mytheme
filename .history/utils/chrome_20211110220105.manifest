@@ -1,4 +1,0 @@
-content userchromejs ./
-content userscripts ../JS/
-content userchrome ../resources/
-override chrome://browser/content/tabbrowser-tab.js ../resources/script-override/tabMods.uc.js
