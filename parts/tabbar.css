@@ -9,10 +9,10 @@
 
 /*Always show tab close button on hover and never otherwise */
 .tabbrowser-tab .tab-close-button {
-  display: none !important;
+	display: none !important;
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
-  display: -moz-box !important;
+	display: -moz-box !important;
 }
 
 /* Move tab bar beneath the url bar
@@ -32,17 +32,17 @@
 
 .toolbar-items:-moz-lwtheme-darktext,
 .toolbar-items:-moz-lwtheme-brighttext {
-  background-color: transparent !important;
-  -moz-appearance: var(--bf-moz-appearance) !important;
+	background-color: transparent !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 /* 	Set minimum height for tab bar */
 #tabbrowser-tabs {
-  --tab-min-height: 32px !important;
-  /*	margin: 6px 5px 6px 5px !important;*/
+	--tab-min-height: 33px !important;
+	/*	margin: 6px 5px 6px 5px !important;*/
 }
 /* Compact mode */
 :root[uidensity="compact"] #tabbrowser-tabs {
-  margin: 0 !important;
+	margin: 0 !important;
 }
 /* Hide solo tab */
 /*
@@ -105,32 +105,32 @@
 }*/
 
 .tab-text {
-  font-weight: var(--bf-tab-font-weight) !important;
-  font-size: var(--bf-tab-font-size) !important;
+	font-weight: var(--bf-tab-font-weight) !important;
+	font-size: var(--bf-tab-font-size) !important;
 }
 
 /* Center all content */
-
+/***margin-top: -1px***/
+/***	padding: 0 10px***/
 .tab-content {
-  justify-content: center !important;
-  align-items: center !important;
-  margin-top: -1px !important;
-  min-width: 100% !important;
-  padding: 0 10px !important;
+	justify-content: center !important;
+	align-items: center !important;
+	margin-top: 0px !important;
+	min-width: 100% !important;
 }
 
 /* A way to center the label and icon while the close button is positioned to the far right */
 
 .tab-content::before {
-  content: "";
-  display: -moz-box;
-  -moz-box-flex: 1;
+	content: "";
+	display: -moz-box;
+	-moz-box-flex: 1;
 }
 
 /* Tab close button */
 
 .tab-close-button {
-  opacity: 1 !important;
+	opacity: 1 !important;
 }
 
 /* Prevent tab icons size breaking */
@@ -140,55 +140,55 @@
 .tab-throbber,
 .tab-throbber-fallback,
 .tab-close-button {
-  min-width: 16px !important;
+	min-width: 16px !important;
 }
 
 /* Adjust tab label width */
 
 .tab-label-container {
-  min-width: 16px !important;
+	min-width: 16px !important;
 }
 
 /* If tab close button is not present, don't force favicon to the center */
 
 #tabbrowser-tabs[closebuttons="activetab"]
-  .tabbrowser-tab:not([selected="true"])
-  .tab-throbber,
+	.tabbrowser-tab:not([selected="true"])
+	.tab-throbber,
 #tabbrowser-tabs[closebuttons="activetab"]
-  .tabbrowser-tab:not([selected="true"])
-  .tab-throbber-fallback,
+	.tabbrowser-tab:not([selected="true"])
+	.tab-throbber-fallback,
 #tabbrowser-tabs[closebuttons="activetab"]
-  .tabbrowser-tab:not([selected="true"]):not([busy])
-  .tab-icon-image,
+	.tabbrowser-tab:not([selected="true"]):not([busy])
+	.tab-icon-image,
 #tabbrowser-tabs[closebuttons="activetab"]
-  .tabbrowser-tab:not([selected="true"]):not([image])
-  .tab-label-container {
-  margin-left: 0 !important;
+	.tabbrowser-tab:not([selected="true"]):not([image])
+	.tab-label-container {
+	margin-left: 0 !important;
 }
 
 /* Tab icon */
 
 hbox.tab-content .tab-icon-image {
-  display: initial !important;
+	display: initial !important;
 }
 
 /* Show the icon of pinned tabs */
 
 hbox.tab-content[pinned="true"] .tab-icon-image {
-  display: initial !important;
+	display: initial !important;
 }
 
 /* Hide text of pinned tabs */
 
 hbox.tab-content[pinned="true"] .tab-text {
-  display: none !important;
+	display: none !important;
 }
 
-/* 	Hide the blue line on top of tab */
+/* 	Hide the blue line on top of tab *
 .tab-line {
-  display: none !important;
+	display: none !important;
 }
-
+/*
 .tab-bottom-line {
 }
 
@@ -217,7 +217,7 @@ hbox.tab-content[pinned="true"] .tab-text {
 			#9400ff,
 			#ba00e5,
 			#df06b9,
-			#e62da7,    
+			#e62da7,
 			#f13b95,
 			#f64d86,
 			#f85f7a,
@@ -251,8 +251,8 @@ hbox.tab-content[pinned="true"] .tab-text {
 	transform: translateY(-50%) !important;}*/
 
 .private-browsing-indicator {
-  display: block !important;
-  background: transparent !important;
+	display: block !important;
+	background: transparent !important;
 }
 
 /* Remove hover effects on tab bar buttons

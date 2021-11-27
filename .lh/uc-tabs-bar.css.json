@@ -52,6 +52,30 @@
                 {
                     "date": 1637356539519,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -282,9 +282,9 @@\n   stroke: none !important;\n }\n \n .titlebar-buttonbox {\n-  appearance: none !important;\n+  appearance: auto !important;\n }\n \n .titlebar-max,\n .uc-titlebar-max,\n"
+                },
+                {
+                    "date": 1637567905839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n   -moz-box-orient: horizontal !important;\n }\n \n #tabbrowser-tabs {\n-  background-color: var(--lwt-accent-color) !important;\n+  background-color: transparent !important;\n }\n \n /* menubar next to tabs (merge tabs bar with titlebar menubar and flow them horizontally) */\n #toolbar-menubar {\n"
+                },
+                {
+                    "date": 1637567934424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n   visibility: visible !important;\n }\n \n :root[inFullscreen] #titlebar {\n-  background: var(--titlebar-background);\n+  background: transparent !important;\n }\n \n #toolbar-menubar[autohide=\"true\"][inactive=\"true\"]:not([customizing=\"true\"])\n   ~ #TabsToolbar {\n"
+                },
+                {
+                    "date": 1637567963121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,13 +73,13 @@\n }\n \n #toolbar-menubar[autohide=\"true\"][inactive=\"true\"]:not([customizing=\"true\"])\n   ~ #TabsToolbar {\n-  background: var(--titlebar-background);\n+  background: transparent !important;\n }\n \n #toolbar-menubar:not([inactive=\"true\"]) {\n-  background: var(--titlebar-background);\n+  background: transparent;\n }\n \n /* menubar buttons */\n #main-menubar {\n"
+                },
+                {
+                    "date": 1637567990381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n   background: transparent !important;\n }\n \n #toolbar-menubar:not([inactive=\"true\"]) {\n-  background: transparent;\n+  background: transparent !important;\n }\n \n /* menubar buttons */\n #main-menubar {\n@@ -143,11 +143,8 @@\n   border-radius: 0 !important;\n   margin: 0 !important;\n }\n \n-#tabs-newtab-button {\n-  display: none !important;\n-}\n \n #new-tab-button {\n   display: -moz-box !important;\n }\n"
+                },
+                {
+                    "date": 1637568018553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -143,9 +143,8 @@\n   border-radius: 0 !important;\n   margin: 0 !important;\n }\n \n-\n #new-tab-button {\n   display: -moz-box !important;\n }\n \n"
+                },
+                {
+                    "date": 1637568184167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -776,12 +776,8 @@\n   .titlebar-spacer[type=\"post-tabs\"] {\n     display: none !important;\n   }\n \n-  #toolbar-menubar:not([inactive=\"true\"]) > spacer {\n-    width: 8px !important;\n-  }\n-\n   #toolbar-menubar:not([inactive=\"true\"])\n     + #TabsToolbar\n     .titlebar-spacer[type=\"pre-tabs\"] {\n     display: none !important;\n"
                 }
             ],
             "date": 1634295938786,

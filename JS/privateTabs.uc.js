@@ -15,7 +15,7 @@ class PrivateTabManager {
         if (!_ucUtils.sharedGlobal.privateTabGlobal) _ucUtils.sharedGlobal.privateTabGlobal = {};
         let privateTabGlobal = _ucUtils.sharedGlobal.privateTabGlobal;
         this.config = {
-            neverClearData: true, // if you want to not record history but don't care about other data, maybe even want to keep private logins
+            neverClearData: false, // if you want to not record history but don't care about other data, maybe even want to keep private logins
             restoreTabsOnRestart: true,
             doNotClearDataUntilFxIsClosed: true,
             deleteContainerOnDisable: false,

@@ -8,6 +8,7 @@ but find that it's missing because docs do not inherit from <browser> elements. 
 :root,
 menupopup {
     --lwt-accent-color: var(--uc-accent-color) !important;
+    --lwt-frame: var(--uc-frame-color) !important;
     --lwt-text-color: var(--uc-arrowpanel-color) !important;
     --lwt-toolbar-field-background-color: hsla(233, 25%, 28%, 85%) !important;
     --lwt-toolbar-field-color: hsl(240, 60%, 99%);
@@ -77,9 +78,6 @@ menupopup {
     --autocomplete-popup-color: var(--lwt-text-color) !important;
     --autocomplete-popup-separator-color: var(--panel-separator-color) !important;
     --autocomplete-popup-highlight-background: var(--arrowpanel-dimmed-further) !important;
-    --searchbar-popup-border: none;
-    --searchbar-popup-border-radius: 0 0 4px 4px;
-    --searchbar-popup-box-shadow: 0 0 10px 3px hsla(0, 0%, 0%, 0.15);
     --focus-outline-color: var(--attention-color) !important;
     --focus-outline-width: 2px;
     --places-cell-focus-bgcolor: var(--uc-places-cell-focus-bgcolor) !important;

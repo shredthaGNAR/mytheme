@@ -258,7 +258,11 @@ as well as the internal appearance of the built-in sidebars, e.g. bookmarks, his
 
 .sidebar-panel .sidebar-placesTreechildren::-moz-tree-cell(cutting, selected),
 .sidebar-panel .sidebar-placesTreechildren::-moz-tree-cell(cutting, hover) {
-    background-color: color-mix(in srgb, transparent 50%, var(--places-cell-hover-bgcolor)) !important;
+    background-color: color-mix(
+        in srgb,
+        transparent 50%,
+        var(--places-cell-hover-bgcolor)
+    ) !important;
 }
 
 .sidebar-placesTree {
@@ -312,7 +316,11 @@ as well as the internal appearance of the built-in sidebars, e.g. bookmarks, his
 .sidebar-placesTreechildren::-moz-tree-separator(hover),
 .sidebar-placesTreechildren:not(:-moz-window-inactive)::-moz-tree-separator(selected),
 .sidebar-placesTreechildren:not(:-moz-window-inactive)::-moz-tree-separator(hover, selected) {
-    border-color: color-mix(in srgb, var(--panel-shortcut-color) 30%, var(--panel-separator-color)) !important;
+    border-color: color-mix(
+        in srgb,
+        var(--panel-shortcut-color) 30%,
+        var(--panel-separator-color)
+    ) !important;
 }
 
 .sidebar-placesTreechildren:not(:-moz-window-inactive)::-moz-tree-separator(cutting) {
@@ -503,25 +511,28 @@ there are normally no twistys in sorted trees so it is relatively safe to collap
     }
 
     :-moz-window-inactive::selection {
-        background-color: var(--ui-selection-bgcolor-disabled, text-select-disabled-background) !important;
+        background-color: var(
+            --ui-selection-bgcolor-disabled,
+            text-select-disabled-background
+        ) !important;
     }
+}
+
+#browser {
+    position: relative !important;
 }
 
 #sidebar-box {
     --sidebar-background-color: var(--ui-secondary-bg) !important;
-    top: calc(var(--urlbar-container-height) + var(--tab-min-height)) !important;
+    top: 0 !important;
     bottom: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    position: fixed !important;
+    position: absolute !important;
     z-index: 1 !important;
     left: 0 !important;
     right: auto !important;
     box-shadow: 0px 0px 8px -4px hsla(240, 4%, 0%, 0.6), 0px 0px 15px 0px hsla(0, 0%, 0%, 0.2) !important;
-}
-
-:root[sizemode="normal"] #sidebar-box {
-    top: calc(var(--urlbar-container-height) + var(--tab-min-height)) !important;
 }
 
 #sidebar-box[hidden] {

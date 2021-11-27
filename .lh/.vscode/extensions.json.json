@@ -1,0 +1,50 @@
+{
+    "sourceFile": ".vscode/extensions.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1637642447935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1637642490893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,8 @@\n     \"zenghongtu.vscode-css-intellisense\",\n     \"saionaro.smart-css-autocomplete\",\n     \"navin-moorthy.vscode-css-snippets\",\n     \"vsls-contrib.gistfs\",\n-    \"visualstudioexptteam.intellicode-api-usage-examples\"\n+    \"visualstudioexptteam.intellicode-api-usage-examples\",\n+    \"unitechit.shopique\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1637642559933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,8 @@\n     \"saionaro.smart-css-autocomplete\",\n     \"navin-moorthy.vscode-css-snippets\",\n     \"vsls-contrib.gistfs\",\n     \"visualstudioexptteam.intellicode-api-usage-examples\",\n-    \"unitechit.shopique\"\n+    \"unitechit.shopique\",\n+    \"timdmackey.mechanic-liquid\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1637642582730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,9 @@\n     \"navin-moorthy.vscode-css-snippets\",\n     \"vsls-contrib.gistfs\",\n     \"visualstudioexptteam.intellicode-api-usage-examples\",\n     \"unitechit.shopique\",\n-    \"timdmackey.mechanic-liquid\"\n+    \"timdmackey.mechanic-liquid\",\n+    \"tshamz.liquid-snippet-include-detection\",\n+    \"hancel.google-translate\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1637642588952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,7 +26,8 @@\n     \"visualstudioexptteam.intellicode-api-usage-examples\",\n     \"unitechit.shopique\",\n     \"timdmackey.mechanic-liquid\",\n     \"tshamz.liquid-snippet-include-detection\",\n-    \"hancel.google-translate\"\n+    \"hancel.google-translate\",\n+    \"benshabatnoam.google-translate-ext\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1637642599578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,7 +27,8 @@\n     \"unitechit.shopique\",\n     \"timdmackey.mechanic-liquid\",\n     \"tshamz.liquid-snippet-include-detection\",\n     \"hancel.google-translate\",\n-    \"benshabatnoam.google-translate-ext\"\n+    \"benshabatnoam.google-translate-ext\",\n+    \"gustavoasc.google-drive-vscode\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1637642651280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,8 @@\n     \"timdmackey.mechanic-liquid\",\n     \"tshamz.liquid-snippet-include-detection\",\n     \"hancel.google-translate\",\n     \"benshabatnoam.google-translate-ext\",\n-    \"gustavoasc.google-drive-vscode\"\n+    \"gustavoasc.google-drive-vscode\",\n+    \"intellsmi.comment-translate\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1637642681338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,8 @@\n     \"tshamz.liquid-snippet-include-detection\",\n     \"hancel.google-translate\",\n     \"benshabatnoam.google-translate-ext\",\n     \"gustavoasc.google-drive-vscode\",\n-    \"intellsmi.comment-translate\"\n+    \"intellsmi.comment-translate\",\n+    \"sirmspencer.vscode-autohide\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1637642826814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,8 @@\n     \"hancel.google-translate\",\n     \"benshabatnoam.google-translate-ext\",\n     \"gustavoasc.google-drive-vscode\",\n     \"intellsmi.comment-translate\",\n-    \"sirmspencer.vscode-autohide\"\n+    \"sirmspencer.vscode-autohide\",\n+    \"funkyremi.vscode-google-translate\"\n   ]\n }\n"
+                }
+            ],
+            "date": 1637642447935,
+            "name": "Commit-0",
+            "content": "{\n  \"recommendations\": [\n    \"johnpapa.vscode-peacock\",\n    \"equinusocio.moxer-icons\",\n    \"equinusocio.moxer-theme\",\n    \"phoenisx.cssvar\",\n    \"sandorengholm.csspreview\",\n    \"rohit-chouhan.animate-css\",\n    \"hridoy.animate-css\",\n    \"tylerxwright.vscode-line-surfer\",\n    \"mde.select-highlight-minimap\",\n    \"smokingslim.vscode-touchbar\",\n    \"shyykoserhiy.git-autoconfig\",\n    \"codestream.codestream\",\n    \"felipecaputo.git-project-manager\",\n    \"dsebastien.vscode-git-pack\",\n    \"slysherz.comment-box\",\n    \"ryanbelisle.vscode-idiomatic-css-comments\",\n    \"enkia.tokyo-night\",\n    \"tinaciousdesign.theme-tinaciousdesign\",\n    \"al3xcubed.theme-cubed\",\n    \"zenghongtu.vscode-css-intellisense\",\n    \"saionaro.smart-css-autocomplete\",\n    \"navin-moorthy.vscode-css-snippets\",\n    \"vsls-contrib.gistfs\",\n    \"visualstudioexptteam.intellicode-api-usage-examples\"\n  ]\n}\n"
+        }
+    ]
+}

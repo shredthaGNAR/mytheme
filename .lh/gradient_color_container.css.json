@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1636608105669,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1637576877487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n   > .tab-stack\n   > .tab-background\n   > .tab-context-line {\n   background-color: unset !important;\n-  height: 1px !important;\n+  height: 2px !important;\n   border-radius: 0 !important;\n-  margin: -1px 20px 0px 0px !important;\n-  border-top: 1px solid var(--identity-icon-color) !important;\n+  margin: -2px 20px 0px 0px !important;\n+  border-top: 2px solid var(--identity-icon-color) !important;\n   border-image: linear-gradient(\n       90deg,\n       var(--lwt-accent-color),\n       var(--identity-icon-color) 4.5% 80%,\n@@ -21,12 +21,12 @@\n   > .tab-stack\n   > .tab-background\n   > .tab-context-line {\n   background-color: unset !important;\n-  height: 1px !important;\n+  height: 2px !important;\n   border-radius: 0 !important;\n-  margin: -1px 20px 0px 0px !important;\n-  border-top: 1px solid var(--identity-icon-color) !important;\n+  margin: -2px 20px 0px 0px !important;\n+  border-top: 2px solid var(--identity-icon-color) !important;\n   border-image: linear-gradient(\n       90deg,\n       var(--tab-line-color),\n       var(--identity-icon-color) 4.5% 80%,\n"
+                },
+                {
+                    "date": 1637578261899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n   > .tab-stack\n   > .tab-background\n   > .tab-context-line {\n   background-color: unset !important;\n-  height: 2px !important;\n+  height: 1px !important;\n   border-radius: 0 !important;\n-  margin: -2px 20px 0px 0px !important;\n-  border-top: 2px solid var(--identity-icon-color) !important;\n+  margin: -1px 20px 0px 0px !important;\n+  border-top: 1px solid var(--identity-icon-color) !important;\n   border-image: linear-gradient(\n       90deg,\n       var(--lwt-accent-color),\n       var(--identity-icon-color) 4.5% 80%,\n@@ -21,12 +21,12 @@\n   > .tab-stack\n   > .tab-background\n   > .tab-context-line {\n   background-color: unset !important;\n-  height: 2px !important;\n+  height: 1px !important;\n   border-radius: 0 !important;\n-  margin: -2px 20px 0px 0px !important;\n-  border-top: 2px solid var(--identity-icon-color) !important;\n+  margin: -1px 20px 0px 0px !important;\n+  border-top: 1px solid var(--identity-icon-color) !important;\n   border-image: linear-gradient(\n       90deg,\n       var(--tab-line-color),\n       var(--identity-icon-color) 4.5% 80%,\n"
                 }
             ],
             "date": 1636608105669,

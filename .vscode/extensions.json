@@ -22,6 +22,16 @@
     "zenghongtu.vscode-css-intellisense",
     "saionaro.smart-css-autocomplete",
     "navin-moorthy.vscode-css-snippets",
-    "vsls-contrib.gistfs"
+    "vsls-contrib.gistfs",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "unitechit.shopique",
+    "timdmackey.mechanic-liquid",
+    "tshamz.liquid-snippet-include-detection",
+    "hancel.google-translate",
+    "benshabatnoam.google-translate-ext",
+    "gustavoasc.google-drive-vscode",
+    "intellsmi.comment-translate",
+    "sirmspencer.vscode-autohide",
+    "funkyremi.vscode-google-translate"
   ]
 }
