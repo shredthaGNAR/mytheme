@@ -45,19 +45,21 @@
 	margin: 0 !important;
 }
 /* Hide solo tab */
-/*
-#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type {
-  visibility: collapse;
-}*/
+
+#tabbrowser-tabs
+	tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type {
+	visibility: collapse;
+}
 /* Hide New Tab Button immediately next to solo tab
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type + toolbarbutton {
 	visibility: collapse;
 }
 	/* Stretch Tabs*/
-/*
-.tabbrowser-tab[fadein]:not([pinned]) {
-	max-width: none !important;}
 
+.tabbrowser-tab[fadein]:not([pinned]) {
+	max-width: none !important;
+}
+/*
 .tab-background {
   border: none !important;
 }
@@ -110,13 +112,13 @@
 }
 
 /* Center all content */
-/***margin-top: -1px***/
-/***	padding: 0 10px***/
+
 .tab-content {
 	justify-content: center !important;
 	align-items: center !important;
-	margin-top: 0px !important;
+	margin-top: -1px !important;
 	min-width: 100% !important;
+	padding: 0 10px !important;
 }
 
 /* A way to center the label and icon while the close button is positioned to the far right */
@@ -184,7 +186,7 @@ hbox.tab-content[pinned="true"] .tab-text {
 	display: none !important;
 }
 
-/* 	Hide the blue line on top of tab *
+/* 	Hide the blue line on top of tab */
 .tab-line {
 	display: none !important;
 }

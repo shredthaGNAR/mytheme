@@ -1,0 +1,142 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1638259850756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638259896041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"\",\n+    \"editor.fontFamily\": \"JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259904098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"etBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259921646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"etBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"jetBrainsMonoMedium, Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259927842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"jetBrainsMonoMedium, Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259944554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259956967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \" Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259968865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"Operator Mono Lig, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259981156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Lig, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638259996090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"victOperator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260013213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"victOperator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"hackOperator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260019325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hackOperator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospaceOperator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260030251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospaceOperator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260037527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260042703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260051507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hack JetBrains Mono Regular Medium, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"hack nerd,JetBrains Mono Regular Medium, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260066057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hack nerd,JetBrains Mono Regular Medium, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260080216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"Operator Mono, Fira Code,\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260090824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono, Fira Code,\",\n+    \"editor.fontFamily\": \"Operator Mono, \",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260097125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono, \",\n+    \"editor.fontFamily\": \"\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260126900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"\",\n+    \"editor.fontFamily\": \"JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260153502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \" Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260161071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \" Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"Hack Nerd Font\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260173602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Hack Nerd Font\",\n+    \"editor.fontFamily\": \"JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260189425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"JetBrains Mono Regular Medium, JetBrainsMonoMedium Nerd Font Mono Medium, Victor Mono, Hack Nerd Font, Operator Mono, Fira Code, monospace\",\n+    \"editor.fontFamily\": \"JetBrainsMonoMedium Nerd Font Mono Medium,\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260202366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"JetBrainsMonoMedium Nerd Font Mono Medium,\",\n+    \"editor.fontFamily\": \"Nerd Font Mono Medium,\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260214885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"Nerd Font Mono Medium,\",\n+    \"editor.fontFamily\": \"hack \",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260227070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hack \",\n+    \"editor.fontFamily\": \"JetBrains Mono Regular Medium,\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260241079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"JetBrains Mono Regular Medium,\",\n+    \"editor.fontFamily\": \"hack nerd font\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260312780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\n-    \"editor.fontFamily\": \"hack nerd font\",\n+    \"editor.fontFamily\": \"Jetbrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260341817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n {\n     \"editor.fontFamily\": \"Jetbrains Mono\",\n     \"editor.fontSize\": 18,\n-    \"workbench.editor.enablePreview\": false\n+    \"workbench.editor.enablePreview\": false,\n+    \"editor.definitionLinkOpensInPeek\": true\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638260365486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\n     \"editor.fontFamily\": \"Jetbrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false,\n-    \"editor.definitionLinkOpensInPeek\": true\n+    \"editor.definitionLinkOpensInPeek\": true,\n+    \"editor.bracketPairColorization.enabled\": true\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638259850756,
+            "name": "Commit-0",
+            "content": "{\n    \"editor.fontFamily\": \"\",\n    \"editor.fontSize\": 18,\n    \"workbench.editor.enablePreview\": false\n}"
+        }
+    ]
+}
