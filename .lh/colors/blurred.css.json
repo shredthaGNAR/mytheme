@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1631005712524,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638655211994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n :root {\n   /* All the CSS variables here are global */\n   /* If windows - `-moz-win-glass`, if macOS - `-moz-mac-vibrancy-dark` */\n   --bf-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n-  --bf-backdrop-blur: 32px !important;\n+  --bf-backdrop-blur: 20px !important;\n   /*6px*/\n-  --bf-sidebar-searchbar-radius: 9px !important;\n+  --bf-sidebar-searchbar-radius: 5px !important;\n   --bf-accent-bg: #4c5ff9cc;\n   --bf-blank-page-bg: #252525;\n   --bf-urlbar-hightlight-bg: var(--bf-accent-bg);\n   --bf-urlbar-radius: 9px !important;\n@@ -16,9 +16,9 @@\n   --bf-urlbar-font-size: 11pt !important;\n   --bf-urlbar-font-weight: 500 !important;\n   --bf-urlbar-switch-tab-color: #6498ef !important;\n   --bf-urlbar-bookmark-color: #53e2ae !important;\n-  --bf-navbar-padding: 6px !important;\n+  --bf-navbar-padding: 4px !important;\n   --bf-tab-selected-bg: #4d4dfeff;\n   /*#985EFF88*/\n   --bf-tab-font-size: 11pt !important;\n   --bf-tab-font-weight: 400 !important;\n"
                 }
             ],
             "date": 1631005712524,

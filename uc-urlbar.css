@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* controls the appearance of the urlbar and everything inside it.
 that includes all the icons, page actions, etc. */
 
@@ -114,7 +120,7 @@ toolbarpaletteitem[place="palette"] > #search-container {
     padding: 0 var(--searchbar-popup-box-shadow-size, 15px)
         var(--searchbar-popup-box-shadow-size, 15px);
     margin: calc((var(--urlbar-container-height) - var(--urlbar-height)) / 2)
-        calc(-4px - var(--searchbar-popup-box-shadow-size, 15px))
+        calc(-5px - var(--searchbar-popup-box-shadow-size, 15px))
         calc(0px - var(--searchbar-popup-box-shadow-size, 15px)) !important;
     background: none;
 }
@@ -268,12 +274,18 @@ toolbarpaletteitem[mousedown] > #urlbar-container > #urlbar > #urlbar-background
 
 .urlbar-icon,
 .urlbar-page-action {
-    background-color: transparent !important;
     filter: none !important;
 }
 
+.urlbar-page-action {
+    -moz-box-pack: center !important;
+}
+
+:is(.urlbar-page-action:not([disabled]), #urlbar-go-button, .search-go-button):not([disabled], :hover, [open]):focus-visible {
+    background-color: var(--urlbar-box-focus-bgcolor) !important;
+}
+
 :not(.urlbar-page-action) > .urlbar-icon:not([disabled]):is(:hover, :focus-visible, [open]),
-#pageAction-urlbar-screenshot[shooting]:not(:hover) .urlbar-icon,
 .urlbar-page-action:not([disabled]):is(:hover, :focus-visible, [open]) .urlbar-icon {
     fill-opacity: 1 !important;
 }
@@ -289,22 +301,46 @@ toolbarpaletteitem[mousedown] > #urlbar-container > #urlbar > #urlbar-background
     opacity: 1;
 }
 
-#star-button-box:not(:hover, :focus-visible, [open]) #star-button[starred] {
-    fill-opacity: var(--urlbar-icon-fill-opacity) !important;
-    fill: currentColor !important;
+#contextual-feature-recommendation {
+    --cfr-active-color: var(--button-hover-bgcolor) !important;
 }
 
-#star-button[starred][animate] {
-    visibility: hidden;
+#cfr-label-container {
+    border-radius: var(--toolbarbutton-border-radius) !important;
+    font-size: 0.85em !important;
+    border: 1px solid transparent !important;
+    margin-block: 1px !important;
 }
 
-#star-button-box:not(:hover, :focus-visible, [open])
-    #star-button[starred][animate]
-    + #star-button-animatable-box
-    > #star-button-animatable-image {
-    opacity: var(--urlbar-icon-fill-opacity) !important;
-    fill: currentColor !important;
-    stroke: currentColor !important;
+#urlbar:not([cfr-recommendation-state="expanded"]) #cfr-button {
+    transform: translateX(-2px);
+}
+
+#cfr-label-container:is(:hover, :focus-visible) {
+    filter: brightness(1.1) saturate(1.2);
+    border-color: var(--button-hover-bgcolor) !important;
+}
+
+#cfr-label-container:hover:active {
+    filter: brightness(1.2) saturate(1.4);
+    border-color: var(--button-active-bgcolor) !important;
+}
+
+#cfr-label {
+    padding-block: 0 !important;
+    padding-inline: 0 10px !important;
+}
+
+#cfr-button {
+    margin-block: 0 !important;
+}
+
+#urlbar[cfr-recommendation-state="expanded"] #cfr-button {
+    pointer-events: none !important;
+}
+
+#urlbar[cfr-recommendation-state="expanded"] #cfr-button .urlbar-icon {
+    fill-opacity: inherit !important;
 }
 
 #urlbar[usertyping]:is([focused], [open]) > #urlbar-input-container > #urlbar-go-button {
@@ -374,10 +410,6 @@ but CSS hides it faster and avoids flickering.
     }
 }
 
-.urlbar-page-action {
-    -moz-box-pack: center !important;
-}
-
 #userContext-indicator {
     margin-inline-start: 6px !important;
 }
@@ -404,7 +436,7 @@ but CSS hides it faster and avoids flickering.
     height: 20px !important;
     border-radius: 10px !important;
     border: 1px solid var(--desaturate-dimmed) !important;
-    background: hsla(0, 0%, 0%, 0.09) !important;
+    background: var(--urlbar-zoom-button-bgcolor, hsla(0, 0%, 0%, 0.09)) !important;
     margin-inline: 4px !important;
     padding: 1px 8px !important;
 }
@@ -460,11 +492,6 @@ but CSS hides it faster and avoids flickering.
     ) !important;
 }
 
-#tracking-protection-icon-box
-    > :is(#tracking-protection-icon-animatable-box, #tracking-protection-icon) {
-    margin-inline-start: 0px !important;
-}
-
 toolbarpaletteitem[removable="false"]
     #tracking-protection-icon-container:is(:hover, [open="true"])
     #tracking-protection-icon-box:not([animate="true"])
@@ -500,6 +527,7 @@ toolbarpaletteitem[removable="false"]
 
 #tracking-protection-icon {
     display: -moz-box !important;
+    margin: 0px !important;
     list-style-image: url(chrome://userchrome/content/material/tracking.svg) !important;
 }
 
@@ -648,7 +676,6 @@ so you can use those classes to set the icon. */
 
 #urlbar[pageproxystate="valid"] #identity-box.chromeUI {
     padding-inline: 8px !important;
-    margin: 0 !important;
     border: none !important;
     background-color: var(--identity-box-solid-bg) !important;
     border-right: 1px solid var(--desaturate-dimmed) !important;
@@ -714,6 +741,7 @@ so you can use those classes to set the icon. */
     #identity-box:not(.httpsOnlyErrorPage, .certErrorPage, .unknownIdentity)
     #identity-icon-box {
     pointer-events: none !important;
+    -moz-user-focus: ignore !important;
 }
 
 :root[hide-tp-icon-on-ntp]:not([customizing])
@@ -771,8 +799,8 @@ so you can use those classes to set the icon. */
 }
 
 #tracking-protection-icon-container {
-    margin-inline: 6px 7px !important;
-    padding-inline: 1.5px 1px !important;
+    margin-inline: 8px 1.5px !important;
+    padding-inline: 0 !important;
     border: none !important;
     background: none !important;
 }
@@ -784,11 +812,6 @@ so you can use those classes to set the icon. */
 .urlbar-input-box input {
     padding-left: 4px !important;
     height: var(--urlbar-height) !important;
-}
-
-#urlbar[searchmode] .urlbar-input-box input,
-#identity-box.chromeUI[pageproxystate="valid"] ~ .urlbar-input-box input {
-    padding-left: 7px !important;
 }
 
 .urlbar-input-box input::placeholder,
@@ -827,14 +850,10 @@ so you can use those classes to set the icon. */
     pointer-events: none !important;
 }
 
-#identity-box:is(:not(.chromeUI), [pageproxystate="invalid"]) {
-    margin-inline-start: -8px !important;
+#identity-box:not(.chromeUI),
+#identity-box[pageproxystate="invalid"] {
+    margin-inline-start: 1.5px !important;
     padding-inline-start: 0px !important;
-}
-
-#identity-box:not(.chromeUI) #identity-icon-box {
-    margin-inline-start: 2px !important;
-    margin-inline-end: -3px !important;
 }
 
 #identity-box.unknownIdentity #identity-icon-box {
@@ -846,7 +865,7 @@ so you can use those classes to set the icon. */
 }
 
 #identity-icon-box {
-    margin-inline-end: 0 !important;
+    margin-inline: 0 !important;
     padding-inline: 0 !important;
     max-width: unset !important;
     border-radius: 0 !important;
@@ -855,7 +874,7 @@ so you can use those classes to set the icon. */
 }
 
 .identity-box-button {
-    padding-inline: unset !important;
+    padding-inline: 0 !important;
 }
 
 #identity-box,
@@ -900,6 +919,7 @@ so you can use those classes to set the icon. */
     fill: var(--protection-active-color) !important;
 }
 
+#identity-box.initialPage #identity-icon,
 #identity-box.extensionPage #identity-icon[tooltiptext="Loaded by extension: Tab Notes"],
 #urlbar[pageproxystate="invalid"] #identity-box #identity-icon,
 #tracking-protection-icon-container[hidden]
@@ -949,30 +969,15 @@ so you can use those classes to set the icon. */
     height: 16px;
 }
 
-#urlbar
-    #identity-box
-    :is(.sharing-icon, .notification-anchor-icon, #permissions-granted-icon, .blocked-permission-icon) {
-    margin-inline-start: 5px !important;
-}
-
-#tracking-protection-icon {
-    margin-inline-start: 6px !important;
-}
-
-#identity-permission-box {
-    margin-inline: 2px -2px !important;
-}
-
 #permissions-granted-icon {
     list-style-image: url(chrome://userchrome/content/formfill.svg) !important;
     margin-top: 1px;
+    margin-inline: 6px 1px !important;
 }
 
 #notification-popup-box {
-    padding-inline: 0 !important;
-    padding-block: 0 !important;
-    margin-block: 0 !important;
-    margin-inline: 2px -2px !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background: none !important;
 }
 
@@ -1012,7 +1017,7 @@ so you can use those classes to set the icon. */
     }
     33.33%,
     66.66% {
-        color: hsl(3.7, 77.1%, 49.6%);
+        color: var(--warning-color);
         fill-opacity: 1;
     }
 }
@@ -1092,16 +1097,10 @@ so you can use those classes to set the icon. */
 urlbar icons that display frequently like the tracking icon or the identity icon have a max width/height of 14px but a viewbox of 16px and are drawn to 16px.
 so they have at least 1px of virtual "padding" on every side. we could replace all the svg icons and maybe I will, but this is a lot easier.
 use 0.6 instead of 1 since 1 will end up being shown as like 1.4px for some window scaling factors.*/
-/* #blocked-permissions-container
-    :is(.screen-icon, .popup-icon, .autoplay-media-icon, .canvas-icon, .install-icon),
-#notification-popup-box
-    :is(.drm-icon, .autoplay-media-icon, .install-icon, #canvas-notification-icon, .canvas-icon, .indexedDB-icon, .screen-icon, .translation-icon, .storage-access-icon),
+#identity-box
+    :is(.desktop-notification-icon, .screen-icon, .popup-icon, .autoplay-media-icon, .canvas-icon, .install-icon, .drm-icon, .autoplay-media-icon, .install-icon, #canvas-notification-icon, .canvas-icon, .indexedDB-icon, .screen-icon, .translation-icon, .storage-access-icon, .midi-icon),
 #webrtc-sharing-icon[sharing="screen"] {
-    padding: 0.6px;
-} */
-
-.notification-anchor-icon#default-notification-icon {
-    list-style-image: url(chrome://userchrome/content/material/notification.svg) !important;
+    padding: 0.6px !important;
 }
 
 .install-icon.blocked-permission-icon,
@@ -1167,11 +1166,11 @@ use 0.6 instead of 1 since 1 will end up being shown as like 1.4px for some wind
     background-color: var(--identity-box-solid-bg) !important;
     border-radius: 0 !important;
     outline: none !important;
-    margin-inline: -24px 0 !important;
+    margin-inline: -24px 3px !important;
     font-size: inherit !important;
     min-width: 16px !important;
     height: var(--urlbar-height) !important;
-    padding-inline: 28px 8px !important;
+    padding-inline: 30px 8px !important;
     border: none !important;
     border-right: 1px solid var(--desaturate-dimmed) !important;
     pointer-events: auto !important;
@@ -1221,6 +1220,7 @@ use 0.6 instead of 1 since 1 will end up being shown as like 1.4px for some wind
 }
 
 #identity-icon-label {
+    padding-inline-start: 6px !important;
     color: var(--lwt-toolbar-field-color, black) !important;
     opacity: var(--identity-box-label-opacity) !important;
     font-weight: var(--urlbar-base-font-weight, 400);

@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name           Misc. Mods
-// @version        1.8.5
+// @version        1.8.6
 // @author         aminomancer
 // @homepage       https://github.com/aminomancer/uc.css.js
 // @description    Various tiny mods not worth making separate scripts for. Read the comments inside the script for details.
+// @license        This Source Code Form is subject to the terms of the Creative Commons Attribution-NonCommercial-ShareAlike International License, v. 4.0. If a copy of the CC BY-NC-SA 4.0 was not distributed with this file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 // ==/UserScript==
 
 (function () {
@@ -211,13 +212,10 @@
                     id: "editBookmarkPanel_persistLastLocation",
                     label: "Remember last location",
                     accesskey: "R",
-                    tooltip:
+                    tooltiptext:
                         "Update the default bookmark folder when you change it. If unchecked, the last folder chosen when this was checked will be the default folder.",
                     oncommand: `Services.prefs.setBoolPref("userChrome.bookmarks.editDialog.persistLastLocation", this.checked)`,
-                    checked: Services.prefs.getBoolPref(
-                        "userChrome.bookmarks.editDialog.persistLastLocation",
-                        true
-                    ),
+                    checked: false,
                 })
             );
             panel.addEventListener("popupshowing", (e) => {
@@ -235,13 +233,7 @@
                         .replace(/^async \_storeRecentlyUsedFolder/, "")
                         .replace(
                             /if \(didChangeFolder\)/,
-                            `if (
-                                didChangeFolder &&
-                                Services.prefs.getBoolPref(
-                                    "userChrome.bookmarks.editDialog.persistLastLocation",
-                                    true
-                                )
-                            )`
+                            `if (didChangeFolder && Services.prefs.getBoolPref("userChrome.bookmarks.editDialog.persistLastLocation", true))`
                         )
             );
         }

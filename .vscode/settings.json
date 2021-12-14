@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Jetbrains Mono",
+    "editor.fontFamily": "Operator Mono, Consolas, 'Courier New', monospace",
     "editor.fontSize": 18,
     "workbench.editor.enablePreview": false,
     "editor.definitionLinkOpensInPeek": true,

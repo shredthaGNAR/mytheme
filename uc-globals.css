@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* this stylesheet is where our basic custom variables are defined, especially colors.
 this is required by almost every other stylesheet, both chrome and content.
 plaintext documents use just uc-low-globals.css,
@@ -34,7 +40,7 @@ tooltip {
     --uc-smooth-timing-function: cubic-bezier(0.07, 0.78, 0.21, 0.95);
     --uc-content-text-a50: hsla(236, 100%, 85%, 0.5);
     --uc-content-text-a80: rgba(255, 255, 255, 0.8);
-    --uc-accent-color: hsl(233, 61%, 8%);
+    --uc-accent-color: hsl(233, 59%, 8%);
     --uc-frame-color: var(--uc-accent-color);
     --uc-toolbar-bgcolor: hsl(233, 42%, 15%);
     --uc-toolbar-color: var(--ui-text-100);
@@ -55,11 +61,12 @@ tooltip {
     --uc-panel-shortcut-focus: hsl(235, 32%, 75%, 90%);
     --uc-places-cell-focus-bgcolor: hsl(232, 30%, 19%);
     --uc-places-cell-hover-bgcolor: hsl(232, 30%, 23%);
+    --light-on-dark-button-text-color: #fff;
 
     --menupopup-inner-box-margin: 0px;
     --menupopup-shadow: none;
     --panel-shadow: none;
-    --searchbar-popup-border: none;
+    --searchbar-popup-border: 1px solid var(--uc-menu-border-color);
     --searchbar-popup-border-radius: 0 0 4px 4px;
     --searchbar-popup-box-shadow: 0 0 10px 3px hsla(0, 0%, 0%, 0.15);
     --searchbar-popup-box-shadow-size: 15px; /* if you increase the blur or spread values in the variable above, increase this variable commensurately */
@@ -86,7 +93,9 @@ tooltip {
     );
     --context-padding-inline: var(--context-iconic-composite-width) 0px;
     --menupopup-border-radius: 5px;
+    --panel-border-radius-mini: 3px;
     --context-menuitem-border-radius: 2.6px;
+    --general-button-border-radius: 2.6px;
     --menu-right-bg: none;
     --menu-right-img: url(chrome://userchrome/content/menu-arrow.svg);
     --menu-right-margin: 4px;
@@ -103,6 +112,7 @@ tooltip {
     --autocomplete-background: var(--popup-on-popup-contrast-bg);
     --ui-secondary-bg: hsl(234, 39%, 10%);
     --ui-tertiary-bg: hsl(233, 39%, 8.5%);
+    --ui-quaternary-bg: hsl(233, 34%, 8.5%);
     --tooltip-bgcolor: hsl(233, 36%, 11%);
     --tooltip-color: white;
     --tooltip-border-radius: 2px;
@@ -114,17 +124,14 @@ tooltip {
     --global-focus-shadow: 0 0 0 3px var(--global-focus-shadow-color),
         0 0 0 1px var(--global-focus-outline-color);
 
-    --statuspanel-color: hsla(0, 0%, 100%, 0.85);
-    --noise-texture: url(chrome://userchrome/content/texture/lightnoise.png);
-    --acrylic-blur: blur(15px);
-    --acrylic-texture: url(chrome://userchrome/content/texture/lightnoise.png);
-    --acrylic-blue: hsla(233.3, 39.1%, 9%, 0.58);
-    --blur-bgcolor: var(--acrylic-blue);
     --transparent-img-background: center/16px repeat hsla(0, 0%, 80%)
         url(chrome://userchrome/content/checker.svg);
     --transparent-img-background-context: center/16px repeat
         url(chrome://userchrome/content/checker-context.svg);
-    --general-button-border-radius: 2.6px;
+
+    --acrylic-blur: blur(15px);
+    --acrylic-texture: url(chrome://userchrome/content/texture/lightnoise.png);
+    --acrylic-blue: hsla(233.3, 39.1%, 9%, 0.58);
     --dialog-bgcolor: hsla(240, 5.9%, 6.7%, 0.85);
     --dialog-box-bgcolor: hsla(232, 100%, 75%, 8%);
     --dialog-box-bgcolor-dim: hsla(240, 100%, 70%, 3%);
@@ -183,9 +190,9 @@ tooltip {
     --uc-destructive-active-bgcolor: hsl(345.8, 90%, 40%);
     --uc-destructive-color: var(--ui-text-100);
 
-    --global-selection-bgcolor: hsla(245, 100%, 76%, 0.5);
+    --global-selection-bgcolor: hsla(245, 100%, 70%, 0.55);
     --global-selection-color: white;
-    --global-selection-bgcolor-disabled: hsla(245, 30%, 70%, 0.4);
+    --global-selection-bgcolor-disabled: hsla(243, 35%, 65%, 0.45);
     --ui-selection-bgcolor: hsla(0, 0%, 100%, 0.9);
     --ui-selection-color: hsl(236, 20%, 16%);
     --ui-selection-bgcolor-disabled: hsla(0, 0%, 100%, 0.7);
@@ -226,7 +233,12 @@ tooltip {
     /* subtle gradient drawn behind the window control buttons. */
     --titlebar-gradient: radial-gradient(
         circle at 100% 0%,
-        hsl(231, 48%, 12%),
+        hsl(231, 45%, 13%),
+        var(--uc-accent-color) 140px
+    );
+    --titlebar-gradient-left: radial-gradient(
+        circle at 0% 0%,
+        hsl(231, 45%, 13%),
         var(--uc-accent-color) 140px
     );
     --titlebar-background: var(--lwt-accent-color) var(--titlebar-gradient);
@@ -258,6 +270,7 @@ tooltip {
     --urlbar-input-bgcolor: hsl(233, 28%, 25%);
     --urlbar-input-bgcolor-brighter: hsl(233, 26%, 27%);
     --urlbar-input-bgcolor-disabled: hsl(233, 30%, 21%);
+    --urlbar-zoom-button-bgcolor: hsla(0, 0%, 0%, 0.09);
     --uc-urlbar-container-height: 38px;
     --uc-menubar-searchbar-width: 256px;
     --uc-tab-min-height: 35px;
@@ -268,6 +281,7 @@ tooltip {
     as well as buttons in tab-like elements like the all-tabs menu and my vertical tabs pane script.
     personally I've settled on circles for small buttons, rounded squares for big buttons. */
     --tab-button-border-radius: 50%;
+    --tree-row-height: 24px;
     --menuitem-height: 26px;
     --subviewbutton-height: 28px;
     --subview-subheader-padding: 5px 3px;
@@ -384,6 +398,8 @@ tooltip {
     --switch-off-hover-background: hsl(233, 18%, 27%);
     --switch-off-active-background: hsl(233, 19%, 24.5%);
     --switch-off-hover-border: hsl(233, 15%, 32%);
+
+    accent-color: var(--in-parent-border-focus);
 }
 
 :root[fxastatus="not_configured"] {

@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1630248812089,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638655068655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n \n toolbar#nav-bar {\n   padding: var(\n     --bf-navbar-padding\n-  ) !important; /* Remove horizontal line on navbar *\n-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;*/\n+  ) !important; /* Remove horizontal line on navbar */\n+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;\n   border-top: none !important;\n }\n \n /* Set color schemes for #nav-bar */\n@@ -71,13 +71,13 @@\n #navigator-toolbox::after {\n   border-bottom: 0 !important;\n }\n \n-/* Set color scheme *\n+/* Set color scheme */\n \n .toolbarbutton-text:-moz-lwtheme-darktext,\n .toolbarbutton-text:-moz-lwtheme-brighttext {\n-\tcolor: var(--bf-icon-color) !important;\n+  color: var(--bf-icon-color) !important;\n }\n \n /* Back button */\n \n"
                 }
             ],
             "date": 1630248812089,

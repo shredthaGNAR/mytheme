@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1634284900778,
@@ -12,6 +12,10 @@
                 {
                     "date": 1634285067879,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,9 @@\n   display: inline-flex !important;\n }\n \n /* Hide titlebar-buttonbox if there's single tab */\n-\n-:root[tabsintitlebar][sizemode=\"maximized\"]\n-  #titlebar\n-  .titlebar-buttonbox-container {\n-  display: none !important;\n+/*\n+:root[tabsintitlebar][sizemode=\"maximized\"] #titlebar .titlebar-buttonbox-container {\n+\tdisplay: none !important;\n }\n+*/\n"
+                },
+                {
+                    "date": 1638654517049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n   display: inline-flex !important;\n }\n \n /* Hide titlebar-buttonbox if there's single tab */\n-/*\n-:root[tabsintitlebar][sizemode=\"maximized\"] #titlebar .titlebar-buttonbox-container {\n-\tdisplay: none !important;\n+\n+:root[tabsintitlebar][sizemode=\"maximized\"]\n+  #titlebar\n+  .titlebar-buttonbox-container {\n+  display: none !important;\n }\n-*/\n"
                 }
             ],
             "date": 1634284900778,

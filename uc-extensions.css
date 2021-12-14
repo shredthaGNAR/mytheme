@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* this stylesheet mainly changes icons for specific extensions or websites
 in order to make them look more consistent with the firefox UI
 and/or fit better on a dark theme, e.g. white on a dark background.
@@ -46,7 +52,8 @@ menupopup#viewSidebarMenu
     list-style-image: url(chrome://userchrome/content/skin/container-base.svg);
 }
 
-#pageAction-urlbar-_testpilot-containers {
+#pageAction-urlbar-_testpilot-containers,
+#pageAction-panel-_testpilot-containers {
     --pageAction-image-16px: url(chrome://userchrome/content/skin/container-go.svg) !important;
     --pageAction-image-32px: url(chrome://userchrome/content/skin/container-go.svg) !important;
 }
@@ -57,7 +64,7 @@ menupopup#viewSidebarMenu
 }
 
 /* hide gitzip page action since it's pretty useless */
-#page-action-buttons > #pageAction-urlbar-gitzip-firefox-addons_gitzip_org {
+#pageAction-urlbar-gitzip-firefox-addons_gitzip_org {
     display: none !important;
 }
 
@@ -687,11 +694,12 @@ we need to invert the icon differently since we don't want to invert the backgro
 }
 
 /* reddit enhancement suite urlbar page action button */
-#pageAction-urlbar-jid1-xufzosoflzsoxg_jetpack {
+#pageAction-urlbar-jid1-xufzosoflzsoxg_jetpack,
+#pageAction-panel-jid1-xufzosoflzsoxg_jetpack {
     list-style-image: url(chrome://userchrome/content/material/filter-css.svg) !important;
 }
 
-#pageAction-urlbar-jid1-xufzosoflzsoxg_jetpack[tooltiptext="Subreddit Style Off"] {
+:is(#pageAction-urlbar-jid1-xufzosoflzsoxg_jetpack, #pageAction-panel-jid1-xufzosoflzsoxg_jetpack)[tooltiptext="Subreddit Style Off"] {
     list-style-image: url(chrome://userchrome/content/material/filter-css-blocked.svg) !important;
 }
 

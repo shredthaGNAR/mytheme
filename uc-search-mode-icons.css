@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* this does nothing on its own — it requires searchModeIndicatorIcons.uc.js.
 when you switch to a one-off search engine in the urlbar, or otherwise enable search mode,
 this changes the identity icon to one matching the search engine.
@@ -75,6 +81,10 @@ and the URL to the search engine so I can find a suitable icon and set a rule fo
     --search-engine-icon: url(chrome://userchrome/content/engines/youtube.svg) !important;
 }
 
+#identity-icon-box[engine="Google Translate"] {
+    --search-engine-icon: url(chrome://userchrome/content/engines/googletranslate.svg) !important;
+}
+
 /* porn */
 #identity-icon-box[engine="XVIDEOS"] {
     --search-engine-icon: url(chrome://userchrome/content/engines/xxx.svg) !important;
@@ -103,6 +113,10 @@ and the URL to the search engine so I can find a suitable icon and set a rule fo
     margin-inline: -2px !important;
     margin-block: 1px 0 !important;
     --search-engine-icon: url(chrome://userchrome/content/engines/wikipedia.svg) !important;
+}
+
+#identity-icon-box[engine="Wiktionary"] {
+    --search-engine-icon: url(chrome://userchrome/content/engines/wiktionary.svg) !important;
 }
 
 #urlbar[pageproxystate="invalid"]
@@ -162,6 +176,26 @@ and the URL to the search engine so I can find a suitable icon and set a rule fo
     --search-engine-icon: url(chrome://userchrome/content/engines/scryfall.svg) !important;
 }
 
+#identity-icon-box[engine="Goatbots"] {
+    --search-engine-icon: url(chrome://userchrome/content/engines/cards.svg) !important;
+}
+
+#identity-icon-box[engine="MTGO Traders"] {
+    --search-engine-icon: url(chrome://userchrome/content/engines/swordshield.svg) !important;
+}
+
 #identity-icon-box[engine="Searchfox"] {
     --search-engine-icon: url(chrome://userchrome/content/engines/searchfox.svg) !important;
+}
+
+#identity-icon-box[engine="Bugzilla"] {
+    --search-engine-icon: url(chrome://userchrome/content/engines/bugzilla.svg) !important;
+}
+
+#identity-icon-box[engine="MDN Web Docs"] {
+    --search-engine-icon: url(chrome://userchrome/content/engines/mdnwebdocs.svg) !important;
+}
+
+#identity-icon-box[engine="Reelgood"] {
+    --search-engine-icon: url(chrome://userchrome/content/engines/reelgood.svg) !important;
 }

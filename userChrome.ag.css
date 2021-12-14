@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* this stylesheet is used to style native anonymous content
 and in particular, tooltips and scrollbars. */
 
@@ -217,7 +223,7 @@ tooltip {
     border: none;
     padding: 5px;
     pointer-events: none;
-    --uc-tooltip-inner-padding: 2px 6px 4px 6px;
+    --uc-tooltip-inner-padding: 4px 7px 6px 7px;
 }
 
 tooltip:not([position]) {
@@ -231,7 +237,7 @@ tooltip > description {
     border: 1px solid var(--uc-menu-border-color);
     border-radius: var(--tooltip-border-radius);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    padding: var(--uc-tooltip-inner-padding, 2px 6px 4px 6px);
+    padding: var(--uc-tooltip-inner-padding, 4px 7px 6px 7px);
     margin: 0;
 }
 
@@ -242,14 +248,31 @@ tooltip > description {
 }
 
 @supports -moz-bool-pref("userChrome.css.mac-ui-fonts") {
-    @-moz-document url(chrome://browser/content/browser.xhtml)
-    {
+    @-moz-document regexp("^(about:|chrome:\/\/|resource:\/\/).*") {
         tooltip {
             font-family: SF Pro Text, Segoe UI, sans-serif;
             font-kerning: normal;
-            --uc-tooltip-inner-padding: 3px 6px 4px 6px;
+            --uc-tooltip-inner-padding: 5px 8px 6px 8px;
         }
     }
+
+    parsererror|parsererror {
+        font-family: SF Pro Display, Segoe UI, sans-serif;
+        font-kerning: normal;
+        font-weight: 500;
+    }
+}
+
+/* this appears when you open a file that firefox tries to read as XML,
+but it's either invalid or not XML. for example when opening an XHTML file. */
+parsererror|parsererror {
+    color: var(--plaintext-color) !important;
+    background-color: var(--in-content-bg-dark) !important;
+}
+
+parsererror|sourcetext {
+    font-family: Overpass Mono, -moz-fixed;
+    font-weight: bold;
 }
 
 /* print preview background */
@@ -259,11 +282,6 @@ tooltip > description {
 
 html|*.videocontrols .controlBar {
     background-color: var(--content-principal-box-background);
-}
-
-parsererror|parsererror {
-    color: var(--plaintext-color) !important;
-    background-color: var(--in-content-bg-dark) !important;
 }
 
 :-moz-native-anonymous .eye-dropper-color-value {

@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* handles system pages and injects some important global variables into extension pages */
 
 @import url(library.css);
@@ -148,7 +154,7 @@
         --in-content-primary-button-background: var(--purple-40) !important;
         --in-content-primary-button-background-hover: var(--purple-35) !important;
         --in-content-primary-button-background-active: var(--purple-30) !important;
-        --in-content-primary-button-text-color: var(--in-content-page-color) !important;
+        --in-content-primary-button-text-color: var(--light-on-dark-button-text-color) !important;
         --in-content-button-border-radius: var(--general-button-border-radius) !important;
         --in-content-accent-color: var(--purple-35) !important;
         --in-content-table-background: var(--in-content-box-background) !important;
@@ -228,14 +234,34 @@
     }
 
     body:not(.inline-onboarding) .fixed-search .search-wrapper {
-        background-image: linear-gradient(
+        /* temporarily disabled due to backdrop-filter being disabled. see https://bugzilla.mozilla.org/show_bug.cgi?id=1741779 */
+
+        /* background-image: linear-gradient(
             180deg,
             var(--in-content-page-background) 0%,
             var(--newtab-search-header-background-intermediate) 50%,
             var(--newtab-search-header-background-color) 100%
         ) !important;
         background-color: transparent !important;
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px); */
+
+        background-image: linear-gradient(
+            180deg,
+            var(--in-content-page-background) 0%,
+            color-mix(
+                    in srgb,
+                    var(--content-principal-page-background) 80%,
+                    var(--in-content-page-background)
+                )
+                50%,
+            color-mix(
+                    in srgb,
+                    var(--content-principal-page-background) 70%,
+                    var(--in-content-page-background)
+                )
+                100%
+        ) !important;
+        background-color: transparent !important;
     }
 
     body:not(.inline-onboarding) .fixed-search.newtab-experience .search-handoff-button {
@@ -419,6 +445,10 @@
 
     #engineList treechildren::-moz-tree-image {
         fill: currentColor !important;
+    }
+
+    #handlersView {
+        word-wrap: anywhere;
     }
 
     @-moz-document regexp("^about:blocked.*") {

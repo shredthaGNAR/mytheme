@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* this adjusts popup dialogs and modal popups */
 
 /* OS-styled javascript modal prompts */
@@ -24,7 +30,7 @@ tabmodalprompt {
     --in-content-primary-button-background: var(--purple-40) !important;
     --in-content-primary-button-background-hover: var(--purple-35) !important;
     --in-content-primary-button-background-active: var(--purple-30) !important;
-    --in-content-primary-button-text-color: var(--in-content-page-color) !important;
+    --in-content-primary-button-text-color: var(--light-on-dark-button-text-color) !important;
     --checkbox-border-color: var(--in-content-box-border-color) !important;
     --checkbox-checked-border-color: transparent !important;
     --checkbox-unchecked-bgcolor: var(--in-content-button-background) !important;
@@ -61,10 +67,16 @@ tabmodalprompt {
 }
 
 .tabmodalprompt-mainContainer {
-    background-color: var(--dialog-bgcolor) !important;
+    /* temporarily disabled due to backdrop-filter being disabled. see https://bugzilla.mozilla.org/show_bug.cgi?id=1741779 */
+
+    /* background-color: var(--dialog-bgcolor) !important;
     background-image: var(--acrylic-texture) !important;
     backdrop-filter: var(--acrylic-blur) !important;
-    border-color: var(--blurred-dialog-border-color) !important;
+    border-color: var(--blurred-dialog-border-color) !important; */
+
+    background-color: var(--ui-quaternary-bg) !important;
+    border-color: var(--uc-menu-border-color) !important;
+
     color: var(--in-parent-page-color) !important;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25), 0px 0px 5px -1px rgba(0, 0, 0, 0.125) !important;
 }
@@ -597,10 +609,17 @@ panel[type="autocomplete-richlistbox"]
     color: #fafafa;
     padding: 24px 16px;
     font: message-box;
-    background-color: var(--dialog-bgcolor) !important;
+
+    /* temporarily disabled due to backdrop-filter being disabled. see https://bugzilla.mozilla.org/show_bug.cgi?id=1741779 */
+
+    /* background-color: var(--dialog-bgcolor) !important;
     background-image: var(--acrylic-texture) !important;
     backdrop-filter: var(--acrylic-blur) !important;
-    border: 1px solid var(--blurred-dialog-border-color) !important;
+    border: 1px solid var(--blurred-dialog-border-color) !important; */
+
+    background-color: var(--ui-tertiary-bg) !important;
+    border: 1px solid var(--uc-menu-border-color) !important;
+
     color: var(--arrowpanel-color) !important;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25), 0px 0px 5px -1px rgba(0, 0, 0, 0.125) !important;
     transition-property: transform, opacity !important;
@@ -676,10 +695,15 @@ panel[type="autocomplete-richlistbox"]
 
 /* blur backdrop filter */
 .content-prompt-dialog > .dialogOverlay[style] .dialogFrame {
-    background-color: var(--dialog-bgcolor) !important;
+    /* temporarily disabled due to backdrop-filter being disabled. see https://bugzilla.mozilla.org/show_bug.cgi?id=1741779 */
+
+    /* background-color: var(--dialog-bgcolor) !important;
     background-image: var(--acrylic-texture) !important;
     backdrop-filter: var(--acrylic-blur) !important;
-    border: 1px solid var(--blurred-dialog-border-color);
+    border: 1px solid var(--blurred-dialog-border-color); */
+
+    background-color: var(--ui-quaternary-bg) !important;
+    border: 1px solid var(--arrowpanel-border-color);
 }
 
 /* hide the background overlay */
@@ -702,7 +726,7 @@ panel[type="autocomplete-richlistbox"]
 }
 
 :is(#window-modal-dialog, .tab-prompt-dialog) > .dialogOverlay[style] .dialogFrame {
-    background-color: var(--ui-tertiary-bg) !important;
+    background-color: var(--ui-quaternary-bg) !important;
     border: 1px solid var(--arrowpanel-border-color);
 }
 
@@ -751,7 +775,7 @@ panel[type="autocomplete-richlistbox"]
         --in-content-primary-button-background: var(--purple-40) !important;
         --in-content-primary-button-background-hover: var(--purple-35) !important;
         --in-content-primary-button-background-active: var(--purple-30) !important;
-        --in-content-primary-button-text-color: var(--in-content-page-color) !important;
+        --in-content-primary-button-text-color: var(--light-on-dark-button-text-color) !important;
         --in-content-primary-button-text-color-hover: white !important;
         --checkbox-border-color: var(--in-content-box-border-color) !important;
         --checkbox-checked-border-color: transparent !important;
@@ -807,10 +831,14 @@ panel[type="autocomplete-richlistbox"]
         font-size: 1em !important;
     }
 
-    .dialog-button-box > button:not([disabled="true"]):hover {
+    .dialog-button-box > button:not([disabled="true"]):is(:hover, :focus-visible) {
         background-color: var(--in-content-button-background-hover) !important;
         color: var(--in-content-button-text-color-hover) !important;
         border-color: var(--in-content-button-border-color-hover) !important;
+    }
+
+    .dialog-button-box > button:not([disabled="true"]):focus-visible {
+        outline-style: auto !important;
     }
 
     .dialog-button-box > button:not([disabled="true"]):hover:active,
@@ -832,7 +860,7 @@ panel[type="autocomplete-richlistbox"]
     }
 
     .dialog-button-box
-        > button:is([autofocus], [type="submit"], [default], .primary):not([disabled="true"]):hover {
+        > button:is([autofocus], [type="submit"], [default], .primary):not([disabled="true"]):is(:hover, :focus-visible) {
         background-color: var(--in-content-primary-button-background-hover) !important;
         color: var(--in-content-primary-button-text-color-hover) !important;
         border-color: var(--in-content-primary-button-border-hover) !important;
@@ -877,7 +905,7 @@ panel[type="autocomplete-richlistbox"]
 
     richlistbox[id]
         richlistitem:not([disabled="true"])
-        > button[label]:is(:enabled, :not([disabled="true"])):hover {
+        > button[label]:is(:enabled, :not([disabled="true"])):is(:hover, :focus-visible) {
         background-color: var(--in-content-primary-button-background-hover) !important;
     }
 
@@ -1054,7 +1082,7 @@ panel[type="autocomplete-richlistbox"]
         --in-content-primary-button-background: var(--purple-40) !important;
         --in-content-primary-button-background-hover: var(--purple-35) !important;
         --in-content-primary-button-background-active: var(--purple-30) !important;
-        --in-content-primary-button-text-color: var(--in-content-page-color) !important;
+        --in-content-primary-button-text-color: var(--light-on-dark-button-text-color) !important;
         --in-content-button-border-radius: var(--general-button-border-radius) !important;
         --in-content-accent-color: var(--purple-35) !important;
         --in-content-table-background: var(--in-content-box-background) !important;
@@ -1143,7 +1171,7 @@ panel[type="autocomplete-richlistbox"]
         --in-content-primary-button-background: var(--purple-40) !important;
         --in-content-primary-button-background-hover: var(--purple-35) !important;
         --in-content-primary-button-background-active: var(--purple-30) !important;
-        --in-content-primary-button-text-color: var(--in-content-page-color) !important;
+        --in-content-primary-button-text-color: var(--light-on-dark-button-text-color) !important;
         --checkbox-border-color: var(--in-content-box-border-color) !important;
         --checkbox-checked-border-color: transparent !important;
         --checkbox-unchecked-bgcolor: var(--in-content-button-background) !important;
@@ -1393,11 +1421,8 @@ panel[type="autocomplete-richlistbox"]
 
     #SanitizeDialog[dialogroot] #sanitizeEverythingWarningBox {
         border-color: transparent !important;
-        background-color: color-mix(
-            in srgb,
-            var(--dialog-bgcolor) 50%,
-            hsla(0, 0%, 0%, 0.2)
-        ) !important;
+        background-color: transparent !important;
+        font-size: 1.1em !important;
     }
 
     #SanitizeDialog[dialogroot] #sanitizeEverythingWarningIcon {
@@ -1464,6 +1489,21 @@ link[href="chrome://global/content/printPagination.css"]
 {
     :root {
         display: none !important;
+    }
+}
+
+@-moz-document url("chrome://browser/content/webrtcLegacyIndicator.xhtml")
+{
+    button {
+        min-width: 28px !important;
+    }
+
+    #firefoxButton {
+        background-size: 20px !important;
+    }
+
+    window[sharingaudio][sharingvideo] > #audioVideoButton {
+        min-width: 46px !important;
     }
 }
 
@@ -1575,6 +1615,11 @@ link[href="chrome://global/content/printPagination.css"]
         background: var(--button-hover-bgcolor);
     }
 
+    button:focus-visible {
+        outline: var(--global-focus-ring) !important;
+        box-shadow: var(--global-focus-shadow) !important;
+    }
+
     button:hover:active {
         background: var(--button-active-bgcolor);
     }
@@ -1635,6 +1680,18 @@ link[href="chrome://global/content/printPagination.css"]
 /* page info popup. kinda lame */
 @-moz-document url(chrome://browser/content/pageinfo/pageInfo.xhtml)
 {
+    :root {
+        --focus-outline-color: var(--global-focus-outline-color) !important;
+    }
+
+    input:not([type="file"], [type="image"]):focus-visible,
+    select:focus-visible,
+    button:focus-visible,
+    textarea:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--focus-outline-color) !important;
+    }
+
     #main-window {
         background-color: var(--arrowpanel-background) !important;
         color: var(--arrowpanel-color) !important;

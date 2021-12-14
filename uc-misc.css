@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Creative Commons
+* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+
 /* this stylesheet contains general/miscellaneous changes
 that are too small to have their own stylesheet.
 includes status bars, tooltips, confirmation hints and warnings,
@@ -19,7 +25,11 @@ tooltip {
     margin-inline-start: -5px !important;
     margin-block-start: 16px !important;
     pointer-events: none !important;
-    --uc-tooltip-inner-padding: 2px 6px 4px 6px;
+}
+
+tooltip,
+#statuspanel {
+    --uc-tooltip-inner-padding: 4px 7px 6px 7px;
 }
 
 tooltip > description,
@@ -30,7 +40,7 @@ tooltip .uc-tooltip-box {
     border: 1px solid var(--tooltip-border-color) !important;
     border-radius: var(--tooltip-border-radius) !important;
     box-shadow: var(--tooltip-box-shadow) !important;
-    padding: var(--uc-tooltip-inner-padding, 2px 6px 4px 6px) !important;
+    padding: var(--uc-tooltip-inner-padding, 4px 7px 6px 7px) !important;
     margin: 0 !important;
 }
 
@@ -47,7 +57,7 @@ tooltip .uc-tooltip-box {
 
 .places-tooltip-box,
 tooltip .uc-tooltip-box {
-    --uc-tooltip-inner-padding: 4px 6px 5px 6px !important;
+    --uc-tooltip-inner-padding: 5px 7px 6px 7px !important;
 }
 
 .places-tooltip description:not([value], [id]):empty,
@@ -179,10 +189,6 @@ as the mouse would then be on top of the tooltip popup not the main window. */
     display: none !important;
 }
 
-:is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support]) description {
-    border: none !important;
-}
-
 :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label[id]:not(:last-of-type) {
     font-weight: var(--uc-font-weight-bold, 600);
 }
@@ -191,18 +197,19 @@ as the mouse would then be on top of the tooltip popup not the main window. */
     color: var(--panel-shortcut-color) !important;
     box-shadow: none !important;
     background: none !important;
+    border: none !important;
     font-size: 0.9em;
 }
 
 :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
     .tooltip-label[id]:not(:last-of-type) {
-    padding: 4px 6px 21px 6px !important;
+    padding: 5.5px 8px 20px 8px !important;
 }
 
 :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
     .tooltip-label:last-of-type:not([id]) {
-    padding-block: 0 6px !important;
-    margin-block-start: -20px !important;
+    padding: 0 8px 8px 8px !important;
+    margin-block-start: -19.5px !important;
 }
 
 #tracking-protection-container tooltip {
@@ -264,14 +271,19 @@ progress[paused]:indeterminate::-moz-progress-bar {
 }
 
 #statuspanel {
-    margin-top: calc(0px - var(--menuitem-height)) !important;
+    /* temporarily disabled due to backdrop-filter being disabled. see https://bugzilla.mozilla.org/show_bug.cgi?id=1741779 */
+    /* color: var(--ui-text-80) !important;
     background-color: var(--acrylic-blue) !important;
     background-image: var(--acrylic-texture) !important;
-    backdrop-filter: var(--acrylic-blur) !important;
+    backdrop-filter: var(--acrylic-blur) !important; */
+
     border: 1px none var(--tooltip-border-color) !important;
     border-top-style: solid !important;
     box-shadow: var(--tooltip-box-shadow) !important;
-    color: var(--ui-text-80) !important;
+    margin-top: calc(0px - var(--menuitem-height)) !important;
+
+    background-color: var(--tooltip-bgcolor) !important;
+    color: var(--tooltip-color) !important;
 }
 
 :root[inDOMFullscreen] #statuspanel {
@@ -292,27 +304,27 @@ progress[paused]:indeterminate::-moz-progress-bar {
     color: inherit !important;
     box-shadow: none !important;
     opacity: revert !important;
-    padding: 0 8px !important;
-    margin: 0 0 1px !important;
+    padding: var(--uc-tooltip-inner-padding, 4px 7px 6px 7px) !important;
+    margin: 0 !important;
     border: none !important;
 }
 
 #statuspanel:not([mirror]):-moz-locale-dir(ltr),
 #statuspanel[mirror]:-moz-locale-dir(rtl) {
     border-top-left-radius: 0 !important;
-    border-top-right-radius: var(--general-button-border-radius) !important;
+    border-top-right-radius: var(--tooltip-border-radius) !important;
     border-right-style: solid !important;
 }
 
 #statuspanel:not([mirror]):-moz-locale-dir(rtl),
 #statuspanel[mirror]:-moz-locale-dir(ltr) {
-    border-top-left-radius: var(--general-button-border-radius) !important;
+    border-top-left-radius: var(--tooltip-border-radius) !important;
     border-top-right-radius: 0 !important;
     border-left-style: solid !important;
 }
 
 #statuspanel-inner {
-    height: var(--menuitem-height) !important;
+    height: revert !important;
     width: auto !important;
     min-width: unset !important;
     max-width: unset !important;
@@ -415,19 +427,15 @@ checkbox .checkbox-check {
     outline: unset !important;
 }
 
-:-moz-focusring,
-:focus,
-button::-moz-focus-inner,
-:-moz-focusring *,
-:focus *,
-:-moz-focusring:focus:not(:focus-visible),
-:-moz-focusring:focus:not(:focus-visible) > * {
+:focus:not(:focus-visible),
+:focus:not(:focus-visible) > * {
     outline: unset !important;
     outline-offset: unset !important;
     -moz-outline-radius: unset !important;
 }
 
 toolbarbutton:focus-visible,
+.popup-notification-button:focus-visible,
 .keyboard-focused-tab > .tab-stack > .tab-background,
 .tabbrowser-tab:focus:not([aria-activedescendant]) > .tab-stack > .tab-background,
 .identity-box-button:not(:active):focus-visible,
@@ -437,7 +445,10 @@ findbar toolbarbutton.tabbable:focus-visible,
 toolbarbutton.bookmark-item:not(.subviewbutton):focus-visible,
 toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-icon,
 toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-text,
-toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-badge-stack {
+toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-badge-stack,
+.urlbar-page-action:focus-visible,
+#appMenu-zoomReduce-button2:focus-visible > .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button2:focus-visible > .toolbarbutton-icon {
     color: inherit;
     outline: unset !important;
     -moz-outline-radius: unset !important;
@@ -475,22 +486,11 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
         .panel-header,
         .popup-notification-description,
         #sidebar-header,
-        .identity-popup-security-connection,
         #PanelUI-whatsNew,
         #protections-popup-message,
         #protections-popup-no-trackers-found-description {
             font-family: SF Pro Display, Segoe UI, sans-serif !important;
             font-kerning: normal !important;
-        }
-
-        :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
-            .tooltip-label[id]:not(:last-of-type) {
-            padding: 3.5px 6px 18px 6px !important;
-        }
-
-        :is(#back-button-tooltip, #forward-button-tooltip):not([shadow-support])
-            .tooltip-label:last-of-type:not([id]) {
-            margin-block-start: -17.5px !important;
         }
 
         #fxa-menu-header-description {
@@ -502,26 +502,20 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
             font-weight: var(--uc-font-weight-bold, 500) !important;
         }
 
-        tooltip {
-            --uc-tooltip-inner-padding: 3px 6px 4px 6px;
+        tooltip,
+        #statuspanel {
+            --uc-tooltip-inner-padding: 5px 8px 6px 8px;
         }
 
+        .places-tooltip-title,
         :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label[id] {
-            font-weight: var(--uc-font-weight-semibold, 400) !important;
+            font-family: SF Pro Display, Segoe UI, sans-serif !important;
+            font-kerning: normal !important;
+            font-weight: var(--uc-font-weight-semibold, 500) !important;
         }
 
+        .places-tooltip-uri,
         :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label:not([id]) {
-            font-weight: var(--uc-font-weight-thin, 300) !important;
-        }
-
-        .places-tooltip-title {
-            font-size: 12px !important;
-            font-weight: var(--uc-font-weight-semibold, 400) !important;
-            line-height: 13.5px !important;
-            max-height: 27px !important;
-        }
-
-        .places-tooltip-uri {
             font-weight: var(--uc-font-weight-thin, 300) !important;
         }
 
@@ -546,15 +540,15 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
         .urlbarView-row[dynamicType="onboardTabToSearch"]
             .urlbarView-title
             strong.urlbarView-dynamic-onboardTabToSearch-titleStrong {
-            font-family: SF Pro Text !important;
+            font-family: SF Pro Text, Segoe UI, sans-serif !important;
         }
 
         .popup-notification-body input[type="password"] {
-            font-family: SF Pro !important;
+            font-family: SF Pro, Segoe UI, sans-serif !important;
         }
 
         .popup-notification-description b {
-            font-family: SF Pro Display !important;
+            font-family: SF Pro Display, Segoe UI, sans-serif !important;
             font-kerning: auto !important;
         }
 

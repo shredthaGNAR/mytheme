@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1630223218267,
@@ -36,6 +36,14 @@
                 {
                     "date": 1634295703374,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n  *\n  * @format\n  */\n \n-/*Always show tab close button on hover and never otherwise *\n+/*Always show tab close button on hover and never otherwise */\n .tabbrowser-tab .tab-close-button {\n   display: none !important;\n }\n .tabbrowser-tab:not([pinned]):hover .tab-close-button {\n@@ -264,8 +264,8 @@\n /* Left to Right Alignment of tabs toolbar */\n \n /* #TabsToolbar {\n   direction: rtl;}\n-*/\n+\n #tabbrowser-tabs {\n   direction: ltr;\n-}\n+}*/\n"
+                },
+                {
+                    "date": 1638654984448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,33 +36,37 @@\n   -moz-appearance: var(--bf-moz-appearance) !important;\n }\n /* \tSet minimum height for tab bar */\n #tabbrowser-tabs {\n-  --tab-min-height: 32px !important;\n+  --tab-min-height: 33px !important;\n   /*\tmargin: 6px 5px 6px 5px !important;*/\n }\n /* Compact mode */\n :root[uidensity=\"compact\"] #tabbrowser-tabs {\n   margin: 0 !important;\n }\n /* Hide solo tab */\n-/*\n-#tabbrowser-tabs tab[first-visible-tab=\"true\"][last-visible-tab=\"true\"]:only-of-type {\n+\n+#tabbrowser-tabs\n+  tab[first-visible-tab=\"true\"][last-visible-tab=\"true\"]:only-of-type {\n   visibility: collapse;\n-}*/\n-/* Hide New Tab Button immediately next to solo tab\n-#tabbrowser-tabs tab[first-visible-tab=\"true\"][last-visible-tab=\"true\"]:only-of-type + toolbarbutton {\n-\tvisibility: collapse;\n }\n-\t/* Stretch Tabs*/\n+/* Hide New Tab Button immediately next to solo tab*/\n+#tabbrowser-tabs\n+  tab[first-visible-tab=\"true\"][last-visible-tab=\"true\"]:only-of-type\n+  + toolbarbutton {\n+  visibility: collapse;\n+}\n+/* Stretch Tabs*/\n+\n+.tabbrowser-tab[fadein]:not([pinned]) {\n+  max-width: none !important;\n+}\n /*\n-.tabbrowser-tab[fadein]:not([pinned]) {\n-\tmax-width: none !important;}\n-\n .tab-background {\n   border: none !important;\n }\n-\n+*/\n .tab-background:-moz-lwtheme-darktext,\n .tab-background:-moz-lwtheme-brighttext {\n   background: transparent !important;\n   -moz-appearance: var(--bf-moz-appearance) !important;\n@@ -97,13 +101,13 @@\n .tabbrowser-tab::after,\n .tabbrowser-tab::before {\n \tborder-width: 1px !important;\n }\n-\n+*/\n .tabbrowser-arrowscrollbox {\n   margin-inline-start: 4px !important;\n   margin-inline-end: 0 !important;\n-}*/\n+}\n \n .tab-text {\n   font-weight: var(--bf-tab-font-weight) !important;\n   font-size: var(--bf-tab-font-size) !important;\n@@ -187,9 +191,9 @@\n /* \tHide the blue line on top of tab */\n .tab-line {\n   display: none !important;\n }\n-\n+/*\n .tab-bottom-line {\n }\n \n .tabbrowser-tab {\n@@ -216,9 +220,9 @@\n \t\t\t90deg,\n \t\t\t#9400ff,\n \t\t\t#ba00e5,\n \t\t\t#df06b9,\n-\t\t\t#e62da7,    \n+\t\t\t#e62da7,\n \t\t\t#f13b95,\n \t\t\t#f64d86,\n \t\t\t#f85f7a,\n \t\t\t#fc7169,\n@@ -247,13 +251,13 @@\n /* Center pinned tab stack(Contains icon) if #tabbrowser-tabs[positionpinnedtabs=true]\n #tabbrowser-tabs[positionpinnedtabs=true] .tabbrowser-tab[pinned=true] .tab-stack {\n \tposition: relative !important;\n \ttop: 50% !important;\n-\ttransform: translateY(-50%) !important;}*/\n+\ttransform: translateY(-50%) !important;}*\n \n .private-browsing-indicator {\n-  display: block !important;\n-  background: transparent !important;\n+\tdisplay: block !important;\n+\tbackground: transparent !important;\n }\n \n /* Remove hover effects on tab bar buttons\n #TabsToolbar {\n"
+                },
+                {
+                    "date": 1638656692212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -251,13 +251,13 @@\n /* Center pinned tab stack(Contains icon) if #tabbrowser-tabs[positionpinnedtabs=true]\n #tabbrowser-tabs[positionpinnedtabs=true] .tabbrowser-tab[pinned=true] .tab-stack {\n \tposition: relative !important;\n \ttop: 50% !important;\n-\ttransform: translateY(-50%) !important;}*\n+\ttransform: translateY(-50%) !important;}*/\n \n .private-browsing-indicator {\n-\tdisplay: block !important;\n-\tbackground: transparent !important;\n+  display: block !important;\n+  background: transparent !important;\n }\n \n /* Remove hover effects on tab bar buttons\n #TabsToolbar {\n"
                 }
             ],
             "date": 1630223218267,
