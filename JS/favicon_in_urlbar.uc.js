@@ -29,10 +29,10 @@ var FaviconInUrlbar = {
 	  
 	favimginurlbar.style.width = "16px";
 	favimginurlbar.style.height = "16px";
-	favimginurlbar.style.marginLeft = "3px";
-	favimginurlbar.style.marginRight = "3px";
-	favimginurlbar.style.marginTop = "3px";
-	favimginurlbar.style.marginBottom = "3px";
+	favimginurlbar.style.marginLeft = "4px";
+	favimginurlbar.style.marginRight = "4px";
+	favimginurlbar.style.marginTop = "4px";
+	favimginurlbar.style.marginBottom = "4px";
 	
 	document.getElementById('identity-box').insertBefore(favimginurlbar,document.getElementById('identity-box').firstChild);
 

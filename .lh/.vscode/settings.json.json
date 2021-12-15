@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 31,
+            "activePatchIndex": 33,
             "patches": [
                 {
                     "date": 1638259850756,
@@ -132,6 +132,14 @@
                 {
                     "date": 1638260365486,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\n     \"editor.fontFamily\": \"Jetbrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": false,\n-    \"editor.definitionLinkOpensInPeek\": true\n+    \"editor.definitionLinkOpensInPeek\": true,\n+    \"editor.bracketPairColorization.enabled\": true\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639470035148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n-    \"editor.fontFamily\": \"Jetbrains Mono\",\n+    \"editor.fontFamily\": \"Operator Mono, Consolas, 'Courier New', monospace\",\n     \"editor.fontSize\": 18,\n-    \"workbench.editor.enablePreview\": false,\n+    \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639470059599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n     \"editor.fontFamily\": \"Operator Mono, Consolas, 'Courier New', monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n-    \"editor.bracketPairColorization.enabled\": true\n+    \"editor.bracketPairColorization.enabled\": true,\n+    \"back-n-forth.withLastEditLocation\": true\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1638259850756,

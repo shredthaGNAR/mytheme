@@ -1,0 +1,18 @@
+{
+    "sourceFile": "parts/compact-bookmarks.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1639486610486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1639486610486,
+            "name": "Commit-0",
+            "content": "/**\n * /* -----------------------------\n *\n * @format\n */\n\n/* Firefox Compact Bookmarks Bar */\n/* ----------------------------- */\n\n/* remove bookmark folder drop marker *\n.toolbarbutton-menu-dropmarker {\n\tdisplay: none !important;\n}\n\n/* Add custom padding size for items below */\ntoolbarbutton.bookmark-item[image]:not([container]) {\n}\n\n/* No Favicon Available - Don't display default icon /*!*/\ntoolbarbutton.bookmark-item:not([container]):not([image]) image {\n  display: none !important;\n}\n\n/* Show Favicon Bookmarks */\n.bookmark-item > .toolbarbutton-icon {\n  display: -moz-box !important;\n  background-position: 0px 1px !important;\n  padding-right: 0px !important;\n  margin: 0 !important;\n}\n\n/* Hide label text for items with favicon */\n#personal-bookmarks toolbarbutton[image] label {\n  display: none !important;\n}\n\n/* Hide folder icon for folders */\n.bookmark-item[container] > .toolbarbutton-icon {\n  margin-right: 5px !important;\n  display: none !important;\n}\n"
+        }
+    ]
+}

@@ -1,7 +1,8 @@
 {
     "editor.fontFamily": "Operator Mono, Consolas, 'Courier New', monospace",
     "editor.fontSize": 18,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "editor.definitionLinkOpensInPeek": true,
-    "editor.bracketPairColorization.enabled": true
+    "editor.bracketPairColorization.enabled": true,
+    "back-n-forth.withLastEditLocation": true
 }
