@@ -27,8 +27,8 @@ var FaviconInUrlbar = {
 	if(favicon_click_opens_page_info_window)
 	  favimginurlbar.setAttribute("onclick","gIdentityHandler.handleMoreInfoClick(event);");	  
 	  
-	favimginurlbar.style.width = "16px";
-	favimginurlbar.style.height = "16px";
+	favimginurlbar.style.width = "14px";
+	favimginurlbar.style.height = "14px";
 	favimginurlbar.style.marginLeft = "4px";
 	favimginurlbar.style.marginRight = "4px";
 	favimginurlbar.style.marginTop = "4px";
