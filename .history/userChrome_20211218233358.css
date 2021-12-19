@@ -7188,21 +7188,21 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
   background: var(--identity-tab-color) !important;
 }
 
-/* Adjust margin on blue tab line for squared background tabs *
+/* Adjust margin on blue tab line for squared background tabs */
 .tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
   margin: 0px 0 0 !important;
 }
-/*	Faviicon when mouse over inactive tab grayscale(15%) Pinned *
+/*	Faviicon when mouse over inactive tab grayscale(15%) Pinned */
 .tabbrowser-tab:hover .tab-icon-image[pinned] {
   filter: grayscale(15%) !important;
 }
 
-/* Favicon icon on pinned inactive tab grayscale(35%) *
+/* Favicon icon on pinned inactive tab grayscale(35%) */
 .tabbrowser-tab .tab-icon-image[pinned] {
   filter: grayscale(0%) !important;
 }
 
-/* Favicon icon when mouse over over inactive tab grayscale(15%) *
+/* Favicon icon when mouse over over inactive tab grayscale(15%) */
 .tabbrowser-tab:hover .tab-icon-image:not([selected="true"]):not([pinned]) {
   filter: grayscale(15%) !important;
 }
@@ -7211,7 +7211,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 .tabbrowser-tab .tab-icon-image:not([selected="true"]):not([pinned]) {
   filter: grayscale(100%) !important;
 }
-/*** Container color bar visibility */
+/*** Container color bar visibility *
 .tabbrowser-tab[usercontextid]
   > .tab-stack
   > .tab-background
@@ -7353,7 +7353,7 @@ See the above repository for updates as well as full license text. */
 /** Gradient line ***/
 
 .tab-content::after {
-  width: calc(100%-10px) !important;
+  width: -moz-available !important;
   margin-block: 0px !important;
   background-image: linear-gradient(
     to right,

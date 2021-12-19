@@ -530,7 +530,7 @@ slider,
   --lwt-background-alignment: right top, left top, right top !important;
   --lwt-background-tiling: no-repeat, no-repeat, repeat-x !important;
   --uc-tab-line-color: transparent !important;
-  --multiselected-color: #ff4aa2 !important; /*linear
+  --multiselected-color: #ff4aa2 !important;/*linear
     gradient(
       to right,
       #9059ff3a,
@@ -539,7 +539,7 @@ slider,
       #ff4aa2 80%,
       #9059ff3a
     ) !important;*/
-  --tab-line-color: transparent; /*linear
+  --tab-line-color: transparent/*linear
     gradient(
       to right,
       #9059ff3a,
@@ -7188,21 +7188,21 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
   background: var(--identity-tab-color) !important;
 }
 
-/* Adjust margin on blue tab line for squared background tabs *
+/* Adjust margin on blue tab line for squared background tabs */
 .tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
   margin: 0px 0 0 !important;
 }
-/*	Faviicon when mouse over inactive tab grayscale(15%) Pinned *
+/*	Faviicon when mouse over inactive tab grayscale(15%) Pinned */
 .tabbrowser-tab:hover .tab-icon-image[pinned] {
   filter: grayscale(15%) !important;
 }
 
-/* Favicon icon on pinned inactive tab grayscale(35%) *
+/* Favicon icon on pinned inactive tab grayscale(35%) */
 .tabbrowser-tab .tab-icon-image[pinned] {
   filter: grayscale(0%) !important;
 }
 
-/* Favicon icon when mouse over over inactive tab grayscale(15%) *
+/* Favicon icon when mouse over over inactive tab grayscale(15%) */
 .tabbrowser-tab:hover .tab-icon-image:not([selected="true"]):not([pinned]) {
   filter: grayscale(15%) !important;
 }
@@ -7211,7 +7211,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 .tabbrowser-tab .tab-icon-image:not([selected="true"]):not([pinned]) {
   filter: grayscale(100%) !important;
 }
-/*** Container color bar visibility */
+/*** Container color bar visibility *
 .tabbrowser-tab[usercontextid]
   > .tab-stack
   > .tab-background
@@ -7353,7 +7353,7 @@ See the above repository for updates as well as full license text. */
 /** Gradient line ***/
 
 .tab-content::after {
-  width: calc(100%-10px) !important;
+  width: -moz-available !important;
   margin-block: 0px !important;
   background-image: linear-gradient(
     to right,
@@ -7472,7 +7472,7 @@ See the above repository for updates as well as full license text. */
 /* controls the appearance of individual tabs and elements inside a tab. */
 
 #TabsToolbar .tabbrowser-tab {
-  background: var(--lwt-accent-color) !important;
+  background-color: var(--lwt-accent-color) !important;
   padding: 0 !important;
 }
 .tab-background {
@@ -7784,7 +7784,7 @@ they must have a 1px tall stripe at the bottom, the color of the bottom line (sh
 #tabbrowser-tabs[closebuttons="activetab"]
   .tab-label-container[textoverflow]:not([labeldirection]):-moz-locale-dir(rtl):not([pinned]) {
   mask-image: linear-gradient(to left, black 70%, transparent) !important;
-} /*
+}/*
 .tab-content[pinned] {
   -moz-box-pack: center !important;
 }

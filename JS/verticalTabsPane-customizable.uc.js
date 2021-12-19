@@ -40,7 +40,7 @@
         },
         // settings for the hotkey
         hotkey: {
-            enabled: true, // set to false if you don't want any hotkey
+            enabled: false, // set to false if you don't want any hotkey
             modifiers: "accel alt", // valid modifiers are "alt", "shift", "ctrl", "meta" and "accel". accel is equal to ctrl on windows and linux, but meta (cmd ⌘) on macOS. meta is the windows key on windows. it's variable on linux.
             key: "V", // the actual key. valid keys are letters, the hyphen key - and F1-F12. digits and F13-F24 are not supported by firefox.
         },

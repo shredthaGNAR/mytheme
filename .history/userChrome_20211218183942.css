@@ -530,7 +530,7 @@ slider,
   --lwt-background-alignment: right top, left top, right top !important;
   --lwt-background-tiling: no-repeat, no-repeat, repeat-x !important;
   --uc-tab-line-color: transparent !important;
-  --multiselected-color: #ff4aa2 !important; /*linear
+  --multiselected-color: linear
     gradient(
       to right,
       #9059ff3a,
@@ -538,8 +538,8 @@ slider,
       #ffbd4fee 60%,
       #ff4aa2 80%,
       #9059ff3a
-    ) !important;*/
-  --tab-line-color: transparent; /*linear
+    ) !important;
+  --tab-line-color: linear
     gradient(
       to right,
       #9059ff3a,
@@ -547,7 +547,7 @@ slider,
       #ffbd4fee 60%,
       #ff4aa2 80%,
       #9059ff3a
-    ) !important;*/
+    ) !important;
 }
 
 /* Rainbow line in the main menus */
@@ -5685,15 +5685,14 @@ so we make the mask size constant. */
   animation: tab-onhover-line-anim 160ms;
 }
 
+/*
 :root[lwtheme-image] #navigator-toolbox:-moz-lwtheme {
   background-image: var(
     --lwt-additional-images
-  ) !important; /* Original: var(--lwt-header-image), var(--lwt-additional-images); */
+  ) !important; /* Original: var(--lwt-header-image), var(--lwt-additional-images); *
   background-repeat: var(--lwt-background-tiling) !important;
   background-position: var(--lwt-background-alignment) !important;
-  background-color: var(
-    --lwt-accent-color
-  ) !important; /* Original:  var(--lwt-accent-color) */
+  background-color: unset !important; /* Original:  var(--lwt-accent-color) *
 }
 /* Navbar Border */
 #navigator-toolbox:-moz-lwtheme {
@@ -6732,7 +6731,7 @@ otherwise they won't overlap with other tabs, they'll just push tabs 10px away f
   pointer-events: none;
   width: 5px !important;
   height: 5px !important;
-  z-index: 2 !important;
+  z-index: 2!important;
 }
 
 .tabbrowser-tab .tab-stack::before {
@@ -7188,21 +7187,21 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
   background: var(--identity-tab-color) !important;
 }
 
-/* Adjust margin on blue tab line for squared background tabs *
+/* Adjust margin on blue tab line for squared background tabs */
 .tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
   margin: 0px 0 0 !important;
 }
-/*	Faviicon when mouse over inactive tab grayscale(15%) Pinned *
+/*	Faviicon when mouse over inactive tab grayscale(15%) Pinned */
 .tabbrowser-tab:hover .tab-icon-image[pinned] {
   filter: grayscale(15%) !important;
 }
 
-/* Favicon icon on pinned inactive tab grayscale(35%) *
+/* Favicon icon on pinned inactive tab grayscale(35%) */
 .tabbrowser-tab .tab-icon-image[pinned] {
   filter: grayscale(0%) !important;
 }
 
-/* Favicon icon when mouse over over inactive tab grayscale(15%) *
+/* Favicon icon when mouse over over inactive tab grayscale(15%) */
 .tabbrowser-tab:hover .tab-icon-image:not([selected="true"]):not([pinned]) {
   filter: grayscale(15%) !important;
 }
@@ -7211,7 +7210,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 .tabbrowser-tab .tab-icon-image:not([selected="true"]):not([pinned]) {
   filter: grayscale(100%) !important;
 }
-/*** Container color bar visibility */
+/*** Container color bar visibility *
 .tabbrowser-tab[usercontextid]
   > .tab-stack
   > .tab-background
@@ -7353,7 +7352,7 @@ See the above repository for updates as well as full license text. */
 /** Gradient line ***/
 
 .tab-content::after {
-  width: calc(100%-10px) !important;
+  width: -moz-available !important;
   margin-block: 0px !important;
   background-image: linear-gradient(
     to right,
@@ -7472,7 +7471,7 @@ See the above repository for updates as well as full license text. */
 /* controls the appearance of individual tabs and elements inside a tab. */
 
 #TabsToolbar .tabbrowser-tab {
-  background: var(--lwt-accent-color) !important;
+  background-color: var(--lwt-accent-color) !important;
   padding: 0 !important;
 }
 .tab-background {
@@ -7522,7 +7521,6 @@ See the above repository for updates as well as full license text. */
   opacity: 1 !important;
   transition: none !important;
 }
-/***
 .tabbrowser-tab:not([usercontextid], [multiselected]) .tab-context-line {
   display: none !important;
 }
@@ -7553,7 +7551,7 @@ See the above repository for updates as well as full license text. */
   :is(.tab-stack, .tab-background, .tab-content, .tab-loading-burst) {
   border-top-right-radius: 5px !important;
   border-top-left-radius: 5px !important;
-  border-bottom-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
   border-bottom-left-radius: 5px !important;
   overflow: hidden !important;
 }
@@ -7620,7 +7618,7 @@ this CSS is complicated because the outside corner needs to take on the color of
 but it's not part of the tab background so it doesn't do so automatically. */
 
 /* overflow needs to be visible since the corners need to be outside the bounding box of the tab,
-otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar. *
+otherwise they won't overlap with other tabs, they'll just push tabs 10px away from each other, and from the edge of the tab bar. */
 #TabsToolbar .tabbrowser-tab,
 #TabsToolbar .tabbrowser-tab .tab-stack {
   overflow: visible !important;
@@ -7719,7 +7717,7 @@ but unfortunately it won't have rounded outside corners unless the tab strip is 
 /* how the background color is applied. it's not as convoluted as it looks,
 it needs to be a gradient image because the bottom line .tab-context-line overlaps with the outside corners.
 we want the corners to take on the color of the bottom line, but the corners are taller than the bottom line, so they can't be fully the same color as the line.
-they must have a 1px tall stripe at the bottom, the color of the bottom line (should it exist), with the remaining 4px being the current bg color of the tab. *
+they must have a 1px tall stripe at the bottom, the color of the bottom line (should it exist), with the remaining 4px being the current bg color of the tab. */
 .tabbrowser-tab:not([selected], [multiselected]) .tab-stack::after,
 .tabbrowser-tab:not([selected], [multiselected]) .tab-stack::before {
   background-image: linear-gradient(
@@ -7764,7 +7762,7 @@ they must have a 1px tall stripe at the bottom, the color of the bottom line (sh
     var(--multiselected-color) 1px,
     var(--tab-bg-current) 1px
   ) !important;
-}*/
+}
 .tab-background {
   border: none !important;
   border-radius: 0px !important;
@@ -7784,7 +7782,7 @@ they must have a 1px tall stripe at the bottom, the color of the bottom line (sh
 #tabbrowser-tabs[closebuttons="activetab"]
   .tab-label-container[textoverflow]:not([labeldirection]):-moz-locale-dir(rtl):not([pinned]) {
   mask-image: linear-gradient(to left, black 70%, transparent) !important;
-} /*
+}
 .tab-content[pinned] {
   -moz-box-pack: center !important;
 }
@@ -7823,7 +7821,7 @@ they must have a 1px tall stripe at the bottom, the color of the bottom line (sh
   transition-timing-function: var(--ease-out) !important;
 }
 
-*/
+
 #main-window[lwthemetextcolor="bright"]
   #tabbrowser-tabs:not([movingtab])
   > .tabbrowser-arrowscrollbox

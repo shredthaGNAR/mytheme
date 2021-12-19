@@ -10,7 +10,7 @@
 _ucUtils.registerHotkey(
     {
         id: "key_togglePinTab",
-        modifiers: "accel alt", // one or more of: alt, shift, ctrl, meta, accel. separated by space, enclosed by quotes.
+        modifiers: "accel shift", // one or more of: alt, shift, ctrl, meta, accel. separated by space, enclosed by quotes.
         key: "P", // one of: A-Z, - (hyphen), or F1-F12. enclosed by quotes.
     },
     (win, key) => {
