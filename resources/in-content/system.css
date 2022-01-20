@@ -6,24 +6,17 @@
 
 /* handles system pages and injects some important global variables into extension pages */
 
-@import url(library.css);
-
 @-moz-document regexp("view-source:.*") {
-    @font-face {
-        font-family: "Overpass Mono";
-        font-style: normal;
-        font-weight: 100;
-        src: local("Overpass Mono"), local("Overpass Mono Light"), local("OverpassMono-Light");
-    }
-
     :root {
-        font-family: Overpass Mono, -moz-fixed;
+        font-family: Fira Code UC, Fira Code, SF Mono, -moz-fixed, monospace;
+        font-weight: 300;
     }
 
     xmp,
     pre,
     plaintext {
-        font-family: Overpass Mono, -moz-fixed;
+        font-family: Fira Code UC, Fira Code, SF Mono, -moz-fixed, monospace;
+        font-weight: 300;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -67,25 +60,21 @@
             color: darkgreen !important;
         }
 
-        .highlight .start-tag {
-            color: tan !important;
-        }
-
-        .highlight .start-tag::selection {
-            color: darkgoldenrod !important;
-        }
-
-        .highlight .end-tag {
-            color: indianred !important;
+        .highlight :is(.start-tag, .end-tag) {
+            color: #cd5c5c !important;
         }
 
         .highlight .end-tag::selection {
-            color: sienna !important;
+            color: #973737 !important;
         }
 
         .highlight .error {
             color: white !important;
             background-color: rgba(178, 34, 34, 0.5) !important;
+        }
+
+        .highlight .comment {
+            color: gray !important;
         }
 
         .highlight .error::selection,
@@ -95,11 +84,15 @@
         }
 
         .highlight .entity {
-            color: mediumorchid !important;
+            color: #f18a65 !important;
         }
 
         .highlight .entity::selection {
-            color: darkorchid !important;
+            color: #a55437 !important;
+        }
+
+        .highlight .pi::selection {
+            color: #6b228f !important;
         }
     }
 }
@@ -121,7 +114,8 @@
     html:not([role="dialog"]) *,
     html:not([role="dialog"]) body.activity-stream,
     window:not([chromehidden]),
-    window:not([chromehidden]) > dialog {
+    window:not([chromehidden]) > dialog,
+    #downloadsListBox richlistitem {
         --in-content-page-background: var(--content-principal-page-background) !important;
         --in-content-page-color: var(--content-principal-page-color) !important;
         --in-content-box-background: var(--content-principal-box-background) !important;
@@ -137,12 +131,7 @@
         ) !important;
         --in-content-button-background-solid: var(--content-principal-button-background-solid);
         --in-content-item-selected: var(--purple-40) !important;
-        --in-content-border-highlight: var(--purple-40) !important;
         --in-content-border-hover: var(--content-principal-border-hover) !important;
-        --in-content-border-focus: var(--purple-40) !important;
-        --in-content-border-active: var(--purple-40) !important;
-        --in-content-border-active-shadow: var(--purple-40-a30) !important;
-        --in-content-category-outline-focus: 1px solid transparent !important;
         --in-content-link-color: var(--purple-30) !important;
         --in-content-link-color-hover: var(--purple-25) !important;
         --in-content-link-color-active: var(--purple-20) !important;
@@ -155,8 +144,13 @@
         --in-content-primary-button-text-color: var(--light-on-dark-button-text-color) !important;
         --in-content-button-border-radius: var(--general-button-border-radius) !important;
         --in-content-accent-color: var(--purple-35) !important;
+        --in-content-item-hover: color-mix(in srgb, var(--purple-30) 45%, transparent) !important;
+        --in-content-item-hover-text: var(--light-on-dark-button-text-color) !important;
         --in-content-table-background: var(--in-content-box-background) !important;
         --in-content-table-header-background: var(--purple-40-a30) !important;
+        --in-content-box-info-background: var(--in-content-button-background-solid) !important;
+        --focus-outline-offset: 2px !important;
+        --default-focusring: var(--default-focusring-width) solid var(--in-parent-border-focus) !important;
         --newtab-background-color: var(--in-content-page-background) !important;
         --newtab-text-primary-color: var(--in-content-page-color) !important;
         --lwt-sidebar-background-color: var(--in-content-box-background) !important;
@@ -173,11 +167,11 @@
         ) !important;
         --newtab-seperator-line-color: var(--in-content-button-background-hover) !important;
         --newtab-modal-color: var(--in-content-box-background) !important;
-        --newtab-focus-outline: var(--in-content-border-active-shadow) !important;
-        --newtab-focus-border: var(--in-content-border-focus) !important;
+        --newtab-focus-outline: var(--purple-40-a30) !important;
+        --newtab-focus-border: var(--purple-40) !important;
         --newtab-focus-border-selected: var(--purple-30) !important;
         --newtab-textbox-background-color: var(--in-content-button-background) !important;
-        --newtab-textbox-focus-color: var(--in-content-border-focus) !important;
+        --newtab-textbox-focus-color: var(--purple-40) !important;
         --newtab-primary-action-background: var(
             --in-content-primary-button-background-hover
         ) !important;
@@ -229,6 +223,29 @@
         --newtab-search-text-color: var(--ui-text-70) !important;
         --newtab-search-first-shadow: rgba(21, 20, 26, 0.5);
         --newtab-search-second-shadow: rgba(21, 20, 26, 0.75);
+    }
+
+    html:not([role="dialog"]) richlistitem[selected] * {
+        --in-content-button-background: inherit !important;
+        --in-content-button-background-hover: inherit !important;
+        --in-content-button-background-active: inherit !important;
+        --in-content-button-text-color: inherit !important;
+        --in-content-button-text-color-hover: inherit !important;
+        --in-content-button-text-color-active: inherit !important;
+        --in-content-focus-outline-color: inherit !important;
+        --in-content-button-background: var(--purple-50) !important;
+        --in-content-button-background-hover: var(--purple-55) !important;
+        --in-content-button-background-active: var(--purple-60) !important;
+        --in-content-button-text-color: var(--in-content-item-selected-text) !important;
+        --in-content-button-text-color-hover: var(--in-content-item-selected-text) !important;
+        --in-content-button-text-color-active: var(--in-content-button-text-color-hover) !important;
+        --in-content-focus-outline-color: var(--in-content-item-selected-text) !important;
+    }
+
+    richlistitem menulist {
+        border-radius: 0 !important;
+        outline-offset: var(--focus-outline-offset, 2px) !important;
+        outline: none !important;
     }
 
     body:not(.inline-onboarding) .fixed-search .search-wrapper {
@@ -288,7 +305,7 @@
     }
 
     #category-experimental > .category-icon {
-        list-style-image: url(chrome://userchrome/content/material/potion-large.svg) !important;
+        list-style-image: url(chrome://userchrome/content/material/test-tube-45-large.svg) !important;
     }
 
     .top-site-outer {
@@ -439,6 +456,23 @@
     .home-section .section .sponsored-checkbox:checked:active,
     .home-section .section input:checked + .slider:active {
         background-color: var(--newtab-primary-action-background-active) !important;
+    }
+
+    .info-box-container > :is(.sync-engines-list, label) {
+        padding-inline: 4px;
+    }
+
+    listheader {
+        padding-bottom: revert !important;
+    }
+
+    treechildren::-moz-tree-row(current, focus) {
+        outline: revert !important;
+        outline-offset: revert !important;
+    }
+
+    :is(listheader, treecols) > treecol {
+        box-shadow: none !important;
     }
 
     #engineList treechildren::-moz-tree-image {
@@ -621,7 +655,7 @@
 
 @-moz-document url-prefix("about:reader") {
     body.dark {
-        --main-background: var(--in-content-bg-dark) !important;
+        --main-background: var(--in-content-page-background) !important;
         --tooltip-background: color-mix(in srgb, black 40%, var(--in-content-bg-dark)) !important;
         --active-color: var(--purple-35) !important;
         --selected-background: var(--attention-color) !important;
@@ -652,9 +686,22 @@
     }
 
     .toolbar {
+        box-shadow: 0 0 12px hsla(0, 0%, 0%, 0.4) !important;
+    }
+
+    body.dark .toolbar {
         border-color: var(--in-content-box-border-color) !important;
         background-color: var(--in-content-box-background-dim) !important;
-        box-shadow: 0 0 12px hsla(0, 0%, 0%, 0.4) !important;
+    }
+
+    body > .container > .header > .domain {
+        border: none !important;
+    }
+
+    body.dark hr,
+    body.dark > .container > .header > .domain {
+        border-color: var(--in-content-button-background-active) !important;
+        border-block-width: 0 1px !important;
     }
 
     .toolbar-container.scrolled .toolbar:not(:hover, :focus-within) {
@@ -702,15 +749,15 @@
 }
 
 /* firefox screenshots addon overlay */
-@-moz-document url("moz-extension://bc8fcf05-0a6f-40d5-a068-b452be394b53/blank.html")
+@-moz-document url("^moz-extension://.*/blank.html.*")
 {
-    .all-buttons-container {
+    :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container {
         background-color: var(--content-principal-box-background) !important;
         height: 88px !important;
         box-shadow: 0 0 0 1px rgba(12, 12, 13, 0.1), 0 0 8px rgba(12, 12, 13, 0.1) !important;
     }
 
-    .all-buttons-container button {
+    :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container button {
         color: var(--content-principal-page-color) !important;
         background-color: transparent !important;
         border-radius: var(--general-button-border-radius) !important;
@@ -721,17 +768,17 @@
         -moz-context-properties: fill, stroke !important;
     }
 
-    .all-buttons-container button:hover {
+    :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container button:hover {
         background-color: var(--content-principal-button-background) !important;
         border: 1px solid var(--content-principal-button-background) !important;
     }
 
-    .hover-highlight {
+    :root[uc-extension-id="screenshots@mozilla.org"] .hover-highlight {
         background: rgba(255, 255, 255, 0.1) !important;
         z-index: 2147483646 !important;
     }
 
-    .pixel-dimensions {
+    :root[uc-extension-id="screenshots@mozilla.org"] .pixel-dimensions {
         margin-block-start: -5px;
         margin-inline-start: -5px;
         z-index: 2147483647 !important;
@@ -740,7 +787,7 @@
     }
 
     @supports -moz-bool-pref("userChrome.css.mac-ui-fonts") {
-        .pixel-dimensions {
+        :root[uc-extension-id="screenshots@mozilla.org"] .pixel-dimensions {
             font-weight: var(--uc-font-weight-bold) !important;
             font-family: -apple-system, BlinkMacSystemFont, SF Pro, "segoe ui", "helvetica neue",
                 helvetica, ubuntu, roboto, noto, arial, sans-serif !important;

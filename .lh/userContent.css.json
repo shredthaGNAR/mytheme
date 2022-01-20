@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 47,
+            "activePatchIndex": 48,
             "patches": [
                 {
                     "date": 1629755073787,
@@ -196,6 +196,10 @@
                 {
                     "date": 1639464585289,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1090,24 +1090,15 @@\n \n   /* Topsite Tiles */\n   .outer-wrapper.newtab-experience .top-site-outer .tile {\n     border-radius: 4px !important;\n-    box-shadow: none !important;\n   }\n \n   .outer-wrapper.newtab-experience .top-site-outer {\n     border-radius: 4px !important;\n   }\n \n-  /* Hide pin icon on topsite tiles */\n-  .top-site-outer .icon-pin-small {\n-    display: none !important;\n-  }\n-  .top-site-outer .title:not(.pinned) {\n-    opacity: 0.6 !important;\n-  }\n-\n-  /* Topsite Tile Size Adjustments */\n+  /* Topsite Tile Size Adjustments *\n   .outer-wrapper.newtab-experience .top-site-outer .tile {\n     height: 44px !important;\n     width: 44px !important;\n   }\n@@ -1140,18 +1131,14 @@\n     inset-inline-end: -6px !important;\n     top: -4px !important;\n   }\n \n-  .outer-wrapper.newtab-experience .top-site-outer .context-menu-button:hover {\n-    background-color: var(--newtab-topsites-context-menu-hover) !important;\n-  }\n-\n   .outer-wrapper.newtab-experience\n     .top-site-outer\n     .context-menu-button:is(:active, :focus) {\n     fill: var(--newtab-icon-primary-color) !important;\n   }\n-\n+*/\n   .top-site-outer .title:not(.sponsored) .sponsored-label {\n     display: none !important;\n   }\n \n@@ -1255,13 +1242,8 @@\n \t\theight: 100% !important;\n \t\twidth: 100% !important;\n \t}\n }\n-/*colores de los sitios anclados*/\n-.top-site-outer .tile {\n-  background-color: var(--newtab-background-color-secondary) !important;\n-  box-shadow: 0px 0px 1px #00000090 !important;\n-}\n \n /*colores al pasar el mouse sobre los sitios anclados en :hover*/\n .top-site-outer:is(.active, :focus, :hover) .tile {\n   box-shadow: -1px 0 var(--newtab-background-color),\n@@ -1307,21 +1289,4 @@\n .customize-menu.customize-animate-enter-done,\n .customize-menu.customize-animate-enter-active {\n   box-shadow: 0px 0px 20px rgb(1 1 1 / 16%), 0px 0px 10px rgb(0 0 0 / 93%) !important;\n }\n-/*colores de los sitios anclados*/\n-.top-site-outer .tile {\n-  background-color: var(--newtab-background-color-secondary) !important;\n-  box-shadow: 0px 0px 1px #00000090 !important;\n-}\n-\n-/*colores al pasar el mouse sobre los sitios anclados en :hover*/\n-.top-site-outer:is(.active, :focus, :hover) .tile {\n-  box-shadow: -1px 0 var(--newtab-background-color),\n-    1px 0 var(--newtab-background-color), 0 -1px var(--newtab-background-color),\n-    0 1px var(--newtab-background-color) !important;\n-  background-color: color-mix(\n-    in srgb,\n-    var(--newtab-background-color, Field) 65%,\n-    transparent\n-  ) !important;\n-}\n"
+                },
+                {
+                    "date": 1642620018547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n @import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/site-github.css);\n @import url(resources/in-content/site-reddit.css);\n @import url(resources/in-content/site-subscene.css);\n+@import url(resources/in-content/library.css);\n+@import url(resources/in-content/downloads.css);\n @import url(resources/in-content/misc-content.css);\n @import url(resources/in-content/custom-content.css);\n @import url(addons.css);\n \n"
                 }
             ],
             "date": 1629755073787,

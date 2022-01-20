@@ -89,7 +89,10 @@ this sheet controls their appearance as well. */
 }
 
 #main-menubar > menu > menupopup {
-    margin-block-start: -5px !important;
+    margin-block: calc(
+        0px - var(--menupopup-inner-box-margin) - ((var(--tab-min-height) - 16px - 4px - 5px) / 2)
+    ) !important;
+    margin-inline: calc(0px - var(--menupopup-inner-box-margin) + 2px) !important;
 }
 
 #toolbar-menubar #main-menubar > menu {
@@ -101,7 +104,7 @@ this sheet controls their appearance as well. */
 #toolbar-menubar #main-menubar > menu > label {
     -moz-box-flex: 1000 !important;
     margin: 0 !important;
-    padding: 4px 6px 5px 6px !important;
+    padding: 4px 8px 5px 8px !important;
     border-radius: var(--toolbarbutton-border-radius) !important;
 }
 
@@ -241,8 +244,9 @@ this sheet controls their appearance as well. */
     border: none;
     margin: 0 !important;
     padding: 8px 17px;
-    -moz-context-properties: stroke;
-    stroke: currentColor;
+    -moz-context-properties: fill, stroke !important;
+    stroke: none !important;
+    fill: none !important;
 }
 
 :root:not([sizemode="maximized"], [inFullscreen]) :is(.titlebar-restore, .uc-titlebar-restore),
@@ -262,7 +266,7 @@ this sheet controls their appearance as well. */
     appearance: none !important;
     width: 15.3px !important;
     height: 15.3px !important;
-    stroke: none !important;
+    stroke: inherit !important;
 }
 
 .titlebar-buttonbox {
@@ -391,7 +395,7 @@ button.private-browsing-indicator:is(:hover:active, [open])::before {
 }
 
 /* all tabs button popup */
-#allTabsMenu-allTabsViewTabs .all-tabs-item {
+.panel-subview-body > .all-tabs-item {
     border-radius: var(--arrowpanel-menuitem-border-radius) !important;
     box-shadow: none !important;
     margin-inline: 4px !important;
@@ -404,7 +408,8 @@ panelview .all-tabs-button:not([disabled], [open]):focus {
     background: none !important;
 }
 
-#allTabsMenu-allTabsViewTabs {
+#allTabsMenu-allTabsViewTabs,
+#allTabsMenu-hiddenTabsView > .panel-subview-body {
     margin: var(--panel-subview-body-padding) !important;
     margin-top: 0 !important;
     padding-block: 0 !important;
@@ -418,7 +423,12 @@ panelview .all-tabs-button:not([disabled], [open]):focus {
     list-style-image: url(chrome://userchrome/content/skin/container-plus.svg);
 }
 
-:is(#allTabsMenu-containerTabsButton, #allTabsMenu-searchTabs) .toolbarbutton-text {
+#allTabsMenu-hiddenTabsButton {
+    list-style-image: url(chrome://userchrome/content/hide-password.svg);
+}
+
+:is(#allTabsMenu-containerTabsButton, #allTabsMenu-searchTabs, #allTabsMenu-hiddenTabsButton)
+    .toolbarbutton-text {
     padding-inline-start: var(--arrowpanel-subviewbutton-iconic-gap, 8px);
 }
 

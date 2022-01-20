@@ -81,6 +81,10 @@ this connects with .panel-subview-body rules in userChrome.au.css */
     padding: 16px !important;
 }
 
+.protections-popup-list.empty image {
+    color: var(--panel-description-color);
+}
+
 /* .panel-subview-body + toolbarseparator {
     margin-top: 0 !important;
 } */
@@ -132,9 +136,12 @@ this connects with .panel-subview-body rules in userChrome.au.css */
     margin-top: revert !important;
 }
 
-#extension-notification-panel,
-#notification-popup {
+#extension-notification-panel {
     margin-top: -1px !important;
+}
+
+#notification-popup {
+    margin-top: calc(-1px - var(--uc-panel-top-offset, 0px)) !important;
 }
 
 panel[type="arrow"][side="top"] {
@@ -482,8 +489,21 @@ panel[type="arrow"][side="top"] {
     background-color: var(--button-primary-active-bgcolor) !important;
 }
 
-.panel-info-button[checked]:not([disabled]):is(:hover, :focus-visible) {
-    background-color: var(--arrowpanel-dimmed-even-further) !important;
+.panel-info-button:not(:hover)[checked] {
+    background-color: var(--toolbarbutton-checked-background) !important;
+}
+
+.panel-info-button:not([disabled]):is(:hover, :focus-visible) {
+    background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+.panel-info-button[checked]:not([disabled]):is(:hover, :focus-visible),
+.panel-info-button:not([disabled]):is([open], :hover:active) {
+    background-color: var(--toolbarbutton-active-background) !important;
+}
+
+.panel-info-button[checked]:not([disabled]):is([open], :hover:active) {
+    background-color: var(--toolbarbutton-checked-active-background) !important;
 }
 
 #protections-popup-info-button {
@@ -714,7 +734,8 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
 }
 
 .permission-popup-permission-remove-button {
-    padding: 2px !important;
+    padding: var(--panel-menulist-padding, 4px 6px) !important;
+    min-height: 24px !important;
     background-color: var(--button-bgcolor) !important;
     color: inherit !important;
     opacity: 1 !important;
@@ -727,7 +748,6 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
 
 .permission-popup-permission-remove-button[disabled="true"] {
     opacity: 0.6 !important;
-    pointer-events: none !important;
 }
 
 .permission-popup-permission-remove-button[disabled="true"] > .button-box {
@@ -735,37 +755,45 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
 }
 
 .permission-popup-permission-remove-button > .button-box {
-    margin: 1px !important;
-    border-radius: 500px;
-    width: 16px;
-    height: 16px;
+    margin-block: 1px !important;
+    margin-inline: var(--menulist-dropmarker-margin, 8px 0) !important;
+    width: 12px;
+    max-width: 12px;
+    height: 12px;
 }
 
-/* .permission-popup-permission-remove-button:is(:hover, :focus-visible) > .button-box {
-    background-color: var(--arrowpanel-dimmed);
-} */
-
 .permission-popup-permission-remove-button > label {
-    margin: 1px 6px !important;
-    height: 16px !important;
-    line-height: 16px !important;
+    margin: 1px 0 !important;
+    text-align: revert !important;
 }
 
 .permission-popup-permission-remove-button > .button-box > .button-icon {
-    width: 16px !important;
-    height: 16px !important;
+    width: 12px !important;
+    height: 12px !important;
     padding: 0 !important;
-    list-style-image: url(chrome://userchrome/content/textbox-clear.svg) !important;
+    list-style-image: url(chrome://userchrome/content/close-big.svg) !important;
+    fill-opacity: inherit;
     -moz-context-properties: fill, fill-opacity !important;
-    fill-opacity: 0 !important;
 }
 
-.permission-popup-permission-remove-button:is(:hover, :focus-visible) {
+.permission-popup-permission-remove-button:not([disabled="true"]):is(:hover, :focus-visible) {
     background-color: var(--button-hover-bgcolor) !important;
 }
 
-.permission-popup-permission-remove-button:hover:active {
+.permission-popup-permission-remove-button:not([disabled="true"]):hover:active {
     background-color: var(--button-active-bgcolor) !important;
+}
+
+.permission-popup-permission-remove-button {
+    fill-opacity: 0.6;
+}
+
+.permission-popup-permission-remove-button:not([disabled="true"]):where(:hover) {
+    fill-opacity: 0.8;
+}
+
+.permission-popup-permission-remove-button:not([disabled="true"]):is(:focus-visible, :hover:active) {
+    fill-opacity: 1;
 }
 
 .permission-popup-permission-item > .popup-subitem {
@@ -802,6 +830,10 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
     margin-top: 0 !important;
 }
 
+.permission-popup-section menulist {
+    margin-block: 0 !important;
+}
+
 #plugins-notification-icon[extraAttr="inactive"] > .plugin-icon {
     fill: currentColor !important;
 }
@@ -821,9 +853,9 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
 
 #identity-popup-securityView .identity-popup-security-connection {
     background-position: left center !important;
-    padding: 0 !important;
-    margin: var(--arrowpanel-menuitem-padding) !important;
-    margin-bottom: 0 !important;
+    padding: var(--arrowpanel-menuitem-padding-block) 0 !important;
+    margin: 0 var(--arrowpanel-menuitem-padding-inline) !important;
+    margin-bottom: calc(0px - var(--arrowpanel-menuitem-padding-block)) !important;
 }
 
 #identity-popup-securityView .identity-popup-security-connection description {
@@ -843,7 +875,11 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
 
 #identity-popup-security-button {
     margin-bottom: revert !important;
-    padding: var(--arrowpanel-menuitem-padding) !important;
+    padding: 0 var(--arrowpanel-menuitem-padding-inline) !important;
+}
+
+#identity-popup-security-button > .identity-button {
+    padding-block: var(--arrowpanel-menuitem-padding-block) !important;
 }
 
 #identity-popup-security-button[disabled="true"] {
@@ -893,16 +929,21 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
     fill: var(--secure-color) !important;
 }
 
+#identity-popup[ciphers="weak"] .identity-popup-security-connection,
+#identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection,
+#identity-popup[connection="secure-cert-user-overridden"] .identity-popup-security-connection,
+#identity-popup[connection="cert-error-page"] .identity-popup-security-connection,
 #identity-popup[connection="secure-cert-user-overridden"] .identity-popup-security-connection {
-    background-image: url(chrome://global/skin/icons/security-warning.svg) !important;
+    background-image: url(chrome://global/skin/icons/security-warning.svg);
+    -moz-context-properties: fill, stroke !important;
     fill: unset !important;
-    -moz-context-properties: fill !important;
+    stroke: var(--low-warning-icon-stroke) !important;
 }
 
 #identity-popup[connection="https-only-error-page"] .identity-popup-security-connection,
 #identity-popup[connection="cert-error-page"] .identity-popup-security-connection,
 #identity-popup[connection="net-error-page"] .identity-popup-security-connection {
-    background-image: url(chrome://userchrome/content/warning.svg) !important;
+    background-image: url(chrome://userchrome/content/warning-big.svg) !important;
 }
 
 #identity-popup[connection="extension"] .identity-popup-security-connection {
@@ -916,6 +957,12 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
     color: var(--secure-text-color) !important;
 }
 
+#identity-popup:where([connection="not-secure"])
+    .identity-popup-security-connection
+    .identity-popup-connection-not-secure.security-view[when-connection~="not-secure"] {
+    color: var(--warning-color) !important;
+}
+
 #identity-popup:where([ciphers="weak"])
     .identity-popup-security-connection
     .identity-popup-connection-not-secure.security-view[when-connection~="not-secure"],
@@ -923,12 +970,6 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
     .identity-popup-security-connection
     .identity-popup-connection-not-secure.security-view[when-connection~="not-secure"] {
     color: var(--low-warning-text-color) !important;
-}
-
-#identity-popup[connection="not-secure"]
-    .identity-popup-security-connection
-    .identity-popup-connection-not-secure.security-view[when-connection~="not-secure"] {
-    color: var(--warning-color) !important;
 }
 
 /* url bar popups */
@@ -945,10 +986,8 @@ popupnotificationcontent label[control]:not([hidden]) + menulist {
 }
 
 #protections-popup-main-header-label {
-    display: -moz-box;
     height: auto !important;
-    -moz-box-align: center !important;
-    -moz-box-pack: center !important;
+    padding-inline: 15px !important;
 }
 
 #protections-popup[toast]
@@ -1203,10 +1242,6 @@ panel .header {
     font-weight: var(--uc-font-weight-bold, 600) !important;
 }
 
-.panel-view-body-unscrollable {
-    overflow-y: scroll !important;
-}
-
 #notification-popup menulist {
     color: var(--notification-menu-color) !important;
 }
@@ -1227,256 +1262,6 @@ panel .header {
 
 #webRTC-previewWarning-learnMore {
     margin-block: 0 4px !important;
-}
-
-#downloadsPanel-mainView {
-    min-width: revert !important;
-    padding: 0 !important;
-}
-
-#downloadsListBox {
-    width: revert !important;
-    min-width: 35em !important;
-    max-width: 48em !important;
-    margin: var(--arrowpanel-menuitem-inline-margin) 0 !important;
-}
-
-#downloadsRichListBox {
-    padding: var(--arrowpanel-menuitem-inline-margin) 0 !important;
-}
-
-#emptyDownloads {
-    padding-block: 1.25em !important;
-    padding-inline: 16px 20px !important;
-}
-
-#downloadsFooterButtons:not([hidden]) {
-    display: flex !important;
-    flex-flow: row nowrap;
-    padding-block: var(--arrowpanel-menuitem-inline-margin) !important;
-    margin: 0 var(--arrowpanel-menuitem-inline-margin) !important;
-    border-top: 1px solid var(--panel-separator-color) !important;
-    gap: var(--arrowpanel-menuitem-inline-margin) !important;
-    --button-hover-bgcolor: var(--in-content-button-background);
-    --button-active-bgcolor: var(--in-content-button-background-hover);
-}
-
-#downloadsFooterButtons > toolbarseparator {
-    display: none !important;
-}
-
-#downloadsFooterButtons > button {
-    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
-    margin: 0 !important;
-    flex-grow: 1;
-    padding: 6px 8px !important;
-    -moz-context-properties: fill, fill-opacity;
-    fill: currentColor;
-}
-
-#downloadsFooterButtons > button > .button-box {
-    display: flex !important;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-#downloadsFooterButtons > button .button-icon {
-    margin-inline: 0 6px;
-    width: 16px;
-    height: 16px;
-}
-
-#downloadsHistory {
-    list-style-image: url(chrome://userchrome/content/skin/sort.svg);
-}
-
-#clearDownloadsPanel {
-    list-style-image: url(chrome://userchrome/content/delete.svg);
-}
-
-richlistitem.download-state > toolbarseparator {
-    visibility: collapse !important;
-}
-
-richlistitem.download-state {
-    position: relative !important;
-    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    margin: 0 var(--arrowpanel-menuitem-inline-margin) !important;
-    border: 0 !important;
-    outline: 0 !important;
-    background: none !important;
-}
-
-.downloadMainArea {
-    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
-}
-
-richlistitem.download-state .downloadMainArea {
-    padding-inline: 4px !important;
-}
-
-.downloadsPanelFooterButton:hover {
-    outline: none !important;
-}
-
-panel richlistitem.download-state[state="1"]:not([exists]) :is(.downloadTarget, .downloadDetails) {
-    color: var(--panel-disabled-color);
-}
-
-richlistitem.download-state[state="1"]:not([exists]) .downloadTypeIcon {
-    opacity: 0.6;
-}
-
-panel richlistitem.download-state .downloadDetails {
-    opacity: 1 !important;
-    color: var(--panel-description-color);
-}
-
-#downloadsListBox richlistitem.download-state .downloadTypeIcon {
-    width: 28px !important;
-    height: 28px !important;
-}
-
-richlistitem.download-state > .downloadButton {
-    height: auto !important;
-    min-height: auto !important;
-    width: auto !important;
-    min-width: auto !important;
-    box-sizing: content-box !important;
-    margin: 0 !important;
-    background: none !important;
-    border-radius: 0 !important;
-    -moz-box-align: center !important;
-    -moz-box-pack: center !important;
-}
-
-#downloadsListBox richlistitem.download-state > .downloadButton {
-    padding: 8px !important;
-}
-
-richlistitem.download-state[state="1"][exists] .downloadMainArea:hover,
-richlistitem.download-state:not([verdict]) > .downloadButton:hover,
-richlistitem.download-state[verdict]:hover {
-    background-color: unset !important;
-}
-
-richlistitem.download-state[state="1"][exists]:is(:hover, :focus-within),
-richlistitem.download-state:is([verdict], .openWhenFinished):is(:hover, :focus-within) {
-    background: var(--download-button-hover-bg) !important;
-}
-
-richlistitem.download-state[state="1"][exists]:hover:active,
-richlistitem.download-state:is([verdict], .openWhenFinished):hover:active {
-    background: var(--download-button-active-bg) !important;
-}
-
-richlistitem.download-state:not([verdict])
-    > .downloadButton:is(:hover, :focus-visible)
-    .button-box {
-    background: var(--in-content-button-background-hover) !important;
-}
-
-richlistitem.download-state:not([verdict]) > .downloadButton:hover:active .button-box {
-    background: var(--in-content-button-background-active) !important;
-}
-
-richlistitem.download-state > .downloadButton .button-box {
-    width: 32px !important;
-    height: 32px !important;
-    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
-    padding: 0 !important;
-}
-
-richlistitem.download-state > .downloadButton .button-box .button-icon {
-    width: 18px !important;
-    height: auto !important;
-}
-
-.downloadIconShow .button-box .button-icon {
-    list-style-image: url(chrome://userchrome/content/material/places/folder.svg) !important;
-}
-
-.downloadIconCancel .button-box .button-icon {
-    list-style-image: url(chrome://userchrome/content/close-big.svg) !important;
-}
-
-.downloadIconRetry .button-box .button-icon {
-    list-style-image: url(chrome://userchrome/content/skin/reload.svg) !important;
-}
-
-richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .button-icon {
-    width: 21px !important;
-}
-
-.downloadProgress {
-    appearance: none !important;
-    margin: 3px 0 -2px 0 !important;
-    border: 1px solid transparent !important;
-    border-radius: 16px !important;
-    height: 8px !important;
-    background-color: var(--arrowpanel-dimmed) !important;
-    overflow: hidden !important;
-}
-
-.downloadProgress[paused] {
-    background-color: var(--desaturate-dimmed) !important;
-}
-
-.downloadProgress::-moz-progress-bar {
-    background-image: none !important;
-    animation: none !important;
-}
-
-.downloadProgress:not([value="0"])::-moz-progress-bar {
-    margin: 0 !important;
-    height: 100% !important;
-    border-radius: 16px !important;
-}
-
-.downloadProgress:indeterminate::-moz-progress-bar {
-    border-radius: 0 !important;
-    background-image: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--download-progress-flare-color) 25%,
-        transparent 50%,
-        var(--download-progress-flare-color) 75%,
-        transparent 100%
-    ) !important;
-}
-
-.downloadProgress[paused]:indeterminate::-moz-progress-bar {
-    background-color: transparent !important;
-    background-image: none !important;
-    animation: none !important;
-    animation-play-state: paused !important;
-}
-
-/* just for downloads in the places organizer */
-@-moz-document url-prefix("chrome://browser/content/places/places.xhtml")
-{
-    richlistitem.download-state:is(:hover, :focus-within),
-    richlistitem.download-state[state="1"][exists]:is(:hover, :focus-within),
-    richlistitem.download-state:is([verdict], .openWhenFinished):is(:hover, :focus-within),
-    richlistitem.download-state[state="1"][exists]:hover:active,
-    richlistitem.download-state:is([verdict], .openWhenFinished):hover:active {
-        background: hsl(230, 5%, 18%) !important;
-    }
-
-    richlistitem.download-state[selected]:not(:hover, :focus-within) {
-        background: hsl(230, 5%, 15%) !important;
-    }
-
-    richlistitem.download-state[state="1"]:not([exists]) .downloadTarget {
-        color: var(--organizer-deemphasized-color);
-    }
-
-    richlistitem.download-state .downloadDetails {
-        opacity: 1 !important;
-        color: var(--organizer-deemphasized-color);
-    }
 }
 
 /* overflow menu */
@@ -1669,6 +1454,7 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
 #protections-popup-mainView-panel-header,
 #eom-mainView-panel-header {
     min-height: 40px !important;
+    word-break: break-word !important;
 }
 
 #editBookmarkPanel > .panel-header {
@@ -1729,16 +1515,21 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
 
 #geo-access-indicator-item,
 #blocked-popup-indicator-item {
-    font-size: 0.9em !important;
-    font-weight: var(--uc-font-weight-thin) !important;
     min-height: 20px !important;
     background: url(chrome://userchrome/content/notifications/popup-subitem.svg) left center/16px
         no-repeat;
+    margin-block: -2px 0.4em !important;
     margin-inline-start: 22px !important;
-    padding-inline-start: 16px !important;
+    padding-inline-start: 13px !important;
     -moz-context-properties: fill, fill-opacity;
     fill: currentColor !important;
     color: var(--panel-description-color) !important;
+    font-size: revert !important;
+}
+
+:is(#geo-access-indicator-item, #blocked-popup-indicator-item)
+    > .permission-popup-permission-label {
+    margin-block: 0 !important;
 }
 
 #protections-popup-sendReportView-heading,
@@ -1770,7 +1561,7 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
 }
 
 .PanelUI-panic-actionlist {
-    color: var(--panel-shortcut-focus) !important;
+    color: var(--panel-shortcut-color) !important;
     margin-bottom: 4px !important;
     filter: brightness(1.5);
 }
@@ -1778,6 +1569,82 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
 #PanelUI-panic-warning {
     color: var(--warning-color) !important;
     margin-top: 12px !important;
+}
+
+/* profiler panel */
+#PanelUI-profiler-header-bar {
+    min-height: 40px !important;
+    -moz-box-align: center !important;
+    border-bottom: 1px solid var(--panel-separator-color) !important;
+    margin: 0 var(--panel-separator-margin) !important;
+}
+
+#PanelUI-profiler-header {
+    background: none !important;
+    color: var(--panel-color) !important;
+    --arrowpanel-dimmed: var(--uc-arrowpanel-dimmed) !important;
+    --arrowpanel-dimmed-further: var(--uc-arrowpanel-dimmed-further) !important;
+    --panel-item-active-bgcolor: var(--arrowpanel-dimmed-further) !important;
+}
+
+#PanelUI-profiler-header-bar label {
+    margin-inline-start: 28px !important;
+    padding: 0 8px !important;
+    margin-block: 0 !important;
+    word-break: break-word !important;
+    font-weight: var(--uc-font-weight-bold, 600) !important;
+}
+
+.PanelUI-profiler-description-title,
+.PanelUI-profiler-content-label {
+    font-weight: var(--uc-font-weight-bold, 600) !important;
+}
+
+.PanelUI-profiler-toolbarbutton-container {
+    margin-inline: revert !important;
+}
+
+.PanelUI-profiler-button-link {
+    padding-inline: 0 !important;
+    background: none !important;
+    text-decoration: none !important;
+    color: var(--lwt-popup-brighttext-url-color) !important;
+    font-weight: var(--uc-font-weight-bold, 600) !important;
+    outline: revert !important;
+    box-shadow: revert !important;
+}
+
+.PanelUI-profiler-button-link:is(:hover, :focus-visible) {
+    text-decoration: underline !important;
+}
+
+#PanelUI-profiler-content {
+    background: var(--panel-background) !important;
+}
+
+.PanelUI-profiler-shortcut {
+    opacity: revert !important;
+    color: var(--panel-shortcut-color) !important;
+}
+
+.PanelUI-profiler-button-primary {
+    background-color: var(--in-parent-primary-button-background) !important;
+    color: var(--in-parent-primary-button-text-color) !important;
+    box-shadow: revert !important;
+}
+
+.PanelUI-profiler-button-primary:hover {
+    background-color: var(--in-parent-primary-button-background-hover) !important;
+}
+
+.PanelUI-profiler-button-primary:hover:active {
+    background-color: var(--in-parent-primary-button-background-active) !important;
+}
+
+.PanelUI-profiler-button:focus-visible {
+    box-shadow: 0 0 0 1px var(--in-parent-primary-button-background-hover) inset,
+        0 0 0 1px var(--in-parent-primary-button-background-hover),
+        0 0 0 4px var(--global-focus-shadow-color) !important;
 }
 
 .eom-addon-button[message-type="warning"]:not([disabled], [open]):is(:hover, :focus-visible) {
@@ -1799,7 +1666,6 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
 /* add icons to some panel subviewbuttons */
 #identity-popup-clear-sitedata-button {
     list-style-image: url(chrome://userchrome/content/skin/forget.svg);
-    /* list-style-image: url(chrome://userchrome/content/skin/3rdpartycookies-disabled.svg); */
 }
 
 #identity-popup-more-info {
@@ -1822,7 +1688,7 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
 }
 
 #protections-popup-show-report-button {
-    list-style-image: url(chrome://userchrome/content/skin/dashboard.svg);
+    list-style-image: url(chrome://userchrome/content/skin/controlcenter/dashboard.svg);
 }
 
 .subviewbutton[data-l10n-id="protections-panel-content-blocking-manage-settings"]
@@ -1910,7 +1776,23 @@ richlistitem.download-state > .downloadButton.downloadIconCancel .button-box .bu
     margin-top: 0 !important;
 }
 
-#protections-popup-milestones,
-#protections-popup-milestones-content {
+#protections-popup-milestones {
+    margin: var(--arrowpanel-menuitem-inline-margin) !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
     background: none !important;
+}
+
+#protections-popup-milestones-content {
+	padding: var(--arrowpanel-menuitem-padding) !important;
+	background-color: var(--arrowpanel-faint) !important;
+    border-radius: var(--panel-border-radius-mini) !important;
+}
+
+#protections-popup-milestones-content:is(:hover, :focus-visible) {
+	background-color: var(--arrowpanel-dimmed) !important;
+}
+
+#protections-popup-milestones-text {
+    margin-inline: 4px !important;
 }

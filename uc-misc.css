@@ -222,6 +222,11 @@ as the mouse would then be on top of the tooltip popup not the main window. */
     margin-block-start: 26px !important;
 }
 
+/* eliminate --default-focusring */
+treechildren::-moz-tree-row(selected, current, focus) {
+    outline: none !important;
+}
+
 progress {
     appearance: none;
     border: 1px solid transparent;
@@ -468,10 +473,12 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
         treechildren,
         panelview,
         #BMB_bookmarksPopup,
-        #main-menubar,
         .sidebar-search-container,
-        .pointerlockfswarning {
-            font-family: SF Pro Text, Segoe UI, sans-serif !important;
+        .pointerlockfswarning,
+        :is(#ContentSelectDropdown, menupopup.in-menulist, .contentSelectDropdown-ingroup)
+            :is(menu, menuitem, menucaption),
+        panel[type="autocomplete-richlistbox"] > richlistbox > richlistitem {
+            font-family: SF Pro Text, SF Arabic, Segoe UI, sans-serif !important;
             font-kerning: normal !important;
         }
 
@@ -479,7 +486,8 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
         #urlbar,
         #searchbar,
         #PopupSearchAutoComplete {
-            font-family: SF Pro, Segoe UI, sans-serif !important;
+            font-family: SF Pro, SF Arabic, Segoe UI, sans-serif !important;
+            font-kerning: normal !important;
         }
 
         /* for displaying larger font sizes */
@@ -488,9 +496,28 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
         #sidebar-header,
         #PanelUI-whatsNew,
         #protections-popup-message,
-        #protections-popup-no-trackers-found-description {
-            font-family: SF Pro Display, Segoe UI, sans-serif !important;
+        #PanelUI-profiler-info,
+        .PanelUI-profiler-button-link,
+        #protections-popup-no-trackers-found-description,
+        #PopupAutoComplete > richlistbox > richlistitem > .ac-title {
+            font-family: SF Pro Display, SF Arabic, Segoe UI, sans-serif !important;
             font-kerning: normal !important;
+        }
+
+        #main-menubar {
+            font-family: SF Pro Display, SF Arabic, Segoe UI, sans-serif !important;
+            font-kerning: normal !important;
+        }
+
+        #toolbar-menubar #main-menubar > menu > label {
+            padding: 5px 8px 6px 8px !important;
+        }
+
+        #main-menubar > menu > menupopup {
+            margin-block: calc(
+                0px - var(--menupopup-inner-box-margin) -
+                    ((var(--tab-min-height) - 14px - 5px - 6px) / 2)
+            ) !important;
         }
 
         #fxa-menu-header-description {
@@ -502,6 +529,10 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
             font-weight: var(--uc-font-weight-bold, 500) !important;
         }
 
+        strong {
+            font-weight: var(--uc-font-weight-extrabold, 600);
+        }
+
         tooltip,
         #statuspanel {
             --uc-tooltip-inner-padding: 5px 8px 6px 8px;
@@ -509,7 +540,7 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
 
         .places-tooltip-title,
         :is(#back-button-tooltip, #forward-button-tooltip) .tooltip-label[id] {
-            font-family: SF Pro Display, Segoe UI, sans-serif !important;
+            font-family: SF Pro Display, SF Arabic, Segoe UI, sans-serif !important;
             font-kerning: normal !important;
             font-weight: var(--uc-font-weight-semibold, 500) !important;
         }
@@ -540,22 +571,22 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
         .urlbarView-row[dynamicType="onboardTabToSearch"]
             .urlbarView-title
             strong.urlbarView-dynamic-onboardTabToSearch-titleStrong {
-            font-family: SF Pro Text, Segoe UI, sans-serif !important;
+            font-family: SF Pro Text, SF Arabic, Segoe UI, sans-serif !important;
         }
 
         .popup-notification-body input[type="password"] {
-            font-family: SF Pro, Segoe UI, sans-serif !important;
+            font-family: SF Pro, SF Arabic, Segoe UI, sans-serif !important;
         }
 
         .popup-notification-description b {
-            font-family: SF Pro Display, Segoe UI, sans-serif !important;
+            font-family: SF Pro Display, SF Arabic, Segoe UI, sans-serif !important;
             font-kerning: auto !important;
         }
 
         :is(#ContentSelectDropdown, menupopup.in-menulist, .contentSelectDropdown-ingroup)
             :where(menu, menuitem, menucaption),
         panel[type="autocomplete-richlistbox"] > richlistbox > richlistitem {
-            font-family: SF Pro Text, Segoe UI, sans-serif !important;
+            font-family: SF Pro Text, SF Arabic, Segoe UI, sans-serif !important;
             font-kerning: normal !important;
         }
 
@@ -569,13 +600,19 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:focus-visible > .toolbarbutton-ba
         }
 
         .dialog-button-box button {
-            font-family: SF Pro Text, Segoe UI, sans-serif !important;
+            font-family: SF Pro Text, SF Arabic, Segoe UI, sans-serif !important;
+        }
+
+        #protections-popup-milestones-text {
+            font-weight: var(--uc-font-weight-bold, 600) !important;
+            font-family: SF Pro Display, SF Arabic, Segoe UI, sans-serif !important;
+            font-size: 1.1em !important;
         }
 
         @-moz-document url-prefix("chrome://browser/content/syncedtabs/sidebar.xhtml")
         {
             body {
-                font-family: SF Pro, Segoe UI, sans-serif !important;
+                font-family: SF Pro, SF Arabic, Segoe UI, sans-serif !important;
                 font-kerning: normal !important;
             }
         }
@@ -638,10 +675,5 @@ menupopup[bmb-command-disabled="true"]
 /* this is for miscMods.uc.js' setting "Anchor permissions popup to granted permission icon"
 adjust the popup and icon dimensions commensurately */
 #permission-popup[anchor-to-icon] {
-    margin-inline-start: -20px !important;
-}
-
-#permissions-granted-icon[anchor-to-icon] {
-    height: var(--urlbar-height) !important;
-    padding-block: revert !important;
+    margin-inline: calc(-20px + var(--uc-panel-left-offset, 0px)) !important;
 }

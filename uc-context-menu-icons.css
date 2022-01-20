@@ -163,11 +163,12 @@ menuitem:not(.menuitem-iconic)[oncommand="_ucUtils.restart(true)"] .menu-text,
 .downloadUnblockMenuItem .menu-text,
 .downloadUseSystemDefaultMenuItem .menu-text,
 .downloadShowMenuItem .menu-text,
-menuitem[command="downloadsCmd_openReferrer"] .menu-text,
-menuitem[command="downloadsCmd_copyLocation"] .menu-text,
+menuitem[data-l10n-id="downloads-cmd-go-to-download-page"] .menu-text,
+menuitem[data-l10n-id="downloads-cmd-copy-download-link"] .menu-text,
 .downloadRemoveFromHistoryMenuItem .menu-text,
-menuitem[command="downloadsCmd_clearList"] .menu-text,
-menuitem[command="downloadsCmd_clearDownloads"] .menu-text,
+menuitem[data-l10n-id="downloads-cmd-clear-list"] .menu-text,
+menuitem[data-l10n-id="downloads-cmd-clear-downloads"] .menu-text,
+menuitem[command="downloadsCmd_deleteFile"] .menu-text,
 #context-media-pause .menu-text,
 #context-media-play .menu-text,
 #context-media-mute .menu-text,
@@ -308,6 +309,10 @@ menu[label="Bitwarden"]:not(.menuitem-iconic, .menu-iconic) > .menu-text,
     > .menu-text,
 :is(menu, menuitem)[id^="multithreaded-download-manager"]:is([label="Open in new tab"], [label="Open in new window"], [label="Open in sidebar"])
     > .menu-iconic-text,
+#_287dcf75-bec6-4eec-b4f6-71948a2eea29_-menuitem-_ViewImage-SearchByImage:not(.menuitem-iconic, .menu-iconic)
+    > .menu-text,
+#invert-element_aminomancer-menuitem-_menuitem-invert:not(.menuitem-iconic, .menu-iconic)
+    > .menu-text,
 #menu_customizeToolbars .menu-text,
 menuitem.viewCustomizeToolbar > .menu-text,
 #addon_darkreader_org-menuitem-_DarkReader-switchEngine:not(.menuitem-iconic) .menu-text,
@@ -339,7 +344,6 @@ menuitem.pageActionContextMenuItem.manageExtensionItem > .menu-text,
 menuitem.customize-context-removeExtension > .menu-text,
 menuitem.pageActionContextMenuItem.removeExtensionItem > .menu-text,
 menuitem.customize-context-reportExtension > .menu-text {
-    display: -moz-inline-box !important;
     margin-inline: 0 !important;
     padding-inline: 0 2px !important;
 }
@@ -558,11 +562,12 @@ menuitem#enableDeveloperTools::before,
 .downloadUnblockMenuItem::before,
 .downloadUseSystemDefaultMenuItem::before,
 .downloadShowMenuItem::before,
-menuitem[command="downloadsCmd_openReferrer"]::before,
-menuitem[command="downloadsCmd_copyLocation"]::before,
+menuitem[data-l10n-id="downloads-cmd-go-to-download-page"]::before,
+menuitem[data-l10n-id="downloads-cmd-copy-download-link"]::before,
 .downloadRemoveFromHistoryMenuItem::before,
-menuitem[command="downloadsCmd_clearList"]::before,
-menuitem[command="downloadsCmd_clearDownloads"]::before,
+menuitem[data-l10n-id="downloads-cmd-clear-list"]::before,
+menuitem[data-l10n-id="downloads-cmd-clear-downloads"]::before,
+menuitem[command="downloadsCmd_deleteFile"]::before,
 #context-media-pause::before,
 #context-media-play::before,
 #context-media-mute::before,
@@ -596,6 +601,8 @@ menu[label="Bitwarden"]:not(.menuitem-iconic, .menu-iconic)::before,
 #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager:not(.menuitem-iconic, .menu-iconic)::before,
 #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options:not(.menuitem-iconic, .menu-iconic)::before,
 #simple-translate_sienori-menuitem-_translatePage:not(.menuitem-iconic, .menu-iconic)::before,
+#_287dcf75-bec6-4eec-b4f6-71948a2eea29_-menuitem-_ViewImage-SearchByImage:not(.menuitem-iconic, .menu-iconic)::before,
+#invert-element_aminomancer-menuitem-_menuitem-invert:not(.menuitem-iconic, .menu-iconic)::before,
 #simple-translate_sienori-menuitem-_translateLink:not(.menuitem-iconic, .menu-iconic)::before,
 #simple-translate_sienori-menuitem-_translateText:not(.menuitem-iconic, .menu-iconic)::before,
 #toolbar-context-menu
@@ -686,11 +693,11 @@ menuitem.customize-context-reportExtension::before {
     background-image: url(chrome://userchrome/content/material/places/folder-open.svg);
 }
 
-menuitem[command="downloadsCmd_openReferrer"]::before {
-    background-image: url(chrome://userchrome/content/document.svg);
+menuitem[data-l10n-id="downloads-cmd-go-to-download-page"]::before {
+    background-image: url(chrome://userchrome/content/skin/new-tab.svg);
 }
 
-menuitem[command="downloadsCmd_copyLocation"]::before {
+menuitem[data-l10n-id="downloads-cmd-copy-download-link"]::before {
     background-image: url(chrome://userchrome/content/skin/link.svg);
 }
 
@@ -698,13 +705,13 @@ menuitem[command="downloadsCmd_copyLocation"]::before {
     background-image: url(chrome://userchrome/content/skin/forget.svg);
 }
 
-menuitem[command="downloadsCmd_clearList"]::before {
-    background-image: url(chrome://userchrome/content/skin/stop.svg);
-    background-size: 15px;
+menuitem[data-l10n-id="downloads-cmd-clear-list"]::before,
+menuitem[data-l10n-id="downloads-cmd-clear-downloads"]::before {
+    background-image: url(chrome://userchrome/content/skin/close-window.svg);
 }
 
-menuitem[command="downloadsCmd_clearDownloads"]::before {
-    background-image: url(chrome://userchrome/content/delete.svg);
+menuitem[command="downloadsCmd_deleteFile"]::before {
+    background-image: url(chrome://userchrome/content/delete-file.svg);
 }
 
 #context-media-mute::before {
@@ -716,11 +723,11 @@ menuitem[command="downloadsCmd_clearDownloads"]::before {
 }
 
 #context-video-fullscreen::before {
-    background-image: url(chrome://userchrome/content/fullscreenEnterButton.svg);
+    background-image: url(chrome://userchrome/content/skin/fullscreen.svg);
 }
 
 #context-leave-dom-fullscreen::before {
-    background-image: url(chrome://userchrome/content/fullscreenExitButton.svg);
+    background-image: url(chrome://userchrome/content/skin/fullscreen-exit.svg);
 }
 
 menuitem[data-l10n-id="full-screen-exit"]::before {
@@ -735,8 +742,12 @@ menuitem[data-l10n-id="full-screen-exit"]::before {
     background-image: url(chrome://userchrome/content/skin/tab-play.svg);
 }
 
-:is(#context-media-showcontrols, #context-media-hidecontrols)::before {
-    background-image: url(chrome://userchrome/content/material/tune.svg);
+#context-media-showcontrols::before {
+    background-image: url(chrome://userchrome/content/material/show-controls.svg);
+}
+
+#context-media-hidecontrols::before {
+    background-image: url(chrome://userchrome/content/material/hide-controls.svg);
 }
 
 #context-showonlythisframe::before,
@@ -746,7 +757,7 @@ menuitem[data-l10n-id="full-screen-exit"]::before {
 }
 
 :is(#context-printframe, #context-print-selection, #menu_print)::before {
-    background-image: url(chrome://userchrome/content/print.svg);
+    background-image: url(chrome://global/skin/icons/print.svg);
 }
 
 #menu_printPreview::before {
@@ -801,7 +812,7 @@ menuitem#menu_openDownloads::before {
 
 menuitem#menu_openAddons::before,
 #addon_darkreader_org-menuitem-_DarkReader-toggle:not(.menuitem-iconic)::before {
-    background-image: url(chrome://browser/content/extension.svg);
+    background-image: url(chrome://mozapps/skin/extensions/extension.svg);
 }
 
 #private-relay_firefox_com-menuitem-_fx-private-relay-generate-alias:not(.menuitem-iconic)::before {
@@ -844,11 +855,11 @@ menuitem#feedbackPage::before {
 }
 
 menuitem#helpSafeMode::before {
-    background-image: url(chrome://userchrome/content/material/auto-fix.svg);
+    background-image: url(chrome://userchrome/content/material/diagnostic.svg);
 }
 
 menuitem#troubleShooting::before {
-    background-image: url(chrome://userchrome/content/material/drugs.svg);
+    background-image: url(chrome://userchrome/content/material/system-report.svg);
 }
 
 menuitem#help_reportSiteIssue::before {
@@ -866,7 +877,7 @@ menuitem#menu_HelpPopup_reportPhishingErrortoolmenu::before {
 }
 
 menuitem#aboutName::before {
-    background-image: url(chrome://userchrome/content/info-filled.svg);
+    background-image: url(chrome://userchrome/content/identity-icons-brand.svg);
 }
 
 menuitem#helpPolicySupport::before {
@@ -966,7 +977,7 @@ menuitem#sanitizeItem::before {
 
 :is(#context-selectall, #menu_selectAll)::before,
 .textbox-contextmenu menuitem[data-l10n-id="text-action-select-all"]::before {
-    background-image: url(chrome://userchrome/content/glyph-highlights-16.svg);
+    background-image: url(chrome://userchrome/content/devtools/tool-styleeditor.svg);
 }
 
 :is(#context-sendaudio, #context-sendimage, #context-sendvideo, #menu_sendLink)::before {
@@ -1027,10 +1038,13 @@ menuitem.customize-context-CopyID::before {
     background-image: url(chrome://userchrome/content/skin/edit-paste-and-go.svg);
 }
 
-:is(#placesContext_deleteBookmark, #placesContext_deleteFolder, #placesContext_delete, #placesContext_delete_history)::before,
+:is(#placesContext_deleteBookmark, #placesContext_deleteFolder, #placesContext_delete, #placesContext_delete_history)::before {
+    background-image: url(chrome://userchrome/content/delete.svg);
+}
+
 :is(#context-delete, #menu_delete)::before,
 .textbox-contextmenu menuitem[data-l10n-id="text-action-delete"]::before {
-    background-image: url(chrome://userchrome/content/delete.svg);
+    background-image: url(chrome://userchrome/content/material/backspace-solid.svg);
 }
 
 .searchbar-clear-history::before {
@@ -1107,7 +1121,7 @@ menuitem.customize-context-CopyID::before {
 }
 
 #menu_findAgain::before {
-    background-image: url(chrome://userchrome/content/find-next-arrow.svg);
+    background-image: url(chrome://userchrome/content/skin/forward.svg);
 }
 
 :is(menuitem#textfieldDirection-swap, #context-bidi-text-direction-toggle, #context-bidi-page-direction-toggle, #documentDirection-swap)::before {
@@ -1479,7 +1493,7 @@ menuitem.customize-context-SidebarAction::before {
 }
 
 menuitem.customize-context-Options::before {
-    background-image: url(chrome://userchrome/content/material/tune.svg);
+    background-image: url(chrome://userchrome/content/settings.svg);
 }
 
 menuitem:is(.customize-context-removeExtension, .pageActionContextMenuItem.removeExtensionItem)::before {

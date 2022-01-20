@@ -13,39 +13,39 @@
 
 /* different tab background colors in various states */
 .tabbrowser-tab:not([selected]):is(:hover, .keyboard-focused-tab, [open]) .tab-background {
-    background: var(--tab-hover) !important;
+    background: var(--uc-tab-hover) !important;
 }
 
 .tabbrowser-tab:is([visuallyselected], [selected]) .tab-background {
-    background: var(--tab-selected) !important;
+    background: var(--uc-tab-selected) !important;
 }
 
 .tabbrowser-tab:focus:not([aria-activedescendant]) > .tab-stack > .tab-background,
 .tabbrowser-tab.keyboard-focused-tab[selected] > .tab-stack > .tab-background {
-    background: var(--tab-focused-hover) !important;
+    background: var(--uc-tab-focused-hover) !important;
 }
 
 .tabbrowser-tab:not([selected])[pinned]:is(:hover, .keyboard-focused-tab, [open]) .tab-background {
-    background: var(--tab-pinned-hover) !important;
+    background: var(--uc-tab-pinned-hover) !important;
 }
 
 .tabbrowser-tab:not([selected], [pinned], [multiselected], :hover, .keyboard-focused-tab, [open])
     .tab-background {
-    background: var(--tab-background) !important;
+    background: var(--uc-tab-background) !important;
 }
 
 .tabbrowser-tab:not([selected])[pinned] .tab-background {
-    background: var(--tab-pinned) !important;
+    background: var(--uc-tab-pinned) !important;
 }
 
 .tabbrowser-tab[multiselected]:not([selected], [pinned], :hover, .keyboard-focused-tab, [open])
     .tab-background {
-    background: var(--tab-multi) !important;
+    background: var(--uc-tab-multi) !important;
 }
 
 .tabbrowser-tab[multiselected]:not([selected], [pinned]):is(:hover, .keyboard-focused-tab, [open])
     .tab-background {
-    background: var(--tab-multi-hover) !important;
+    background: var(--uc-tab-multi-hover) !important;
 }
 
 /* block our animations while tabs are being dragged & dropped */
@@ -108,15 +108,12 @@
     display: none !important;
 }
 
-.tab-label[attention]:not([selected="true"]) {
-    font-weight: unset !important;
+.tab-label-container {
+    height: revert !important;
 }
 
-.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
-.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
-    background-image: unset !important;
-    background-position: unset !important;
-    background-repeat: unset !important;
+.tab-label[attention]:not([selected="true"]) {
+    font-weight: unset !important;
 }
 
 /* highlight unread tabs; requires italicizeUnreadTabs.uc.js */
@@ -543,11 +540,6 @@ does nothing without restoreTabSoundButton.uc.js since sound icon no longer exis
     opacity: 0.6 !important;
 }
 
-:root:not([customizing])
-    .tab-icon-sound:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]):not(:hover):-moz-window-inactive {
-    opacity: 0.5 !important;
-}
-
 .tabbrowser-tab:is(:hover, .keyboard-focused-tab, [open])
     .tab-icon-sound[pictureinpicture][soundplaying],
 .tabbrowser-tab .tab-icon-sound[pictureinpicture][muted],
@@ -621,11 +613,33 @@ so in other words it won't show if audio is playing until you hover the general 
     opacity: 0.6 !important;
 }
 
+/* attention indicator */
 .tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
 .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
-    background-image: url(chrome://userchrome/content/indicator-tab-attention.svg);
-    background-position: right 6px top 4px !important;
+    background-image: url(chrome://userchrome/content/indicator-tab-attention-purple.svg) !important;
+    background-position: right 4px top 4px !important;
+    background-size: 10px !important;
     background-repeat: no-repeat;
+}
+
+/* tab crashed indicator */
+.tabbrowser-tab[crashed] > .tab-stack > .tab-content::after {
+    top: 4px;
+    right: 4px;
+    content: "";
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+    -moz-context-properties: fill, stroke;
+    stroke: var(--warning-icon-detail);
+    fill: var(--warning-icon-background);
+    background-image: url(chrome://userchrome/content/devtools/error-small-two-tone.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .tab-close-button {

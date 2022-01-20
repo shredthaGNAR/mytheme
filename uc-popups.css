@@ -18,12 +18,7 @@ tabmodalprompt {
     --in-content-button-background-hover: var(--arrowpanel-dimmed-further) !important;
     --in-content-button-background-active: var(--arrowpanel-dimmed-even-further) !important;
     --in-content-item-selected: var(--purple-40) !important;
-    --in-content-border-highlight: var(--purple-40) !important;
     --in-content-border-hover: var(--dialog-box-border-hover) !important;
-    --in-content-border-focus: var(--purple-40) !important;
-    --in-content-border-active: var(--purple-40) !important;
-    --in-content-border-active-shadow: var(--purple-40-a30) !important;
-    --in-content-category-outline-focus: 1px solid transparent !important;
     --in-content-link-color: var(--purple-35) !important;
     --in-content-link-color-hover: var(--purple-30) !important;
     --in-content-link-color-active: var(--purple-30) !important;
@@ -232,7 +227,7 @@ panel[type="autocomplete-richlistbox"] > richlistbox {
 panel[type="autocomplete-richlistbox"] > richlistbox > richlistitem {
     appearance: none !important;
     color: var(--menu-color) !important;
-    padding: 0 8px !important;
+    padding: 4px 8px !important;
     border: none !important;
     min-height: var(--menuitem-height) !important;
     border-radius: var(--context-menuitem-border-radius) !important;
@@ -272,6 +267,15 @@ panel[type="autocomplete-richlistbox"]
     > .line2-label {
     opacity: 1 !important;
     color: var(--panel-shortcut-color) !important;
+}
+
+#PopupAutoComplete
+    > richlistbox
+    > richlistitem[originaltype="insecureWarning"]
+    > .ac-title
+    > description
+    > .ac-title-text {
+    padding-inline: 0 8px !important;
 }
 
 panel[type="autocomplete-richlistbox"] > richlistbox > richlistitem[originaltype="loginsFooter"] {
@@ -470,16 +474,24 @@ panel[type="autocomplete-richlistbox"]
 @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml")
 {
     .control-item {
-        backdrop-filter: blur(8px) !important;
+        /* backdrop-filter has been temporarily disabled by mozilla */
+        /* backdrop-filter: blur(8px) !important;
         background-color: var(--btn-bg-color) !important;
-        background-image: var(--acrylic-texture), var(--pip-icon) !important;
+        background-image: var(--acrylic-texture), var(--pip-icon) !important; */
+        background-color: var(--in-content-button-highlight-dark) !important;
         fill: currentColor !important;
         -moz-context-properties: fill !important;
         color: var(--player-control-icon-fill) !important;
+        border-radius: 3px !important;
     }
 
     body:not(:fullscreen) #controls:hover .control-item {
         opacity: 1 !important;
+    }
+
+    #controls[keying] button:focus-visible {
+        outline-style: auto !important;
+        box-shadow: 1px 2px 5px #000;
     }
 
     #close {
@@ -511,7 +523,7 @@ panel[type="autocomplete-richlistbox"]
 #DateTimePickerPanel {
     --arrowpanel-background: var(--in-content-box-background) !important;
     --arrowpanel-color: var(--lwt-text-color) !important;
-    --arrowpanel-border-color: var(--menu-border-color) !important;
+    --arrowpanel-border-color: var(--uc-menu-border-color) !important;
 }
 
 @-moz-document url-prefix("chrome://global/content/timepicker.xhtml"),
@@ -659,11 +671,12 @@ panel[type="autocomplete-richlistbox"]
 :is(.tab-prompt-dialog, #window-modal-dialog) .dialogBox {
     margin-top: 0px !important; /* tab-prompt-dialogs are anchored to the top of the browser content area.
     this makes them look like they emerge from under the navbar. */
+    border: 1px solid var(--arrowpanel-border-color);
 }
 
 :is(.tab-prompt-dialog, #window-modal-dialog) :is(.dialogBox, .dialogFrame) {
     border-radius: 0 0 5px 5px !important;
-    border-top-style: none !important;
+    border-top-width: 0 !important;
 }
 
 .content-prompt-dialog :is(.dialogBox, .dialogFrame) {
@@ -727,7 +740,6 @@ panel[type="autocomplete-richlistbox"]
 
 :is(#window-modal-dialog, .tab-prompt-dialog) > .dialogOverlay[style] .dialogFrame {
     background-color: var(--ui-quaternary-bg) !important;
-    border: 1px solid var(--arrowpanel-border-color);
 }
 
 /* center text in any dialog box */
@@ -763,12 +775,7 @@ panel[type="autocomplete-richlistbox"]
         --in-content-button-background-hover: var(--arrowpanel-dimmed-further) !important;
         --in-content-button-background-active: var(--arrowpanel-dimmed-even-further) !important;
         --in-content-item-selected: var(--purple-40) !important;
-        --in-content-border-highlight: var(--purple-40) !important;
         --in-content-border-hover: var(--dialog-box-border-hover) !important;
-        --in-content-border-focus: var(--purple-40) !important;
-        --in-content-border-active: var(--purple-40) !important;
-        --in-content-border-active-shadow: var(--purple-40-a30) !important;
-        --in-content-category-outline-focus: 1px solid transparent !important;
         --in-content-link-color: var(--purple-35) !important;
         --in-content-link-color-hover: var(--purple-30) !important;
         --in-content-link-color-active: var(--purple-30) !important;
@@ -883,6 +890,7 @@ panel[type="autocomplete-richlistbox"]
 
     richlistbox[id] {
         background-color: var(--in-content-box-background-dim) !important;
+        border-color: var(--in-content-box-border-color) !important;
     }
 
     richlistbox[id] richlistitem {
@@ -1026,7 +1034,7 @@ panel[type="autocomplete-richlistbox"]
 
     @supports -moz-bool-pref("userChrome.css.mac-ui-fonts") {
         #commonDialogWindow[dialogroot] {
-            font-family: SF Pro Text, Segoe UI, sans-serif !important;
+            font-family: SF Pro Text, SF Arabic, Segoe UI, sans-serif !important;
             font-kerning: normal !important;
             padding-block: 2px !important;
         }
@@ -1038,7 +1046,7 @@ panel[type="autocomplete-richlistbox"]
         #titleText {
             font-weight: var(--uc-font-weight-semibold, 400) !important;
             font-size: 14px !important;
-            font-family: SF Pro Display, Segoe UI, sans-serif !important;
+            font-family: SF Pro Display, SF Arabic, Segoe UI, sans-serif !important;
         }
 
         #chooser .name {
@@ -1067,12 +1075,7 @@ panel[type="autocomplete-richlistbox"]
         ) !important;
         --in-content-button-background-solid: var(--content-principal-button-background-solid);
         --in-content-item-selected: var(--purple-40) !important;
-        --in-content-border-highlight: var(--purple-40) !important;
         --in-content-border-hover: var(--content-principal-border-hover) !important;
-        --in-content-border-focus: var(--purple-40) !important;
-        --in-content-border-active: var(--purple-40) !important;
-        --in-content-border-active-shadow: var(--purple-40-a30) !important;
-        --in-content-category-outline-focus: 1px solid transparent !important;
         --in-content-link-color: var(--purple-30) !important;
         --in-content-link-color-hover: var(--purple-25) !important;
         --in-content-link-color-active: var(--purple-20) !important;
@@ -1135,7 +1138,7 @@ panel[type="autocomplete-richlistbox"]
         .header,
         #location {
             font-weight: var(--uc-font-weight-extrabold, 500) !important;
-            font-family: SF Pro, Segoe UI, sans-serif !important;
+            font-family: SF Pro, SF Arabic, Segoe UI, sans-serif !important;
         }
     }
 }
@@ -1145,7 +1148,8 @@ panel[type="autocomplete-richlistbox"]
     url-prefix("chrome://global/content/print.html"),
     url("chrome://browser/content/places/bookmarkProperties.xhtml"),
     url("chrome://browser/content/places/bookmarkProperties2.xhtml"),
-    url-prefix("chrome://browser/content/sanitize.xhtml")
+    url-prefix("chrome://browser/content/sanitize.xhtml"),
+    url("chrome://browser/content/spotlight.html")
 {
     :root[dialogroot],
     :root[dialogroot] dialog {
@@ -1159,12 +1163,7 @@ panel[type="autocomplete-richlistbox"]
         --in-content-button-background-active: var(--arrowpanel-dimmed-even-further) !important;
         --in-content-item-selected: var(--purple-40) !important;
         --in-content-item-hover: var(--arrowpanel-dimmed) !important;
-        --in-content-border-highlight: var(--purple-40) !important;
         --in-content-border-hover: var(--dialog-box-border-hover) !important;
-        --in-content-border-focus: var(--purple-40) !important;
-        --in-content-border-active: var(--purple-40) !important;
-        --in-content-border-active-shadow: var(--purple-40-a30) !important;
-        --in-content-category-outline-focus: 1px solid transparent !important;
         --in-content-link-color: var(--purple-35) !important;
         --in-content-link-color-hover: var(--purple-30) !important;
         --in-content-link-color-active: var(--purple-30) !important;
@@ -1360,7 +1359,7 @@ panel[type="autocomplete-richlistbox"]
     }
 
     :root[dialogroot] input[type="number"]:hover:active::-moz-number-spin-box {
-        border-color: var(--in-content-border-active) !important;
+        border-color: var(--purple-40) !important;
     }
 
     :root[dialogroot] input[type="number"]:focus,
@@ -1464,13 +1463,13 @@ panel[type="autocomplete-richlistbox"]
     @supports -moz-bool-pref("userChrome.css.mac-ui-fonts") {
         :root[dialogroot],
         :root[dialogroot] dialog {
-            font-family: SF Pro Text, Segoe UI, sans-serif !important;
+            font-family: SF Pro Text, SF Arabic, Segoe UI, sans-serif !important;
             font-kerning: normal !important;
         }
 
         :root[dialogroot] :is(h2, h3, #titleText) {
             font-weight: var(--uc-font-weight-semibold, 400) !important;
-            font-family: SF Pro Display, Segoe UI, sans-serif !important;
+            font-family: SF Pro Display, SF Arabic, Segoe UI, sans-serif !important;
         }
     }
 }
@@ -1592,13 +1591,18 @@ link[href="chrome://global/content/printPagination.css"]
         background-image: url(chrome://branding/content/about-logo.svg) !important;
     }
 
+    #aboutDialog {
+        width: auto !important;
+        max-width: 1000px !important;
+    }
+
     #aboutDialogContainer {
         border: 0 !important;
         background-color: var(--arrowpanel-background) !important;
         background-image: radial-gradient(
-            circle at 19% 40%,
+            circle at calc((210px / 2) + 30px) calc(20% + 20px + 52px),
             hsla(255, 80%, 90%, 0.3),
-            transparent 50%
+            transparent 35%
         );
         background-blend-mode: overlay !important;
         color: var(--ui-text-100) !important;
@@ -1757,7 +1761,7 @@ link[href="chrome://global/content/printPagination.css"]
     }
 
     #permTab {
-        list-style-image: url(chrome://userchrome/content/skin/permissions.svg) !important;
+        list-style-image: url(chrome://userchrome/content/formfill.svg) !important;
     }
 
     #securityTab {
@@ -1830,7 +1834,8 @@ link[href="chrome://global/content/printPagination.css"]
         color: var(--arrowpanel-color) !important;
     }
 
-    treechildren::-moz-tree-row(selected) {
+    treechildren::-moz-tree-row(selected),
+    treechildren::-moz-tree-row(focus) {
         outline: none !important;
         border: none !important;
     }
@@ -1927,9 +1932,8 @@ link[href="chrome://global/content/printPagination.css"]
     #imagecontainerbox {
         background: var(--transparent-img-background-context) !important;
         background-color: var(--arrowpanel-faint) !important;
-        color: var(--arrowpanel-darker);
-        fill: currentColor;
-        fill-opacity: 0.6;
+        fill: var(--arrowpanel-dimmed);
+        fill-opacity: 0.5;
         border: 1px solid var(--button-solid-active-background) !important;
         border-radius: var(--general-button-border-radius);
         -moz-context-properties: fill, fill-opacity;
@@ -1971,8 +1975,7 @@ link[href="chrome://global/content/printPagination.css"]
 
     #perm-install-row .permissionLabel {
         background-image: url(chrome://userchrome/content/material/extension.svg);
-        background-size: 14px;
-        background-position-x: 1px;
+        background-size: 16px;
     }
 
     #perm-popup-row .permissionLabel {
@@ -1992,7 +1995,7 @@ link[href="chrome://global/content/printPagination.css"]
     }
 
     #perm-cookie-row .permissionLabel {
-        background-image: url(chrome://userchrome/content/skin/3rdpartycookies.svg);
+        background-image: url(chrome://userchrome/content/skin/controlcenter/3rdpartycookies.svg);
         background-size: 14px;
         background-position-x: 1px;
     }

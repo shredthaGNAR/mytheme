@@ -38,21 +38,16 @@
 }
 
 @-moz-document plain-text-document(), media-document(all) {
-    @font-face {
-        font-family: "Overpass Mono";
-        font-style: normal;
-        font-weight: 100;
-        src: local("Overpass Mono"), local("Overpass Mono Light"), local("OverpassMono-Light");
-    }
-
     :root {
-        font-family: Overpass Mono, -moz-fixed;
+        font-family: Fira Code UC, Fira Code, SF Mono, -moz-fixed, monospace;
+        font-weight: 300;
     }
 
     xmp,
     pre,
     plaintext {
-        font-family: Overpass Mono, -moz-fixed;
+        font-family: Fira Code UC, Fira Code, SF Mono, -moz-fixed, monospace;
+        font-weight: 300;
     }
 
     img.transparent {
@@ -78,11 +73,6 @@
             background-color: var(--content-selection-bgcolor-disabled) !important;
         }
     }
-}
-
-:root,
-menupopup {
-    --in-content-category-outline-focus: transparent !important;
 }
 
 .controlsContainer {

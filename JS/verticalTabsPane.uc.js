@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Vertical Tabs Pane
-// @version        1.5.3
+// @version        1.5.5
 // @author         aminomancer
 // @homepage       https://github.com/aminomancer/uc.css.js
 // @description    Create a vertical pane across from the sidebar that functions like the vertical
@@ -63,7 +63,7 @@
         // settings for the hotkey
         hotkey: {
             enabled: true, // set to false if you don't want any hotkey
-            modifiers: "accel shift", // valid modifiers are "alt", "shift", "ctrl", "meta" and "accel". accel is equal to ctrl on windows and linux, but meta (cmd ⌘) on macOS. meta is the windows key on windows. it's variable on linux.
+            modifiers: "accel alt", // valid modifiers are "alt", "shift", "ctrl", "meta" and "accel". accel is equal to ctrl on windows and linux, but meta (cmd ⌘) on macOS. meta is the windows key on windows. it's variable on linux.
             key: "V", // the actual key. valid keys are letters, the hyphen key - and F1-F12. digits and F13-F24 are not supported by firefox.
         },
     };
@@ -333,6 +333,8 @@
                     "TabAttrModified",
                     "TabClose",
                     "TabMove",
+                    "TabHide",
+                    "TabShow",
                     "TabPinned",
                     "TabUnpinned",
                     "TabSelect",
@@ -392,7 +394,7 @@
         // make an array containing all the context menus that can be opened by right-clicking something inside the pane.
         get contextMenus() {
             let menus = [];
-            let contextDefs = Array.from(this.pane.querySelectorAll("[context]"));
+            let contextDefs = [...this.pane.querySelectorAll("[context]")];
             contextDefs.push(this.pane);
             contextDefs.forEach((node) => {
                 let menu = document.getElementById(node.getAttribute("context"));
@@ -524,7 +526,7 @@
          * @param {object} e (an event object)
          */
         handleEvent(e) {
-            let tab = e.target.tab;
+            let { tab } = e.target;
             switch (e.type) {
                 case "mousedown":
                     this._onMouseDown(e, tab);
@@ -550,9 +552,11 @@
                 case "deactivate":
                     this._onDeactivate(e);
                     break;
-                case "TabAttrModified":
+                case "TabHide":
+                case "TabShow":
                 case "TabPinned":
                 case "TabUnpinned":
+                case "TabAttrModified":
                 case "TabBrowserDiscarded":
                     this._tabAttrModified(e.target);
                     break;
@@ -1073,7 +1077,7 @@
                     !gNavToolbox.contains(oldFocus) &&
                     !this.pane.contains(oldFocus)
                 ) {
-                    let allStops = Array.from(document.querySelectorAll("toolbartabstop"));
+                    let allStops = [...document.querySelectorAll("toolbartabstop")];
                     let earlierVisibleStopIndex = allStops.indexOf(e.target) - 1;
                     while (earlierVisibleStopIndex >= 0) {
                         let stop = allStops[earlierVisibleStopIndex];

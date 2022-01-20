@@ -28,7 +28,10 @@ user_pref("svg.context-properties.content.enabled", true);
 user_pref("layout.css.backdrop-filter.enabled", true);
 // prevent bugs that would otherwise be caused by the custom scrollbars in the user-agent sheet
 user_pref("layout.css.cached-scrollbar-styles.enabled", false);
+// enable browser dark mode
 user_pref("ui.systemUsesDarkTheme", 1);
+// enable content dark mode
+user_pref("layout.css.prefers-color-scheme.content-override", 0);
 // allow stylesheets to modify trees in system pages viewed in regular tabs
 user_pref("layout.css.xul-tree-pseudos.content.enabled", true);
 // allow the color-mix() CSS function
@@ -37,8 +40,6 @@ user_pref("layout.css.color-mix.enabled", true);
 user_pref("layout.css.moz-outline-radius.enabled", true);
 // avoid native styling
 user_pref("browser.display.windows.non_native_menus", 1);
-user_pref("widget.disable-native-theme-for-content", true);
-user_pref("widget.non-native-theme.win.scrollbar.use-system-size", false);
 user_pref("widget.content.allow-gtk-dark-theme", true);
 // keep "all tabs" menu available at all times, useful for all tabs menu expansion pack
 user_pref("browser.tabs.tabmanager.enabled", true);
@@ -48,15 +49,17 @@ user_pref("ui.highlight", "hsla(245, 100%, 66%, .55)");
 user_pref("ui.selecteditem", "#2F3456");
 // Text color for selected <option> elements and others
 user_pref("ui.selecteditemtext", "#FFFFFFCC");
+// Tooltip colors (only relevant if userChrome.ag.css somehow fails to apply, but doesn't hurt)
+user_pref("ui.infotext", "#FFFFFF");
+user_pref("ui.infobackground", "#hsl(233, 36%, 11%)");
 
 // REQUIRED on macOS
-// user_pref("widget.macos.native-context-menus", false);
+user_pref("widget.macos.native-context-menus", false);
 
 // recommended prefs
 // functionality oriented prefs
 user_pref("browser.display.use_system_colors", false);
-user_pref("browser.display.focus_ring_style", 0);
-user_pref("browser.display.focus_ring_width", 0);
+user_pref("accessibility.mouse_focuses_formcontrol", 0);
 user_pref("browser.startup.blankWindow", false);
 user_pref("browser.startup.preXulSkeletonUI", false);
 user_pref("browser.tabs.tabMinWidth", 90);
@@ -76,10 +79,15 @@ user_pref("ui.tooltipDelay", 300);
 user_pref("ui.key.menuAccessKeyFocuses", false);
 
 // style oriented prefs
-user_pref("reader.color_scheme", "dark");
-user_pref("browser.anchor_color", "#6669ff");
-user_pref("browser.active_color", "#9999ff");
-user_pref("browser.visited_color", "#e34f80");
+// use GTK style for in-content scrollbars
+user_pref("widget.non-native-theme.scrollbar.style", 2);
+// set the scrollbar width
+user_pref("widget.non-native-theme.win.scrollbar.use-system-size", false);
+user_pref("widget.non-native-theme.scrollbar.size.override", 11);
+user_pref("widget.non-native-theme.gtk.scrollbar.thumb-size", 0.818);
+// set the default background color for color-scheme: dark. see it for example on about:blank
+user_pref("browser.display.background_color.dark", "#19191b");
+// findbar highlight and selection colors
 user_pref("ui.textHighlightBackground", "#7755FF");
 user_pref("ui.textHighlightForeground", "#FFFFFF");
 user_pref("ui.textSelectBackground", "#FFFFFF");
@@ -88,10 +96,14 @@ user_pref("ui.textSelectAttentionForeground", "#FFFFFF");
 user_pref("ui.textSelectDisabledBackground", "#7755FF");
 user_pref("ui.textSelectBackgroundAttention", "#FF3388");
 user_pref("ui.textSelectBackgroundDisabled", "#7755FF");
+// spell check style
 user_pref("ui.SpellCheckerUnderline", "#E2467A");
 user_pref("ui.SpellCheckerUnderlineStyle", 1);
+// IME style (for example when typing pinyin or hangul)
 user_pref("ui.IMERawInputBackground", "#000000");
 user_pref("ui.IMESelectedRawTextBackground", "#7755FF");
+// about:reader dark mode
+user_pref("reader.color_scheme", "dark");
 
 // windows font settings - does nothing on macOS or linux
 user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
@@ -121,6 +133,11 @@ user_pref("userChrome.urlbar-results.hide-help-button", true);
 // recommended for all operating systems, but not required.
 // must have the fonts installed. check the repo's readme for more details.
 // user_pref("userChrome.css.mac-ui-fonts", true);
+
+// add a drop shadow on menupopup and panel elements (context menus, addons' popup panels, etc.)
+// the 8px drop shadow area around the menupopup can't be clicked through.
+// this might bother some people so it's disabled by default.
+// user_pref("userChrome.css.menupopup-shadows", true);
 
 // custom wikipedia dark mode theme
 // user_pref("userChrome.css.wikipedia.dark-theme-enabled", true);
