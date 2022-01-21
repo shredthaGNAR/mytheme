@@ -2605,6 +2605,7 @@ tab {
 	--urlbar-min-height: 28px !important;
 	--urlbar-icon-padding: 4px !important;
 	font-size: 1.35em !important;
+	border-radius: 5px !important;
 	overflow: hidden !important;
 }*/
 
@@ -3998,7 +3999,7 @@ box#customization-container {
 .searchbar-textbox,
 #urlbar:hover,
 .searchbar-textbox:hover {
-  font-size: 1.35em !important;
+  font-size: 1em !important;
 }
 
 :root {

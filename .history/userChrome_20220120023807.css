@@ -1630,10 +1630,10 @@ background-image: radial-gradient( circle farthest-corner at 32.7% 82.7%,  rgba(
 		) !important;
 }
 
-/*
+*/
 .tabbrowser-tab:not([selected="true"]):not([multiselected="true"])
-    .tab-background {
-    background-color: color-mix(in srgb, currentColor 8%, transparent) !important;
+  .tab-background {
+  background-color: color-mix(in srgb, currentColor 8%, transparent) !important;
 }
 
 /*tooltip dark theme*/
@@ -2605,6 +2605,7 @@ tab {
 	--urlbar-min-height: 28px !important;
 	--urlbar-icon-padding: 4px !important;
 	font-size: 1.35em !important;
+	border-radius: 5px !important;
 	overflow: hidden !important;
 }*/
 
@@ -3998,7 +3999,7 @@ box#customization-container {
 .searchbar-textbox,
 #urlbar:hover,
 .searchbar-textbox:hover {
-  font-size: 1.35em !important;
+  font-size: 1em !important;
 }
 
 :root {
@@ -8436,7 +8437,7 @@ See the above repository for updates as well as full license text. */
 }
 
 :root[uidensity="compact"] #PersonalToolbar {
-  --uc-bm-padding: 7px;
+  --uc-bm-padding: 10px;
 }
 :root[uidensity="touch"] #PersonalToolbar {
   --uc-bm-padding: 7px;
@@ -8486,9 +8487,3 @@ See the above repository for updates as well as full license text. */
 #navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar {
   transform: rotateX(0);
 }
-/*test code
-tab.tabbrowser-tab vbox.tab-background[selected="true"] { border: 0px !important; } 
-
-#navigator-toolbox { --lwt-tabs-border-color: transparent !important; }
-#tabbrowser-tabs{ --lwt-tab-line-color: transparent !important; }
-*/
