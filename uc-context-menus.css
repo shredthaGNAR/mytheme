@@ -10,6 +10,10 @@ rules in here should match similar rules in userContent.css,
 since devtools and certain system pages contain the same elements,
 but *inside* of content documents rather than in the UI where userChrome.css can style them. */
 
+menupopup {
+    -moz-window-shadow: none !important;
+}
+
 menupopup:not([type="arrow"]) {
     appearance: none !important;
     background: var(--menupopup-background) !important;
@@ -182,7 +186,7 @@ menupopup menuitem:is([type="checkbox"], [type="radio"])::before {
     background-size: contain;
     border: 1px solid var(--checkbox-border-color);
     background-color: var(--checkbox-unchecked-bgcolor);
-    color: var(--in-parent-primary-button-text-color);
+    color: var(--uc-parent-primary-button-text-color);
 }
 
 menupopup .unified-nav-current[type="radio"][checked="true"] {

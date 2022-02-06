@@ -51,6 +51,7 @@ the last 75% or so of this stylesheet is dedicated to restoring pre-proton conte
         --panel-border-color: var(--arrowpanel-border-color);
         --panel-border-radius: var(--arrowpanel-border-radius);
         --panel-padding: var(--arrowpanel-padding);
+        -moz-window-shadow: none;
     }
 
     panel[type="autocomplete-richlistbox"] {
@@ -69,6 +70,10 @@ the last 75% or so of this stylesheet is dedicated to restoring pre-proton conte
 
     #editBookmarkPanel menulist menupopup::part(content) {
         border: none;
+    }
+
+    #bookmarkpropertiesdialog::part(content-box) {
+        margin-bottom: 8px;
     }
 
     :is(panel, menupopup)::part(content) {
@@ -193,6 +198,13 @@ the last 75% or so of this stylesheet is dedicated to restoring pre-proton conte
         border-radius: var(--searchbar-popup-border-radius);
         box-shadow: var(--searchbar-popup-box-shadow);
         width: calc(var(--panel-width) + 10px);
+    }
+
+    #managed-bookmarks > .toolbarbutton-icon,
+    #bookmarks-toolbar-placeholder > .toolbarbutton-icon,
+    #PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]),
+    #OtherBookmarks.bookmark-item[container] > .toolbarbutton-icon {
+        margin-inline-end: var(--context-iconic-margin-end);
     }
 
     /* panel width */
@@ -2084,7 +2096,7 @@ animation-duration of 730ms, 71% is the point where we start the fade out. */
         }
 
         radio[disabled="true"] {
-            color: var(--context-menu-disabled-color);
+            color: var(--uc-menu-disabled-color);
         }
     }
 }

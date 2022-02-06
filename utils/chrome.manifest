@@ -14,11 +14,15 @@ override chrome://global/skin/arrowscrollbox.css ../resources/layout/arrowscroll
 # Override the tab element to restore the tab sound button and move the close button, among other things.
 # override chrome://browser/content/tabbrowser-tab.js ../resources/script-override/tabMods.uc.js
 
+# Override the notification message bar element to move the close button to the left in tab order.
+override chrome://global/content/elements/message-bar.js ../resources/script-override/message-bar.js
+
 # Override a bunch of icons that appear all over the browser.
 override chrome://global/skin/icons/check.svg ../resources/check.svg
 override chrome://global/skin/icons/success.svg ../resources/check.svg
 override chrome://global/skin/icons/check-partial.svg ../resources/check-partial.svg
 override chrome://global/skin/icons/radio.svg ../resources/radio.svg
+override chrome://global/skin/icons/blocked.svg ../resources/blocked.svg
 override chrome://global/skin/icons/security-broken.svg ../resources/connection-mixed-active-loaded.svg
 override chrome://global/skin/icons/security-warning.svg ../resources/connection-mixed-passive-loaded.svg
 override chrome://global/skin/icons/security.svg ../resources/skin/connection-secure.svg
@@ -72,12 +76,31 @@ override chrome://browser/skin/places/bookmarksMenu.svg ../resources/material/pl
 override chrome://browser/skin/places/folder-smart.svg ../resources/material/places/folder-user.svg
 override chrome://browser/skin/places/tag.svg ../resources/material/places/tag.svg
 override chrome://browser/skin/places/history.svg ../resources/skin/history.svg
+override chrome://browser/skin/downloads/downloads.svg ../resources/downloads/downloads.svg
 override chrome://browser/skin/downloads/notification-start-animation.svg ../resources/downloads/notification-start-animation.svg
 override chrome://browser/skin/downloads/notification-finish-animation.svg ../resources/downloads/notification-finish-animation.svg
 override chrome://browser/skin/fullscreen.svg ../resources/skin/fullscreen.svg
 override chrome://browser/skin/fullscreen-exit.svg ../resources/skin/fullscreen-exit.svg
 override chrome://browser/skin/controlcenter/socialblock.svg ../resources/material/dislike.svg
 override chrome://browser/skin/controlcenter/3rdpartycookies.svg ../resources/skin/controlcenter/3rdpartycookies.svg
+override chrome://browser/skin/notification-icons/autoplay-media.svg ../resources/notifications/autoplay-media.svg
+override chrome://browser/skin/notification-icons/autoplay-media-blocked.svg ../resources/notifications/autoplay-media-blocked.svg
+override chrome://browser/skin/notification-icons/camera.svg ../resources/notifications/camera.svg
+override chrome://browser/skin/notification-icons/camera-blocked.svg ../resources/notifications/camera-blocked.svg
+override chrome://browser/skin/notification-icons/desktop-notification.svg ../resources/notifications/desktop-notification.svg
+override chrome://browser/skin/notification-icons/desktop-notification-blocked.svg ../resources/notifications/desktop-notification-blocked.svg
+override chrome://browser/skin/notification-icons/geo.svg ../resources/notifications/geo.svg
+override chrome://browser/skin/notification-icons/geo-blocked.svg ../resources/notifications/geo-blocked.svg
+override chrome://browser/skin/notification-icons/microphone.svg ../resources/notifications/microphone.svg
+override chrome://browser/skin/notification-icons/microphone-blocked.svg ../resources/notifications/microphone-blocked.svg
+override chrome://browser/skin/notification-icons/midi.svg ../resources/notifications/midi.svg
+override chrome://browser/skin/notification-icons/persistent-storage.svg ../resources/notifications/persistent-storage.svg
+override chrome://browser/skin/notification-icons/persistent-storage-blocked.svg ../resources/notifications/persistent-storage-blocked.svg
+override chrome://browser/skin/notification-icons/popup.svg ../resources/notifications/popup.svg
+override chrome://browser/skin/notification-icons/screen.svg ../resources/notifications/screen.svg
+override chrome://browser/skin/notification-icons/screen-blocked.svg ../resources/notifications/screen-blocked.svg
+override chrome://browser/skin/notification-icons/xr.svg ../resources/notifications/xr.svg
+override chrome://browser/skin/notification-icons/xr-blocked.svg ../resources/notifications/xr-blocked.svg
 override chrome://browser/skin/preferences/android-menu.svg ../resources/preferences/android-menu.svg
 override chrome://browser/skin/preferences/category-general.svg ../resources/preferences/category-general.svg
 override chrome://browser/skin/preferences/category-privacy-security.svg ../resources/preferences/category-privacy-security.svg

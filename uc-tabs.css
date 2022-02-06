@@ -688,6 +688,11 @@ so in other words it won't show if audio is playing until you hover the general 
     transform: translateX(25px) scale(0.5) !important;
 }
 
+.tabbrowser-tab .tab-label:not([fadein]),
+.tabbrowser-tab .tab-throbber:not([fadein]) {
+    display: none !important;
+}
+
 .tabbrowser-tab .tab-throbber:not([busy], [progress]) {
     opacity: 0 !important;
     pointer-events: none !important;
@@ -711,14 +716,14 @@ so in other words it won't show if audio is playing until you hover the general 
 }
 
 /* this pref enables a special loading throbber animation that spins instead of bouncing horizontally */
-@supports (-moz-bool-pref("userChrome.tabs.new-loading-spinner-animation")) {
+@supports -moz-bool-pref("userChrome.tabs.new-loading-spinner-animation") {
     @keyframes uc-tab-throbber-spinner {
         to {
             rotate: 360deg;
         }
     }
 
-    .tab-throbber {
+    .tab-throbber[fadein] {
         display: block !important;
         position: relative !important;
     }
@@ -753,7 +758,7 @@ so in other words it won't show if audio is playing until you hover the general 
         this version of the animation is implemented by an <animateTransform> tag.
         it's the most efficient method but it has broken once for a couple days due to an erroneous nightly patch. */
 
-        /* background-image: url(chrome://userchrome/content/loading-spinner.svg) !important; */
+        background-image: url(chrome://userchrome/content/loading-spinner.svg) !important;
 
         /* ---------------------------------- */
 
@@ -764,7 +769,7 @@ so in other words it won't show if audio is playing until you hover the general 
         giving the element a CSS property "animation" that references the animation in the style tag.
         use this if method #1 randomly breaks, *temporarily*. mozilla should patch such a bug quickly. */
 
-        background-image: url(chrome://userchrome/content/loading-spinner-css.svg) !important;
+        /* background-image: url(chrome://userchrome/content/loading-spinner-css.svg) !important; */
 
         /* ---------------------------------- */
 
@@ -784,13 +789,13 @@ so in other words it won't show if audio is playing until you hover the general 
 
     /* all tabs menu & vertical tabs pane (script) */
     .tab-throbber-tabslist:is([busy], [progress]) {
-        /* METHOD #1: */
-        /* list-style-image: url(chrome://userchrome/content/loading-spinner.svg) !important; */
+        /* ANIMATION METHOD #1: */
+        list-style-image: url(chrome://userchrome/content/loading-spinner.svg) !important;
 
-        /* METHOD #2: */
-        list-style-image: url(chrome://userchrome/content/loading-spinner-css.svg) !important;
+        /* ANIMATION METHOD #2: */
+        /* list-style-image: url(chrome://userchrome/content/loading-spinner-css.svg) !important; */
 
-        /* METHOD #3: */
+        /* ANIMATION METHOD #3: */
         /* animation: 0.85s steps(12, end) uc-tab-throbber-spinner infinite !important;
         list-style-image: url(chrome://userchrome/content/loading-spinner-static.svg) !important; */
     }
@@ -808,7 +813,7 @@ so in other words it won't show if audio is playing until you hover the general 
 
 /* hide the close button for pinned tabs. if the last visible tab is pinned, it doesn't hide the close button since the tab doesn't get shrunk in that case.
 this requires you to make a pref in about:config and set it to true: "userChrome.tabs.pinned-tabs.close-buttons.disabled" */
-@supports (-moz-bool-pref("userChrome.tabs.pinned-tabs.close-buttons.disabled")) {
+@supports -moz-bool-pref("userChrome.tabs.pinned-tabs.close-buttons.disabled") {
     .tabbrowser-tab[pinned] .tab-close-button {
         display: none !important;
     }

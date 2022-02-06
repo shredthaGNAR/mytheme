@@ -1,0 +1,14 @@
+@media (prefers-reduced-motion: no-preference) {
+  /* @media (prefers-reduced-motion: reduce) */
+  .tab-loading-burst::before {
+    display: none !important;
+    animation: none !important;
+  }
+  .tab-throbber::before {
+    background-image: url("chrome://global/skin/icons/defaultFavicon.svg") !important;
+    animation: none !important;
+  }
+  .tab-throbber[busy]::before {
+    filter: opacity(50%) !important;
+  }
+}
