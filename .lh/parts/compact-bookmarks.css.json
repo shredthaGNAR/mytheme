@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1639486610486,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644384562850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,12 @@\n-/**\n- * /* -----------------------------\n- *\n- * @format\n- */\n-\n /* Firefox Compact Bookmarks Bar */\n-/* ----------------------------- */\n \n-/* remove bookmark folder drop marker *\n+/* remove bookmark folder drop marker */\n .toolbarbutton-menu-dropmarker {\n-\tdisplay: none !important;\n+  display: none !important;\n }\n \n-/* Add custom padding size for items below */\n+/* Add custom padding size for items below *\n toolbarbutton.bookmark-item[image]:not([container]) {\n }\n \n /* No Favicon Available - Don't display default icon /*!*/\n"
+                },
+                {
+                    "date": 1644391228370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,19 @@\n+/**\n+ * /* -----------------------------\n+ *\n+ * @format\n+ */\n+\n /* Firefox Compact Bookmarks Bar */\n+/* ----------------------------- */\n \n /* remove bookmark folder drop marker */\n .toolbarbutton-menu-dropmarker {\n   display: none !important;\n }\n \n-/* Add custom padding size for items below *\n+/* Add custom padding size for items below */\n toolbarbutton.bookmark-item[image]:not([container]) {\n }\n \n /* No Favicon Available - Don't display default icon /*!*/\n"
                 }
             ],
             "date": 1639486610486,

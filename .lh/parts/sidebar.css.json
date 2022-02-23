@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1630222960072,
@@ -12,6 +12,14 @@
                 {
                     "date": 1634967447402,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   border-radius: var(--bf-sidebar-searchbar-radius) !important;\n }\n \n #sidebar-box:-moz-lwtheme {\n-  appearance: auto !important;\n+  appearance: -moz-mac-vibrant-titlebar-dark !important;\n   -moz-default-appearance: -moz-mac-vibrant-titlebar-dark !important;\n   -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;\n }\n \n"
+                },
+                {
+                    "date": 1644384696024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,9 @@\n   -moz-default-appearance: -moz-mac-vibrant-titlebar-dark !important;\n   -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;\n }\n \n-/*\n #sidebar-box:lwt-sidebar {\n-\tappearance: auto;\n-\t-moz-default-appearance: -moz-mac-source-list;\n-\t-moz-font-smoothing-background-color: -moz-mac-source-list;\n-}*/\n+  appearance: auto;\n+  -moz-default-appearance: -moz-mac-source-list;\n+  -moz-font-smoothing-background-color: -moz-mac-source-list;\n+}\n"
+                },
+                {
+                    "date": 1644391181023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,10 @@\n   -moz-default-appearance: -moz-mac-vibrant-titlebar-dark !important;\n   -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;\n }\n \n+/*\n #sidebar-box:lwt-sidebar {\n-  appearance: auto;\n-  -moz-default-appearance: -moz-mac-source-list;\n-  -moz-font-smoothing-background-color: -moz-mac-source-list;\n-}\n+\tappearance: auto;\n+\t-moz-default-appearance: -moz-mac-source-list;\n+\t-moz-font-smoothing-background-color: -moz-mac-source-list;\n+}*/\n"
                 }
             ],
             "date": 1630222960072,

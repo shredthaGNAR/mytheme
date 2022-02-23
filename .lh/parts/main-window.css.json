@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1633906883761,
@@ -16,6 +16,22 @@
                 {
                     "date": 1634285517667,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,31 +3,27 @@\n  * ░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀▀░█▀█░█▀▀░█░█\n  * ░░█░░█▀▄░█▀█░█░█░▀▀█░█▀▀░█▀█░█▀▄░█▀▀░█░█░█░░░░█░\n  * ░░▀░░▀░▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░░▀░\n  * \n- * Main window*\n- * #main-window {\n- * \tfont-kerning: normal;\n- * \tborder: none !important;\n- * }\n- * /* Add transparency to light and dark color schemes\n- *\n- * @format\n- */\n+ * Main window*/\n+ #main-window {\n+ font-kerning: normal;\n+ border: none !important;\n+ }\n \n+\n #main-window:-moz-lwtheme-brighttext,\n #main-window:-moz-lwtheme-darktext {\n-  background: transparent !important;\n-  -moz-appearance: --moz-mac-vibrant-titlebar-dark !important;\n+\tbackground: transparent !important;\n+\t-moz-appearance: --moz-mac-vibrant-titlebar-dark !important;\n }\n /*\n ░█▀▀░█▀█░█▀█░▀█▀\n ░█▀▀░█░█░█░█░░█░\n ░▀░░░▀▀▀░▀░▀░░▀░\n-I'm not sure if this does something*/\n-/*\n+I'm not sure if this does something\n+\n \t-webkit-font-smoothing: antialiased;\n \t-moz-osx-font-smoothing: grayscale;\n \ttext-rendering: optimizeLegibility;\n \tfont-variant-ligatures: none;\n \tfont-kerning: normal;\n-*/\n"
+                },
+                {
+                    "date": 1644383949060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,19 @@\n-/**\n- * /*\n+\n  * ░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀▀░█▀█░█▀▀░█░█\n  * ░░█░░█▀▄░█▀█░█░█░▀▀█░█▀▀░█▀█░█▀▄░█▀▀░█░█░█░░░░█░\n  * ░░▀░░▀░▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░░▀░\n- * \n- * Main window*/\n+\n+ /*Main window*/\n  #main-window {\n  font-kerning: normal;\n  border: none !important;\n  }\n \n-\n #main-window:-moz-lwtheme-brighttext,\n #main-window:-moz-lwtheme-darktext {\n \tbackground: transparent !important;\n-\t-moz-appearance: --moz-mac-vibrant-titlebar-dark !important;\n+\t-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n }\n /*\n ░█▀▀░█▀█░█▀█░▀█▀\n ░█▀▀░█░█░█░█░░█░\n"
+                },
+                {
+                    "date": 1644384644907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n \n- * ░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀▀░█▀█░█▀▀░█░█\n- * ░░█░░█▀▄░█▀█░█░█░▀▀█░█▀▀░█▀█░█▀▄░█▀▀░█░█░█░░░░█░\n- * ░░▀░░▀░▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░░▀░\n-\n  /*Main window*/\n  #main-window {\n  font-kerning: normal;\n  border: none !important;\n"
+                },
+                {
+                    "date": 1644388701364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,21 @@\n-\n- /*Main window*/\n+/**\n+ * /*\n+ * ░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀▀░█▀█░█▀▀░█░█\n+ * ░░█░░█▀▄░█▀█░█░█░▀▀█░█▀▀░█▀█░█▀▄░█▀▀░█░█░█░░░░█░\n+ * ░░▀░░▀░▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░░▀░\n+ *\n+ * Main window*/\n  #main-window {\n  font-kerning: normal;\n  border: none !important;\n  }\n \n+\n #main-window:-moz-lwtheme-brighttext,\n #main-window:-moz-lwtheme-darktext {\n \tbackground: transparent !important;\n-\t-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n+\t-moz-appearance: --moz-mac-vibrant-titlebar-dark !important;\n }\n /*\n ░█▀▀░█▀█░█▀█░▀█▀\n ░█▀▀░█░█░█░█░░█░\n"
+                },
+                {
+                    "date": 1645278173792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n #main-window:-moz-lwtheme-brighttext,\n #main-window:-moz-lwtheme-darktext {\n \tbackground: transparent !important;\n-\t-moz-appearance: --moz-mac-vibrant-titlebar-dark !important;\n+\t-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;\n }\n /*\n ░█▀▀░█▀█░█▀█░▀█▀\n ░█▀▀░█░█░█░█░░█░\n"
                 }
             ],
             "date": 1633906883761,

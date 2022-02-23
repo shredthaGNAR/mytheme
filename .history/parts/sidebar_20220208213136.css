@@ -1,0 +1,46 @@
+/*
+░█▀▀░▀█▀░█▀▄░█▀▀░█▀▄░█▀█░█▀▄
+░▀▀█░░█░░█░█░█▀▀░█▀▄░█▀█░█▀▄
+░▀▀▀░▀▀▀░▀▀░░▀▀▀░▀▀░░▀░▀░▀░▀
+
+Sidebar
+*/
+
+/*
+#sidebar-box {}
+
+#sidebar-box:-moz-lwtheme-darktext, #sidebar-box:-moz-lwtheme-brighttext {
+	--sidebar-background-color: var(--bf-sidebar-bg) !important;
+	--sidebar-text-color: var(--bf-sidebar-color) !important;
+}
+*/
+
+#sidebar,
+.sidebar-panel {
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1)
+  ) !important;
+  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+}
+
+/* Sidebar searchbar */
+
+#sidebar-search-container #search-box {
+  border: none !important;
+  padding: 6px !important;
+  border-radius: var(--bf-sidebar-searchbar-radius) !important;
+}
+
+#sidebar-box:-moz-lwtheme {
+  appearance: -moz-mac-vibrant-titlebar-dark !important;
+  -moz-default-appearance: -moz-mac-vibrant-titlebar-dark !important;
+  -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;
+}
+
+#sidebar-box:lwt-sidebar {
+  appearance: auto;
+  -moz-default-appearance: -moz-mac-source-list;
+  -moz-font-smoothing-background-color: -moz-mac-source-list;
+}
