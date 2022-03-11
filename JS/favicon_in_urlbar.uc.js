@@ -29,8 +29,8 @@ var FaviconInUrlbar = {
 	  
 	favimginurlbar.style.width = "14px";
 	favimginurlbar.style.height = "14px";
-	favimginurlbar.style.marginLeft = "4px";
-	favimginurlbar.style.marginRight = "4px";
+	favimginurlbar.style.marginLeft = "2px";
+	favimginurlbar.style.marginRight = "2px";
 	favimginurlbar.style.marginTop = "4px";
 	favimginurlbar.style.marginBottom = "4px";
 	

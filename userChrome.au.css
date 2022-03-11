@@ -223,14 +223,6 @@ the last 75% or so of this stylesheet is dedicated to restoring pre-proton conte
         background-color: var(--panel-item-hover-bgcolor);
     }
 
-    panelview
-        :is(.toolbarbutton-1, toolbarbutton.subviewbutton, .navigable.subviewbutton):not([disabled], [open]):focus-visible:active,
-    .widget-overflow-list .toolbarbutton-1:not([disabled], [open]):focus-visible:active,
-    .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"])
-        > toolbarbutton:not([disabled], [open]):focus-visible:active {
-        background-color: var(--panel-item-active-bgcolor);
-    }
-
     .panel-footer > button {
         border-radius: var(--general-button-border-radius);
     }
@@ -526,7 +518,8 @@ this way we don't animate tabs that were simply moved rather than created */
     }
 
     #customization-container,
-    #customization-container :is(menupopup, panel)::part(arrowscrollbox) {
+    #customization-container :is(menupopup, panel)::part(arrowscrollbox),
+    window#alertNotification #alertSettings :is(menupopup, panel)::part(arrowscrollbox) {
         --arrowpanel-dimmed: color-mix(in srgb, var(--uc-toolbar-color) 7%, transparent);
         --arrowpanel-dimmed-further: color-mix(in srgb, var(--uc-toolbar-color) 12%, transparent);
         --arrowpanel-dimmed-even-further: color-mix(
@@ -553,6 +546,7 @@ this way we don't animate tabs that were simply moved rather than created */
             var(--in-content-bg-darker, rgb(21, 21, 23))
         ) !important;
         --panel-border-color: var(--arrowpanel-border-color) !important;
+        --menu-separator-color: var(--arrowpanel-border-color) !important;
         --uc-checkbox-unchecked-bgcolor: color-mix(in srgb, var(--toolbar-color) 7%, transparent);
         --uc-checkbox-unchecked-hover-bgcolor: color-mix(
             in srgb,
@@ -638,6 +632,10 @@ this way we don't animate tabs that were simply moved rather than created */
     #customization-panelWrapper > .panel-arrowbox {
         z-index: 251 !important;
         position: absolute;
+    }
+
+    #customization-uidensity-touch-spacer {
+        margin-inline: calc(-1 * var(--arrowpanel-padding) / 2) !important;
     }
 
     #customization-container {
