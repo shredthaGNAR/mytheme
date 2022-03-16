@@ -1,0 +1,114 @@
+/* Disables tab flash on load */
+.tabbrowser-tab .tab-loading-burst {
+  display: none !important;
+}
+:root {
+  --tabbar-inactive-color: rgba(0, 0, 0, 0.07);
+  --tabbar-border-color: rgba(0, 0, 0, 0.2);
+}
+:root:-moz-lwtheme {
+  --tabbar-inactive-color: rgba(0, 0, 0, 0.4);
+  --tabbar-border-color: rgba(0, 0, 0, 0.8);
+}
+tab:only-of-type .tab-background {
+  background-color: transparent !important;
+}
+.tab-background[selected],
+.tab-background[multiselected] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-top: none !important;
+}
+/* Sets tab bar transition durations */
+#tabbrowser-tabs:not(:hover) tab {
+  transition: all 300ms cubic-bezier(0, 0, 0.1, 1) 0ms !important;
+}
+/* Disables favicon spring */
+.tabbrowser-tab .tab-icon-image {
+  display: inherit !important;
+}
+.tab-throbber {
+  display: none !important;
+}
+/* Sets tab max width */
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
+  max-width: 100% !important;
+}
+
+/* Centeres tab content */
+.tab-content::before {
+  -moz-box-flex: 1 !important;
+  display: -moz-box !important;
+  content: "" !important;
+}
+tab:not([pinned]) .tab-content {
+  padding-right: 24px !important;
+}
+#nav-bar,
+#titlebar,
+#sidebar-box {
+  -moz-appearance: -moz-mac-vibrant-titlebar-light !important;
+}
+#nav-bar:-moz-lwtheme,
+#titlebar:-moz-lwtheme,
+#sidebar-box:-moz-lwtheme {
+  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+}
+
+/* Places window controls */
+.titlebar-buttonbox-container {
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 7px;
+}
+/* Standard tab text color */
+#TabsToolbar .tabbrowser-tab .tab-label {
+  color: white !important;
+  filter: opacity(80%) !important;
+}
+
+/* Unloaded tab faded text and image */
+#TabsToolbar .tabbrowser-tab[pending] {
+  color: white !important;
+  filter: opacity(50%) !important;
+}
+
+/* Selected tab blue font color */
+#TabsToolbar .tabbrowser-tab[selected] .tab-label {
+  font-weight: bold !important;
+  text-shadow: 0px 0px 5px rgba(0, 173, 238, 0.75) !important;
+}
+
+/* Unread tab background blue tint */
+#TabsToolbar .tabbrowser-tab[titlechanged] > .tab-stack > .tab-background {
+  background-color: rgba(77, 0, 255, 0.2) !important;
+  background-blend-mode: multiply !important;
+}
+/*private browsing - purple */
+#main-window[privatebrowsingmode="temporary"][tabsintitlebar]
+  #nav-bar
+  #PanelUI-button
+  #PanelUI-menu-button {
+  background-image: linear-gradient(
+    rgb(153, 38, 211),
+    rgb(105, 19, 163) 95%
+  ) !important;
+  filter: opacity(90%);
+}
+#main-window[privatebrowsingmode="temporary"][tabsintitlebar]
+  #nav-bar
+  #PanelUI-button
+  #PanelUI-menu-button:hover:not(:active):not([open]) {
+  /*background-image: radial-gradient(farthest-side at center bottom, rgba(240, 193, 255, .5) 10%, rgba(240, 193, 255, 0) 70%),
+					radial-gradient(farthest-side at center bottom, rgb(192, 81, 247), rgba(236, 172, 255, 0)),
+					linear-gradient(rgb(144, 20, 207), rgb(95, 0, 158) 95%) !important;*/
+  filter: opacity(100%);
+}
+#main-window[privatebrowsingmode="temporary"][tabsintitlebar]
+  #nav-bar
+  #PanelUI-button
+  #PanelUI-menu-button:-moz-any(:hover:active, [open]) {
+  /*background-image: linear-gradient(rgb(144, 20, 207), rgb(95, 0, 158) 95%) !important;*/
+  filter: opacity(80%);
+}

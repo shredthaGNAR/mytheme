@@ -9327,3 +9327,7 @@ tab[visuallyselected] > stack::after {
   font-kerning: normal;
   border: none !important;
 }
+/* Fix tab toolbar background color */
+.browser-toolbar.titlebar-color {
+  background: hsl(240, 1%, 10%) !important;
+}

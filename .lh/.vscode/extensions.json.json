@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1637642447935,
@@ -40,6 +40,14 @@
                 {
                     "date": 1637642826814,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,8 @@\n     \"hancel.google-translate\",\n     \"benshabatnoam.google-translate-ext\",\n     \"gustavoasc.google-drive-vscode\",\n     \"intellsmi.comment-translate\",\n-    \"sirmspencer.vscode-autohide\"\n+    \"sirmspencer.vscode-autohide\",\n+    \"funkyremi.vscode-google-translate\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1647038048874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,9 @@\n     \"benshabatnoam.google-translate-ext\",\n     \"gustavoasc.google-drive-vscode\",\n     \"intellsmi.comment-translate\",\n     \"sirmspencer.vscode-autohide\",\n-    \"funkyremi.vscode-google-translate\"\n+    \"funkyremi.vscode-google-translate\",\n+    \"visualstudioexptteam.vscodeintellicode\",\n+    \"ms-vscode-remote.remote-containers\"\n   ]\n }\n"
+                },
+                {
+                    "date": 1647038081581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,8 @@\n     \"intellsmi.comment-translate\",\n     \"sirmspencer.vscode-autohide\",\n     \"funkyremi.vscode-google-translate\",\n     \"visualstudioexptteam.vscodeintellicode\",\n-    \"ms-vscode-remote.remote-containers\"\n+    \"ms-vscode-remote.remote-containers\",\n+    \"ms-vscode.cmake-tools\"\n   ]\n }\n"
                 }
             ],
             "date": 1637642447935,
