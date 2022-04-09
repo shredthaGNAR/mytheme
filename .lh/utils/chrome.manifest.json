@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 18,
+            "activePatchIndex": 20,
             "patches": [
                 {
                     "date": 1636610465963,
@@ -80,6 +80,14 @@
                 {
                     "date": 1646119768136,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n override chrome://global/skin/icons/security.svg ../resources/skin/connection-secure.svg\n override chrome://global/skin/icons/print.svg ../resources/material/print.svg\n override chrome://global/skin/icons/open-in-new.svg ../resources/open-in-new.svg\n override chrome://global/skin/icons/chevron.svg ../resources/chevron.svg\n+override chrome://global/skin/icons/close.svg ../resources/close.svg\n override chrome://global/skin/icons/delete.svg ../resources/material/delete.svg\n override chrome://global/skin/icons/add.svg ../resources/add.svg\n override chrome://global/skin/icons/more.svg ../resources/more.svg\n override chrome://global/skin/icons/edit.svg ../resources/edit.svg\n"
+                },
+                {
+                    "date": 1648272310796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n # Override the built-in styles for arrowscrollboxes, mainly to replace scrollbuttons with scrollbars.\n override chrome://global/skin/arrowscrollbox.css ../resources/layout/arrowscrollbox.css\n \n # Override the tab element to restore the tab sound button and move the close button, among other things.\n-# override chrome://browser/content/tabbrowser-tab.js ../resources/script-override/tabMods.uc.js\n+#override chrome://browser/content/tabbrowser-tab.js ../resources/script-override/tabMods.uc.js\n \n # Override the notification message bar element to move the close button to the left in tab order.\n override chrome://global/content/elements/message-bar.js ../resources/script-override/message-bar.js\n \n@@ -125,5 +125,5 @@\n # XML document stylesheet. Used when opening an XML file or response.\n override chrome://global/content/xml/XMLPrettyPrint.css ../resources/layout/XMLPrettyPrint.css\n # The script for the searchbar on about:preferences.\n # Its highlight color doesn't match the theme, so I changed how it works.\n-override chrome://browser/content/preferences/findInPage.js ../resources/script-override/findInPage.js\n+override chrome://browser/content/preferences/findInPage.js ../resources/script-override/findInPage.js\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1648369577327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n # Override the built-in styles for arrowscrollboxes, mainly to replace scrollbuttons with scrollbars.\n override chrome://global/skin/arrowscrollbox.css ../resources/layout/arrowscrollbox.css\n \n # Override the tab element to restore the tab sound button and move the close button, among other things.\n-#override chrome://browser/content/tabbrowser-tab.js ../resources/script-override/tabMods.uc.js\n+# override chrome://browser/content/tabbrowser-tab.js ../resources/script-override/tabMods.uc.js\n \n # Override the notification message bar element to move the close button to the left in tab order.\n override chrome://global/content/elements/message-bar.js ../resources/script-override/message-bar.js\n \n@@ -125,5 +125,5 @@\n # XML document stylesheet. Used when opening an XML file or response.\n override chrome://global/content/xml/XMLPrettyPrint.css ../resources/layout/XMLPrettyPrint.css\n # The script for the searchbar on about:preferences.\n # Its highlight color doesn't match the theme, so I changed how it works.\n-override chrome://browser/content/preferences/findInPage.js ../resources/script-override/findInPage.js\n\\ No newline at end of file\n+override chrome://browser/content/preferences/findInPage.js ../resources/script-override/findInPage.js\n"
                 }
             ],
             "date": 1636610465963,

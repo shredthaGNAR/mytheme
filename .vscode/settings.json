@@ -1,8 +1,16 @@
 {
-    "editor.fontFamily": "Operator Mono, Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "Victor Mono",
     "editor.fontSize": 18,
     "workbench.editor.enablePreview": true,
     "editor.definitionLinkOpensInPeek": true,
     "editor.bracketPairColorization.enabled": true,
-    "back-n-forth.withLastEditLocation": true
+    "back-n-forth.withLastEditLocation": true,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "bookmarks.useWorkaroundForFormatters": true,
+    "editor.defaultFormatter": null,
+    "[plaintext]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 40,
+            "activePatchIndex": 80,
             "patches": [
                 {
                     "date": 1638259850756,
@@ -168,6 +168,166 @@
                 {
                     "date": 1639568383913,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Lig, Consolas, 'Courier New', monospace\",\n+    \"editor.fontFamily\": \"Operator Mono, Consolas, 'Courier New', monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647451809058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono, Consolas, 'Courier New', monospace\",\n+    \"editor.fontFamily\": \"SF Mono Semibold Operator Mono, Consolas, 'Courier New', monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647451827443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"SF Mono Semibold Operator Mono, Consolas, 'Courier New', monospace\",\n+    \"editor.fontFamily\": \"SF Mono , Operator Mono, Consolas, 'Courier New', monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647451847390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"SF Mono , Operator Mono, Consolas, 'Courier New', monospace\",\n+    \"editor.fontFamily\": \"Operator Mono, Consolas, 'Courier New', monospace\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647451857520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono, Consolas, 'Courier New', monospace\",\n+    \"editor.fontFamily\": \"Operator Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453575514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono\",\n+    \"editor.fontFamily\": \"\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453631475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"\",\n+    \"editor.fontFamily\": \"JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453691425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"tor Mono Lig Light \\tFamily\\tOperator Mono Lig,JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453698700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"tor Mono Lig Light \\tFamily\\tOperator Mono Lig,JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"]\\tOperator Mono Lig,JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453718516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"]\\tOperator Mono Lig,JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453813504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453865083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647453908579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"\",\n+    \"editor.fontFamily\": \"Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454036317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"Operator Mono Bold for Powerline,Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454052700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Bold for Powerline,Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"Operator Mono, Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454059821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono, Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"Operator Mono , Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454110077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono , Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454115272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"\\\\, Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454522858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"\\\\, Victor Mono, Operator Mono Lig, JetBrains Mono, Iosevka\",\n+    \"editor.fontFamily\": \"Victor Mono, Operator Mono Lig, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454529762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Victor Mono, Operator Mono Lig, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Iosevka,Victor Mono, Operator Mono Lig, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454550461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Iosevka,Victor Mono, Operator Mono Lig, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Iosevka, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454576744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Iosevka, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \"hack, Operator Mono Lig, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454588421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"hack, Operator Mono Lig, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454636287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Hack NF, Operator Mono Lig, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454650352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Hack NF, Operator Mono Lig, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454659644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Operator Mon, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454679069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mon, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454732218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Lig, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \"Fira Code,Operator Mono Lig, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454745380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Fira Code,Operator Mono Lig, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \" Operator Mono Lig, Victor Mono, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1647454753649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono Lig, Victor Mono, JetBrains Mono\",\n+    \"editor.fontFamily\": \" Operator Mono Lig, Victor Mono, Fira Code, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1648366289480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono Lig, Victor Mono, Fira Code, JetBrains Mono\",\n+    \"editor.fontFamily\": \"ira Code, JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1648366322396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"ira Code, JetBrains Mono\",\n+    \"editor.fontFamily\": \"JetBrains Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1648366334205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"JetBrains Mono\",\n+    \"editor.fontFamily\": \"victor mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1648366391073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"victor mono\",\n+    \"editor.fontFamily\": \"\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1648366400281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"\",\n+    \"editor.fontFamily\": \"Victor Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1649508509512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n-    \"back-n-forth.withLastEditLocation\": true\n+    \"back-n-forth.withLastEditLocation\": true,\n+    \"editor.formatOnType\": true\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1649508514721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,8 @@\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n     \"back-n-forth.withLastEditLocation\": true,\n-    \"editor.formatOnType\": true\n+    \"editor.formatOnType\": true,\n+    \"editor.formatOnSave\": true,\n+    \"editor.formatOnPaste\": true\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1649508734430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n     \"editor.bracketPairColorization.enabled\": true,\n     \"back-n-forth.withLastEditLocation\": true,\n     \"editor.formatOnType\": true,\n     \"editor.formatOnSave\": true,\n-    \"editor.formatOnPaste\": true\n+    \"editor.formatOnPaste\": true,\n+    \"bookmarks.useWorkaroundForFormatters\": true\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1649509235008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n     \"back-n-forth.withLastEditLocation\": true,\n     \"editor.formatOnType\": true,\n     \"editor.formatOnSave\": true,\n     \"editor.formatOnPaste\": true,\n-    \"bookmarks.useWorkaroundForFormatters\": true\n+    \"bookmarks.useWorkaroundForFormatters\": true,\n+    \"editor.defaultFormatter\": \"lonefy.vscode-JS-CSS-HTML-formatter\"\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1649509268582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,9 @@\n     \"editor.formatOnType\": true,\n     \"editor.formatOnSave\": true,\n     \"editor.formatOnPaste\": true,\n     \"bookmarks.useWorkaroundForFormatters\": true,\n-    \"editor.defaultFormatter\": \"lonefy.vscode-JS-CSS-HTML-formatter\"\n+    \"editor.defaultFormatter\": \"lonefy.vscode-JS-CSS-HTML-formatter\",\n+    \"[plaintext]\": {\n+        \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1649509316646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     \"editor.formatOnType\": true,\n     \"editor.formatOnSave\": true,\n     \"editor.formatOnPaste\": true,\n     \"bookmarks.useWorkaroundForFormatters\": true,\n-    \"editor.defaultFormatter\": \"lonefy.vscode-JS-CSS-HTML-formatter\",\n+    \"editor.defaultFormatter\": null,\n     \"[plaintext]\": {\n         \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n     }\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1638259850756,
