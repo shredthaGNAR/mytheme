@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 67,
+            "activePatchIndex": 68,
             "patches": [
                 {
                     "date": 1629755073787,
@@ -276,6 +276,10 @@
                 {
                     "date": 1649523833845,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,19 +17,20 @@\n @import url(resources/in-content/ext-simpletranslate.css);\n @import url(resources/in-content/ext-tabnotes.css);\n @import url(resources/in-content/ext-firefoxnotes.css);\n @import url(resources/in-content/ext-sortbookmarks.css);\n+\n+/*\n @import url(resources/in-content/site-google.css);\n-\n-/*@import url(resources/in-content/site-youtube.css);\n+@import url(resources/in-content/site-youtube.css);\n @import url(resources/in-content/site-wiki.css);\n @import url(resources/in-content/site-github.css);\n-@import url(resources/in-content/site-mozilla.css);*/\n-\n+@import url(resources/in-content/site-mozilla.css);\n @import url(resources/in-content/site-reddit.css);\n @import url(resources/in-content/site-subscene.css);\n+@import url(resources/in-content/custom-content.css);*/\n+\n @import url(resources/in-content/misc-content.css);\n-@import url(resources/in-content/custom-content.css);\n @import url(parts/onetab-darktheme.css);\n @import url(addons.css);\n \n /* Removes the white loading page */\n"
+                },
+                {
+                    "date": 1649746180210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,9 @@\n \n /* Removes the white loading page */\n \n \n-/*url(about:newtab), url(about:home)*/\n-\n-\n-/*\n+/*url(about:newtab), url(about:home)\n @-moz-document url(about:blank), url(about:newtab), url(about:home) {\n \thtml:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {\n \t\tbackground: #30325e70,var(--bf-bg) !important;\n }*/\n@@ -170,9 +167,9 @@\n         --customize-menu-seperator-line-color: #313182 !important;\n         /*Linea separadora en \"personalizar\"*/\n         --newtab-button-primary-color: #1050ff !important;\n         /*Color del botón \"Guardar\"*/\n-        --newtab-button-secondary-color: #c02020 !important;\n+        --newtab-button-secondary-color: #9165ff !important;\n         /*color del botón \"cancelar\"*/\n         --newtab-primary-action-background-off: #454670 !important;\n         /*color radiobutton no activo*/\n         --newtab-primary-action-background: #394fcc !important;\n@@ -323,18 +320,8 @@\n         scrollbar-color: #38375580 transparent !important;\n     }\n }\n \n-\n-/*\n-@-moz-document url(\"about:newtab\") {\n-\tbody { background-color: #0113268c !important;}\n-}\n-@-moz-document url(chrome://browser/content/browser.xhtml) {\n-\tbrowser[type=\"content-primary\"] {background: #01132696 !important}\n-}\n-*/\n-\n @-moz-document url(about:home),\n url(about:newtab) {\n     .personalize-button {\n         background-color: #3c3d9970 !important;\n"
                 }
             ],
             "date": 1629755073787,

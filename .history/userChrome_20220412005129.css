@@ -1316,16 +1316,15 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 }
 
 
-/* Active tab brightness */
+/* Active tab brightness *
 
 .tab-content[selected="true"] {
-    background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
-    text-shadow: 1px !important;
-    border-radius: 5px !important;
-    margin-top: 3px !important;
-    margin-bottom: 3px !important;
+  background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
+  text-shadow: 1px !important;
+  border-radius: 5px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
 }
-
 
 /* Gradient line *
 

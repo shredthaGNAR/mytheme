@@ -1146,7 +1146,7 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"],
 [multiselected]) {
     background-color: #4d4dfe50 !important;
-    height: 32px !important;
+    height: 33px !important;
 }
 
 
@@ -1316,16 +1316,15 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 }
 
 
-/* Active tab brightness */
+/* Active tab brightness *
 
 .tab-content[selected="true"] {
-    background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
-    text-shadow: 1px !important;
-    border-radius: 5px !important;
-    margin-top: 3px !important;
-    margin-bottom: 3px !important;
+  background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
+  text-shadow: 1px !important;
+  border-radius: 5px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
 }
-
 
 /* Gradient line *
 
@@ -4442,7 +4441,7 @@ and covers entire bottom outline of tab. Line Position:bottom
 
 #tabbrowser-arrowscrollbox {
     --tab-min-height: 33px !important;
-    /*  max-height  : var(--tab-min-height) !important;*/
+    max-height: var(--tab-min-height) !important;
 }
 
 .urlbarView-title[all-whitespace] {
@@ -5714,7 +5713,7 @@ so we make the mask size constant. */
 /* Navbar Border */
 
 #navigator-toolbox:-moz-lwtheme {
-    --tabs-border-color: --transparent !important;
+    --tabs-border-color: transparent !important;
 }
 
 :root:-moz-lwtheme #toolbar-menubar {
@@ -5800,6 +5799,13 @@ so we make the mask size constant. */
   > .tab-close-button {
   padding-inline-start: 3px !important; /* Original: 0px *
   width: 19px !important; /* Redefine from 19px !important, Original: 17px = (width - padding)  *
+}
+
+/* Disable animation for selected and pinned tabs *
+.tabbrowser-tab:is([pinned], [selected])
+	> .tab-stack
+	> .tab-background::before {
+	animation: none !important;
 }
 
 /* These ones are used for the read/unread tabs styling. For italic rules use
@@ -5940,13 +5946,6 @@ for icons on the bookmarks bar under the url bar *
 }
 
 
-/* Disable animation for selected and pinned tabs *
-.tabbrowser-tab:is([pinned], [selected])
-	> .tab-stack
-	> .tab-background::before {
-	animation: none !important;
-}
-
 /* Line to mark selected tab */
 
 .tab-background[selected]::before,
@@ -5964,7 +5963,7 @@ for icons on the bookmarks bar under the url bar *
     background-image: var(--my-gradient) !important;
 }
 
-*/ .tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
     display: none;
 }
 
@@ -5976,6 +5975,8 @@ for icons on the bookmarks bar under the url bar *
     background: linear-gradient( to bottom, transparent 2px, var(--toolbar-bgcolor) 2px, var(--toolbar-bgcolor) 95%, var(--identity-tab-color) 2px) !important;
 }
 
+
+/*
 :root::-moz-lwtheme.tab-background[selected="true"] {
     background: linear-gradient( to bottom, transparent 2px, var(--toolbar-bgcolor) 2px, var(--toolbar-bgcolor) 100%) !important;
 }

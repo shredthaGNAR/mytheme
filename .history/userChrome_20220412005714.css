@@ -4544,16 +4544,13 @@ and covers entire bottom outline of tab. Line Position:bottom
 .tabbrowser-tab > .tab-stack > .tab-background:is([multiselected]),
 .tabbrowser-tab > .tab-stack > .tab-content:is([multiselected]) {
 	background: #4d4dfe !important;
+}*/
+
+.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"],
+[multiselected]) {
+    background-color: color-mix( in srgb, var(--button-hover-bgcolor) 60%, transparent) !important;
 }
-.tabbrowser-tab:hover
-	> .tab-stack
-	> .tab-background:not([selected="true"], [multiselected]) {
-	background-color: color-mix(
-		in srgb,
-		var(--button-hover-bgcolor) 60%,
-		transparent
-	) !important;
-}
+
 
 /* highlight unread tabs; requires italicizeUnreadTabs.uc.js */
 
@@ -9774,19 +9771,14 @@ tab:only-of-type:not([pinned]) {
     transparent
   ) !important;
 }
-
-.tabbrowser-tab
-  > .tab-stack
-  > .tab-background:not([selected], [multiselected]) {
-  background-color: color-mix(
-    in srgb,
-    currentColor 13%,
-    transparent
-  ) !important;
-}
 */
 
-#nav-bar,
+.tabbrowser-tab>.tab-stack>.tab-background:not([selected],
+[multiselected]) {
+    background-color: color-mix( in srgb, currentColor 13%, transparent) !important;
+}
+
+*/ #nav-bar,
 #titlebar,
 #sidebar-box {
     -moz-appearance: -moz-mac-vibrant-titlebar-light !important;

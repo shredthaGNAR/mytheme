@@ -1316,16 +1316,15 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 }
 
 
-/* Active tab brightness */
+/* Active tab brightness *
 
 .tab-content[selected="true"] {
-    background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
-    text-shadow: 1px !important;
-    border-radius: 5px !important;
-    margin-top: 3px !important;
-    margin-bottom: 3px !important;
+  background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
+  text-shadow: 1px !important;
+  border-radius: 5px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
 }
-
 
 /* Gradient line *
 
@@ -5940,13 +5939,6 @@ for icons on the bookmarks bar under the url bar *
 }
 
 
-/* Disable animation for selected and pinned tabs *
-.tabbrowser-tab:is([pinned], [selected])
-	> .tab-stack
-	> .tab-background::before {
-	animation: none !important;
-}
-
 /* Line to mark selected tab */
 
 .tab-background[selected]::before,
@@ -5964,7 +5956,7 @@ for icons on the bookmarks bar under the url bar *
     background-image: var(--my-gradient) !important;
 }
 
-*/ .tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
     display: none;
 }
 
@@ -6127,11 +6119,12 @@ TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab
 #tabbrowser-arrowscrollbox,
 #tabbrowser-tabs[positionpinnedtabs]>#tabbrowser-arrowscrollbox>.tabbrowser-tab[pinned] {
     min-height: var(--tab-min-height) !important;
+    max-height: var(--tab-min-height) !important;
 }
 
 .tab-background,
 .tab-stack {
-    min-height: inherit !important;
+    min-height: var(--tab-min-height) !important;
     border-radius: 5px !important;
 }
 
@@ -6141,7 +6134,7 @@ TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab
 }
 
 
-/* highlight unread tabs; requires italicizeUnreadTabs.uc.js */
+/**  highlight unread tabs; requires italicizeUnreadTabs.uc.js */
 
 :root[italic-unread-tabs] .tabbrowser-tab[notselectedsinceload]:not([pending]),
 :root[italic-unread-tabs] .tabbrowser-tab[notselectedsinceload][pending][busy] {
@@ -6200,8 +6193,7 @@ TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab
 
 
 /* set rounded outside corners on tabs so they look like folder labels.
-you can disable this by making a new pref in about:config and setting it to true: "userChrome.tabs.rounded-outer-corners.disabled"
-this CSS is complicated because the outside corner needs to take on the color of the tab,
+you can disable this by making a new pref in about:config and setting it to true: "userChrome.tabs.rounded-outer-corners.disabled" this CSS is complicated because the outside corner needs to take on the color of the tab,
 but it's not part of the tab background so it doesn't do so automatically. */
 
 
@@ -6361,7 +6353,7 @@ otherwise they won't overlap with other tabs, they'll just push tabs 10px away f
 /* this is all the convoluted z-index stuff I was talking about — how tab depth is controlled. */
 
 
-/* default position is for tabs to be stacked on top of the tab to their left.
+/* default pozition is for tabs to be stacked on top of the tab to their left.
 so shadows are cast to the left but not to the right. */
 
 .tabbrowser-tab {
@@ -6452,17 +6444,6 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 }
 
 
-/*
-.tab-throbber[busy]::before {
-  opacity: 0.8 !important;
-  fill: var(--busy-throbber-fill) !important;
-}
-
-.tab-throbber[progress]::before {
-  opacity: 1 !important;
-  fill: var(--loading-throbber-fill) !important;
-}
-
 /* colored lines on container tabs */
 
 .tabbrowser-tab[usercontextid] .tab-context-line {
@@ -6538,11 +6519,13 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 }
 
 
-/* Hide solo tab *
-#tabbrowser-tabs
-  tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type {
-  visibility: collapse;
+/* Hide solo tab */
+
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type {
+    visibility: collapse;
 }
+
+
 /* Stretch Tabs*/
 
 .tabbrowser-tab[fadein]:not([pinned]) {
@@ -6561,47 +6544,49 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 }*/
 
 
-/* (MACOS ONLY!) Enable window vibrancy behind tabs *
+/* (MACOS ONLY!) Enable window vibrancy behind tabs */
 
 #navigator-toolbox:not(:-moz-window-inactive) {
-  background-color: #0001 !important;
+    background-color: #0001 !important;
 }
 
-#main-window[lwthemetextcolor="bright"]
-  #navigator-toolbox:not(:-moz-window-inactive) {
-  background-color: #1114 !important;
+#main-window[lwthemetextcolor="bright"] #navigator-toolbox:not(:-moz-window-inactive) {
+    background-color: #1114 !important;
 }
+
 #main-window {
-  -moz-appearance: none !important;
-  appearance: auto;
+    -moz-appearance: none !important;
+    appearance: auto;
 }
 
 #main-window[lwthemetextcolor="bright"] {
-  -moz-appearance: none !important;
-  appearance: auto;
+    -moz-appearance: none !important;
+    appearance: auto;
 }
 
-:-moz-any(#main-window, #navigator-toolbox):-moz-any([inFullscreen="true"], :-moz-window-inactive) {
-  appearance: none !important;
-  background-color: var(--lwt-accent-color) !important;
+:-moz-any(#main-window,
+#navigator-toolbox):-moz-any([inFullscreen="true"],
+ :-moz-window-inactive) {
+    appearance: none !important;
+    background-color: var(--lwt-accent-color) !important;
 }
 
-/* Edge Style Tab Shadows *
+
+/* Edge Style Tab Shadows */
 
 #nav-bar {
-  box-shadow: 0 -1px 2px -1px #0004 !important;
+    box-shadow: 0 -1px 2px -1px #0004 !important;
 }
 
 :root[lwthemetextcolor="bright"] #nav-bar {
-  box-shadow: 0 -1px 2px -1px #0006 !important;
+    box-shadow: 0 -1px 2px -1px #0006 !important;
 }
 
 .tabbrowser-tab[visuallyselected] .tab-background {
-  box-shadow: 0 2px 4px #0005, 0 -1px 2px -1px #0004 !important;
+    box-shadow: 0 2px 4px #0005, 0 -1px 2px -1px #0004 !important;
 }
-*/
 
-:root[lwthemetextcolor="bright"] .tabbrowser-tab[visuallyselected] .tab-background,
+*/ :root[lwthemetextcolor="bright"] .tabbrowser-tab[visuallyselected] .tab-background,
 :root[lwthemetextcolor="bright"] {
     box-shadow: 0 2px 4px #0008, 0 -1px 2px -1px #0006 !important;
 }
@@ -6634,7 +6619,7 @@ so shadows are cast in both directions, unless the neighboring tab is selected o
 }
 
 
-/* different tab background colors in various states */
+/* different tab background colors in various states *
 
 .tabbrowser-tab:not([selected]):is(:hover,
 .keyboard-focused-tab,

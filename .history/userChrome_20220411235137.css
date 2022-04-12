@@ -1316,16 +1316,15 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 }
 
 
-/* Active tab brightness */
+/* Active tab brightness *
 
 .tab-content[selected="true"] {
-    background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
-    text-shadow: 1px !important;
-    border-radius: 5px !important;
-    margin-top: 3px !important;
-    margin-bottom: 3px !important;
+  background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
+  text-shadow: 1px !important;
+  border-radius: 5px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
 }
-
 
 /* Gradient line *
 
@@ -1970,11 +1969,23 @@ description#identity-popup-content-verifier,
 }
 
 
-/* COLOUR OF URLBAR ADDRESS UNDERLINE */
+/* COLOUR OF URL BAR ADDRESS UNDERLINE */
 
 .urlbarView div {
     border-image: 1 0 0 0 linear-gradient( 90deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
     border-width: 1px !important;
+}
+
+
+/* Tab label mask. */
+
+.tabbrowser-tab {
+    --tab-label-mask-size: 0.5em !important;
+}
+
+.tabbrowser-tab[visuallyselected="true"]:hover,
+#tabbrowser-tabs:not([closebuttons="activetab"])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:not([visuallyselected="true"]):hover {
+    --tab-label-mask-size: 0.5em !important;
 }
 
 #urlbar[focused="true"] #urlbar-background {
@@ -2475,7 +2486,7 @@ menugroup>menuitem>hbox>image {
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[class*="identity-color"] .tab-label {
     text-decoration: underline !important;
     text-decoration-color: var(--identity-icon-color) !important;
-    font-weight: bold !important;
+    /*font-weight        : bold !important;*/
     text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5) !important;
 }
 
@@ -2917,7 +2928,7 @@ meaning it doesn't overlap with the right side of the label at all, which is whe
 so we make the mask size constant. */
 
 .tabbrowser-tab {
-    --tab-label-mask-size: 2em !important;
+    --tab-label-mask-size: 0.5em !important;
 }
 
 
@@ -4176,7 +4187,7 @@ spacer[part="overflow-end-indicator"] {
  */
 
 .tabbrowser-tab {
-    --tab-label-mask-size: 2em !important;
+    --tab-label-mask-size: 0.5em !important;
 }
 
 
@@ -5509,7 +5520,7 @@ meaning it doesn't overlap with the right side of the label at all, which is whe
 so we make the mask size constant. */
 
 .tabbrowser-tab {
-    --tab-label-mask-size: 2em !important;
+    --tab-label-mask-size: 5em !important;
 }
 
 
@@ -5637,12 +5648,10 @@ so we make the mask size constant. */
 /* Remove next line if you want selec4ed tab to have color other than toolbar background - then it follows your theme color  *
 	--lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
 }
-*/
 
 .tab-background[selected] {
-    border-inline: 1px solid color-mix(in srgb, currentcolor 30%, transparent) !important;
+	border-inline: 1px solid color-mix(in srgb, currentcolor 30%, transparent) !important;
 }
-
 
 /* Few exceptions for default light theme */
 
@@ -5714,7 +5723,7 @@ so we make the mask size constant. */
 /* Navbar Border */
 
 #navigator-toolbox:-moz-lwtheme {
-    --tabs-border-color: --transparent !important;
+    --tabs-border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 :root:-moz-lwtheme #toolbar-menubar {
@@ -5800,6 +5809,13 @@ so we make the mask size constant. */
   > .tab-close-button {
   padding-inline-start: 3px !important; /* Original: 0px *
   width: 19px !important; /* Redefine from 19px !important, Original: 17px = (width - padding)  *
+}
+
+/* Disable animation for selected and pinned tabs *
+.tabbrowser-tab:is([pinned], [selected])
+	> .tab-stack
+	> .tab-background::before {
+	animation: none !important;
 }
 
 /* These ones are used for the read/unread tabs styling. For italic rules use
@@ -6020,6 +6036,11 @@ TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab
 [multiselected])>.tab-stack>.tab-background:-moz-lwtheme {
     border-radius: 5px !important;
     box-shadow: 0 0 0 1px rgba(128, 128, 142, 0.9), 0 0 4px rgba(128, 128, 142, 0.5) !important;
+}
+
+.tabbrowser-tab[visuallyselected="true"]:hover,
+#tabbrowser-tabs:not([closebuttons="activetab"])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:not([visuallyselected="true"]):hover {
+    --tab-label-mask-size: 0.5em !important;
 }
 
 

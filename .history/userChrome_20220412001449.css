@@ -1123,11 +1123,10 @@ tab:is([pinned])[selected="true"] .tab-content {
     border-radius: 0px !important;
 }
 
-
-/*
 tab:is([pinned]):not([selected="true"]) .tab-content {
-	-height: 33px !important;
+    -height: 33px !important;
 }
+
 
 /*
 .tab-content[selected="true"] {
@@ -1146,7 +1145,7 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"],
 [multiselected]) {
     background-color: #4d4dfe50 !important;
-    height: 32px !important;
+    height: 33px !important;
 }
 
 
@@ -1198,26 +1197,14 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 }
 
 
-/*** URLBAR Focus ******
+/*** URLBAR Focus ******/
 
 #urlbar[focused="true"] {
     background: linear-gradient(#161742a6, #18151e26) !important;
-    /* border: 1px solid transparent !important;*
-    border-image: 1 1 1 1
-        linear-gradient(
-            90deg,
-            #9400ff,
-            #ba00e5,
-            #df06b9,
-            #e62da7,
-            #f13b95,
-            #f64d86,
-            #f85f7a,
-            #fc7169,
-            #f9845b,
-            #e8ab52
-        ) !important;
-    border-image: 9px !important;*/
+    /* border: 1px solid transparent !important;*/
+    border-image: 1 1 1 1 linear-gradient( 90deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
+    border-image: 9px !important;
+}
 
 
 /*	border-radius: 9px !important;*
@@ -1573,11 +1560,12 @@ background-image: radial-gradient( circle farthest-corner at 32.7% 82.7%,  rgba(
 		) !important;
 }
 
-/***inactive background tab
-.tabbrowser-tab:not([selected="true"]):not([multiselected="true"])
-  .tab-background {
-  background-color: color-mix(in srgb, currentColor 8%, transparent) !important;
+/***inactive background tab*/
+
+.tabbrowser-tab:not([selected="true"]):not([multiselected="true"]) .tab-background {
+    background-color: color-mix(in srgb, currentColor 8%, transparent) !important;
 }
+
 
 /*tooltip dark theme*/
 
@@ -1772,7 +1760,7 @@ tooltip {
 
 #urlbar-background,
 #urlbar {
-    background-image: linear-gradient(#161742a6, #18151e26) !important;
+    background-image: linear-gradient(#161742, #18151e) !important;
 }
 
 
@@ -1795,26 +1783,26 @@ tooltip {
 }*/
 
 #urlbar[focused="true"] #urlbar-background {
-    background: linear-gradient(#161742a6, #18151e26) !important;
+    background: linear-gradient(#161742, #1rgba(24, 21, 30, 0.917)!important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px) !important;
 }
 
 #urlbar[open="true"] #urlbar-background {
-    background: linear-gradient(#161742a6, #18151e26) !important;
+    background: linear-gradient(#161742a6, #18151ed5) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px) !important;
 }
 
 #urlbar[focused="true"] {
-    background: linear-gradient(#161742a6, #18151e26) !important;
+    background: linear-gradient(#161742a6, #18151ed8) !important;
     border: 1px solid transparent !important;
 }
 
 #urlbar[focused="true"] #urlbar-background {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px) !important;
-    background: linear-gradient(#161742a6, #18151e26) !important;
+    background: linear-gradient(#161742a6, #18151ed1) !important;
 }
 
 :root {
@@ -4442,7 +4430,7 @@ and covers entire bottom outline of tab. Line Position:bottom
 
 #tabbrowser-arrowscrollbox {
     --tab-min-height: 33px !important;
-    /*  max-height  : var(--tab-min-height) !important;*/
+    max-height: var(--tab-min-height) !important;
 }
 
 .urlbarView-title[all-whitespace] {
@@ -5714,7 +5702,7 @@ so we make the mask size constant. */
 /* Navbar Border */
 
 #navigator-toolbox:-moz-lwtheme {
-    --tabs-border-color: --transparent !important;
+    --tabs-border-color: transparent !important;
 }
 
 :root:-moz-lwtheme #toolbar-menubar {
@@ -5800,6 +5788,13 @@ so we make the mask size constant. */
   > .tab-close-button {
   padding-inline-start: 3px !important; /* Original: 0px *
   width: 19px !important; /* Redefine from 19px !important, Original: 17px = (width - padding)  *
+}
+
+/* Disable animation for selected and pinned tabs *
+.tabbrowser-tab:is([pinned], [selected])
+	> .tab-stack
+	> .tab-background::before {
+	animation: none !important;
 }
 
 /* These ones are used for the read/unread tabs styling. For italic rules use
@@ -5940,13 +5935,6 @@ for icons on the bookmarks bar under the url bar *
 }
 
 
-/* Disable animation for selected and pinned tabs *
-.tabbrowser-tab:is([pinned], [selected])
-	> .tab-stack
-	> .tab-background::before {
-	animation: none !important;
-}
-
 /* Line to mark selected tab */
 
 .tab-background[selected]::before,
@@ -5964,7 +5952,7 @@ for icons on the bookmarks bar under the url bar *
     background-image: var(--my-gradient) !important;
 }
 
-*/ .tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
     display: none;
 }
 
@@ -5976,6 +5964,8 @@ for icons on the bookmarks bar under the url bar *
     background: linear-gradient( to bottom, transparent 2px, var(--toolbar-bgcolor) 2px, var(--toolbar-bgcolor) 95%, var(--identity-tab-color) 2px) !important;
 }
 
+
+/*
 :root::-moz-lwtheme.tab-background[selected="true"] {
     background: linear-gradient( to bottom, transparent 2px, var(--toolbar-bgcolor) 2px, var(--toolbar-bgcolor) 100%) !important;
 }

@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Victor Mono",
+    "editor.fontFamily": "Victor Mono,Fira Code iScript",
     "editor.fontSize": 18,
     "workbench.editor.enablePreview": true,
     "editor.definitionLinkOpensInPeek": true,

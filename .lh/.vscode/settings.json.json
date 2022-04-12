@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 80,
+            "activePatchIndex": 83,
             "patches": [
                 {
                     "date": 1638259850756,
@@ -328,6 +328,18 @@
                 {
                     "date": 1649509316646,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     \"editor.formatOnType\": true,\n     \"editor.formatOnSave\": true,\n     \"editor.formatOnPaste\": true,\n     \"bookmarks.useWorkaroundForFormatters\": true,\n-    \"editor.defaultFormatter\": \"lonefy.vscode-JS-CSS-HTML-formatter\",\n+    \"editor.defaultFormatter\": null,\n     \"[plaintext]\": {\n         \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1649745191086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Victor Mono\",\n+    \"editor.fontFamily\": \"Fira Code iScript,Victor Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1649745217357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Fira Code iScript,Victor Mono\",\n+    \"editor.fontFamily\": \",Victor Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1649745236187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \",Victor Mono\",\n+    \"editor.fontFamily\": \"Victor Mono,Fira Code iScript\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
                 }
             ],
             "date": 1638259850756,
