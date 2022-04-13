@@ -18,9 +18,6 @@
 @import url(resources/in-content/ext-tabnotes.css);
 @import url(resources/in-content/ext-firefoxnotes.css);
 @import url(resources/in-content/ext-sortbookmarks.css);
-@import url(resources/in-content/misc-content.css);
-@import url(parts/onetab-darktheme.css);
-@import url(addons.css);
 
 /*
 @import url(resources/in-content/site-google.css);
@@ -32,11 +29,14 @@
 @import url(resources/in-content/site-subscene.css);
 @import url(resources/in-content/custom-content.css);*/
 
+@import url(resources/in-content/misc-content.css);
+@import url(parts/onetab-darktheme.css);
+@import url(addons.css);
 
 /* Removes the white loading page */
 
 
-/*url(about:newtab), url(about:home)*
+/*url(about:newtab), url(about:home)
 @-moz-document url(about:blank), url(about:newtab), url(about:home) {
 	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
 		background: #30325e70,var(--bf-bg) !important;
@@ -652,7 +652,7 @@ url(about:newtab) {
 @-moz-document url(about:privatebrowsing) {
      :root {
         scrollbar-width: thin !important;
-        scrollbar-color: #8682fe transparent !important;
+        scrollbar-color: #38375580 transparent !important;
     }
 }
 
@@ -1135,4 +1135,72 @@ url-prefix(about:home) {
 .customize-menu.customize-animate-enter-done,
 .customize-menu.customize-animate-enter-active {
     box-shadow: 0px 0px 20px rgb(1 1 1 / 16%), 0px 0px 10px rgb(0 0 0 / 93%) !important;
+}
+
+
+/*****  Neat theme-aware context menus by AveYo - check it out with AlpenGlow or FoxyGlow  *****/
+
+:root {
+    --fixup1: -moz-DialogText;
+    --fixup2: -moz-Dialog;
+}
+
+@media not all and (prefers-color-scheme: light) {
+     :root {
+        --fixup1: -moz-DialogText;
+        --fixup2: -moz-Dialog;
+    }
+}
+
+@media (-moz-windows-default-theme: 1) and (prefers-color-scheme: dark) {
+     :root {
+        --fixup1: -moz-menuhovertext;
+        --fixup2: -moz-menuhover;
+    }
+}
+
+#context-sep-navigation {
+    display: none !important;
+}
+
+#context-navigation {
+    -moz-appearance: none !important;
+    background-color: transparent !important;
+}
+
+menu,
+menuitem,
+.subviewbutton {
+    -moz-appearance: none !important;
+}
+
+
+/* scrollbox:not([orient="horizontal"]) */
+
+menupopup:not(.PanelUI-subView) {
+    -moz-appearance: none !important;
+    background-color: var( --lwt-sidebar-background-color, var(--autocomplete-popup-background, var(--fixup2))) !important;
+    color: var( --lwt-sidebar-text-color, var(--autocomplete-popup-color, var(--fixup1))) !important;
+    padding: 0 !important;
+}
+
+:-moz-any(#context-navigation>*,
+menu,
+menuitem):is([_moz-menuactive]),
+.subviewbutton:is(:focus-visible,
+ :hover),
+treechildren::-moz-tree-row(hover),
+treechildren::-moz-tree-cell-text(hover) {
+    -moz-appearance: none !important;
+    background-color: var( --lwt-sidebar-highlight-background-color, var(--toolbar-field-focus-border-color, -moz-menuhover)) !important;
+    color: var( --lwt-sidebar-text-color, var(--autocomplete-popup-highlight-color, -moz-Dialog)) !important;
+}
+
+:-moz-any(#context-navigation>*,
+menu,
+menuitem):is([_moz-menuactive][disabled]),
+.subviewbutton:is(:focus-visible,
+ :hover):is([disabled]) {
+    background-color: unset !important;
+    color: #ccc !important;
 }

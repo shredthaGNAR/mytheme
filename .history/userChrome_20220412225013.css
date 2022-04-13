@@ -9204,7 +9204,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton):hover:not([disabled="true"]):not
 toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-icon,
 toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-text,
 toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-badge-stack {
-    background-color: rgba(var(--lwt-accent-color), 0.3) !important;
+    background-color: rgba(var(--lwt-accent-color), 0.8) !important;
 }
 
 #PersonalToolbar,

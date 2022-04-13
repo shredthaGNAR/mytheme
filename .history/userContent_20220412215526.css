@@ -652,7 +652,7 @@ url(about:newtab) {
 @-moz-document url(about:privatebrowsing) {
      :root {
         scrollbar-width: thin !important;
-        scrollbar-color: #8682fe transparent !important;
+        scrollbar-color: #38375580 transparent !important;
     }
 }
 

@@ -9204,7 +9204,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton):hover:not([disabled="true"]):not
 toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-icon,
 toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-text,
 toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-badge-stack {
-    background-color: rgba(var(--lwt-accent-color), 0.3) !important;
+    background-color: rgba(var(--lwt-accent-color), 0.8) !important;
 }
 
 #PersonalToolbar,
@@ -9853,56 +9853,4 @@ tab:only-of-type:not([pinned]) {
 
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab[selected="true"] .tab-label-container {
     --tab-label-mask-size: 0.5em !important;
-}
-
-.tab-background {
-    border-radius: var(--tab-border-radius);
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    margin-block: 0 !important;
-    border: 0 !important;
-    position: relative !important;
-    --uc-tab-corner-bg: transparent;
-}
-
-
-/* rounded bottom corners */
-
-.tab-background::before,
-.tab-background::after {
-    content: "" !important;
-    display: block !important;
-    position: absolute !important;
-    width: 8px !important;
-    height: 8px !important;
-    bottom: 0 !important;
-    pointer-events: none !important;
-    clip-path: inset(0);
-}
-
-.tab-background::before {
-    border-bottom-right-radius: var(--tab-border-radius) !important;
-    left: 0 !important;
-    box-shadow: 4px 4px 0 4px var(--uc-tab-corner-bg) !important;
-}
-
-.tab-background::after {
-    border-bottom-left-radius: var(--tab-border-radius) !important;
-    right: 0 !important;
-    box-shadow: -4px 4px 0 4px var(--uc-tab-corner-bg) !important;
-}
-
-.tabbrowser-tab[selected="true"] .tab-background {
-    --uc-tab-corner-bg: var( --lwt-selected-tab-background-color, var(--toolbar-bgcolor));
-}
-
-.tab-background:is([selected],
-[multiselected]) {
-    --uc-tab-corner-bg: var(--tab-selected-bgcolor, var(--toolbar-bgcolor));
-}
-
-#tabbrowser-tabs:not([movingtab])>#tabbrowser-arrowscrollbox>.tabbrowser-tab>.tab-stack>.tab-background[multiselected="true"]:-moz-lwtheme,
-#tabbrowser-tabs:not([movingtab])>#tabbrowser-arrowscrollbox>.tabbrowser-tab>.tab-stack>.tab-background[selected="true"]:-moz-lwtheme {
-    background-image: linear-gradient( var(--lwt-selected-tab-background-color, transparent), var(--lwt-selected-tab-background-color, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none);
-    --uc-tab-corner-bg: var( --lwt-selected-tab-background-color, var(--toolbar-bgcolor));
 }
