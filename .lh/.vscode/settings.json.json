@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 83,
+            "activePatchIndex": 101,
             "patches": [
                 {
                     "date": 1638259850756,
@@ -340,6 +340,78 @@
                 {
                     "date": 1649745236187,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \",Victor Mono\",\n+    \"editor.fontFamily\": \"Victor Mono,Fira Code iScript\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650791579092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Victor Mono,Fira Code iScript\",\n+    \"editor.fontFamily\": \",Fira Code iScript\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798524305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \",Fira Code iScript\",\n+    \"editor.fontFamily\": \"\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798554345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"\",\n+    \"editor.fontFamily\": \" Operator Mono Liq\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798567206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono Liq\",\n+    \"editor.fontFamily\": \" Operator Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798581013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono\",\n+    \"editor.fontFamily\": \" Operator Mono li\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798593400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono li\",\n+    \"editor.fontFamily\": \" Operator Mono l\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798598488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono l\",\n+    \"editor.fontFamily\": \" Operator Mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798645291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \" Operator Mono\",\n+    \"editor.fontFamily\": \"sf mo\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798665830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"sf mo\",\n+    \"editor.fontFamily\": \"sf mono bold\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798672742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"sf mono bold\",\n+    \"editor.fontFamily\": \"sf mono\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798904987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"sf mono\",\n+    \"editor.fontFamily\": \"FiraFlott\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650798941352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"FiraFlott\",\n+    \"editor.fontFamily\": \"flottflott\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650799124191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"flottflott\",\n+    \"editor.fontFamily\": \"JetBrains Mono, Operator Mono Liq, Victor Mono, Fira Code iScript\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650799141634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"JetBrains Mono, Operator Mono Liq, Victor Mono, Fira Code iScript\",\n+    \"editor.fontFamily\": \"Operator Mono Liq, Victor Mono, Fira Code iScript\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650799180919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Liq, Victor Mono, Fira Code iScript\",\n+    \"editor.fontFamily\": \", Operator Mono Liq, Victor Mono, Fira Code iScript\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650799188066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \", Operator Mono Liq, Victor Mono, Fira Code iScript\",\n+    \"editor.fontFamily\": \"Operator Mono Liq, Victor Mono, Fira Code iScript,\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650799198382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Liq, Victor Mono, Fira Code iScript,\",\n+    \"editor.fontFamily\": \"Operator Mono Liq, Victor Mono, Fira Code iScript, JetBrains Mono, \",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
+                },
+                {
+                    "date": 1650799209610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-    \"editor.fontFamily\": \"Operator Mono Liq, Victor Mono, Fira Code iScript, JetBrains Mono, \",\n+    \"editor.fontFamily\": \"Operator Mono Liq, Victor Mono, Fira Code iScript, JetBrains Mono,\",\n     \"editor.fontSize\": 18,\n     \"workbench.editor.enablePreview\": true,\n     \"editor.definitionLinkOpensInPeek\": true,\n     \"editor.bracketPairColorization.enabled\": true,\n"
                 }
             ],
             "date": 1638259850756,
