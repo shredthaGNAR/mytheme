@@ -1,8 +1,8 @@
 /* This Source Code Form is subject to the terms of the Creative Commons
-* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
-* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
-* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
-* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+ * Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+ * If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+ * file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+ * or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
 
 /* this stylesheet is used to style shadow parts with the ::part() function,
 and to override built-in rules without using the "!important" tag.
@@ -636,11 +636,6 @@ this way we don't animate tabs that were simply moved rather than created */
 
     #customization-uidensity-touch-spacer {
         margin-inline: calc(-1 * var(--arrowpanel-padding) / 2) !important;
-    }
-
-    #customization-container {
-        background-color: var(--in-content-bg-dark);
-        background-image: none;
     }
 
     #customization-footer {
@@ -1517,10 +1512,13 @@ animation-duration of 730ms, 71% is the point where we start the fade out. */
     }
 
     .midi-icon,
-    .midi-sysex-icon,
-    .popup-notification-icon[popupid="midi"],
-    .popup-notification-icon[popupid="midi-sysex"] {
+    .popup-notification-icon[popupid="midi"] {
         list-style-image: url(chrome://userchrome/content/notifications/midi.svg);
+    }
+
+    .midi-sysex-icon,
+    .popup-notification-icon[popupid="midi-sysex"] {
+        list-style-image: url(chrome://userchrome/content/material/midi-port.svg);
     }
 
     #canvas-notification-icon,

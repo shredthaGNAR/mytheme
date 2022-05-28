@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           All Tabs Menu Expansion Pack
-// @version        2.0.3
+// @version        2.0.7
 // @author         aminomancer
 // @homepage       https://github.com/aminomancer
 // @description    Next to the "new tab" button in Firefox there's a V-shaped button that opens a
@@ -117,17 +117,117 @@
         }
     }
 
-    function skipHiddenButtons(tabsPanel) {
+    // Adjust the PanelView class methods for each panelview instance to improve
+    // key navigation and prevent focusing hidden elements.
+    function modifyWalkers(tabsPanel) {
         let panelViewClass = PanelView.forNode(tabsPanel.view);
-        if (!panelViewClass._makeNavigableTreeWalker.toSource().startsWith("("))
+        if (!panelViewClass.moveSelection.toSource().startsWith("(function uc_ATMEP_")) {
+            panelViewClass.moveSelection = function uc_ATMEP_moveSelection(
+                isDown,
+                arrowKey = false
+            ) {
+                let walker = arrowKey ? this._arrowNavigableWalker : this._tabNavigableWalker;
+                let oldSel = this.selectedElement;
+                let newSel;
+                if (oldSel) {
+                    walker.currentNode = oldSel;
+                    newSel = isDown ? walker.nextNode() : walker.previousNode();
+                }
+                // If we couldn't find something, select the first or last item:
+                if (!newSel) {
+                    walker.currentNode = walker.root;
+                    newSel = isDown ? walker.firstChild() : walker.lastChild();
+                }
+                if (oldSel?.classList.contains("all-tabs-secondary-button")) {
+                    if (oldSel.parentElement === newSel?.parentElement) {
+                        walker.currentNode = newSel;
+                        newSel = isDown ? walker.nextNode() : walker.previousNode();
+                    }
+                }
+                this.selectedElement = newSel;
+                return newSel;
+            };
+        }
+        if (!panelViewClass.hasOwnProperty("moveSelectionHorizontal")) {
+            panelViewClass.moveSelectionHorizontal = function uc_ATMEP_moveSelectionHorizontal(
+                isNext
+            ) {
+                let walker = this._horizontalNavigableWalker;
+                let oldSel = this.selectedElement;
+                let newSel;
+                if (oldSel) {
+                    walker.currentNode = oldSel;
+                    newSel = isNext ? walker.nextNode() : walker.previousNode();
+                }
+                // If we couldn't find something, select the first or last item:
+                if (!newSel) {
+                    walker.currentNode = walker.root;
+                    newSel = isNext ? walker.firstChild() : walker.lastChild();
+                }
+                this.selectedElement = newSel;
+                return newSel;
+            };
+        }
+        if (!panelViewClass.hasOwnProperty("_horizontalNavigableWalker")) {
+            Object.defineProperty(panelViewClass, "_horizontalNavigableWalker", {
+                get: function () {
+                    if (!this.__horizontalNavigableWalker) {
+                        this.__horizontalNavigableWalker = this._makeNavigableTreeWalker(
+                            true,
+                            false
+                        );
+                    }
+                    return this.__horizontalNavigableWalker;
+                },
+            });
+        }
+        if (!panelViewClass._makeNavigableTreeWalker.toSource().startsWith("(function uc_ATMEP_")) {
             eval(
                 `panelViewClass._makeNavigableTreeWalker = function ` +
                     panelViewClass._makeNavigableTreeWalker
                         .toSource()
-                        .replace(/(node\.disabled)/, `$1 || node.hidden`)
+                        .replace(/^\(/, "")
+                        .replace(/\)$/, "")
+                        .replace(/^_makeNavigableTreeWalker\s*/, "")
+                        .replace(/^function\s*/, "")
+                        .replace(/^(.)/, `uc_ATMEP_makeNavigableTreeWalker $1`)
+                        .replace(/\(arrowKey\)/, `(arrowKey, vertical = true)`)
+                        // .replace(/(node\.disabled)/, `$1 || node.hidden`)
+                        .replace(
+                            /(let bounds = this)/,
+                            `if (node.hidden) {\n        return NodeFilter.FILTER_SKIP;\n      }\n      $1`
+                        )
+                        .replace(
+                            /(\(!arrowKey && this\._isNavigableWithTabOnly\(node\)\)\n\s*\) \{)/,
+                            /* javascript */ `$1
+        if (vertical && node.classList.contains("all-tabs-secondary-button")) return NodeFilter.FILTER_SKIP;`
+                        )
             );
-        delete panelViewClass.__arrowNavigableWalker;
-        delete panelViewClass.__tabNavigableWalker;
+        }
+        if (!panelViewClass.keyNavigation.toSource().startsWith("(function uc_ATMEP_")) {
+            eval(
+                `panelViewClass.keyNavigation = function ` +
+                    panelViewClass.keyNavigation
+                        .toSource()
+                        .replace(/^\(/, "")
+                        .replace(/\)$/, "")
+                        .replace(/^keyNavigation\s*/, "")
+                        .replace(/^function\s*/, "")
+                        .replace(/^(.)/, `uc_ATMEP_keyNavigation $1`)
+                        .replace(
+                            /(if \(\n\s*\(!this\.window\.RTL_UI && keyCode == \"ArrowLeft\"\) \|\|)/,
+                            /* javascript */ `if (this.selectedElement && this.selectedElement.matches(".all-tabs-button, .all-tabs-secondary-button")) {
+          let isNext = (this.window.RTL_UI && keyCode == "ArrowLeft") || (!this.window.RTL_UI && keyCode == "ArrowRight");
+          let nextButton = this.moveSelectionHorizontal(isNext);
+          Services.focus.setFocus(nextButton, Services.focus.FLAG_BYKEY);
+          break;
+        }
+        $1`
+                        )
+            );
+            delete panelViewClass.__arrowNavigableWalker;
+            delete panelViewClass.__tabNavigableWalker;
+        }
     }
 
     function prefHandler(_sub, _top, _pref) {
@@ -322,7 +422,7 @@
         setupPIP();
         setupCtrlTab();
 
-        tabsPanels.forEach(skipHiddenButtons);
+        tabsPanels.forEach(modifyWalkers);
         tabsPanels.forEach(setupTabsPanel);
     }
 
@@ -470,7 +570,7 @@
             }
 
             let busy = tab.getAttribute("busy");
-            setAttributes(row.firstElementChild, {
+            setAttributes(row.querySelector(".all-tabs-button"), {
                 busy,
                 label: tab.label,
                 image: !busy && tab.getAttribute("image"),
@@ -479,7 +579,7 @@
 
             this._setImageAttributes(row, tab);
 
-            let secondaryButton = row.querySelector(".all-tabs-secondary-button");
+            let secondaryButton = row.querySelector(".all-tabs-secondary-button[toggle-mute]");
             setAttributes(secondaryButton, {
                 muted: tab.muted,
                 soundplaying: tab.soundPlaying,
@@ -632,7 +732,7 @@
             delete tab.noCanvas;
             this.gBrowser.unlockClearMultiSelection();
             this.gBrowser.clearMultiSelectedTabs();
-            PanelMultiView.hidePopup(this.view.closest("panel"));
+            PanelMultiView.hidePopup(PanelMultiView.forNode(this.view.panelMultiView)._panel);
         };
         tabsPanel._onClick = function (e, tab) {
             if (e.button !== 0 || e.target.classList.contains("all-tabs-secondary-button")) return;
@@ -696,8 +796,7 @@
                 (AppConstants.platform == "win" || AppConstants.platform == "macosx")
             ) {
                 delete tab.noCanvas;
-                let windowUtils = window.windowUtils;
-                let scale = windowUtils.screenPixelsPerCSSPixel / windowUtils.fullZoom;
+                let scale = window.devicePixelRatio;
                 let canvas = this._dndCanvas;
                 if (!canvas) {
                     this._dndCanvas = canvas = document.createElementNS(
@@ -838,7 +937,7 @@
     box-shadow: none;
     -moz-box-align: center;
     padding-inline-end: 2px;
-    overflow-x: -moz-hidden-unscrollable;
+    overflow: hidden;
     position: relative;
 }
 .panel-subview-body > .all-tabs-item .all-tabs-button:not([disabled], [open]):focus {
@@ -857,7 +956,7 @@
 .panel-subview-body > .all-tabs-item[selected] {
     font-weight: normal;
     background-color: var(--arrowpanel-dimmed-further) !important;
-    --main-stripe-color: var(--arrowpanel-dimmed-even-further);
+    --main-stripe-color: var(--panel-item-active-bgcolor);
 }
 .panel-subview-body > .all-tabs-item .all-tabs-button {
     min-height: revert;
@@ -1021,8 +1120,8 @@
     border-image: linear-gradient(
         to right,
         transparent,
-        var(--arrowpanel-dimmed-even-further) 1%,
-        var(--arrowpanel-dimmed-even-further) 25%,
+        var(--panel-item-active-bgcolor) 1%,
+        var(--panel-item-active-bgcolor) 25%,
         transparent 90%
     );
     border-image-slice: 1;
@@ -1030,11 +1129,11 @@
 }
 .panel-subview-body > .all-tabs-item[dragpos="before"]::before {
     inset-block-start: 0;
-    border-top: 1px solid var(--arrowpanel-dimmed-even-further);
+    border-top: 1px solid var(--panel-item-active-bgcolor);
 }
 .panel-subview-body > .all-tabs-item[dragpos="after"]::before {
     inset-block-end: 0;
-    border-bottom: 1px solid var(--arrowpanel-dimmed-even-further);
+    border-bottom: 1px solid var(--panel-item-active-bgcolor);
 }
 .panel-subview-body
     > .all-tabs-item[pinned]
@@ -1045,6 +1144,18 @@
     padding-inline-start: 20px;
     -moz-context-properties: fill, fill-opacity;
     fill: currentColor;
+}
+#places-tooltip-insecure-icon {
+    -moz-context-properties: fill;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: .2em;
+    min-width: 1em !important;
+}
+#places-tooltip-insecure-icon[hidden] {
+    display: none;
 }`;
         let sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(
             Ci.nsIStyleSheetService

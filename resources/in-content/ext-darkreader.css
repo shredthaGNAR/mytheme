@@ -1,8 +1,8 @@
 /* This Source Code Form is subject to the terms of the Creative Commons
-* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
-* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
-* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
-* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+ * Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+ * If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+ * file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+ * or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
 
 /* dark reader */
 
@@ -54,7 +54,9 @@
     :root[uc-extension-id="addon@darkreader.org"]
         :where(.multi-switch__option:hover:not(.multi-switch__option--selected), .slider__track, .slider__track::after),
     :root[uc-extension-id="addon@darkreader.org"] .collapsible-panel__group__expand-button,
-    :root[uc-extension-id="addon@darkreader.org"] .textbox {
+    :root[uc-extension-id="addon@darkreader.org"] .textbox,
+    :root[uc-extension-id="addon@darkreader.org"] .slider__track::before,
+    :root[uc-extension-id="addon@darkreader.org"] .slider__track::after{
         background-color: var(--uc-arrowpanel-dimmed) !important;
     }
 

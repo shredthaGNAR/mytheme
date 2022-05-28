@@ -1,8 +1,8 @@
 /* This Source Code Form is subject to the terms of the Creative Commons
-* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
-* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
-* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
-* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
+ * Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+ * If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+ * file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+ * or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
 
 /* controls the appearance of the urlbar results popup .urlbarView and #urlbar-results, etc. */
 
@@ -591,9 +591,20 @@
 }
 
 .urlbarView-row[engine="Google"]:is([type="tabtosearch"], [type="tokenaliasengine"])
-    .urlbarView-favicon {
+    .urlbarView-favicon,
+.urlbarView-row[engine="Google"][type="search"] .urlbarView-favicon[src]:not([src^="chrome"]) {
     box-sizing: border-box !important;
     background: url(chrome://userchrome/content/engines/google.svg) no-repeat !important;
+    width: 16px !important;
+    height: 16px !important;
+    padding-inline-start: 16px;
+}
+
+.urlbarView-row[engine="DuckDuckGo"]:is([type="tabtosearch"], [type="tokenaliasengine"])
+    .urlbarView-favicon,
+.urlbarView-row[engine="DuckDuckGo"][type="search"] .urlbarView-favicon[src]:not([src^="chrome"]) {
+    box-sizing: border-box !important;
+    background: url(chrome://userchrome/content/engines/duckduckgo.svg) no-repeat !important;
     width: 16px !important;
     height: 16px !important;
     padding-inline-start: 16px;

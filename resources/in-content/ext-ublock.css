@@ -1,18 +1,16 @@
 /* This Source Code Form is subject to the terms of the Creative Commons
-* Attribution-NonCommercial-ShareAlike International License, v. 4.0.
-* If a copy of the CC BY-NC-SA 4.0 was not distributed with this
-* file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
-* or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
-
+ * Attribution-NonCommercial-ShareAlike International License, v. 4.0.
+ * If a copy of the CC BY-NC-SA 4.0 was not distributed with this
+ * file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/
+ * or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. */
 
 /* uBlock Origin dark theme */
 
-
-/* @-moz-document regexp("^moz-extension://./.*") */
-
-@-moz-document url("disabled") {
+/* @-moz-document regexp("^moz-extension://.*/.*") */
+@-moz-document url("disabled")
+{
     @media (prefers-color-scheme: dark) {
-         :root[uc-extension-id="uBlock0@raymondhill.net"] {
+        :root[uc-extension-id="uBlock0@raymondhill.net"] {
             --fg-icon-info-lvl-0-dimmed: hsl(0, 0%, 53.3%) !important;
             --fg-icon-info-lvl-1-dimmed: hsla(258, 57%, 35%, 1) !important;
             --fg-icon-info-lvl-1: hsla(258, 66%, 48%, 1) !important;
@@ -112,9 +110,11 @@
             --checkbox-checked-ink: var(--in-content-link-color) !important;
             --checkbox-hover-ink: var(--purple-40-a50) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"]:not(#ublock0-epicker) body {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"]:not(#ublock0-epicker) body {
             background-color: var(--bg-1) !important;
         }
+
         #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] body {
             --font-size: 12px !important;
             --popup-gap: 10px !important;
@@ -122,83 +122,122 @@
             --popup-gap-extra-thin: 2px !important;
             --checkbox-size: calc(var(--font-size) + 2px) !important;
         }
+
         #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] #main {
             max-width: 280px !important;
         }
-        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] #basicStats>[data-i18n] {
+
+        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] #basicStats > [data-i18n] {
             font-size: var(--font-size) !important;
         }
-        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] #basicStats>[data-i18n]+span {
+
+        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"]
+            #basicStats
+            > [data-i18n]
+            + span {
             font-size: calc(var(--font-size) + 1px) !important;
         }
+
         #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] .toolRibbon {
             display: flex !important;
             flex-flow: row nowrap !important;
         }
+
         #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] .toolRibbon .tool {
             font-size: calc(var(--font-size) + 4px) !important;
             flex-grow: 1 !important;
         }
-        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] body:not([data-more~="a"]) [data-more="a"],
-        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] body:not([data-more~="b"]) [data-more="b"],
-        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] body:not([data-more~="c"]) [data-more="c"],
-        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] body:not([data-more~="d"]) [data-more="d"],
-        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"] body:not([data-more~="f"]) [data-more="f"] {
+
+        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"]
+            body:not([data-more~="a"])
+            [data-more="a"],
+        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"]
+            body:not([data-more~="b"])
+            [data-more="b"],
+        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"]
+            body:not([data-more~="c"])
+            [data-more="c"],
+        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"]
+            body:not([data-more~="d"])
+            [data-more="d"],
+        #uBO-popup-panel[uc-extension-id="uBlock0@raymondhill.net"]
+            body:not([data-more~="f"])
+            [data-more="f"] {
             border: none !important;
         }
+
         @supports -moz-bool-pref("userChrome.css.mac-ui-fonts") {
-             :root[uc-extension-id="uBlock0@raymondhill.net"] body {
+            :root[uc-extension-id="uBlock0@raymondhill.net"] body {
                 font-family: SF Pro Text, SF Arabic, Segoe UI, sans-serif !important;
             }
-             :root[uc-extension-id="uBlock0@raymondhill.net"] #hostname>span+span {
+
+            :root[uc-extension-id="uBlock0@raymondhill.net"] #hostname > span + span {
                 font-weight: 500 !important;
             }
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] button:not(.disabled,
-        [disabled]) {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] button:not(.disabled, [disabled]) {
             cursor: pointer !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] #cloudWidget {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] #cloudWidget {
             background-color: var(--in-content-button-highlight-dark) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] #actions,
-         :root[uc-extension-id="uBlock0@raymondhill.net"] #sticky {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] #actions,
+        :root[uc-extension-id="uBlock0@raymondhill.net"] #sticky {
             background-color: var(--bg-1) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-cursor {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-cursor {
             caret-color: white !important;
             color: white !important;
             border-color: white !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-selected {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-selected {
             background: var(--dark-gray-70) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-focused .CodeMirror-selected {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-focused .CodeMirror-selected {
             background: var(--dark-gray-50) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] a:hover {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] a:hover {
             --link-ink: var(--in-content-link-color-hover) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] #cloudCapacity {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] #cloudCapacity {
             background-color: var(--dark-gray-30) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-activeline-background {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] .CodeMirror-activeline-background {
             background: var(--dark-gray-70) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .checkbox>input[type="checkbox"]+svg {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] .checkbox > input[type="checkbox"] + svg {
             border: 1.5px solid var(--checkbox-ink) !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .checkbox>input[type="checkbox"]:checked+svg {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"]
+            .checkbox
+            > input[type="checkbox"]:checked
+            + svg {
             background-color: var(--checkbox-checked-ink);
             border-color: var(--checkbox-checked-ink) !important;
             stroke: var(--default-surface);
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .checkbox>input[type="checkbox"]:not(:checked):hover+svg {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"]
+            .checkbox
+            > input[type="checkbox"]:not(:checked):hover
+            + svg {
             border-color: var(--checkbox-checked-ink) !important;
             background-color: var(--checkbox-hover-ink) !important;
             stroke: transparent !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] select {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] select {
             appearance: none !important;
             background-color: var(--dark-gray-30) !important;
             color: var(--default-ink) !important;
@@ -207,14 +246,16 @@
             padding-block: 3px !important;
             padding-inline: 3px !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] select>option {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] select > option {
             appearance: none !important;
             background-color: var(--dark-gray-30) !important;
             color: var(--default-ink) !important;
             border: none !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] input:is([type="number"],
-        [type="search"]) {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"]
+            input:is([type="number"], [type="search"]) {
             appearance: none !important;
             background-color: var(--dark-gray-30) !important;
             color: var(--default-ink) !important;
@@ -223,14 +264,21 @@
             padding-block: 3px !important;
             padding-inline: 3px !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .cm-search-widget .fa-icon:not(.fa-icon-ro):hover {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"]
+            .cm-search-widget
+            .fa-icon:not(.fa-icon-ro):hover {
             fill: white !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] .cm-search-widget .cm-search-widget-button:hover {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"]
+            .cm-search-widget
+            .cm-search-widget-button:hover {
             color: white !important;
         }
-         :root[uc-extension-id="uBlock0@raymondhill.net"] #diff,
-         :root[uc-extension-id="uBlock0@raymondhill.net"] #advancedSettings {
+
+        :root[uc-extension-id="uBlock0@raymondhill.net"] #diff,
+        :root[uc-extension-id="uBlock0@raymondhill.net"] #advancedSettings {
             border-color: var(--cm-gutter-border) !important;
         }
     }
