@@ -384,6 +384,26 @@ menupopup#viewSidebarMenu
     display: none;
 }
 
+/* GitZip */
+:is(.menu-iconic, .menuitem-iconic)[id^="gitzip-firefox-addons_gitzip_org-menuitem-"]
+    .menu-iconic-left::before {
+    width: 16px;
+    height: 16px;
+    margin-inline: var(--context-iconic-margin);
+    fill: currentColor;
+    -moz-context-properties: fill, fill-opacity, stroke;
+    content: "";
+    display: -moz-inline-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(chrome://userchrome/content/material/zipper.svg);
+}
+
+:is(.menu-iconic, .menuitem-iconic)[id^="gitzip-firefox-addons_gitzip_org-menuitem-"]
+    .menu-iconic-icon {
+    display: none;
+}
+
 /* invert some icons in the extension options panel */
 .eom-addon-button[data-extensionid="FirefoxColor@mozilla.com"] .toolbarbutton-icon,
 .eom-addon-button[data-extensionid="default-bookmark-folder@gustiaux.com"] .toolbarbutton-icon,
@@ -610,7 +630,7 @@ menuitem[id^="sort-bookmarks_heftig-menuitem"][label="Sort this folder…"]
 
 :is(#simple-translate_sienori-menuitem-_translatePage, #simple-translate_sienori-menuitem-_translatePageOnTab)[label^="Translate this page"]
     > .menu-accel-container::before {
-    content: "Translate this Page";
+    content: "Translate Page";
 }
 
 #simple-translate_sienori-menuitem-_translateLink[label="Translate selected link"]
@@ -623,7 +643,7 @@ menuitem[id^="sort-bookmarks_heftig-menuitem"][label="Sort this folder…"]
     content: "Translate Selected Text";
 }
 
-/* hide translate this page when right-clicking text input */
+/* hide translate this page menuitem when right-clicking text input */
 #contentAreaContextMenu
     #context-cut:not([hidden])
     ~ :is(.menu-iconic, .menuitem-iconic):is([label^="Translate this page"], [label="Simple Translate"]) {

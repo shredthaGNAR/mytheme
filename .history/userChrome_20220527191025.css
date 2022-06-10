@@ -673,7 +673,7 @@ slider,
 }
 
 
-/**----------------------------------------------------------------*/
+/**----------------------------------------------------------------*
 
 #TabsToolbar {
     position: relative;
@@ -843,7 +843,7 @@ description#identity-popup-content-verifier,
 }*/
 
 
-/*test code from reddit never used prob delete*/
+/*test code from reddit never used prob delete*
 
 :root #nav-bar,
 #titlebar,
@@ -854,7 +854,7 @@ description#identity-popup-content-verifier,
 #TabsToolbar,
 #nav-bar {
     appearance: none !important;
-    /*none*/
+    /*none*
 }
 
 #titlebar,
@@ -863,13 +863,13 @@ description#identity-popup-content-verifier,
 #PersonalToolbar,
 .tab-content {
     appearance: none !important;
-    /*none*/
+    /*none*
 }
 
 
 /*google searxh box shadow
 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 2px rgba(0, 0, 0, 0.08);
-*/
+*
 
 .browser-toolbar:not(.titlebar-color) {
     color: #fff !important;
@@ -1099,7 +1099,7 @@ tab:not([pinned])[selected="true"] .tab-background {
 
 tab:not([pinned])[selected="true"] .tab-content {
     /*background-image: url(images/tabbackground.png);*/
-    background-image: radial-gradient( circle at bottom center, #551dfc, #1b0034d3) !important;
+    background-image: radial-gradient( circle at bottom center, #551dfc, #270f3e27) !important;
     margin-bottom: 0px !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -1120,7 +1120,7 @@ tab:is([pinned])[selected="true"] .tab-content {
     #1293dd,
     #551dfc
   ) !important;*/
-    background-image: radial-gradient( circle at bottom center, #551dfc, #1b0034d3) !important;
+    background-image: radial-gradient( circle at bottom center, #551dfc, #8405fb00) !important;
     border-radius: 5px !important;
 }
 
@@ -1138,7 +1138,7 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 /**Move the label of the eyelashes to the vertical center of the tab */
 
 .tab-label {
-    text-shadow: 1px !important;
+    text-shadow: 0px !important;
 }
 
 
@@ -1198,11 +1198,14 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 }
 
 
-/*** URLBAR Focus ******
+/*** URLBAR Focus ******/
 
 #urlbar[focused="true"] {
-    background: linear-gradient(#161742a6, #18151e26) !important;
-    /* border: 1px solid transparent !important;*
+    background: linear-gradient(#161742a6, #18151e71) !important;
+}
+
+
+/* border: 1px solid transparent !important;*
     border-image: 1 1 1 1
         linear-gradient(
             90deg,
@@ -1319,7 +1322,7 @@ tab:is([pinned]):not([selected="true"]) .tab-content {
 /* Active tab brightness */
 
 .tab-content[selected="true"] {
-    background-color: color-mix(in srgb, #1b0034d3 7%, transparent) !important;
+    background-color: color-mix(in srgb, #ffffffd3 7%, transparent) !important;
     text-shadow: 1px !important;
     border-radius: 5px !important;
     margin-top: 3px !important;
@@ -1490,7 +1493,7 @@ Contains navbar, urlbar, and etc*/
 
 #TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"],
 [multiselected])>.tab-stack>.tab-background:-moz-lwtheme {
-    box-shadow: 0 0 1px rgba(91, 91, 122, 0.486), 5px 3px 6px rgba(91, 91, 122, 0.486), 4px 4px 2px rgba(91, 91, 122, 0.486) !important;
+    box-shadow: 0 0 1px rgb(91, 91, 122), 5px 3px 6px rgb(91, 91, 122), 4px 4px 2px rgb(91, 91, 122) !important;
     /*border-top  : 3px solid transparent !important;*/
     /*border-image: 1 0 0 0
         linear-gradient(
@@ -1546,32 +1549,15 @@ background-image: radial-gradient( circle farthest-corner at 32.7% 82.7%,  rgba(
 }
 
 
-/* Mouse Hover Background by passing by non-selected tabs *
+/* Mouse Hover Background by passing by non-selected tabs */
 
-.tabbrowser-tab:hover
-	> .tab-stack
-	> .tab-background:not([selected="true"], [multiselected]) {
-	background-image: radial-gradient(
-		circle at bottom center,
-		#551dfc,
-		#000134d3
-	) !important;
-	border-top: 2px solid transparent !important;
-	border-image: 1 0 0 0
-		linear-gradient(
-			90deg,
-			#9400ff,
-			#ba00e5,
-			#df06b9,
-			#e62da7,
-			#f13b95,
-			#f64d86,
-			#f85f7a,
-			#fc7169,
-			#f9845b,
-			#e8ab52
-		) !important;
+.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"],
+[multiselected]) {
+    background-image: radial-gradient( circle at bottom center, #551dfc, #000134d3) !important;
+    border-top: 2px solid transparent !important;
+    border-image: 1 0 0 0 linear-gradient( 90deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
 }
+
 
 /***inactive background tab
 .tabbrowser-tab:not([selected="true"]):not([multiselected="true"])
@@ -1673,7 +1659,7 @@ tooltip {
 }
 
 
-/** URL Bar */
+/** URL Bar *
 
 :root[tabsintitlebar]:not(:-moz-window-inactive,
  :-moz-lwtheme),
@@ -1748,7 +1734,7 @@ tooltip {
   opacity: 0.15 !important;
 }
 
-/** Clipped tabs - Letters cleary *******************************************/
+/** Clipped tabs - Letters cleary *******************************************
 
 #tabbrowser-tabs[closebuttons="activetab"] .tab-content:not([pinned]) {
     padding-inline-start: 8px !important;
@@ -2029,14 +2015,14 @@ description#identity-popup-content-verifier,
 }
 
 
-/* toolbar area background  */
+/* toolbar area background  *
 
 .browser-toolbar:not(.titlebar-color) {
     background: transparent !important;
 }
 
 
-/*** dark theme ***/
+/*** dark theme ***
 
 :root[lwthemetextcolor="bright"] #urlbar:not([focused="true"],
 [open])>#urlbar-background,
@@ -2357,19 +2343,21 @@ menugroup>menuitem>hbox>image {
 /*** Theme - Compatibility */
 
 
-/*** Header Image *
+/*** Header Image */
+
 :root[lwtheme-image] {
-  background-image: var(--lwt-header-image) !important;
-  background-repeat: no-repeat !important;
-  background-position: right top !important;
+    background-image: var(--lwt-header-image) !important;
+    background-repeat: no-repeat !important;
+    background-position: right top !important;
 }
 
 :root[lwtheme-image] #navigator-toolbox:-moz-lwtheme {
-  background-image: var(--lwt-additional-images) !important;
-  background-repeat: var(--lwt-background-tiling) !important;
-  background-position: var(--lwt-background-alignment) !important;
-  background-color: transparent !important;
+    background-image: var(--lwt-additional-images) !important;
+    background-repeat: var(--lwt-background-tiling) !important;
+    background-position: var(--lwt-background-alignment) !important;
+    background-color: transparent !important;
 }
+
 
 /* Original:  var(--lwt-accent-color)*/
 
@@ -2421,24 +2409,13 @@ menugroup>menuitem>hbox>image {
 }
 
 
-/*** Search Bar
+/*** Search Bar*/
+
 #searchbar {
-  border: 1px solid transparent !important;
-  border-image: 1 1 1 1
-    linear-gradient(
-      90deg,
-      #9400ff,
-      #ba00e5,
-      #df06b9,
-      #e62da7,
-      #f13b95,
-      #f64d86,
-      #f85f7a,
-      #fc7169,
-      #f9845b,
-      #e8ab52
-    ) !important;
+    border: 1px solid transparent !important;
+    border-image: 1 1 1 1 linear-gradient( 90deg, #9400ff, #ba00e5, #df06b9, #e62da7, #f13b95, #f64d86, #f85f7a, #fc7169, #f9845b, #e8ab52) !important;
 }
+
 
 /** Inactive tabs: Separator line style *
 .tab-background:not([selected="true"]):not([multiselected="true"]):not([beforeselected-visible="true"]) {
@@ -2915,7 +2892,7 @@ otherwise they won't overlap with other tabs, they'll just push tabs 10px away f
 it gets bigger when you hover the tab, apparently because the close button gains a background in that condition.
 this is ugly in general imo but it's useless with this theme in particular since we put the close button on the right,
 meaning it doesn't overlap with the right side of the label at all, which is where the overflowing mask is applied.
-so we make the mask size constant. *
+so we make the mask size constant. */
 
 .tabbrowser-tab {
     --tab-label-mask-size: 2em !important;
@@ -3136,11 +3113,13 @@ toolbarbutton {
 }
 
 
-/** Enable urlbar border when focused *
-#urlbar:focus-within > #urlbar-background {
-  border-color: -moz-accent-color !important;
-  border-width: 1px !important;
+/** Enable urlbar border when focused */
+
+#urlbar:focus-within>#urlbar-background {
+    border-color: -moz-accent-color !important;
+    border-width: 1px !important;
 }
+
 
 /* highlights the top of active tabs *
 
@@ -3844,45 +3823,44 @@ scrollbar {
 }
 
 
-/** Selected Tab - Bottom Rounded Corner ************************************
+/** Selected Tab - Bottom Rounded Corner ************************************/
+
 #tabbrowser-tabs {
-  --tab-corner-rounding: 5px !important;
-  /* 10px looks about like chromium - 17px looks close to Australis tabs *
-  --tab-corner-padding: 1px !important;
-  --tab-corner-position: calc(
-    var(--tab-corner-padding) - var(--tab-corner-rounding)
-  ) !important;
+    --tab-corner-rounding: 5px !important;
+    /* 10px looks about like chromium - 17px looks close to Australis tabs */
+    --tab-corner-padding: 1px !important;
+    --tab-corner-position: calc( var(--tab-corner-padding) - var(--tab-corner-rounding)) !important;
 }
 
-:root:not([customizing="true"]) tab[visuallyselected] > stack::before,
-:root:not([customizing
-  display: block !important;
-  position: absolute !important;
-  z-index: 1 !important;
-
-  /* Shape *
-  width: var(--tab-corner-rounding) !important;
-  height: 100% !important;
-  /* Color *
-  fill: var(--toolbar-bgcolor) !important;
-  stroke: var(--tabs-border-color, transparent) !important;
-  -moz-context-properties: fill, stroke !important;
-  /* Image *
-  background-size: var(--tab-corner-rounding) !important;
-  background-repeat: no-repeat !important;
-  background-position-y: bottom !important;
+:root:not([customizing="true"]) tab[visuallyselected]>stack::before,
+:root:not([customizing="true"]) tab[visuallyselected]>stack::after {
+    display: block !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    /* Shape */
+    width: var(--tab-corner-rounding) !important;
+    height: 100% !important;
+    /* Color */
+    fill: var(--toolbar-bgcolor) !important;
+    stroke: var(--tabs-border-color, transparent) !important;
+    -moz-context-properties: fill, stroke !important;
+    /* Image */
+    background-size: var(--tab-corner-rounding) !important;
+    background-repeat: no-repeat !important;
+    background-position-y: bottom !important;
 }
 
-tab[visuallyselected] > stack::before {
-  left: var(--tab-corner-position) !important;
-  background-image: url("./icons/tab-bottom-corner-left.svg") !important;
+tab[visuallyselected]>stack::before {
+    left: var(--tab-corner-position) !important;
+    background-image: url("./icons/tab-bottom-corner-left.svg") !important;
 }
 
-tab[visuallyselected] > stack::after {
-  left: auto !important;
-  right: var(--tab-corner-position) !important;
-  background-image: url("./icons/tab-bottom-corner-right.svg") !important;
+tab[visuallyselected]>stack::after {
+    left: auto !important;
+    right: var(--tab-corner-position) !important;
+    background-image: url("./icons/tab-bottom-corner-right.svg") !important;
 }
+
 
 /* Bar between the bookmarks bar and the page  */
 
@@ -9824,7 +9802,7 @@ tab:only-of-type:not([pinned]) {
 
 #PersonalToolbar {
     background-image: url(/images/noise-512x512.png) !important;
-    background-color: transparent !important;
+    background-color: #2a2a2ac0 !important;
     -webkit-backdrop-filter: blur(32px) !important;
     backdrop-filter: blur(32px) !important;
 }
@@ -10471,7 +10449,7 @@ See the above repository for updates as well as full license text. */
 }
 
 
-/* To counter the above, make tabs toolbar spacer a bit narrower so there won't be too much space reserved when window dragging spacers are shown */
+/* To counter the above, make tabs toolbar spacer a bit narrower so there won't be too much space reserved when window dragging spacers are shown *
 
 .titlebar-spacer[type="pre-tabs"] {
     width: 24px !important;
@@ -10577,16 +10555,17 @@ Manifest URL
 
 /* force inactive window on default theme */
 
-#navigator-toolbox:-moz-window-inactive {
-    background-color: var( --lwt-accent-color-inactive, var(--lwt-accent-color)) !important;
+@media not (-moz-os-version: windows-win7) {
+    @media not (-moz-os-version: windows-win8) {
+        #navigator-toolbox:-moz-window-inactive {
+            background-color: var( --lwt-accent-color-inactive, var(--lwt-accent-color)) !important;
+        }
+    }
 }
 
-
-/*
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab[selected="true"] .tab-label-container {
     --tab-label-mask-size: 0.5em !important;
 }
-*/
 
 --button-primary-bgcolor :root[tabsintitlebar] #nav-bar {
     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
