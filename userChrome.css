@@ -42,7 +42,7 @@
 #sidebar-search-container,
 #bookmarksPanel,
 #PersonalToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #appMenu-popup,
@@ -328,7 +328,7 @@ box.panel-header {
 :root #TabsToolbar,
 :root #titlebar,
 :root #tabbrowser-tabs {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
     background: transparent !important;
 }
 
@@ -361,7 +361,7 @@ slider,
 :root[lwthemetextcolor="bright"] #TabsToolbar,
 :root[lwthemetextcolor="bright"] #titlebar,
 :root[lwthemetextcolor="bright"] #tabbrowser-tabs {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root:-moz-window-inactive #TabsToolbar,
@@ -631,7 +631,7 @@ slider,
 }
 
 #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
     -moz-font-smoothing-background-color: none !important;
 }
 
@@ -640,18 +640,18 @@ slider,
 }
 
 #nav-bar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #PersonalToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
     background: transparent !important;
 }
 
 :root[macOSNativeFullscreen]:is(#navigator-toolbox,
 #sidebar-box) {
     /* Make the toolbar opaque using this color that simulates the -moz-mac-vibrant-toolbar-dark effect. This hides vibrancy, but it also ensures that we can't see #browser through the transparent toolbar. */
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
     background: transparent !important;
 }
 
@@ -669,7 +669,7 @@ slider,
 .message,
 .theme-body,
 .table-widget-empty-text {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 
@@ -2756,7 +2756,7 @@ slider,
 .message,
 .theme-body,
 .table-widget-empty-text {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .theme-body {
@@ -3941,7 +3941,7 @@ slider,
 .message,
 .theme-body,
 .table-widget-empty-text {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .theme-body {
@@ -3951,13 +3951,13 @@ slider,
 
 /*
 .tab-background:not([selected="true"]) {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
-    -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark!important;
+    -moz-font-smoothing-background-color: -moz-mac-vibrancy-dark!important;
 }*/
 
 :root #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
-    -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
+    -moz-font-smoothing-background-color: -moz-mac-vibrancy-dark !important;
 }
 
 
@@ -8728,11 +8728,11 @@ tab.tabbrowser-tab vbox.tab-background[selected="true"] {
 /* make tabs toolbar translucent */
 
 :root:not(:-moz-window-inactive [lwthemetextcolor="dark"]) #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root:not(:-moz-window-inactive)[lwthemetextcolor="bright"] #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root:-moz-window-inactive[lwthemetextcolor="bright"] {
@@ -8764,7 +8764,7 @@ tab.tabbrowser-tab vbox.tab-background[selected="true"] {
 :root #TabsToolbar,
 :root #titlebar,
 :root #tabbrowser-tabs {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
     background-color: transparent !important;
 }
 
@@ -8787,11 +8787,11 @@ tab.tabbrowser-tab vbox.tab-background[selected="true"] {
 /* make tabs toolbar translucent */
 
 :root:not(:-moz-window-inactive [lwthemetextcolor="dark"]) #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root:not(:-moz-window-inactive)[lwthemetextcolor="bright"] #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root:-moz-window-inactive[lwthemetextcolor="bright"] {
@@ -9326,7 +9326,7 @@ More gradients to try out
 #main-window[lwthemetextcolor="bright"] .table-widget-empty-text,
 #main-window[lwthemetextcolor="bright"] findbar,
 #main-window[lwthemetextcolor="bright"] #PersonalToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 
@@ -9636,13 +9636,13 @@ tab:only-of-type:not([pinned]) {
 #nav-bar,
 #titlebar,
 #sidebar-box {
-    --moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    --moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #nav-bar:-moz-lwtheme,
 #titlebar:-moz-lwtheme,
 #sidebar-box:-moz-lwtheme {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #nav-bar {
@@ -9855,42 +9855,42 @@ tab:only-of-type:not([pinned]) {
 }
 
 :root #main-window {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #nav-bar,
 #titlebar,
 #sidebar-box {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #nav-bar:-moz-lwtheme,
 #titlebar:-moz-lwtheme,
 #sidebar-box:-moz-lwtheme {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .tab-background[selected="true"] {
     border: none !important;
     border-image: none !important;
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .tab-background[selected="true"]:-moz-window-inactive {
     border-image: none !important;
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .tab-background[selected="true"] {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .tab-background[selected="true"]:-moz-window-inactive {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 
@@ -9942,7 +9942,7 @@ tab:only-of-type:not([pinned]) {
 :root #TabsToolbar,
 :root #titlebar,
 :root #tabbrowser-tabs {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
     background-color: transparent !important;
 }
 
@@ -9971,11 +9971,11 @@ tab:only-of-type:not([pinned]) {
 /* FF 100< lwt-default-theme-in-dark-mode="true" */
 
 :root:not(:-moz-window-inactive [lwt-default-theme-in-dark-mode]) #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root:not(:-moz-window-inactive)[lwt-default-theme-in-dark-mode] #TabsToolbar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root:-moz-window-inactive[lwt-default-theme-in-dark-mode] {
@@ -10318,13 +10318,13 @@ See the above repository for updates as well as full license text. */
 #nav-bar,
 #titlebar,
 #sidebar-box {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #nav-bar:-moz-lwtheme,
 #titlebar:-moz-lwtheme,
 #sidebar-box:-moz-lwtheme {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #main-window:not(:-moz-lwtheme) {
@@ -10332,7 +10332,7 @@ See the above repository for updates as well as full license text. */
 }
 
 #main-window[lwt-default-theme-in-dark-mode] {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #main-window:is(:not(:-moz-lwtheme),
@@ -10589,7 +10589,7 @@ Manifest URL
 */
 
 --button-primary-bgcolor :root[tabsintitlebar] #nav-bar {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 :root[tabsintitlebar] #nav-bar:-moz-window-inactive {
@@ -10607,5 +10607,5 @@ slider,
 .message,
 .theme-body,
 .table-widget-empty-text {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }

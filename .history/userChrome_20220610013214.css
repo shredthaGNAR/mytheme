@@ -1,0 +1,573 @@
+/*
+```
+@@@@@@@    @@@@@@   @@@   @@@@@@    @@@@@@   @@@  @@@
+@@@@@@@@  @@@@@@@@  @@@  @@@@@@@   @@@@@@@@  @@@@ @@@
+@@!  @@@  @@!  @@@  @@!  !@@       @@!  @@@  @@!@!@@@
+!@!  @!@  !@!  @!@  !@!  !@!       !@!  @!@  !@!!@!@!
+@!@@!@!   @!@  !@!  !!@  !!@@!!    @!@  !@!  @!@ !!@!
+!!@!!!    !@!  !!!  !!!   !!@!!!   !@!  !!!  !@!  !!!
+!!:       !!:  !!!  !!:       !:!  !!:  !!!  !!:  !!!
+:!:       :!:  !:!  :!:      !:!   :!:  !:!  :!:  !:!
+ ::       ::::: ::   ::  :::: ::   ::::: ::   ::   ::
+ :         : :  :   :    :: : :     : :  :   ::    :
+
+A Firefox theme with Pywal and macOS in mind.
+Firefox Vibrancy, Transparency, for macOS
+ver. 0.1
+By: Brandon Shockley
+Original Source Material: "https://github.com/manilarome/blurredfox/"
+```
+![Poison](https://i.imgur.com/0Amq1Y9.png)
+![Additional Screenshots](https://imgur.com/a/Sh0vzDS)
+
+# Why?
+Unfortunately, becuase of design capability differences between Firefox for Linux and macOS,
+Manilarome's beautiful theme, ![blurredfox](https://github.com/manilarome/blurredfox) doesn't render properly on macOS. This edit of their theme tries
+to find work arounds for what doesn't work, as well as tweak some settings to my liking. This
+theme is intended to be used with, ![pywal](https://github.com/dylanaraps/pywal) and ![pywalfox](https://github.com/Frewacom/pywalfox). I am also
+not a professional CSS developer. My theme might be crude, and there are likely to be
+overlapping rules and bugs. Please feel free to propose fixes and raise issues on Github.
+
+# Features
+
+# Dependencies
+
+# Installation
+
+ - NOTES:
+  - The User should configure spacing in the URL bar between elements in the Customize page instead of me, probably.
+
+# TODO:
+- [ ] Integrate this better into Pywalfox
+   -  [ ] Context menu highlighting
+   -  [ ] Text highlighting
+   -  [ ] Context Menu Background
+   -  [X] Check if there are variables set I can use or link wals cached .css file. Restarts would be required if simply linking cached css.
+        - [X] If Linking to .css from .cache/wal create a template to add alphachannels
+        - [X] Looks like I might be able to grab variables from already themed sections items and use them to color other items.
+-  [ ] Clean up rules and make them more concise.
+-  [ ] Find a better solution to show and hide the macOS Titlebar buttons [ (x) (-) (+) ]
+-  [ ] Change Right Click Menu Seperators and Right Click Hover Color
+-  [ ] Keep Menu Selected When Hovering over the Titlebar Buttons [ (x) (-) (+) ]
+-  [ ] Keep URL Bar open when scrolling through overflow dropdowns
+-  [ ] Make sure URL Bar and Tab Bar are the same height
+-  [ ] Add pywal variable to --chrome-content-separator-color.
+    -  [X] Create Config Options to Show and hide.
+-  [ ] Integrate Pywal Colors into Find Bar
+-  [X] Find Bar Seach Box Should be White
+-  [X] Side Bar Vibrancy
+    - [X] Side bar header drop down
+-  [ ] Dropdowns, right click, and context menus should match
+-  [X] Do the Customize Window
+-  [ ] Look at pywalfox's userChrome.css to see if there's anything I can integrate
+-  [ ] Implement Other layout conifurations eg: Auto Hide Side Bar w/ Tabbar and OG
+        auto hide url bar with tab bar on the bottom.
+-  [ ] Theme the Dropdown under the back and probably forward buttons
+-  [ ] Add wallpaper or pywall'd picture / logos to interface
+-  [ ] Look into icon replacements
+-  [ ] Can I import sass files eg: userChrome.scss
+-  [ ] Try to add blur to elements that are just transparent. Maybe a blurred picture as the background?
+-  [ ] Change the height of the URL Bar to match the icons in the bar
+-  [X] Center the URL Bar buttons between the Url input and the edge
+-  [ ] URL Bar always focused on New Tab
+-  [X] Hide Tabs if only one tab
+
+# Bugs:
+* Find Bar Near the search box appears to flash in sync with the cursor after typing try to
+replcate.
+    - Mostly Fixed by setting .findbar-closebutton to vibrancy. Still occurs once everytime
+    you click the search box. Bug is also caused by other behavior
+
+* Opening Findbar while side panel is open messes up the lower half of the background of the
+sidepanel.
+    - Set the findbar opacity to .9 appears to resolve this for the most part, findbar flashes
+    when exiting
+
+* colors.css is not completely matching pywalfox pallet. They might be off, but pywalfox has
+more colors. 19 vs 15. Some colors in colors.css appear to be dupes. Check colors.css.
+
+* If you move your cursor above the header text in the side panel the tabs bar drops down. It
+would be nice if that didnt happen.
+
+*/
+
+
+/*
+@@@  @@@  @@@@@@  @@@@@@@  @@@  @@@@@@  @@@@@@@  @@@      @@@@@@@@  @@@@@@
+@@!  @@@ @@!  @@@ @@!  @@@ @@! @@!  @@@ @@!  @@@ @@!      @@!      !@@
+@!@  !@! @!@!@!@! @!@!!@!  !!@ @!@!@!@! @!@!@!@  @!!      @!!!:!    !@@!!
+ !: .:!  !!:  !!! !!: :!!  !!: !!:  !!! !!:  !!! !!:      !!:          !:!
+   ::     :   : :  :   : : :    :   : : :: : ::  : ::.: : : :: ::: ::.: :
+*/
+
+
+/*  Link Pywal */
+
+@import url("file:///Users/brandon/.cache/wal/colors.css");
+
+/*
+@@@  @@@ @@@ @@@@@@@  @@@@@@@   @@@@@@  @@@  @@@  @@@@@@@ @@@ @@@
+@@!  @@@ @@! @@!  @@@ @@!  @@@ @@!  @@@ @@!@!@@@ !@@      @@! !@@
+@!@  !@! !!@ @!@!@!@  @!@!!@!  @!@!@!@! @!@@!!@! !@!       !@!@!
+ !: .:!  !!: !!:  !!! !!: :!!  !!:  !!! !!:  !!! :!!        !!:
+   ::    :   :: : ::   :   : :  :   : : ::    :   :: :: :   .:
+*/
+
+
+/* Turn on Vibrancy aka macOS Transparency and Blur in the URL Bar, Nav Bar, and Side
+Panel, Findbar, and Bookmarks Bar */
+
+#main-window,
+#nav-bar,
+#sidebar-header,
+#history-panel,
+#sidebar-search-container,
+#bookmarksPanel,
+#PersonalToolbar,
+findbar {
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+
+/* Selected Tab Background Color */
+
+.tab-background[selected="true"] {
+    background: var(--autocomplete-popup-highlight-background) !important;
+    opacity: 0.8;
+}
+
+
+/* Various Opacities */
+
+#appMenu-popup,
+#customizationui-widget-panel,
+#pageActionPanel,
+#editBookmarkPanel,
+#protections-popup,
+#pageActionActivatedActionPanel,
+#widget-overflow,
+#urlbar-background,
+#identity-popup,
+.panel-arrowcontent,
+menupopup[hasbeenopened="true"] {
+    opacity: 0.95;
+}
+
+
+/* Bar between the bookmarks bar and the page  */
+
+#sidebar-splitter {
+    border: none !important;
+    opacity: 1 !important;
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+
+/* Possible Bug Fix Keeps sidebar from being weirdly affected by vibrancy settings in find bar*/
+
+findbar {
+    opacity: 0.9 !important;
+}
+
+
+/*
+ @@@@@@@  @@@@@@  @@@  @@@ @@@@@@@ @@@@@@@@ @@@  @@@ @@@@@@@
+!@@      @@!  @@@ @@!@!@@@   @@!   @@!      @@!  !@@   @@!
+!@!      @!@  !@! @!@@!!@!   @!!   @!!!:!    !@@!@!    @!!
+:!!      !!:  !!! !!:  !!!   !!:   !!:       !: :!!    !!:
+ :: :: :  : :. :  ::    :     :    : :: ::: :::  :::    :
+
+@@@@@@@@@@  @@@@@@@@ @@@  @@@ @@@  @@@  @@@@@@
+@@! @@! @@! @@!      @@!@!@@@ @@!  @@@ !@@
+@!! !!@ @!@ @!!!:!   @!@@!!@! @!@  !@!  !@@!!
+!!:     !!: !!:      !!:  !!! !!:  !!!     !:!
+ :      :   : :: ::: ::    :   :.:: :  ::.: :
+*/
+
+
+/* Global */
+
+
+/* Remove Themeing */
+
+menupopup,
+menuitem,
+menu {
+    -moz-appearance: none !important;
+}
+
+
+/* Softens the Menu Separator in Right Click Menus */
+
+menupopup menuseparator {
+    -moz-appearance: meter !important;
+}
+
+
+/* Keep Rounded Edges on Menus */
+
+.panel-arrowcontent,
+#alltabs-popup .arrowscrollbox-scrollbox,
+menupopup:not(#BMB_bookmarksPopup),
+.textbox-contextmenu {
+    border-radius: 5px !important;
+}
+
+
+/* Right Click Menu */
+
+
+/*  Sets Background Color, Text Color, and Opacity  */
+
+#mainPopupSet menupopup {
+    color: var(--lwt-toolbar-field-color);
+    /* Text Color */
+    background-color: var( --autocomplete-popup-highlight-background) !important;
+    /*This is the right click menu color*/
+    opacity: 0.95;
+}
+
+
+/* Color of hovered menu item */
+
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"] {
+    background-color: var(--lwt-toolbarbutton-icon-fill-attention) !important;
+}
+
+
+/* Side Panel Header Drop Down */
+
+image.panel-arrow {
+    color: var( --autocomplete-popup-highlight-background) !important;
+    /*This is the right click menu color of the little arrow */
+}
+
+
+/* Side Panel Drop Down Menu Hover Color */
+
+.subviewbutton:hover {
+    background-color: var(--lwt-toolbarbutton-icon-fill-attention) !important;
+}
+
+box.panel-arrowcontent {
+    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+    /* Text Color */
+    background: var( --autocomplete-popup-highlight-background) !important;
+    /*This is the right click menu color*/
+    box-shadow: var(--autocomplete-popup-highlight-background) !important;
+    opacity: 0.95;
+}
+
+
+/* context menus in the ui like the url bar */
+
+arrowscrollbox.menupopup-arrowscrollbox {
+    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+    /* Text Color */
+    background: var( --autocomplete-popup-highlight-background) !important;
+    /*This is the right click menu color*/
+    box-shadow: var(--autocomplete-popup-highlight-background) !important;
+    opacity: 0.95;
+    border-radius: 5px !important;
+}
+
+image.panel-arrow {
+    fill: var(--autocomplete-popup-highlight-background) !important;
+    stroke: var(--autocomplete-popup-highlight-background) !important;
+}
+
+
+/*
+@@@@@@  @@@  @@@ @@@@@@@  @@@@@@  @@@  @@@ @@@ @@@@@@@  @@@@@@@@
+@@!  @@@ @@!  @@@   @@!   @@!  @@@ @@!  @@@ @@! @@!  @@@ @@!
+@!@!@!@! @!@  !@!   @!!   @!@  !@! @!@!@!@! !!@ @!@  !@! @!!!:!
+!!:  !!! !!:  !!!   !!:   !!:  !!! !!:  !!! !!: !!:  !!! !!:
+ :   : :  :.:: :     :     : :. :   :   : : :   :: :  :  : :: :::
+*/
+
+
+/*
+Various Configs
+Note: only have On Configuration Uncommented
+
+Configuration 1
+- Tab Bar at the Top
+- URL Bar Drops Down on hover near top or Focus
+
+Configuration 2
+- Url Bar at the top
+- Tab Bar drops down on hover or focus
+*/
+
+
+/* Configuration 1 - Start */
+
+
+/* Hide Navigation Bar */
+
+#nav-bar {
+    height: 1px;
+    margin-bottom: -1.5rem;
+    opacity: 0;
+    overflow: hidden;
+}
+
+
+/* Show Navigation Bar */
+
+toolbox:hover #nav-bar,
+toolbox:focus-within #nav-bar {
+    padding-top: 0.5rem;
+    height: auto;
+    margin-bottom: 0rem;
+    opacity: 1;
+    overflow: visible;
+    transition: 0.1s;
+    /* The Length of the Transition */
+}
+
+
+/* Configuration 1 - End */
+
+
+/* Configuration 2 - Start */
+
+
+/* Configuration 2 - End */
+
+
+/* Other Options Useful in this Configuration Uncomment
+to enable / change */
+
+
+/* A thin bar that seperate the URL Bar from the page.
+If the URL bar is hidden it will still display.
+It runs through the sidebar when it is open.
+Defualt is none */
+
+#main-window {
+    --chrome-content-separator-color: none !important;
+}
+
+
+/* Hides the Title Bar [ (x) (-) (+) ] buttons */
+
+.titlebar-buttonbox-container {
+    display: none !important;
+}
+
+
+/* Removes the Spacer Before the Tabs */
+
+.titlebar-spacer[type="pre-tabs"] {
+    display: none !important;
+}
+
+
+/* Removes the Spacer After the Tabs */
+
+.titlebar-spacer[type="post-tabs"] {
+    display: none !important;
+}
+
+
+/*
+@@@@@@@@@@  @@@  @@@@@@  @@@@@@@
+@@! @@! @@! @@! !@@     !@@
+@!! !!@ @!@ !!@  !@@!!  !@!
+!!:     !!: !!:     !:! :!!
+ :      :   :   ::.: :   :: :: :
+*/
+
+
+/* Changes the space above the tab bars useful if you have window borderss
+and stil want to see the selected tab highlight color */
+
+:root[extradragspace][tabsintitlebar]:not([inFullscreen]) {
+    --space-above-tabbar: 2px !important;
+}
+
+.findbar-closebutton {
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+
+/* Not Sure If Needed URL Bar Input Context Menu
+menupopup[hasbeenopened="true"] {
+  background-color: var(--color8) !important;
+  color: white !important;
+}
+*/
+
+
+/* Find Bar Input Field color and text color */
+
+.findbar-textbox.findbar-find-fast {
+    background-color: white !important;
+    color: black !important;
+}
+
+
+/* Color of Buttons When Hovering in Find Bar */
+
+.findbar-button.tabbable:hover {
+    background-color: var(--autocomplete-popup-highlight-background) !important;
+}
+
+
+/* Color of Selected Button */
+
+.findbar-button.tabbable[checked="true"] {
+    background-color: var(--autocomplete-popup-highlight-background) !important;
+}
+
+
+/*Color of Text and Highlight Color in Find Bar Input Field */
+
+::-moz-selection {
+    /* color: red; */
+    background: var(--autocomplete-popup-highlight-background) !important;
+}
+
+
+/* Moves the URL Input Field down 6px from it's original placement */
+
+#urlbar {
+    /* max-width: 90% !important; */
+    /* margin: 0 15% !important; */
+    --urlbar-height: 26px !important;
+    --urlbar-toolbar-height: 26px !important;
+}
+
+
+/* Hides all the tabs if there is only one tab */
+
+#tabbrowser-tabs tab:only-of-type,
+#tabbrowser-tabs tab:only-of-type+#tabs-newtab-button {
+    display: none !important;
+}
+
+
+/* Shrinks the Tab Bar and the tabs This will leave some space at the top
+if you dont leave anything it may be difficult to hover the URL Bar adjusting
+the URL bar height maybe needed too */
+
+#TabsToolbar {
+    --tab-min-height: 1px !important;
+    min-height: 1px !important;
+}
+
+
+/* Tabs use max width */
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: none !important;
+}
+
+
+/*
+  @@@@@@@ @@@  @@@  @@@@@@ @@@@@@@  @@@@@@  @@@@@@@@@@  @@@ @@@@@@@@  @@@@@@  @@@@@@@ @@@  @@@@@@  @@@  @@@      @@@@@@@   @@@@@@   @@@@@@@  @@@@@@@@
+ !@@      @@!  @@@ !@@       @@!   @@!  @@@ @@! @@! @@! @@!      @@! @@!  @@@   @@!   @@! @@!  @@@ @@!@!@@@      @@!  @@@ @@!  @@@ !@@       @@!
+ !@!      @!@  !@!  !@@!!    @!!   @!@  !@! @!! !!@ @!@ !!@    @!!   @!@!@!@!   @!!   !!@ @!@  !@! @!@@!!@!      @!@@!@!  @!@!@!@! !@! @!@!@ @!!!:!
+ :!!      !!:  !!!     !:!   !!:   !!:  !!! !!:     !!: !!:  !!:     !!:  !!!   !!:   !!: !!:  !!! !!:  !!!      !!:      !!:  !!! :!!   !!: !!:
+  :: :: :  :.:: :  ::.: :     :     : :. :   :      :   :   :.::.: :  :   : :    :    :    : :. :  ::    :        :        :   : :  :: :: :  : :: :::
+*/
+
+box#customization-container {
+    -moz-appearance: -moz-mac-vibrancy-dark;
+}
+
+
+/*Button Color*/
+
+.customizationmode-button {
+    -moz-appearance: none !important;
+    background: var(--lwt-selected-tab-background-color) !important;
+}
+
+
+/* Button Color on Hover */
+
+.customizationmode-button:hover {
+    -moz-appearance: none !important;
+    background: var(--autocomplete-popup-highlight-background) !important;
+}
+
+
+/* Button Text */
+
+.customizationmode-button label {
+    color: var(--lwt-toolbar-field-color) !important;
+}
+
+
+/* Text Color on Hover */
+
+.customizationmode-button:hover label {
+    color: var(--autocomplete-popup-highlight-color) !important;
+}
+
+
+/* Remove border From Buttons */
+
+.customizationmode-button {
+    border: none !important;
+}
+
+
+/*
+@@@  @@@  @@@@@@  @@@@@@@      @@@  @@@  @@@@@@ @@@@@@@@ @@@@@@@
+@@!@!@@@ @@!  @@@   @@!        @@!  @@@ !@@     @@!      @@!  @@@
+@!@@!!@! @!@  !@!   @!!        @!@  !@!  !@@!!  @!!!:!   @!@  !@!
+!!:  !!! !!:  !!!   !!:        !!:  !!!     !:! !!:      !!:  !!!
+::    :   : :. :     :          :.:: :  ::.: :  : :: ::: :: :  :
+*/
+
+
+/* test space */
+
+
+/*
+Make a list of all the different colored elements that Pywalfox uses and match them to the pallette then edit color variables
+
+also increase the opacity to .95
+
+also also theme scroll bar
+
+Pywalfox Palette Colors
+
+Accent primary: --autocomplete-popup-highlight-background
+Accent Secondary: --lwt-toolbarbutton-icon-fill-attention
+Text: --lwt-toolbar-field-color
+Text Focus: var(--lwt-tab-text, var(--toolbar-color))
+Background Extra: --lwt-toolbarbutton-hover-background
+Background Light: --lwt-selected-tab-background-color
+Background: --autocomplete-popup-highlight-color
+
+Once Properly Themed remove import maybe could use pywal import to set background of newtab preferences etc to your current wallpaper
+
+try to import blurred image and add to menu
+figure out rightclick hover color
+rightclick and other context menus should have the same background
+side panel header drop down appears to have a different highight mechanism should be the same
+color as other drop downs
+add to home brew
+make compatible with linux
+ hide everything and theme tree style tabs as a config
+*/
+
+
+/* URL Bar Drop Down Coloring */
+
+vbox.panel-subview-body {
+    background-color: var(--autocomplete-popup-highlight-background) !important;
+}
+
+box.panel-header {
+    background-color: var(--autocomplete-popup-highlight-background) !important;
+}
+
+#overflowMenu-customize-button {
+    background-color: var(--autocomplete-popup-highlight-background) !important;
+}

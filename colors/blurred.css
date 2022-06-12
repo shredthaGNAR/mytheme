@@ -3,7 +3,8 @@
 :root {
     /* All the CSS variables here are global */
     /* If windows - `-moz-win-glass`, if macOS - `-moz-mac-vibrancy-dark` */
-    --bf-moz-appearance: -moz-mac-vibrancy-dark !important;
+    --bf-moz-appearance: -moz-mac-vibrant-titlebar-dark;
+    !important;
     --bf-backdrop-blur: 20px !important;
     /*6px*/
     --bf-sidebar-searchbar-radius: 5px !important;
