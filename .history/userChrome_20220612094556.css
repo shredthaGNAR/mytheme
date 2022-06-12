@@ -8597,13 +8597,10 @@ tab.tabbrowser-tab vbox.tab-background[selected="true"] {
 }
 
 
-/* Navbar Border */
-
+/* Navbar Border *
 #navigator-toolbox:-moz-lwtheme {
-    --lwt-tabs-border-color: rgba(0, 0, 0, 0.5) !important;
+  --lwt-tabs-border-color: rgba(0, 0, 0, 0.5) !important;
 }
-
-
 /* brings container indicators back to the bottom */
 
 .tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
@@ -8682,7 +8679,7 @@ tab.tabbrowser-tab vbox.tab-background[selected="true"] {
 }
 
 
-/*improve border visiblity for selected tabs *
+/*improve border visiblity for selected tabs */
 
 .tab-background:is([selected],
 [multiselected]):-moz-lwtheme {
@@ -8806,7 +8803,7 @@ tab.tabbrowser-tab vbox.tab-background[selected="true"] {
 }
 
 
-/* improve border visiblity for selected tabs *
+/* improve border visiblity for selected tabs */
 
 .tab-background:is([selected],
 [multiselected]):-moz-lwtheme {
@@ -8942,7 +8939,7 @@ tab[selected="true"]:not([ignorefocus="true"]) {
 }
 
 
-/** Container Tab - Color line at icon's bottom *******************************/
+/** Container Tab - Color line at icon's bottom *******************************
 
 .tab-context-line {
     display: none;
@@ -9136,6 +9133,8 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open],
     --focus-outline-color: #9400ff;
 }
 
+
+/***
 :root:root[lwthemetextcolor="bright"] :not([lwt-default-theme-in-dark-mode]) {
     --urlbar-box-bgcolor: color-mix( in srgb, currentColor 16%, transparent) !important;
     --urlbar-box-focus-bgcolor: color-mix( in srgb, currentColor 16%, transparent) !important;
@@ -9216,8 +9215,7 @@ More gradients to try out
 /***Icon Fill Color ==========================================================*/
 
 :root:-moz-lwtheme {
-    /* button_background_hover */
-    --lwt-toolbarbutton-icon-fill-attention: var( --#1100ac91, rgb(0, 120, 215)) !important;
+    --lwt-toolbarbutton-icon-fill-attention: var( --button-primary-bgcolor, rgb(0, 120, 215)) !important;
 }
 
 :root[privatebrowsingmode="temporary"] {
@@ -9261,7 +9259,7 @@ More gradients to try out
 /***  Glowing line at bottom. */
 
 .tabbrowser-tab>.tab-stack>.tab-background>.tab-context-line {
-    height: 12px !important;
+    height: 2px !important;
     /*12px*/
     border-radius: 5px !important;
     box-shadow: 0px 0px 18px 2px var(--identity-icon-color) !important;
@@ -9276,7 +9274,7 @@ More gradients to try out
 }
 
 
-/* focused state - use shadow and remove outline */
+/* focused state - use shadow and remove outline *
 
 #urlbar:is([focused="true"]):not([open="true"])>#urlbar-background,
 #searchbar:focus-within {
@@ -9798,7 +9796,8 @@ tab:only-of-type:not([pinned]) {
 
 #navigator-toolbox:-moz-lwtheme {
     --tabs-border-color: rgba(0, 0, 0, 0.3) !important;
-    --lwt-tabs-border-color: transparent !important;
+    /* Legacy: v96 *
+    --lwt-tabs-border-color: transparent !important;*/
 }
 
 .tabbrowser-tab:is([visuallyselected="true"],
@@ -10329,7 +10328,7 @@ See the above repository for updates as well as full license text. */
 }
 
 #main-window:not(:-moz-lwtheme) {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    appearance: -moz-mac-vibrant-titlebar-dark !important;
 }
 
 #main-window[lwt-default-theme-in-dark-mode] {
@@ -10582,16 +10581,19 @@ Manifest URL
     background-color: var( --lwt-accent-color-inactive, var(--lwt-accent-color)) !important;
 }
 
+
+/*
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab[selected="true"] .tab-label-container {
     --tab-label-mask-size: 0.5em !important;
 }
+*/
 
 --button-primary-bgcolor :root[tabsintitlebar] #nav-bar {
     -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
 }
 
 :root[tabsintitlebar] #nav-bar:-moz-window-inactive {
-    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+    appearance: -moz-mac-vibrant-titlebar-dark !important;
 }
 
 #TabsToolbar,
