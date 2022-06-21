@@ -12,5 +12,6 @@
     "editor.defaultFormatter": null,
     "[plaintext]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "favorites.resources": []
 }
